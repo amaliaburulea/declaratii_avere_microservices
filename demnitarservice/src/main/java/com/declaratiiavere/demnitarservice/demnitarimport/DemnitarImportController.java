@@ -32,6 +32,12 @@ import java.util.stream.Stream;
 public class DemnitarImportController {
     private static final Integer TIP_VENIT_SALAR = 1;
     private static final Integer TIP_VENIT_ACTIVITATI_INDEPENDENTE = 2;
+    private static final Integer TIP_VENIT_CEDAREA_FOLOSINTEI = 3;
+    private static final Integer TIP_VENIT_INVESTITII = 4;
+    private static final Integer TIP_VENIT_PENSII = 5;
+    private static final Integer TIP_VENIT_AGRICOL = 6;
+    private static final Integer TIP_VENIT_NOROC = 7;
+    private static final Integer TIP_VENIT_ALTE_VENITURI = 8;
 
     @Autowired
     private DemnitarService demnitarService;
@@ -231,10 +237,393 @@ public class DemnitarImportController {
         
         declaratieAvereVenitInfoList.addAll(getDeclaratieAvereVenitSalarInfoList(revenueDeclarationInfo));
         declaratieAvereVenitInfoList.addAll(getDeclaratieAvereVenitActivitatiIndependenteInfoList(revenueDeclarationInfo));
-        
+        declaratieAvereVenitInfoList.addAll(getDeclaratieAvereVenitCedareaFolosinteiInfoList(revenueDeclarationInfo));
+        declaratieAvereVenitInfoList.addAll(getDeclaratieAvereVenitInvestitiiInfoList(revenueDeclarationInfo));
+        declaratieAvereVenitInfoList.addAll(getDeclaratieAvereVenitPensiiInfoList(revenueDeclarationInfo));
+        declaratieAvereVenitInfoList.addAll(getDeclaratieAvereVenitAgricolInfoList(revenueDeclarationInfo));
+        declaratieAvereVenitInfoList.addAll(getDeclaratieAvereVenitNorocInfoList(revenueDeclarationInfo));
+        declaratieAvereVenitInfoList.addAll(getDeclaratieAvereVenitAlteVenituriInfoList(revenueDeclarationInfo));
         return declaratieAvereVenitInfoList;
     }
 
+    private List<DeclaratieAvereVenitInfo>getDeclaratieAvereVenitAlteVenituriInfoList(RevenueDeclarationInfo revenueDeclarationInfo){
+        List<DeclaratieAvereVenitInfo> declaratieAvereVenitInfoList = new ArrayList<>();
+        if(revenueDeclarationInfo.getExistaVenituriAlte1().equals("Da")){
+            DeclaratieAvereVenitInfo declaratieAvereVenitInfo = new DeclaratieAvereVenitInfo();
+            declaratieAvereVenitInfo.setTip(TIP_VENIT_ALTE_VENITURI);
+            declaratieAvereVenitInfo.setTitular(revenueDeclarationInfo.getVenitAlte1Titular());
+            declaratieAvereVenitInfo.setSursaVenit(revenueDeclarationInfo.getVenitAlte1Sursa());
+            declaratieAvereVenitInfo.setServiciulPrestat(revenueDeclarationInfo.getVenitAlte1ServiciPrestat());
+            try {
+                revenueDeclarationInfo.setVeniAlte1VenitAnual(revenueDeclarationInfo.getVeniAlte1VenitAnual().replaceAll(",", "."));
+                declaratieAvereVenitInfo.setVenitAnual(new BigDecimal(revenueDeclarationInfo.getVeniAlte1VenitAnual()));
+            } catch (Exception e) {
+                throw new ValidationException("getVenitAlteVenitAnual format invalid " + revenueDeclarationInfo.getVeniAlte1VenitAnual());
+            }
+
+            declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitAlte1Moneda());
+
+            declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
+        }
+        if(revenueDeclarationInfo.getExistaVenituriAlte2().equals("Da")){
+            DeclaratieAvereVenitInfo declaratieAvereVenitInfo = new DeclaratieAvereVenitInfo();
+            declaratieAvereVenitInfo.setTip(TIP_VENIT_ALTE_VENITURI);
+            declaratieAvereVenitInfo.setTitular(revenueDeclarationInfo.getVenitAlte2Titular());
+            declaratieAvereVenitInfo.setSursaVenit(revenueDeclarationInfo.getVenitAlte2Sursa());
+            declaratieAvereVenitInfo.setServiciulPrestat(revenueDeclarationInfo.getVenitAlte2ServiciPrestat());
+            try {
+                revenueDeclarationInfo.setVeniAlte2VenitAnual(revenueDeclarationInfo.getVeniAlte2VenitAnual().replaceAll(",", "."));
+                declaratieAvereVenitInfo.setVenitAnual(new BigDecimal(revenueDeclarationInfo.getVeniAlte2VenitAnual()));
+            } catch (Exception e) {
+                throw new ValidationException("getVenitAlteVenitAnual format invalid " + revenueDeclarationInfo.getVeniAlte2VenitAnual());
+            }
+
+            declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitAlte2Moneda());
+
+            declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
+        }
+
+        if(revenueDeclarationInfo.getExistaVenituriAlte3().equals("Da")){
+            DeclaratieAvereVenitInfo declaratieAvereVenitInfo = new DeclaratieAvereVenitInfo();
+            declaratieAvereVenitInfo.setTip(TIP_VENIT_ALTE_VENITURI);
+            declaratieAvereVenitInfo.setTitular(revenueDeclarationInfo.getVenitAlte3Titular());
+            declaratieAvereVenitInfo.setSursaVenit(revenueDeclarationInfo.getVenitAlte3Sursa());
+            declaratieAvereVenitInfo.setServiciulPrestat(revenueDeclarationInfo.getVenitAlte3ServiciPrestat());
+            try {
+                revenueDeclarationInfo.setVeniAlte3VenitAnual(revenueDeclarationInfo.getVeniAlte3VenitAnual().replaceAll(",", "."));
+                declaratieAvereVenitInfo.setVenitAnual(new BigDecimal(revenueDeclarationInfo.getVeniAlte3VenitAnual()));
+            } catch (Exception e) {
+                throw new ValidationException("getVenitAlteVenitAnual format invalid " + revenueDeclarationInfo.getVeniAlte3VenitAnual());
+            }
+
+            declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitAlte3Moneda());
+
+            declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
+        }
+
+        if(revenueDeclarationInfo.getExistaVenituriAlte4().equals("Da")){
+            DeclaratieAvereVenitInfo declaratieAvereVenitInfo = new DeclaratieAvereVenitInfo();
+            declaratieAvereVenitInfo.setTip(TIP_VENIT_ALTE_VENITURI);
+            declaratieAvereVenitInfo.setTitular(revenueDeclarationInfo.getVenitAlte4Titular());
+            declaratieAvereVenitInfo.setSursaVenit(revenueDeclarationInfo.getVenitAlte4Sursa());
+            declaratieAvereVenitInfo.setServiciulPrestat(revenueDeclarationInfo.getVenitAlte4ServiciPrestat());
+            try {
+                revenueDeclarationInfo.setVeniAlte4VenitAnual(revenueDeclarationInfo.getVeniAlte4VenitAnual().replaceAll(",", "."));
+                declaratieAvereVenitInfo.setVenitAnual(new BigDecimal(revenueDeclarationInfo.getVeniAlte4VenitAnual()));
+            } catch (Exception e) {
+                throw new ValidationException("getVenitAlteVenitAnual format invalid " + revenueDeclarationInfo.getVeniAlte4VenitAnual());
+            }
+
+            declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitAlte4Moneda());
+
+            declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
+        }
+        return declaratieAvereVenitInfoList;
+    }
+    private List<DeclaratieAvereVenitInfo>getDeclaratieAvereVenitNorocInfoList(RevenueDeclarationInfo revenueDeclarationInfo){
+        List<DeclaratieAvereVenitInfo> declaratieAvereVenitInfoList = new ArrayList<>();
+        if(revenueDeclarationInfo.getExistaVenituriNoroc1().equals("Da")){
+            DeclaratieAvereVenitInfo declaratieAvereVenitInfo = new DeclaratieAvereVenitInfo();
+            declaratieAvereVenitInfo.setTip(TIP_VENIT_NOROC);
+            declaratieAvereVenitInfo.setTitular(revenueDeclarationInfo.getVenitNoroc1Titular());
+            declaratieAvereVenitInfo.setSursaVenit(revenueDeclarationInfo.getVenitNoroc1Sursa());
+            declaratieAvereVenitInfo.setServiciulPrestat(revenueDeclarationInfo.getVenitNoroc1ServiciPrestat());
+            try {
+                revenueDeclarationInfo.setVenitNoroc1VenitAnual(revenueDeclarationInfo.getVenitNoroc1VenitAnual().replaceAll(",", "."));
+                declaratieAvereVenitInfo.setVenitAnual(new BigDecimal(revenueDeclarationInfo.getVenitNoroc1VenitAnual()));
+            } catch (Exception e) {
+                throw new ValidationException("getVenitNoroc1VenitAnual format invalid " + revenueDeclarationInfo.getVenitNoroc1VenitAnual());
+            }
+
+            declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitNoroc1Moneda());
+
+            declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
+        }
+        if(revenueDeclarationInfo.getExistaVenituriNoroc2().equals("Da")){
+            DeclaratieAvereVenitInfo declaratieAvereVenitInfo = new DeclaratieAvereVenitInfo();
+            declaratieAvereVenitInfo.setTip(TIP_VENIT_NOROC);
+            declaratieAvereVenitInfo.setTitular(revenueDeclarationInfo.getVenitNoroc2Titular());
+            declaratieAvereVenitInfo.setSursaVenit(revenueDeclarationInfo.getVenitNoroc2Sursa());
+            declaratieAvereVenitInfo.setServiciulPrestat(revenueDeclarationInfo.getVenitNoroc2ServiciPrestat());
+            try {
+                revenueDeclarationInfo.setVenitNoroc2VenitAnual(revenueDeclarationInfo.getVenitNoroc2VenitAnual().replaceAll(",", "."));
+                declaratieAvereVenitInfo.setVenitAnual(new BigDecimal(revenueDeclarationInfo.getVenitNoroc2VenitAnual()));
+            } catch (Exception e) {
+                throw new ValidationException("getVenitNoroc2VenitAnual format invalid " + revenueDeclarationInfo.getVenitNoroc2VenitAnual());
+            }
+
+            declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitNoroc2Moneda());
+
+            declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
+        }
+        return declaratieAvereVenitInfoList;
+    }
+    private List<DeclaratieAvereVenitInfo>getDeclaratieAvereVenitAgricolInfoList(RevenueDeclarationInfo revenueDeclarationInfo){
+        List<DeclaratieAvereVenitInfo> declaratieAvereVenitInfoList = new ArrayList<>();
+        if(revenueDeclarationInfo.getExistaVenituriAgricole1().equals("Da")){
+            DeclaratieAvereVenitInfo declaratieAvereVenitInfo = new DeclaratieAvereVenitInfo();
+            declaratieAvereVenitInfo.setTip(TIP_VENIT_AGRICOL);
+            declaratieAvereVenitInfo.setTitular(revenueDeclarationInfo.getVenitAgricol1Titular());
+            declaratieAvereVenitInfo.setSursaVenit(revenueDeclarationInfo.getVenitAgricol1Sursa());
+            declaratieAvereVenitInfo.setServiciulPrestat(revenueDeclarationInfo.getVenitAgricol1ServiciPrestat());
+            try {
+                revenueDeclarationInfo.setVenitAgricol1VenitAnual(revenueDeclarationInfo.getVenitAgricol1VenitAnual().replaceAll(",", "."));
+                declaratieAvereVenitInfo.setVenitAnual(new BigDecimal(revenueDeclarationInfo.getVenitAgricol1VenitAnual()));
+            } catch (Exception e) {
+                throw new ValidationException("getVenitAgricol1VenitAnual format invalid " + revenueDeclarationInfo.getVenitAgricol1VenitAnual());
+            }
+
+            declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitAgricol1Moneda());
+
+            declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
+        }
+        if(revenueDeclarationInfo.getExistaVenituriAgricole2().equals("Da")){
+            DeclaratieAvereVenitInfo declaratieAvereVenitInfo = new DeclaratieAvereVenitInfo();
+            declaratieAvereVenitInfo.setTip(TIP_VENIT_AGRICOL);
+            declaratieAvereVenitInfo.setTitular(revenueDeclarationInfo.getVenitAgricol2Titular());
+            declaratieAvereVenitInfo.setSursaVenit(revenueDeclarationInfo.getVenitAgricol2Sursa());
+            declaratieAvereVenitInfo.setServiciulPrestat(revenueDeclarationInfo.getVenitAgricol2ServiciPrestat());
+            try {
+                revenueDeclarationInfo.setVenitAgricol2VenitAnual(revenueDeclarationInfo.getVenitAgricol2VenitAnual().replaceAll(",", "."));
+                declaratieAvereVenitInfo.setVenitAnual(new BigDecimal(revenueDeclarationInfo.getVenitAgricol2VenitAnual()));
+            } catch (Exception e) {
+                throw new ValidationException("getVenitAgricol2VenitAnual format invalid " + revenueDeclarationInfo.getVenitAgricol2VenitAnual());
+            }
+
+            declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitAgricol2Moneda());
+
+            declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
+        }
+        return declaratieAvereVenitInfoList;
+    }
+
+    private List<DeclaratieAvereVenitInfo>getDeclaratieAvereVenitPensiiInfoList(RevenueDeclarationInfo revenueDeclarationInfo){
+        List<DeclaratieAvereVenitInfo> declaratieAvereVenitInfoList = new ArrayList<>();
+        if(revenueDeclarationInfo.getExistaVenituriPensii1().equals("Da")){
+            DeclaratieAvereVenitInfo declaratieAvereVenitInfo = new DeclaratieAvereVenitInfo();
+            declaratieAvereVenitInfo.setTip(TIP_VENIT_PENSII);
+            declaratieAvereVenitInfo.setTitular(revenueDeclarationInfo.getVenitPensii1Titular());
+            declaratieAvereVenitInfo.setSursaVenit(revenueDeclarationInfo.getVenitPensii1Sursa());
+            declaratieAvereVenitInfo.setServiciulPrestat(revenueDeclarationInfo.getVenitPensii1ServiciPrestat());
+            try {
+                revenueDeclarationInfo.setVenitPensii1VenitAnual(revenueDeclarationInfo.getVenitPensii1VenitAnual().replaceAll(",", "."));
+                declaratieAvereVenitInfo.setVenitAnual(new BigDecimal(revenueDeclarationInfo.getVenitPensii1VenitAnual()));
+            } catch (Exception e) {
+                throw new ValidationException("getVenitPensii1VenitAnual format invalid " + revenueDeclarationInfo.getVenitPensii1VenitAnual());
+            }
+
+            declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitPensii1Moneda());
+
+            declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
+        }
+        if(revenueDeclarationInfo.getExistaVenituriPensii2().equals("Da")){
+            DeclaratieAvereVenitInfo declaratieAvereVenitInfo = new DeclaratieAvereVenitInfo();
+            declaratieAvereVenitInfo.setTip(TIP_VENIT_PENSII);
+            declaratieAvereVenitInfo.setTitular(revenueDeclarationInfo.getVenitPensii2Titular());
+            declaratieAvereVenitInfo.setSursaVenit(revenueDeclarationInfo.getVenitPensii2Sursa());
+            declaratieAvereVenitInfo.setServiciulPrestat(revenueDeclarationInfo.getVenitPensii2ServiciPrestat());
+            try {
+                revenueDeclarationInfo.setVenitPensii2VenitAnual(revenueDeclarationInfo.getVenitPensii2VenitAnual().replaceAll(",", "."));
+                declaratieAvereVenitInfo.setVenitAnual(new BigDecimal(revenueDeclarationInfo.getVenitPensii2VenitAnual()));
+            } catch (Exception e) {
+                throw new ValidationException("getVenitPensii2VenitAnual format invalid " + revenueDeclarationInfo.getVenitPensii2VenitAnual());
+            }
+
+            declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitPensii2Moneda());
+
+            declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
+        }
+        return declaratieAvereVenitInfoList;
+    }
+
+    private List<DeclaratieAvereVenitInfo>getDeclaratieAvereVenitInvestitiiInfoList(RevenueDeclarationInfo revenueDeclarationInfo){
+        List<DeclaratieAvereVenitInfo> declaratieAvereVenitInfoList = new ArrayList<>();
+        if(revenueDeclarationInfo.getExistaVenituriInvestitii1().equals("Da")){
+            DeclaratieAvereVenitInfo declaratieAvereVenitInfo = new DeclaratieAvereVenitInfo();
+            declaratieAvereVenitInfo.setTip(TIP_VENIT_INVESTITII);
+            declaratieAvereVenitInfo.setTitular(revenueDeclarationInfo.getVenitInvestitii1Titular());
+            declaratieAvereVenitInfo.setSursaVenit(revenueDeclarationInfo.getVenitInvestitii1Sursa());
+            declaratieAvereVenitInfo.setServiciulPrestat(revenueDeclarationInfo.getVenitInvestitii1ServiciPrestat());
+            try {
+                revenueDeclarationInfo.setVenitInvestitii1VenitAnual(revenueDeclarationInfo.getVenitInvestitii1VenitAnual().replaceAll(",", "."));
+                declaratieAvereVenitInfo.setVenitAnual(new BigDecimal(revenueDeclarationInfo.getVenitInvestitii1VenitAnual()));
+            } catch (Exception e) {
+                throw new ValidationException("getVenitInvestitii1VenitAnual format invalid " + revenueDeclarationInfo.getVenitInvestitii1VenitAnual());
+            }
+
+            declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitInvestitii1Moneda());
+
+            declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
+        }
+        if(revenueDeclarationInfo.getExistaVenituriInvestitii2().equals("Da")){
+            DeclaratieAvereVenitInfo declaratieAvereVenitInfo = new DeclaratieAvereVenitInfo();
+            declaratieAvereVenitInfo.setTip(TIP_VENIT_INVESTITII);
+            declaratieAvereVenitInfo.setTitular(revenueDeclarationInfo.getVenitInvestitii2Titular());
+            declaratieAvereVenitInfo.setSursaVenit(revenueDeclarationInfo.getVenitInvestitii2Sursa());
+            declaratieAvereVenitInfo.setServiciulPrestat(revenueDeclarationInfo.getVenitInvestitii2ServiciPrestat());
+            try {
+                revenueDeclarationInfo.setVenitInvestitii2VenitAnual(revenueDeclarationInfo.getVenitInvestitii2VenitAnual().replaceAll(",", "."));
+                declaratieAvereVenitInfo.setVenitAnual(new BigDecimal(revenueDeclarationInfo.getVenitInvestitii2VenitAnual()));
+            } catch (Exception e) {
+                throw new ValidationException("getVenitInvestitii2VenitAnual format invalid " + revenueDeclarationInfo.getVenitInvestitii2VenitAnual());
+            }
+
+            declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitInvestitii2Moneda());
+
+            declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
+        }
+
+        if(revenueDeclarationInfo.getExistaVenituriInvestitii3().equals("Da")){
+            DeclaratieAvereVenitInfo declaratieAvereVenitInfo = new DeclaratieAvereVenitInfo();
+            declaratieAvereVenitInfo.setTip(TIP_VENIT_INVESTITII);
+            declaratieAvereVenitInfo.setTitular(revenueDeclarationInfo.getVenitInvestitii3Titular());
+            declaratieAvereVenitInfo.setSursaVenit(revenueDeclarationInfo.getVenitInvestitii3Sursa());
+            declaratieAvereVenitInfo.setServiciulPrestat(revenueDeclarationInfo.getVenitInvestitii3ServiciPrestat());
+            try {
+                revenueDeclarationInfo.setVenitInvestitii3VenitAnual(revenueDeclarationInfo.getVenitInvestitii3VenitAnual().replaceAll(",", "."));
+                declaratieAvereVenitInfo.setVenitAnual(new BigDecimal(revenueDeclarationInfo.getVenitInvestitii3VenitAnual()));
+            } catch (Exception e) {
+                throw new ValidationException("getVenitInvestitii3VenitAnual format invalid " + revenueDeclarationInfo.getVenitInvestitii3VenitAnual());
+            }
+
+            declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitInvestitii3Moneda());
+
+            declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
+        }
+
+        if(revenueDeclarationInfo.getExistaVenituriInvestitii4().equals("Da")){
+            DeclaratieAvereVenitInfo declaratieAvereVenitInfo = new DeclaratieAvereVenitInfo();
+            declaratieAvereVenitInfo.setTip(TIP_VENIT_INVESTITII);
+            declaratieAvereVenitInfo.setTitular(revenueDeclarationInfo.getVenitInvestitii4Titular());
+            declaratieAvereVenitInfo.setSursaVenit(revenueDeclarationInfo.getVenitInvestitii4Sursa());
+            declaratieAvereVenitInfo.setServiciulPrestat(revenueDeclarationInfo.getVenitInvestitii4ServiciPrestat());
+            try {
+                revenueDeclarationInfo.setVenitInvestitii4VenitAnual(revenueDeclarationInfo.getVenitInvestitii4VenitAnual().replaceAll(",", "."));
+                declaratieAvereVenitInfo.setVenitAnual(new BigDecimal(revenueDeclarationInfo.getVenitInvestitii4VenitAnual()));
+            } catch (Exception e) {
+                throw new ValidationException("getVenitInvestitii4VenitAnual format invalid " + revenueDeclarationInfo.getVenitInvestitii4VenitAnual());
+            }
+
+            declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitInvestitii4Moneda());
+
+            declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
+        }
+        
+
+        return declaratieAvereVenitInfoList;
+    }
+
+    private List<DeclaratieAvereVenitInfo>getDeclaratieAvereVenitCedareaFolosinteiInfoList(RevenueDeclarationInfo revenueDeclarationInfo){
+        List<DeclaratieAvereVenitInfo> declaratieAvereVenitInfoList = new ArrayList<>();
+        if(revenueDeclarationInfo.getExistaVenituriCedareaFolosintei1().equals("Da")){
+            DeclaratieAvereVenitInfo declaratieAvereVenitInfo = new DeclaratieAvereVenitInfo();
+            declaratieAvereVenitInfo.setTip(TIP_VENIT_CEDAREA_FOLOSINTEI);
+            declaratieAvereVenitInfo.setTitular(revenueDeclarationInfo.getVenitCedareaFolosintei1Titular());
+            declaratieAvereVenitInfo.setSursaVenit(revenueDeclarationInfo.getVenitCedareaFolosintei1Sursa());
+            declaratieAvereVenitInfo.setServiciulPrestat(revenueDeclarationInfo.getVenitCedareaFolosintei1ServiciPrestat());
+            try {
+                revenueDeclarationInfo.setVenitCedareaFolosintei1VenitAnual(revenueDeclarationInfo.getVenitCedareaFolosintei1VenitAnual().replaceAll(",", "."));
+                declaratieAvereVenitInfo.setVenitAnual(new BigDecimal(revenueDeclarationInfo.getVenitCedareaFolosintei1VenitAnual()));
+            } catch (Exception e) {
+                throw new ValidationException("getVenitCedareaFolosintei1VenitAnual format invalid " + revenueDeclarationInfo.getVenitCedareaFolosintei1VenitAnual());
+            }
+
+            declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitCedareaFolosintei1Moneda());
+
+            declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
+        }
+        if(revenueDeclarationInfo.getExistaVenituriCedareaFolosintei2().equals("Da")){
+            DeclaratieAvereVenitInfo declaratieAvereVenitInfo = new DeclaratieAvereVenitInfo();
+            declaratieAvereVenitInfo.setTip(TIP_VENIT_CEDAREA_FOLOSINTEI);
+            declaratieAvereVenitInfo.setTitular(revenueDeclarationInfo.getVenitCedareaFolosintei2Titular());
+            declaratieAvereVenitInfo.setSursaVenit(revenueDeclarationInfo.getVenitCedareaFolosintei2Sursa());
+            declaratieAvereVenitInfo.setServiciulPrestat(revenueDeclarationInfo.getVenitCedareaFolosintei2ServiciPrestat());
+            try {
+                revenueDeclarationInfo.setVenitCedareaFolosintei2VenitAnual(revenueDeclarationInfo.getVenitCedareaFolosintei2VenitAnual().replaceAll(",", "."));
+                declaratieAvereVenitInfo.setVenitAnual(new BigDecimal(revenueDeclarationInfo.getVenitCedareaFolosintei2VenitAnual()));
+            } catch (Exception e) {
+                throw new ValidationException("getVenitCedareaFolosintei2VenitAnual format invalid " + revenueDeclarationInfo.getVenitCedareaFolosintei2VenitAnual());
+            }
+
+            declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitCedareaFolosintei2Moneda());
+
+            declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
+        }
+
+        if(revenueDeclarationInfo.getExistaVenituriCedareaFolosintei3().equals("Da")){
+            DeclaratieAvereVenitInfo declaratieAvereVenitInfo = new DeclaratieAvereVenitInfo();
+            declaratieAvereVenitInfo.setTip(TIP_VENIT_CEDAREA_FOLOSINTEI);
+            declaratieAvereVenitInfo.setTitular(revenueDeclarationInfo.getVenitCedareaFolosintei3Titular());
+            declaratieAvereVenitInfo.setSursaVenit(revenueDeclarationInfo.getVenitCedareaFolosintei3Sursa());
+            declaratieAvereVenitInfo.setServiciulPrestat(revenueDeclarationInfo.getVenitCedareaFolosintei3ServiciPrestat());
+            try {
+                revenueDeclarationInfo.setVenitCedareaFolosintei3VenitAnual(revenueDeclarationInfo.getVenitCedareaFolosintei3VenitAnual().replaceAll(",", "."));
+                declaratieAvereVenitInfo.setVenitAnual(new BigDecimal(revenueDeclarationInfo.getVenitCedareaFolosintei3VenitAnual()));
+            } catch (Exception e) {
+                throw new ValidationException("getVenitCedareaFolosintei3VenitAnual format invalid " + revenueDeclarationInfo.getVenitCedareaFolosintei3VenitAnual());
+            }
+
+            declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitCedareaFolosintei3Moneda());
+
+            declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
+        }
+
+        if(revenueDeclarationInfo.getExistaVenituriCedareaFolosintei4().equals("Da")){
+            DeclaratieAvereVenitInfo declaratieAvereVenitInfo = new DeclaratieAvereVenitInfo();
+            declaratieAvereVenitInfo.setTip(TIP_VENIT_CEDAREA_FOLOSINTEI);
+            declaratieAvereVenitInfo.setTitular(revenueDeclarationInfo.getVenitCedareaFolosintei4Titular());
+            declaratieAvereVenitInfo.setSursaVenit(revenueDeclarationInfo.getVenitCedareaFolosintei4Sursa());
+            declaratieAvereVenitInfo.setServiciulPrestat(revenueDeclarationInfo.getVenitCedareaFolosintei4ServiciPrestat());
+            try {
+                revenueDeclarationInfo.setVenitCedareaFolosintei4VenitAnual(revenueDeclarationInfo.getVenitCedareaFolosintei4VenitAnual().replaceAll(",", "."));
+                declaratieAvereVenitInfo.setVenitAnual(new BigDecimal(revenueDeclarationInfo.getVenitCedareaFolosintei4VenitAnual()));
+            } catch (Exception e) {
+                throw new ValidationException("getVenitCedareaFolosintei4VenitAnual format invalid " + revenueDeclarationInfo.getVenitCedareaFolosintei4VenitAnual());
+            }
+
+            declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitCedareaFolosintei4Moneda());
+
+            declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
+        }
+
+        if(revenueDeclarationInfo.getExistaVenituriCedareaFolosintei5().equals("Da")){
+            DeclaratieAvereVenitInfo declaratieAvereVenitInfo = new DeclaratieAvereVenitInfo();
+            declaratieAvereVenitInfo.setTip(TIP_VENIT_CEDAREA_FOLOSINTEI);
+            declaratieAvereVenitInfo.setTitular(revenueDeclarationInfo.getVenitCedareaFolosintei5Titular());
+            declaratieAvereVenitInfo.setSursaVenit(revenueDeclarationInfo.getVenitCedareaFolosintei5Sursa());
+            declaratieAvereVenitInfo.setServiciulPrestat(revenueDeclarationInfo.getVenitCedareaFolosintei5ServiciPrestat());
+            try {
+                revenueDeclarationInfo.setVenitCedareaFolosintei5VenitAnual(revenueDeclarationInfo.getVenitCedareaFolosintei5VenitAnual().replaceAll(",", "."));
+                declaratieAvereVenitInfo.setVenitAnual(new BigDecimal(revenueDeclarationInfo.getVenitCedareaFolosintei5VenitAnual()));
+            } catch (Exception e) {
+                throw new ValidationException("getVenitCedareaFolosintei5VenitAnual format invalid " + revenueDeclarationInfo.getVenitCedareaFolosintei5VenitAnual());
+            }
+
+            declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitCedareaFolosintei5Moneda());
+
+            declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
+        }
+
+        if(revenueDeclarationInfo.getExistaVenituriCedareaFolosintei6().equals("Da")){
+            DeclaratieAvereVenitInfo declaratieAvereVenitInfo = new DeclaratieAvereVenitInfo();
+            declaratieAvereVenitInfo.setTip(TIP_VENIT_CEDAREA_FOLOSINTEI);
+            declaratieAvereVenitInfo.setTitular(revenueDeclarationInfo.getVenitCedareaFolosintei6Titular());
+            declaratieAvereVenitInfo.setSursaVenit(revenueDeclarationInfo.getVenitCedareaFolosintei6Sursa());
+            declaratieAvereVenitInfo.setServiciulPrestat(revenueDeclarationInfo.getVenitCedareaFolosintei6ServiciPrestat());
+            try {
+                revenueDeclarationInfo.setVenitCedareaFolosintei6VenitAnual(revenueDeclarationInfo.getVenitCedareaFolosintei6VenitAnual().replaceAll(",", "."));
+                declaratieAvereVenitInfo.setVenitAnual(new BigDecimal(revenueDeclarationInfo.getVenitCedareaFolosintei6VenitAnual()));
+            } catch (Exception e) {
+                throw new ValidationException("getVenitCedareaFolosintei6VenitAnual format invalid " + revenueDeclarationInfo.getVenitCedareaFolosintei6VenitAnual());
+            }
+
+            declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitCedareaFolosintei6Moneda());
+
+            declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
+        }
+
+        return declaratieAvereVenitInfoList;
+    }
     private List<DeclaratieAvereVenitInfo> getDeclaratieAvereVenitActivitatiIndependenteInfoList(RevenueDeclarationInfo revenueDeclarationInfo) {
         List<DeclaratieAvereVenitInfo> declaratieAvereVenitInfoList = new ArrayList<>();
 
