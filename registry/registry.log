@@ -1,0 +1,189 @@
+2017-04-18 12:04:49.748 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [RegistryApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2017-04-18 12:04:49.765 [main] INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-04-18 12:04:49.777 [main] INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+2017-04-18 12:04:49.784 [main] INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+2017-04-18 12:04:49.786 [main] INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1dd02175, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@31206beb, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3e77a1ed, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3ffcd140]
+2017-04-18 12:04:49.800 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [RegistryApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2017-04-18 12:04:49.810 [main] INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-04-18 12:04:49.816 [main] INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+2017-04-18 12:04:49.817 [main] INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+2017-04-18 12:04:49.817 [main] INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@221af3c0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@62bd765, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@23a5fd2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@78a2da20]
+2017-04-18 12:04:51.201 [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1ba9117e: startup date [Tue Apr 18 12:04:51 EEST 2017]; root of context hierarchy
+2017-04-18 12:04:51.201 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2017-04-18 12:04:51.480 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-04-18 12:04:51.501 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a796dcbb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-18 12:04:52.153 [main] INFO  c.a.k.r.RegistryApplicationTests - No active profile set, falling back to default profiles: default
+2017-04-18 12:04:52.176 [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@49cb9cb5: startup date [Tue Apr 18 12:04:52 EEST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1ba9117e
+2017-04-18 12:04:53.621 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=be4ef400-52be-30bb-9ea0-e9a61de68317
+2017-04-18 12:04:53.647 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-04-18 12:04:53.705 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a796dcbb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-18 12:04:53.714 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration$$EnhancerBySpringCGLIB$$da74d7f1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-18 12:04:55.719 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2017-04-18 12:04:55.875 [main] INFO  c.netflix.discovery.DiscoveryClient - Client configured to neither register nor query for data.
+2017-04-18 12:04:56.038 [main] INFO  c.n.e.DefaultEurekaServerContext - Initializing ...
+2017-04-18 12:04:56.042 [main] INFO  c.n.eureka.cluster.PeerEurekaNodes - Adding new peer nodes [http://localhost:-1/eureka/]
+2017-04-18 12:04:56.542 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON encoding codec CloudJacksonJson
+2017-04-18 12:04:56.542 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON decoding codec CloudJacksonJson
+2017-04-18 12:04:56.542 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2017-04-18 12:04:56.542 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2017-04-18 12:04:56.845 [main] INFO  c.n.eureka.cluster.PeerEurekaNodes - Replica node URL:  http://localhost:-1/eureka/
+2017-04-18 12:04:56.871 [main] INFO  c.n.e.r.AbstractInstanceRegistry - Finished initializing remote region registries. All known remote regions: []
+2017-04-18 12:04:56.875 [main] INFO  c.n.e.DefaultEurekaServerContext - Initialized
+2017-04-18 12:04:58.610 [main] INFO  o.s.u.f.SpringTemplateLoader - SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.context.annotation.AnnotationConfigApplicationContext@49cb9cb5: startup date [Tue Apr 18 12:04:52 EEST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1ba9117e] and template loader path [classpath:/templates/]
+2017-04-18 12:04:58.744 [main] WARN  o.s.c.n.a.ArchaiusAutoConfiguration - No spring.application.name found, defaulting to 'application'
+2017-04-18 12:04:58.751 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2017-04-18 12:04:58.751 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-04-18 12:04:58.767 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2017-04-18 12:04:58.767 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-04-18 12:04:59.178 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 0
+2017-04-18 12:04:59.278 [Thread-7] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Setting the eureka configuration..
+2017-04-18 12:04:59.278 [Thread-7] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Eureka data center value eureka.datacenter is not set, defaulting to default
+2017-04-18 12:04:59.279 [Thread-7] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Eureka environment value eureka.environment is not set, defaulting to test
+2017-04-18 12:04:59.285 [main] INFO  c.a.k.r.RegistryApplicationTests - Started RegistryApplicationTests in 9.285 seconds (JVM running for 10.441)
+2017-04-18 12:04:59.315 [Thread-8] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@49cb9cb5: startup date [Tue Apr 18 12:04:52 EEST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1ba9117e
+2017-04-18 12:04:59.318 [Thread-8] INFO  o.s.c.n.e.EurekaDiscoveryClientConfiguration - Unregistering application unknown with eureka with status DOWN
+2017-04-18 12:04:59.334 [Thread-8] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 0
+2017-04-18 12:04:59.371 [Thread-8] INFO  c.n.e.DefaultEurekaServerContext - Shutting down ...
+2017-04-18 12:04:59.398 [Thread-8] INFO  c.n.e.DefaultEurekaServerContext - Shut down
+2017-04-18 12:04:59.399 [Thread-7] INFO  o.s.c.n.e.s.EurekaServerBootstrap - isAws returned false
+2017-04-18 12:04:59.400 [Thread-7] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Initialized server context
+2017-04-18 12:04:59.400 [Thread-7] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Got 1 instances from neighboring DS node
+2017-04-18 12:04:59.400 [Thread-7] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Renew threshold is: 1
+2017-04-18 12:04:59.400 [Thread-7] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Changing status to UP
+2017-04-18 12:04:59.405 [Thread-7] ERROR o.s.c.n.e.s.EurekaServerBootstrap - Cannot bootstrap eureka server :
+java.lang.IllegalStateException: Timer already cancelled.
+	at java.util.Timer.sched(Timer.java:397)
+	at java.util.Timer.schedule(Timer.java:248)
+	at com.netflix.eureka.registry.AbstractInstanceRegistry.postInit(AbstractInstanceRegistry.java:1235)
+	at com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl.openForTraffic(PeerAwareInstanceRegistryImpl.java:236)
+	at org.springframework.cloud.netflix.eureka.server.InstanceRegistry.openForTraffic(InstanceRegistry.java:75)
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap.initEurekaServerContext(EurekaServerBootstrap.java:154)
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap.contextInitialized(EurekaServerBootstrap.java:81)
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerInitializerConfiguration$1.run(EurekaServerInitializerConfiguration.java:70)
+	at java.lang.Thread.run(Thread.java:745)
+2017-04-18 12:04:59.405 [Thread-7] ERROR o.s.c.n.e.s.EurekaServerInitializerConfiguration - Could not initialize Eureka servlet context
+java.lang.RuntimeException: Cannot bootstrap eureka server :
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap.contextInitialized(EurekaServerBootstrap.java:87)
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerInitializerConfiguration$1.run(EurekaServerInitializerConfiguration.java:70)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalStateException: Timer already cancelled.
+	at java.util.Timer.sched(Timer.java:397)
+	at java.util.Timer.schedule(Timer.java:248)
+	at com.netflix.eureka.registry.AbstractInstanceRegistry.postInit(AbstractInstanceRegistry.java:1235)
+	at com.netflix.eureka.registry.PeerAwareInstanceRegistryImpl.openForTraffic(PeerAwareInstanceRegistryImpl.java:236)
+	at org.springframework.cloud.netflix.eureka.server.InstanceRegistry.openForTraffic(InstanceRegistry.java:75)
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap.initEurekaServerContext(EurekaServerBootstrap.java:154)
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap.contextInitialized(EurekaServerBootstrap.java:81)
+	... 2 common frames omitted
+2017-04-18 12:10:46.726 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [RegistryApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2017-04-18 12:10:46.742 [main] INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-04-18 12:10:46.753 [main] INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+2017-04-18 12:10:46.761 [main] INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+2017-04-18 12:10:46.763 [main] INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1dd02175, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@31206beb, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3e77a1ed, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3ffcd140]
+2017-04-18 12:10:46.774 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [RegistryApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2017-04-18 12:10:46.778 [main] INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-04-18 12:10:46.779 [main] INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+2017-04-18 12:10:46.779 [main] INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+2017-04-18 12:10:46.779 [main] INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@221af3c0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@62bd765, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@23a5fd2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@78a2da20]
+2017-04-18 12:10:48.038 [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@44821a96: startup date [Tue Apr 18 12:10:48 EEST 2017]; root of context hierarchy
+2017-04-18 12:10:48.280 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-04-18 12:10:48.301 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$30599132] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-18 12:10:48.953 [main] INFO  c.a.k.r.RegistryApplicationTests - No active profile set, falling back to default profiles: default
+2017-04-18 12:10:48.968 [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@12ed9db6: startup date [Tue Apr 18 12:10:48 EEST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@44821a96
+2017-04-18 12:10:50.281 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=be4ef400-52be-30bb-9ea0-e9a61de68317
+2017-04-18 12:10:50.311 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-04-18 12:10:50.346 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$30599132] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-18 12:10:50.361 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration$$EnhancerBySpringCGLIB$$63378c68] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-18 12:10:52.380 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2017-04-18 12:10:52.494 [main] INFO  c.netflix.discovery.DiscoveryClient - Client configured to neither register nor query for data.
+2017-04-18 12:10:52.633 [main] INFO  c.n.e.DefaultEurekaServerContext - Initializing ...
+2017-04-18 12:10:52.636 [main] INFO  c.n.eureka.cluster.PeerEurekaNodes - Adding new peer nodes [http://localhost:-1/eureka/]
+2017-04-18 12:10:53.233 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON encoding codec CloudJacksonJson
+2017-04-18 12:10:53.234 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON decoding codec CloudJacksonJson
+2017-04-18 12:10:53.234 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2017-04-18 12:10:53.234 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2017-04-18 12:10:53.607 [main] INFO  c.n.eureka.cluster.PeerEurekaNodes - Replica node URL:  http://localhost:-1/eureka/
+2017-04-18 12:10:53.632 [main] INFO  c.n.e.r.AbstractInstanceRegistry - Finished initializing remote region registries. All known remote regions: []
+2017-04-18 12:10:53.646 [main] INFO  c.n.e.DefaultEurekaServerContext - Initialized
+2017-04-18 12:10:54.857 [main] INFO  o.s.u.f.SpringTemplateLoader - SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.context.annotation.AnnotationConfigApplicationContext@12ed9db6: startup date [Tue Apr 18 12:10:48 EEST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@44821a96] and template loader path [classpath:/templates/]
+2017-04-18 12:10:54.987 [main] WARN  o.s.c.n.a.ArchaiusAutoConfiguration - No spring.application.name found, defaulting to 'application'
+2017-04-18 12:10:54.995 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2017-04-18 12:10:54.995 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-04-18 12:10:55.004 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2017-04-18 12:10:55.004 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-04-18 12:10:55.305 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 0
+2017-04-18 12:10:55.338 [Thread-7] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Setting the eureka configuration..
+2017-04-18 12:10:55.338 [main] INFO  c.a.k.r.RegistryApplicationTests - Started RegistryApplicationTests in 8.432 seconds (JVM running for 9.332)
+2017-04-18 12:10:55.338 [Thread-7] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Eureka data center value eureka.datacenter is not set, defaulting to default
+2017-04-18 12:10:55.339 [Thread-7] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Eureka environment value eureka.environment is not set, defaulting to test
+2017-04-18 12:10:55.356 [Thread-7] INFO  o.s.c.n.e.s.EurekaServerBootstrap - isAws returned false
+2017-04-18 12:10:55.357 [Thread-7] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Initialized server context
+2017-04-18 12:10:55.358 [Thread-7] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Got 1 instances from neighboring DS node
+2017-04-18 12:10:55.358 [Thread-7] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Renew threshold is: 1
+2017-04-18 12:10:55.358 [Thread-7] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Changing status to UP
+2017-04-18 12:10:55.377 [Thread-7] ERROR o.s.c.n.e.s.EurekaServerBootstrap - Cannot bootstrap eureka server :
+java.lang.NullPointerException: null
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap.contextInitialized(EurekaServerBootstrap.java:83)
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerInitializerConfiguration$1.run(EurekaServerInitializerConfiguration.java:70)
+	at java.lang.Thread.run(Thread.java:745)
+2017-04-18 12:10:55.378 [Thread-7] ERROR o.s.c.n.e.s.EurekaServerInitializerConfiguration - Could not initialize Eureka servlet context
+java.lang.RuntimeException: Cannot bootstrap eureka server :
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap.contextInitialized(EurekaServerBootstrap.java:87)
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerInitializerConfiguration$1.run(EurekaServerInitializerConfiguration.java:70)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NullPointerException: null
+	at org.springframework.cloud.netflix.eureka.server.EurekaServerBootstrap.contextInitialized(EurekaServerBootstrap.java:83)
+	... 2 common frames omitted
+2017-04-18 12:10:55.520 [Thread-8] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@12ed9db6: startup date [Tue Apr 18 12:10:48 EEST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@44821a96
+2017-04-18 12:10:55.531 [Thread-8] INFO  o.s.c.n.e.EurekaDiscoveryClientConfiguration - Unregistering application unknown with eureka with status DOWN
+2017-04-18 12:10:55.534 [Thread-8] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 0
+2017-04-18 12:10:55.541 [Thread-8] INFO  c.n.e.DefaultEurekaServerContext - Shutting down ...
+2017-04-18 12:10:55.549 [Thread-8] INFO  c.n.e.DefaultEurekaServerContext - Shut down
+2017-04-18 13:38:01.796 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.declaratiiavere.registry.RegistryApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2017-04-18 13:38:01.813 [main] INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-04-18 13:38:01.820 [main] INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+2017-04-18 13:38:01.826 [main] INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+2017-04-18 13:38:01.828 [main] INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1dd02175, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@31206beb, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3e77a1ed, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3ffcd140]
+2017-04-18 13:38:01.842 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.declaratiiavere.registry.RegistryApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2017-04-18 13:38:01.859 [main] INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2017-04-18 13:38:01.860 [main] INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+2017-04-18 13:38:01.861 [main] INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Could not instantiate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+2017-04-18 13:38:01.862 [main] INFO  o.s.t.c.s.DefaultTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@221af3c0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@62bd765, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@23a5fd2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@78a2da20]
+2017-04-18 13:38:03.290 [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@44821a96: startup date [Tue Apr 18 13:38:03 EEST 2017]; root of context hierarchy
+2017-04-18 13:38:03.600 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-04-18 13:38:03.619 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$30599132] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-18 13:38:04.329 [main] INFO  c.r.r.RegistryApplicationTests - No active profile set, falling back to default profiles: default
+2017-04-18 13:38:04.346 [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@12ed9db6: startup date [Tue Apr 18 13:38:04 EEST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@44821a96
+2017-04-18 13:38:05.557 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=be4ef400-52be-30bb-9ea0-e9a61de68317
+2017-04-18 13:38:05.588 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-04-18 13:38:05.628 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$30599132] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-18 13:38:05.645 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.RefreshEndpointAutoConfiguration$$EnhancerBySpringCGLIB$$63378c68] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-18 13:38:06.985 [main] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2017-04-18 13:38:07.085 [main] INFO  c.netflix.discovery.DiscoveryClient - Client configured to neither register nor query for data.
+2017-04-18 13:38:07.209 [main] INFO  c.n.e.DefaultEurekaServerContext - Initializing ...
+2017-04-18 13:38:07.213 [main] INFO  c.n.eureka.cluster.PeerEurekaNodes - Adding new peer nodes [http://localhost:-1/eureka/]
+2017-04-18 13:38:07.629 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON encoding codec CloudJacksonJson
+2017-04-18 13:38:07.629 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using JSON decoding codec CloudJacksonJson
+2017-04-18 13:38:07.629 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML encoding codec XStreamXml
+2017-04-18 13:38:07.629 [main] INFO  c.n.d.p.DiscoveryJerseyProvider - Using XML decoding codec XStreamXml
+2017-04-18 13:38:07.967 [main] INFO  c.n.eureka.cluster.PeerEurekaNodes - Replica node URL:  http://localhost:-1/eureka/
+2017-04-18 13:38:07.983 [main] INFO  c.n.e.r.AbstractInstanceRegistry - Finished initializing remote region registries. All known remote regions: []
+2017-04-18 13:38:07.987 [main] INFO  c.n.e.DefaultEurekaServerContext - Initialized
+2017-04-18 13:38:09.373 [main] INFO  o.s.u.f.SpringTemplateLoader - SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.context.annotation.AnnotationConfigApplicationContext@12ed9db6: startup date [Tue Apr 18 13:38:04 EEST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@44821a96] and template loader path [classpath:/templates/]
+2017-04-18 13:38:09.522 [main] WARN  o.s.c.n.a.ArchaiusAutoConfiguration - No spring.application.name found, defaulting to 'application'
+2017-04-18 13:38:09.529 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2017-04-18 13:38:09.530 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-04-18 13:38:09.538 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2017-04-18 13:38:09.538 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-04-18 13:38:09.875 [main] INFO  o.s.c.s.DefaultLifecycleProcessor - Starting beans in phase 0
+2017-04-18 13:38:09.904 [main] INFO  c.r.r.RegistryApplicationTests - Started RegistryApplicationTests in 7.947 seconds (JVM running for 8.865)
+2017-04-18 13:38:09.928 [Thread-8] INFO  o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@12ed9db6: startup date [Tue Apr 18 13:38:04 EEST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@44821a96
+2017-04-18 13:38:09.936 [Thread-8] INFO  o.s.c.n.e.EurekaDiscoveryClientConfiguration - Unregistering application unknown with eureka with status DOWN
+2017-04-18 13:38:09.937 [Thread-8] INFO  o.s.c.s.DefaultLifecycleProcessor - Stopping beans in phase 0
+2017-04-18 13:38:09.948 [Thread-8] INFO  c.n.e.DefaultEurekaServerContext - Shutting down ...
+2017-04-18 13:38:09.954 [Thread-7] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Setting the eureka configuration..
+2017-04-18 13:38:09.955 [Thread-7] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2017-04-18 13:38:09.955 [Thread-7] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2017-04-18 13:38:09.955 [Thread-7] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Eureka data center value eureka.datacenter is not set, defaulting to default
+2017-04-18 13:38:09.956 [Thread-7] INFO  o.s.c.n.e.s.EurekaServerBootstrap - Eureka environment value eureka.environment is not set, defaulting to test
+2017-04-18 13:38:09.967 [Thread-8] INFO  c.n.e.DefaultEurekaServerContext - Shut down
