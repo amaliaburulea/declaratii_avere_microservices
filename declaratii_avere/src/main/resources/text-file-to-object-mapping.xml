@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<textFileToObjectMappings>
+
+    <mapping
+            fileType="RevenueDeclarationInfo"
+            fileCellDelimiter='|'
+            fileFormat="delimited"
+            fileEncoding="UTF-8"
+            hasTitleRecord="true"
+            className="declaratiiavere.RevenueDeclarationInfo">
+        <fieldMapping fileFieldName="ndem" objectAttributeName="lastName"/>
+        <fieldMapping fileFieldName="pndem" objectAttributeName="firstName"/>
+    </mapping>
+
+</textFileToObjectMappings>
+
+
