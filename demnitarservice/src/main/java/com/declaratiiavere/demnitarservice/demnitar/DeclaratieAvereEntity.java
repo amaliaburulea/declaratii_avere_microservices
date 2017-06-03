@@ -40,6 +40,9 @@ public class DeclaratieAvereEntity extends EntityBase {
     @Column(name ="grup_politic")
     private String grupPolitic;
 
+    @Column(name ="link_declaratie")
+    private String linkDeclaratie;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "demnitar_id", nullable = false, insertable = false, updatable = false)
     private DemnitarEntity demnitarEntity;
@@ -136,6 +139,14 @@ public class DeclaratieAvereEntity extends EntityBase {
 
     public void setGrupPolitic(String grupPolitic) {
         this.grupPolitic = grupPolitic;
+    }
+
+    public String getLinkDeclaratie() {
+        return linkDeclaratie;
+    }
+
+    public void setLinkDeclaratie(String linkDeclaratie) {
+        this.linkDeclaratie = linkDeclaratie;
     }
 
     public Set<DeclaratieAvereAlteActiveEntity> getDeclaratieAvereAlteActiveEntitySet() {

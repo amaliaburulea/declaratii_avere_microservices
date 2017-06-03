@@ -25,6 +25,7 @@ public class DeclaratieAvereInfo {
     private String institutie;
     private String institutie2;
     private String grupPolitic;
+    private String linkDeclaratie;
 
     private List<DeclaratieAvereAlteActiveInfo> declaratieAvereAlteActiveInfoList;
     private List<DeclaratieAvereBunImobilInfo> declaratieAvereBunImobilInfoList;
@@ -118,6 +119,14 @@ public class DeclaratieAvereInfo {
         this.grupPolitic = grupPolitic;
     }
 
+    public String getLinkDeclaratie() {
+        return linkDeclaratie;
+    }
+
+    public void setLinkDeclaratie(String linkDeclaratie) {
+        this.linkDeclaratie = linkDeclaratie;
+    }
+
     public List<DeclaratieAvereAlteActiveInfo> getDeclaratieAvereAlteActiveInfoList() {
         return declaratieAvereAlteActiveInfoList;
     }
@@ -197,4 +206,5 @@ public class DeclaratieAvereInfo {
     public void setDeclaratieAvereVenitInfoList(List<DeclaratieAvereVenitInfo> declaratieAvereVenitInfoList) {
         this.declaratieAvereVenitInfoList = declaratieAvereVenitInfoList;
     }
+
 }

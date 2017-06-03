@@ -49,7 +49,8 @@ CREATE TABLE IF NOT EXISTS `declaratie_avere` (
   `functie2` varchar(200) DEFAULT NULL,
   `institutie` varchar(400) NOT NULL,
   `institutie2` varchar(400) DEFAULT NULL,
-  `grup_politic` varchar(200) DEFAULT NULL,
+  `grup_politic` varchar(200) DEFAULT NULL
+  `link_declaratie` VARCHAR(200) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `declaratieAvere_unique` (`demnitar_id`,`data_declaratiei`),
   CONSTRAINT `declaratieAvere_demnitar_fk` FOREIGN KEY (`demnitar_id`) REFERENCES `demnitar` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION

@@ -131,6 +131,7 @@ public class DemnitarService {
         declaratieAvereInfo.setFunctie2(declaratieAvereEntity.getFunctie2());
         declaratieAvereInfo.setInstitutie(declaratieAvereEntity.getInstitutie());
         declaratieAvereInfo.setInstitutie2(declaratieAvereEntity.getInstitutie2());
+        declaratieAvereInfo.setLinkDeclaratie(declaratieAvereEntity.getLinkDeclaratie());
 
         List<DeclaratieAvereAlteActiveInfo> declaratieActiveAlteActiveInfoList = new ArrayList<>();
 
@@ -507,6 +508,7 @@ public class DemnitarService {
         declaratieAvereEntity.setFunctie2(declaratieAvereInfo.getFunctie2());
         declaratieAvereEntity.setInstitutie(declaratieAvereInfo.getInstitutie());
         declaratieAvereEntity.setInstitutie2(declaratieAvereInfo.getInstitutie2());
+        declaratieAvereEntity.setLinkDeclaratie(declaratieAvereInfo.getLinkDeclaratie());
 
         populateDeclaratieAvereAlteActiveEntitySet(declaratieAvereEntity.getDeclaratieAvereAlteActiveEntitySet(),
                 declaratieAvereEntity, declaratieAvereInfo);

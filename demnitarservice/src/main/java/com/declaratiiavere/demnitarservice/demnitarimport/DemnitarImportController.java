@@ -198,6 +198,8 @@ public class DemnitarImportController {
         declaratieAvereInfo.setDataDeclaratiei(dataDeclaratiei);
         declaratieAvereInfo.setFunctie(revenueDeclarationInfo.getFunctie());
         declaratieAvereInfo.setInstitutie(revenueDeclarationInfo.getInstitutie());
+        declaratieAvereInfo.setLinkDeclaratie(revenueDeclarationInfo.getLinkDeclaratie());
+
 
         List<DeclaratieAvereAlteActiveInfo> declaratieAvereAlteActiveInfoList = getDeclaratieAvereAlteActiveInfoList(revenueDeclarationInfo);
         declaratieAvereInfo.setDeclaratieAvereAlteActiveInfoList(declaratieAvereAlteActiveInfoList);
@@ -2619,6 +2621,7 @@ public class DemnitarImportController {
         columnMapping.put("datSem", "dataDeclaratiei");
         columnMapping.put("funct", "functie");
         columnMapping.put("inst", "institutie");
+        columnMapping.put("l_Fis", "linkDeclaratie");
 
         // teren 1
         columnMapping.put("dimobt", "existaTerenuri1");

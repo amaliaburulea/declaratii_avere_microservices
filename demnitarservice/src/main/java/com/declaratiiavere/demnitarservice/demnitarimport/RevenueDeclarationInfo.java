@@ -11,6 +11,7 @@ public class RevenueDeclarationInfo {
     private String dataDeclaratiei;
     private String functie;
     private String institutie;
+    private String linkDeclaratie;
 
     // teren 1
     private String existaTerenuri1;
@@ -990,6 +991,14 @@ public class RevenueDeclarationInfo {
 
     public void setInstitutie(String institutie) {
         this.institutie = institutie;
+    }
+
+    public String getLinkDeclaratie() {
+        return linkDeclaratie;
+    }
+
+    public void setLinkDeclaratie(String linkDeclaratie) {
+        this.linkDeclaratie = linkDeclaratie;
     }
 
     public String getExistaTerenuri1() {
