@@ -19,6 +19,7 @@ public class RevenueDeclarationInfo {
     private String teren1Categoria;
     private String teren1AnDobindire;
     private String teren1Suprafata;
+    private String teren1ExplicatieSuprafata;
     private String teren1UnitateDeMasura;
     private String teren1CotaParte;
     private String teren1ModDobandire;
@@ -30,6 +31,7 @@ public class RevenueDeclarationInfo {
     private String teren2Categoria;
     private String teren2AnDobindire;
     private String teren2Suprafata;
+    private String teren2ExplicatieSuprafata;
     private String teren2UnitateDeMasura;
     private String teren2CotaParte;
     private String teren2ModDobandire;
@@ -41,6 +43,7 @@ public class RevenueDeclarationInfo {
     private String teren3Categoria;
     private String teren3AnDobindire;
     private String teren3Suprafata;
+    private String teren3ExplicatieSuprafata;
     private String teren3UnitateDeMasura;
     private String teren3CotaParte;
     private String teren3ModDobandire;
@@ -52,6 +55,7 @@ public class RevenueDeclarationInfo {
     private String teren4Categoria;
     private String teren4AnDobindire;
     private String teren4Suprafata;
+    private String teren4ExplicatieSuprafata;
     private String teren4UnitateDeMasura;
     private String teren4CotaParte;
     private String teren4ModDobandire;
@@ -63,6 +67,7 @@ public class RevenueDeclarationInfo {
     private String teren5Categoria;
     private String teren5AnDobindire;
     private String teren5Suprafata;
+    private String teren5ExplicatieSuprafata;
     private String teren5UnitateDeMasura;
     private String teren5CotaParte;
     private String teren5ModDobandire;
@@ -74,6 +79,7 @@ public class RevenueDeclarationInfo {
     private String teren6Categoria;
     private String teren6AnDobindire;
     private String teren6Suprafata;
+    private String teren6ExplicatieSuprafata;
     private String teren6UnitateDeMasura;
     private String teren6CotaParte;
     private String teren6ModDobandire;
@@ -85,6 +91,7 @@ public class RevenueDeclarationInfo {
     private String teren7Categoria;
     private String teren7AnDobindire;
     private String teren7Suprafata;
+    private String teren7ExplicatieSuprafata;
     private String teren7UnitateDeMasura;
     private String teren7CotaParte;
     private String teren7ModDobandire;
@@ -96,6 +103,7 @@ public class RevenueDeclarationInfo {
     private String teren8Categoria;
     private String teren8AnDobindire;
     private String teren8Suprafata;
+    private String teren8ExplicatieSuprafata;
     private String teren8UnitateDeMasura;
     private String teren8CotaParte;
     private String teren8ModDobandire;
@@ -107,6 +115,7 @@ public class RevenueDeclarationInfo {
     private String teren9Categoria;
     private String teren9AnDobindire;
     private String teren9Suprafata;
+    private String teren9ExplicatieSuprafata;
     private String teren9UnitateDeMasura;
     private String teren9CotaParte;
     private String teren9ModDobandire;
@@ -118,6 +127,7 @@ public class RevenueDeclarationInfo {
     private String teren10Categoria;
     private String teren10AnDobindire;
     private String teren10Suprafata;
+    private String teren10ExplicatieSuprafata;
     private String teren10UnitateDeMasura;
     private String teren10CotaParte;
     private String teren10ModDobandire;
@@ -129,6 +139,7 @@ public class RevenueDeclarationInfo {
     private String teren11Categoria;
     private String teren11AnDobindire;
     private String teren11Suprafata;
+    private String teren11ExplicatieSuprafata;
     private String teren11UnitateDeMasura;
     private String teren11CotaParte;
     private String teren11ModDobandire;
@@ -140,6 +151,7 @@ public class RevenueDeclarationInfo {
     private String teren12Categoria;
     private String teren12AnDobindire;
     private String teren12Suprafata;
+    private String teren12ExplicatieSuprafata;
     private String teren12UnitateDeMasura;
     private String teren12CotaParte;
     private String teren12ModDobandire;
@@ -151,6 +163,7 @@ public class RevenueDeclarationInfo {
     private String teren13Categoria;
     private String teren13AnDobindire;
     private String teren13Suprafata;
+    private String teren13ExplicatieSuprafata;
     private String teren13UnitateDeMasura;
     private String teren13CotaParte;
     private String teren13ModDobandire;
@@ -162,6 +175,7 @@ public class RevenueDeclarationInfo {
     private String teren14Categoria;
     private String teren14AnDobindire;
     private String teren14Suprafata;
+    private String teren14ExplicatieSuprafata;
     private String teren14UnitateDeMasura;
     private String teren14CotaParte;
     private String teren14ModDobandire;
@@ -173,6 +187,7 @@ public class RevenueDeclarationInfo {
     private String teren15Categoria;
     private String teren15AnDobindire;
     private String teren15Suprafata;
+    private String teren15ExplicatieSuprafata;
     private String teren15UnitateDeMasura;
     private String teren15CotaParte;
     private String teren15ModDobandire;
@@ -187,6 +202,7 @@ public class RevenueDeclarationInfo {
     private String cladire1Categoria;
     private String cladire1AnDobindire;
     private String cladire1Suprafata;
+    private String cladire1ExplicatieSuprafata;
     private String cladire1UnitateDeMasura;
     private String cladire1CotaParte;
     private String cladire1ModDobandire;
@@ -198,6 +214,7 @@ public class RevenueDeclarationInfo {
     private String cladire2Categoria;
     private String cladire2AnDobindire;
     private String cladire2Suprafata;
+    private String cladire2ExplicatieSuprafata;
     private String cladire2UnitateDeMasura;
     private String cladire2CotaParte;
     private String cladire2ModDobandire;
@@ -209,6 +226,7 @@ public class RevenueDeclarationInfo {
     private String cladire3Categoria;
     private String cladire3AnDobindire;
     private String cladire3Suprafata;
+    private String cladire3ExplicatieSuprafata;
     private String cladire3UnitateDeMasura;
     private String cladire3CotaParte;
     private String cladire3ModDobandire;
@@ -220,6 +238,7 @@ public class RevenueDeclarationInfo {
     private String cladire4Categoria;
     private String cladire4AnDobindire;
     private String cladire4Suprafata;
+    private String cladire4ExplicatieSuprafata;
     private String cladire4UnitateDeMasura;
     private String cladire4CotaParte;
     private String cladire4ModDobandire;
@@ -231,6 +250,7 @@ public class RevenueDeclarationInfo {
     private String cladire5Categoria;
     private String cladire5AnDobindire;
     private String cladire5Suprafata;
+    private String cladire5ExplicatieSuprafata;
     private String cladire5UnitateDeMasura;
     private String cladire5CotaParte;
     private String cladire5ModDobandire;
@@ -242,6 +262,7 @@ public class RevenueDeclarationInfo {
     private String cladire6Categoria;
     private String cladire6AnDobindire;
     private String cladire6Suprafata;
+    private String cladire6ExplicatieSuprafata;
     private String cladire6UnitateDeMasura;
     private String cladire6CotaParte;
     private String cladire6ModDobandire;
@@ -253,6 +274,7 @@ public class RevenueDeclarationInfo {
     private String cladire7Categoria;
     private String cladire7AnDobindire;
     private String cladire7Suprafata;
+    private String cladire7ExplicatieSuprafata;
     private String cladire7UnitateDeMasura;
     private String cladire7CotaParte;
     private String cladire7ModDobandire;
@@ -264,6 +286,7 @@ public class RevenueDeclarationInfo {
     private String cladire8Categoria;
     private String cladire8AnDobindire;
     private String cladire8Suprafata;
+    private String cladire8ExplicatieSuprafata;
     private String cladire8UnitateDeMasura;
     private String cladire8CotaParte;
     private String cladire8ModDobandire;
@@ -275,6 +298,7 @@ public class RevenueDeclarationInfo {
     private String cladire9Categoria;
     private String cladire9AnDobindire;
     private String cladire9Suprafata;
+    private String cladire9ExplicatieSuprafata;
     private String cladire9UnitateDeMasura;
     private String cladire9CotaParte;
     private String cladire9ModDobandire;
@@ -286,6 +310,7 @@ public class RevenueDeclarationInfo {
     private String cladire10Categoria;
     private String cladire10AnDobindire;
     private String cladire10Suprafata;
+    private String cladire10ExplicatieSuprafata;
     private String cladire10UnitateDeMasura;
     private String cladire10CotaParte;
     private String cladire10ModDobandire;
@@ -297,6 +322,7 @@ public class RevenueDeclarationInfo {
     private String cladire11Categoria;
     private String cladire11AnDobindire;
     private String cladire11Suprafata;
+    private String cladire11ExplicatieSuprafata;
     private String cladire11UnitateDeMasura;
     private String cladire11CotaParte;
     private String cladire11ModDobandire;
@@ -308,6 +334,7 @@ public class RevenueDeclarationInfo {
     private String cladire12Categoria;
     private String cladire12AnDobindire;
     private String cladire12Suprafata;
+    private String cladire12ExplicatieSuprafata;
     private String cladire12UnitateDeMasura;
     private String cladire12CotaParte;
     private String cladire12ModDobandire;
@@ -319,6 +346,7 @@ public class RevenueDeclarationInfo {
     private String cladire13Categoria;
     private String cladire13AnDobindire;
     private String cladire13Suprafata;
+    private String cladire13ExplicatieSuprafata;
     private String cladire13UnitateDeMasura;
     private String cladire13CotaParte;
     private String cladire13ModDobandire;
@@ -330,6 +358,7 @@ public class RevenueDeclarationInfo {
     private String cladire14Categoria;
     private String cladire14AnDobindire;
     private String cladire14Suprafata;
+    private String cladire14ExplicatieSuprafata;
     private String cladire14UnitateDeMasura;
     private String cladire14CotaParte;
     private String cladire14ModDobandire;
@@ -341,6 +370,7 @@ public class RevenueDeclarationInfo {
     private String cladire15Categoria;
     private String cladire15AnDobindire;
     private String cladire15Suprafata;
+    private String cladire15ExplicatieSuprafata;
     private String cladire15UnitateDeMasura;
     private String cladire15CotaParte;
     private String cladire15ModDobandire;
@@ -1040,6 +1070,14 @@ public class RevenueDeclarationInfo {
     public void setTeren1Suprafata(String teren1Suprafata) {
         this.teren1Suprafata = teren1Suprafata;
     }
+    
+    public String getTeren1ExplicatieSuprafata(){
+        return teren1ExplicatieSuprafata;
+    }
+    
+    public void setTeren1ExplicatieSuprafata(String teren1ExplicatieSuprafata){
+        this.teren1ExplicatieSuprafata = teren1ExplicatieSuprafata;
+    }
 
     public String getTeren1UnitateDeMasura() {
         return teren1UnitateDeMasura;
@@ -1111,6 +1149,14 @@ public class RevenueDeclarationInfo {
 
     public void setTeren2Suprafata(String teren2Suprafata) {
         this.teren2Suprafata = teren2Suprafata;
+    }
+    
+    public String getTeren2ExplicatieSuprafata(){
+        return teren2ExplicatieSuprafata;
+    }
+
+    public void setTeren2ExplicatieSuprafata(String teren2ExplicatieSuprafata){
+        this.teren2ExplicatieSuprafata = teren2ExplicatieSuprafata;
     }
 
     public String getTeren2UnitateDeMasura() {
@@ -1185,6 +1231,14 @@ public class RevenueDeclarationInfo {
         this.teren3Suprafata = teren3Suprafata;
     }
 
+    public String getTeren3ExplicatieSuprafata(){
+        return teren3ExplicatieSuprafata;
+    }
+
+    public void setTeren3ExplicatieSuprafata(String teren3ExplicatieSuprafata){
+        this.teren3ExplicatieSuprafata = teren3ExplicatieSuprafata;
+    }
+
     public String getTeren3UnitateDeMasura() {
         return teren3UnitateDeMasura;
     }
@@ -1255,6 +1309,14 @@ public class RevenueDeclarationInfo {
 
     public void setTeren4Suprafata(String teren4Suprafata) {
         this.teren4Suprafata = teren4Suprafata;
+    }
+
+    public String getTeren4ExplicatieSuprafata(){
+        return teren4ExplicatieSuprafata;
+    }
+
+    public void setTeren4ExplicatieSuprafata(String teren4ExplicatieSuprafata){
+        this.teren4ExplicatieSuprafata = teren4ExplicatieSuprafata;
     }
 
     public String getTeren4UnitateDeMasura() {
@@ -1329,6 +1391,14 @@ public class RevenueDeclarationInfo {
         this.teren5Suprafata = teren5Suprafata;
     }
 
+    public String getTeren5ExplicatieSuprafata(){
+        return teren5ExplicatieSuprafata;
+    }
+
+    public void setTeren5ExplicatieSuprafata(String teren5ExplicatieSuprafata){
+        this.teren5ExplicatieSuprafata = teren5ExplicatieSuprafata;
+    }
+
     public String getTeren5UnitateDeMasura() {
         return teren5UnitateDeMasura;
     }
@@ -1399,6 +1469,14 @@ public class RevenueDeclarationInfo {
 
     public void setTeren6Suprafata(String teren6Suprafata) {
         this.teren6Suprafata = teren6Suprafata;
+    }
+
+    public String getTeren6ExplicatieSuprafata(){
+        return teren6ExplicatieSuprafata;
+    }
+
+    public void setTeren6ExplicatieSuprafata(String teren6ExplicatieSuprafata){
+        this.teren6ExplicatieSuprafata = teren6ExplicatieSuprafata;
     }
 
     public String getTeren6UnitateDeMasura() {
@@ -1473,6 +1551,14 @@ public class RevenueDeclarationInfo {
         this.teren7Suprafata = teren7Suprafata;
     }
 
+    public String getTeren7ExplicatieSuprafata(){
+        return teren7ExplicatieSuprafata;
+    }
+
+    public void setTeren7ExplicatieSuprafata(String teren7ExplicatieSuprafata){
+        this.teren7ExplicatieSuprafata = teren7ExplicatieSuprafata;
+    }
+
     public String getTeren7UnitateDeMasura() {
         return teren7UnitateDeMasura;
     }
@@ -1543,6 +1629,14 @@ public class RevenueDeclarationInfo {
 
     public void setTeren8Suprafata(String teren8Suprafata) {
         this.teren8Suprafata = teren8Suprafata;
+    }
+
+    public String getTeren8ExplicatieSuprafata(){
+        return teren8ExplicatieSuprafata;
+    }
+
+    public void setTeren8ExplicatieSuprafata(String teren8ExplicatieSuprafata){
+        this.teren8ExplicatieSuprafata = teren8ExplicatieSuprafata;
     }
 
     public String getTeren8UnitateDeMasura() {
@@ -1617,6 +1711,14 @@ public class RevenueDeclarationInfo {
         this.teren9Suprafata = teren9Suprafata;
     }
 
+    public String getTeren9ExplicatieSuprafata(){
+        return teren9ExplicatieSuprafata;
+    }
+
+    public void setTeren9ExplicatieSuprafata(String teren9ExplicatieSuprafata){
+        this.teren9ExplicatieSuprafata = teren9ExplicatieSuprafata;
+    }
+
     public String getTeren9UnitateDeMasura() {
         return teren9UnitateDeMasura;
     }
@@ -1687,6 +1789,14 @@ public class RevenueDeclarationInfo {
 
     public void setTeren10Suprafata(String teren10Suprafata) {
         this.teren10Suprafata = teren10Suprafata;
+    }
+
+    public String getTeren10ExplicatieSuprafata(){
+        return teren10ExplicatieSuprafata;
+    }
+
+    public void setTeren10ExplicatieSuprafata(String teren10ExplicatieSuprafata){
+        this.teren10ExplicatieSuprafata = teren10ExplicatieSuprafata;
     }
 
     public String getTeren10UnitateDeMasura() {
@@ -1761,6 +1871,14 @@ public class RevenueDeclarationInfo {
         this.teren11Suprafata = teren11Suprafata;
     }
 
+    public String getTeren11ExplicatieSuprafata(){
+        return teren11ExplicatieSuprafata;
+    }
+
+    public void setTeren11ExplicatieSuprafata(String teren11ExplicatieSuprafata){
+        this.teren11ExplicatieSuprafata = teren11ExplicatieSuprafata;
+    }
+
     public String getTeren11UnitateDeMasura() {
         return teren11UnitateDeMasura;
     }
@@ -1831,6 +1949,14 @@ public class RevenueDeclarationInfo {
 
     public void setTeren12Suprafata(String teren12Suprafata) {
         this.teren12Suprafata = teren12Suprafata;
+    }
+
+    public String getTeren12ExplicatieSuprafata(){
+        return teren12ExplicatieSuprafata;
+    }
+
+    public void setTeren12ExplicatieSuprafata(String teren12ExplicatieSuprafata){
+        this.teren12ExplicatieSuprafata = teren12ExplicatieSuprafata;
     }
 
     public String getTeren12UnitateDeMasura() {
@@ -1905,6 +2031,14 @@ public class RevenueDeclarationInfo {
         this.teren13Suprafata = teren13Suprafata;
     }
 
+    public String getTeren13ExplicatieSuprafata(){
+        return teren13ExplicatieSuprafata;
+    }
+
+    public void setTeren13ExplicatieSuprafata(String teren13ExplicatieSuprafata){
+        this.teren13ExplicatieSuprafata = teren13ExplicatieSuprafata;
+    }
+
     public String getTeren13UnitateDeMasura() {
         return teren13UnitateDeMasura;
     }
@@ -1977,6 +2111,14 @@ public class RevenueDeclarationInfo {
         this.teren14Suprafata = teren14Suprafata;
     }
 
+    public String getTeren14ExplicatieSuprafata(){
+        return teren14ExplicatieSuprafata;
+    }
+
+    public void setTeren14ExplicatieSuprafata(String teren14ExplicatieSuprafata){
+        this.teren14ExplicatieSuprafata = teren14ExplicatieSuprafata;
+    }
+
     public String getTeren14UnitateDeMasura() {
         return teren14UnitateDeMasura;
     }
@@ -2047,6 +2189,14 @@ public class RevenueDeclarationInfo {
 
     public void setTeren15Suprafata(String teren15Suprafata) {
         this.teren15Suprafata = teren15Suprafata;
+    }
+
+    public String getTeren15ExplicatieSuprafata(){
+        return teren15ExplicatieSuprafata;
+    }
+
+    public void setTeren15ExplicatieSuprafata(String teren15ExplicatieSuprafata){
+        this.teren15ExplicatieSuprafata = teren15ExplicatieSuprafata;
     }
 
     public String getTeren15UnitateDeMasura() {
@@ -2123,6 +2273,14 @@ public class RevenueDeclarationInfo {
 
     public String getCladire1Suprafata() {
         return cladire1Suprafata;
+    }
+    
+    public String getCladire1ExplicatieSuprafata(){
+        return cladire1ExplicatieSuprafata;
+    }
+    
+    public void setCladire1ExplicatieSuprafata(String cladire1ExplicatieSuprafata){
+        this.cladire1ExplicatieSuprafata = cladire1ExplicatieSuprafata;
     }
 
     public void setCladire1Suprafata(String cladire1Suprafata) {
@@ -2201,6 +2359,14 @@ public class RevenueDeclarationInfo {
         this.cladire2Suprafata = cladire2Suprafata;
     }
 
+    public String getCladire2ExplicatieSuprafata(){
+        return cladire2ExplicatieSuprafata;
+    }
+
+    public void setCladire2ExplicatieSuprafata(String cladire2ExplicatieSuprafata){
+        this.cladire2ExplicatieSuprafata = cladire2ExplicatieSuprafata;
+    }
+
     public String getCladire2UnitateDeMasura() {
         return cladire2UnitateDeMasura;
     }
@@ -2271,6 +2437,14 @@ public class RevenueDeclarationInfo {
 
     public void setCladire3Suprafata(String cladire3Suprafata) {
         this.cladire3Suprafata = cladire3Suprafata;
+    }
+
+    public String getCladire3ExplicatieSuprafata(){
+        return cladire3ExplicatieSuprafata;
+    }
+
+    public void setCladire3ExplicatieSuprafata(String cladire3ExplicatieSuprafata){
+        this.cladire3ExplicatieSuprafata = cladire3ExplicatieSuprafata;
     }
 
     public String getCladire3UnitateDeMasura() {
@@ -2345,6 +2519,14 @@ public class RevenueDeclarationInfo {
         this.cladire4Suprafata = cladire4Suprafata;
     }
 
+    public String getCladire4ExplicatieSuprafata(){
+        return cladire4ExplicatieSuprafata;
+    }
+
+    public void setCladire4ExplicatieSuprafata(String cladire4ExplicatieSuprafata){
+        this.cladire4ExplicatieSuprafata = cladire4ExplicatieSuprafata;
+    }
+
     public String getCladire4UnitateDeMasura() {
         return cladire4UnitateDeMasura;
     }
@@ -2415,6 +2597,14 @@ public class RevenueDeclarationInfo {
 
     public void setCladire5Suprafata(String cladire5Suprafata) {
         this.cladire5Suprafata = cladire5Suprafata;
+    }
+
+    public String getCladire5ExplicatieSuprafata(){
+        return cladire5ExplicatieSuprafata;
+    }
+
+    public void setCladire5ExplicatieSuprafata(String cladire5ExplicatieSuprafata){
+        this.cladire5ExplicatieSuprafata = cladire5ExplicatieSuprafata;
     }
 
     public String getCladire5UnitateDeMasura() {
@@ -2489,6 +2679,14 @@ public class RevenueDeclarationInfo {
         this.cladire6Suprafata = cladire6Suprafata;
     }
 
+    public String getCladire6ExplicatieSuprafata(){
+        return cladire6ExplicatieSuprafata;
+    }
+
+    public void setCladire6ExplicatieSuprafata(String cladire6ExplicatieSuprafata){
+        this.cladire6ExplicatieSuprafata = cladire6ExplicatieSuprafata;
+    }
+
     public String getCladire6UnitateDeMasura() {
         return cladire6UnitateDeMasura;
     }
@@ -2559,6 +2757,14 @@ public class RevenueDeclarationInfo {
 
     public void setCladire7Suprafata(String cladire7Suprafata) {
         this.cladire7Suprafata = cladire7Suprafata;
+    }
+
+    public String getCladire7ExplicatieSuprafata(){
+        return cladire7ExplicatieSuprafata;
+    }
+
+    public void setCladire7ExplicatieSuprafata(String cladire7ExplicatieSuprafata){
+        this.cladire7ExplicatieSuprafata = cladire7ExplicatieSuprafata;
     }
 
     public String getCladire7UnitateDeMasura() {
@@ -2633,6 +2839,14 @@ public class RevenueDeclarationInfo {
         this.cladire8Suprafata = cladire8Suprafata;
     }
 
+    public String getCladire8ExplicatieSuprafata(){
+        return cladire8ExplicatieSuprafata;
+    }
+
+    public void setCladire8ExplicatieSuprafata(String cladire8ExplicatieSuprafata){
+        this.cladire8ExplicatieSuprafata = cladire8ExplicatieSuprafata;
+    }
+
     public String getCladire8UnitateDeMasura() {
         return cladire8UnitateDeMasura;
     }
@@ -2705,6 +2919,14 @@ public class RevenueDeclarationInfo {
         this.cladire9Suprafata = cladire9Suprafata;
     }
 
+    public String getCladire9ExplicatieSuprafata(){
+        return cladire9ExplicatieSuprafata;
+    }
+
+    public void setCladire9ExplicatieSuprafata(String cladire9ExplicatieSuprafata){
+        this.cladire9ExplicatieSuprafata = cladire9ExplicatieSuprafata;
+    }
+
     public String getCladire9UnitateDeMasura() {
         return cladire9UnitateDeMasura;
     }
@@ -2759,6 +2981,14 @@ public class RevenueDeclarationInfo {
 
     public void setCladire10Categoria(String cladire10Categoria) {
         this.cladire10Categoria = cladire10Categoria;
+    }
+
+    public String getCladire10ExplicatieSuprafata(){
+        return cladire10ExplicatieSuprafata;
+    }
+
+    public void setCladire10ExplicatieSuprafata(String cladire10ExplicatieSuprafata){
+        this.cladire10ExplicatieSuprafata = cladire10ExplicatieSuprafata;
     }
 
     public String getCladire10AnDobindire() {
@@ -2849,6 +3079,14 @@ public class RevenueDeclarationInfo {
         this.cladire11Suprafata = cladire11Suprafata;
     }
 
+    public String getCladire11ExplicatieSuprafata(){
+        return cladire11ExplicatieSuprafata;
+    }
+
+    public void setCladire11ExplicatieSuprafata(String cladire11ExplicatieSuprafata){
+        this.cladire11ExplicatieSuprafata = cladire11ExplicatieSuprafata;
+    }
+
     public String getCladire11UnitateDeMasura() {
         return cladire11UnitateDeMasura;
     }
@@ -2919,6 +3157,14 @@ public class RevenueDeclarationInfo {
 
     public void setCladire12Suprafata(String cladire12Suprafata) {
         this.cladire12Suprafata = cladire12Suprafata;
+    }
+
+    public String getCladire12ExplicatieSuprafata(){
+        return cladire12ExplicatieSuprafata;
+    }
+
+    public void setCladire12ExplicatieSuprafata(String cladire12ExplicatieSuprafata){
+        this.cladire12ExplicatieSuprafata = cladire12ExplicatieSuprafata;
     }
 
     public String getCladire12UnitateDeMasura() {
@@ -2993,6 +3239,14 @@ public class RevenueDeclarationInfo {
         this.cladire13Suprafata = cladire13Suprafata;
     }
 
+    public String getCladire13ExplicatieSuprafata(){
+        return cladire13ExplicatieSuprafata;
+    }
+
+    public void setCladire13ExplicatieSuprafata(String cladire13ExplicatieSuprafata){
+        this.cladire13ExplicatieSuprafata = cladire13ExplicatieSuprafata;
+    }
+
     public String getCladire13UnitateDeMasura() {
         return cladire13UnitateDeMasura;
     }
@@ -3065,6 +3319,14 @@ public class RevenueDeclarationInfo {
         this.cladire14Suprafata = cladire14Suprafata;
     }
 
+    public String getCladire14ExplicatieSuprafata(){
+        return cladire14ExplicatieSuprafata;
+    }
+
+    public void setCladire14ExplicatieSuprafata(String cladire14ExplicatieSuprafata){
+        this.cladire14ExplicatieSuprafata = cladire14ExplicatieSuprafata;
+    }
+
     public String getCladire14UnitateDeMasura() {
         return cladire14UnitateDeMasura;
     }
@@ -3135,6 +3397,14 @@ public class RevenueDeclarationInfo {
 
     public void setCladire15Suprafata(String cladire15Suprafata) {
         this.cladire15Suprafata = cladire15Suprafata;
+    }
+
+    public String getCladire15ExplicatieSuprafata(){
+        return cladire15ExplicatieSuprafata;
+    }
+
+    public void setCladire15ExplicatieSuprafata(String cladire15ExplicatieSuprafata){
+        this.cladire15ExplicatieSuprafata = cladire15ExplicatieSuprafata;
     }
 
     public String getCladire15UnitateDeMasura() {

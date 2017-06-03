@@ -37,6 +37,9 @@ public class DeclaratieAvereBunImobilEntity {
     @Column(name ="suprafata")
     private BigDecimal suprafata;
 
+    @Column(name ="explicatie_suprafata")
+    private String explicatieSuprafata;
+
     @Column(name ="unitate_masura")
     private String unitateMasura;
 
@@ -115,6 +118,14 @@ public class DeclaratieAvereBunImobilEntity {
 
     public void setSuprafata(BigDecimal suprafata) {
         this.suprafata = suprafata;
+    }
+
+    public String getExplicatieSuprafata(){
+        return explicatieSuprafata;
+    }
+
+    public void setExplicatieSuprafata(String explicatieSuprafata){
+        this.explicatieSuprafata=explicatieSuprafata;
     }
 
     public String getUnitateMasura() {

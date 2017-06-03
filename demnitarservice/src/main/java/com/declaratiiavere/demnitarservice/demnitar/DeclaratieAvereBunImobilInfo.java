@@ -15,6 +15,7 @@ public class DeclaratieAvereBunImobilInfo {
     private Integer cladireCategorie;
     private String anDobandire;
     private BigDecimal suprafata;
+    private String explicatieSuprafata;
     private String unitateMasura;
     private String cotaParte;
     private String modDobandire;
@@ -74,6 +75,14 @@ public class DeclaratieAvereBunImobilInfo {
 
     public void setSuprafata(BigDecimal suprafata) {
         this.suprafata = suprafata;
+    }
+
+    public String getExplicatieSuprafata(){
+        return explicatieSuprafata;
+    }
+
+    public void setExplicatieSuprafata(String explicatieSuprafata){
+        this.explicatieSuprafata=explicatieSuprafata;
     }
 
     public String getUnitateMasura() {

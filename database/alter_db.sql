@@ -74,6 +74,7 @@ CREATE TABLE IF NOT EXISTS `declaratie_avere_bun_imobil` (
   `cladire_categorie` int(11) DEFAULT NULL COMMENT '1 - apartament, 2 - casă de locuit, 3 - casă de vacanţă, 4 - spaţii comerciale/de producţie, 5 - altă categorie decât cele de mai sus',
   `an_dobandire` varchar(100) NOT NULL,
   `suprafata` decimal(12,2) NOT NULL,
+  `explicatie_suprafata` TEXT DEFAULT NULL,
   `unitate_masura` varchar(10) DEFAULT NULL,
   `cota_parte` varchar(100) DEFAULT NULL,
   `mod_dobandire` text DEFAULT NULL,
