@@ -255,6 +255,7 @@ public class DemnitarService {
         declaratieActiveBunImobilInfo.setCladireCategorie(declaratieAvereBunImobilEntity.getCladireCategorie());
         declaratieActiveBunImobilInfo.setAnDobandire(declaratieAvereBunImobilEntity.getAnDobandire());
         declaratieActiveBunImobilInfo.setSuprafata(declaratieAvereBunImobilEntity.getSuprafata());
+        declaratieActiveBunImobilInfo.setExplicatieSuprafata(declaratieAvereBunImobilEntity.getExplicatieSuprafata());
         declaratieActiveBunImobilInfo.setUnitateMasura(declaratieAvereBunImobilEntity.getUnitateMasura());
         declaratieActiveBunImobilInfo.setCotaParte(declaratieAvereBunImobilEntity.getCotaParte());
         declaratieActiveBunImobilInfo.setModDobandire(declaratieAvereBunImobilEntity.getModDobandire());
@@ -1079,6 +1080,7 @@ public class DemnitarService {
         declaratieAvereBunImobilEntity.setCladireCategorie(declaratieAvereBunImobilInfo.getCladireCategorie());
         declaratieAvereBunImobilEntity.setAnDobandire(declaratieAvereBunImobilInfo.getAnDobandire());
         declaratieAvereBunImobilEntity.setSuprafata(declaratieAvereBunImobilInfo.getSuprafata());
+        declaratieAvereBunImobilEntity.setExplicatieSuprafata(declaratieAvereBunImobilInfo.getExplicatieSuprafata());
         declaratieAvereBunImobilEntity.setUnitateMasura(declaratieAvereBunImobilInfo.getUnitateMasura());
         declaratieAvereBunImobilEntity.setCotaParte(declaratieAvereBunImobilInfo.getCotaParte());
         declaratieAvereBunImobilEntity.setModDobandire(declaratieAvereBunImobilInfo.getModDobandire());

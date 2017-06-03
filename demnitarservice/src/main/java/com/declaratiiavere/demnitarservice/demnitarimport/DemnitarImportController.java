@@ -1663,6 +1663,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(true);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getTeren1Adresa());
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getTeren1ExplicatieSuprafata());
 
             try {
                 declaratieAvereBunImobilInfo.setTerenCategorie(new Integer(revenueDeclarationInfo.getTeren1Categoria().substring(0, 1)));
@@ -1681,11 +1682,11 @@ public class DemnitarImportController {
             } catch (NumberFormatException nfe) {
                 throw new ValidationException("getTeren1Suprafata format invalid " + revenueDeclarationInfo.getTeren1Suprafata());
             }
-
             declaratieAvereBunImobilInfo.setModDobandire(revenueDeclarationInfo.getTeren1ModDobandire());
             declaratieAvereBunImobilInfo.setTitular(revenueDeclarationInfo.getTeren1Titular());
             declaratieAvereBunImobilInfo.setCotaParte(revenueDeclarationInfo.getTeren1CotaParte());
             declaratieAvereBunImobilInfo.setUnitateMasura(revenueDeclarationInfo.getTeren1UnitateDeMasura());
+
 
             declaratieAvereBunImobilInfoList.add(declaratieAvereBunImobilInfo);
         }
@@ -1694,6 +1695,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(true);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getTeren2Adresa());
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getTeren2ExplicatieSuprafata());
 
             try {
                 declaratieAvereBunImobilInfo.setTerenCategorie(new Integer(revenueDeclarationInfo.getTeren2Categoria().substring(0, 1)));
@@ -1725,6 +1727,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(true);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getTeren3Adresa());
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getTeren3ExplicatieSuprafata());
 
             try {
                 declaratieAvereBunImobilInfo.setTerenCategorie(new Integer(revenueDeclarationInfo.getTeren3Categoria().substring(0, 1)));
@@ -1756,6 +1759,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(true);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getTeren4Adresa());
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getTeren4ExplicatieSuprafata());
 
             try {
                 declaratieAvereBunImobilInfo.setTerenCategorie(new Integer(revenueDeclarationInfo.getTeren4Categoria().substring(0, 1)));
@@ -1787,6 +1791,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(true);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getTeren5Adresa());
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getTeren5ExplicatieSuprafata());
 
             try {
                 declaratieAvereBunImobilInfo.setTerenCategorie(new Integer(revenueDeclarationInfo.getTeren5Categoria().substring(0, 1)));
@@ -1818,6 +1823,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(true);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getTeren6Adresa());
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getTeren6ExplicatieSuprafata());
 
             try {
                 declaratieAvereBunImobilInfo.setTerenCategorie(new Integer(revenueDeclarationInfo.getTeren6Categoria().substring(0, 1)));
@@ -1849,6 +1855,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(true);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getTeren7Adresa());
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getTeren7ExplicatieSuprafata());
 
             try {
                 declaratieAvereBunImobilInfo.setTerenCategorie(new Integer(revenueDeclarationInfo.getTeren7Categoria().substring(0, 1)));
@@ -1880,6 +1887,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(true);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getTeren8Adresa());
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getTeren8ExplicatieSuprafata());
 
             try {
                 declaratieAvereBunImobilInfo.setTerenCategorie(new Integer(revenueDeclarationInfo.getTeren8Categoria().substring(0, 1)));
@@ -1911,7 +1919,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(true);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getTeren9Adresa());
-
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getTeren9ExplicatieSuprafata());
             try {
                 declaratieAvereBunImobilInfo.setTerenCategorie(new Integer(revenueDeclarationInfo.getTeren9Categoria().substring(0, 1)));
             } catch (StringIndexOutOfBoundsException e) {
@@ -1942,6 +1950,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(true);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getTeren10Adresa());
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getTeren10ExplicatieSuprafata());
 
             try {
                 declaratieAvereBunImobilInfo.setTerenCategorie(new Integer(revenueDeclarationInfo.getTeren10Categoria().substring(0, 1)));
@@ -1973,6 +1982,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(true);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getTeren11Adresa());
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getTeren11ExplicatieSuprafata());
 
             try {
                 declaratieAvereBunImobilInfo.setTerenCategorie(new Integer(revenueDeclarationInfo.getTeren11Categoria().substring(0, 1)));
@@ -2004,6 +2014,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(true);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getTeren12Adresa());
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getTeren12ExplicatieSuprafata());
 
             try {
                 declaratieAvereBunImobilInfo.setTerenCategorie(new Integer(revenueDeclarationInfo.getTeren12Categoria().substring(0, 1)));
@@ -2035,6 +2046,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(true);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getTeren13Adresa());
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getTeren13ExplicatieSuprafata());
 
             try {
                 declaratieAvereBunImobilInfo.setTerenCategorie(new Integer(revenueDeclarationInfo.getTeren13Categoria().substring(0, 1)));
@@ -2066,6 +2078,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(true);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getTeren14Adresa());
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getTeren14ExplicatieSuprafata());
 
             try {
                 declaratieAvereBunImobilInfo.setTerenCategorie(new Integer(revenueDeclarationInfo.getTeren14Categoria().substring(0, 1)));
@@ -2097,6 +2110,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(true);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getTeren15Adresa());
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getTeren15ExplicatieSuprafata());
 
             try {
                 declaratieAvereBunImobilInfo.setTerenCategorie(new Integer(revenueDeclarationInfo.getTeren15Categoria().substring(0, 1)));
@@ -2131,6 +2145,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(false);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getCladire1Adresa());
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getCladire1ExplicatieSuprafata());
 
             try {
                 declaratieAvereBunImobilInfo.setCladireCategorie(new Integer(revenueDeclarationInfo.getCladire1Categoria().substring(0, 1)));
@@ -2163,6 +2178,7 @@ public class DemnitarImportController {
             declaratieAvereBunImobilInfo.setIsTeren(false);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getCladire2Adresa());
 
+
             try {
                 declaratieAvereBunImobilInfo.setCladireCategorie(new Integer(revenueDeclarationInfo.getCladire2Categoria().substring(0, 1)));
             } catch (StringIndexOutOfBoundsException e) {
@@ -2180,7 +2196,7 @@ public class DemnitarImportController {
             } catch (NumberFormatException nfe) {
                 throw new ValidationException("getCladire2Suprafata format invalid " + revenueDeclarationInfo.getCladire2Suprafata());
             }
-
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getCladire2ExplicatieSuprafata());
             declaratieAvereBunImobilInfo.setModDobandire(revenueDeclarationInfo.getCladire2ModDobandire());
             declaratieAvereBunImobilInfo.setTitular(revenueDeclarationInfo.getCladire2Titular());
             declaratieAvereBunImobilInfo.setCotaParte(revenueDeclarationInfo.getCladire2CotaParte());
@@ -2193,6 +2209,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(false);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getCladire3Adresa());
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getCladire3ExplicatieSuprafata());
 
             try {
                 declaratieAvereBunImobilInfo.setCladireCategorie(new Integer(revenueDeclarationInfo.getCladire3Categoria().substring(0, 1)));
@@ -2224,6 +2241,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(false);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getCladire4Adresa());
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getCladire4ExplicatieSuprafata());
 
             try {
                 declaratieAvereBunImobilInfo.setCladireCategorie(new Integer(revenueDeclarationInfo.getCladire4Categoria().substring(0, 1)));
@@ -2255,6 +2273,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(false);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getCladire5Adresa());
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getCladire5ExplicatieSuprafata());
 
             try {
                 declaratieAvereBunImobilInfo.setCladireCategorie(new Integer(revenueDeclarationInfo.getCladire5Categoria().substring(0, 1)));
@@ -2286,6 +2305,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(false);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getCladire6Adresa());
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getCladire6ExplicatieSuprafata());
 
             try {
                 declaratieAvereBunImobilInfo.setCladireCategorie(new Integer(revenueDeclarationInfo.getCladire6Categoria().substring(0, 1)));
@@ -2317,6 +2337,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(false);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getCladire7Adresa());
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getCladire7ExplicatieSuprafata());
 
             try {
                 declaratieAvereBunImobilInfo.setCladireCategorie(new Integer(revenueDeclarationInfo.getCladire7Categoria().substring(0, 1)));
@@ -2348,6 +2369,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(false);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getCladire8Adresa());
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getCladire8ExplicatieSuprafata());
 
             try {
                 declaratieAvereBunImobilInfo.setCladireCategorie(new Integer(revenueDeclarationInfo.getCladire8Categoria().substring(0, 1)));
@@ -2379,6 +2401,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(false);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getCladire9Adresa());
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getCladire9ExplicatieSuprafata());
 
             try {
                 declaratieAvereBunImobilInfo.setCladireCategorie(new Integer(revenueDeclarationInfo.getCladire9Categoria().substring(0, 1)));
@@ -2410,6 +2433,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(false);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getCladire10Adresa());
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getCladire10ExplicatieSuprafata());
 
             try {
                 declaratieAvereBunImobilInfo.setCladireCategorie(new Integer(revenueDeclarationInfo.getCladire10Categoria().substring(0, 1)));
@@ -2441,7 +2465,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(false);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getCladire11Adresa());
-
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getCladire11ExplicatieSuprafata());
             try {
                 declaratieAvereBunImobilInfo.setCladireCategorie(new Integer(revenueDeclarationInfo.getCladire11Categoria().substring(0, 1)));
             } catch (StringIndexOutOfBoundsException e) {
@@ -2472,6 +2496,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(false);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getCladire12Adresa());
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getCladire12ExplicatieSuprafata());
 
             try {
                 declaratieAvereBunImobilInfo.setCladireCategorie(new Integer(revenueDeclarationInfo.getCladire12Categoria().substring(0, 1)));
@@ -2503,7 +2528,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(false);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getCladire13Adresa());
-
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getCladire13ExplicatieSuprafata());
             try {
                 declaratieAvereBunImobilInfo.setCladireCategorie(new Integer(revenueDeclarationInfo.getCladire13Categoria().substring(0, 1)));
             } catch (StringIndexOutOfBoundsException e) {
@@ -2534,6 +2559,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(false);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getCladire14Adresa());
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getCladire14ExplicatieSuprafata());
 
             try {
                 declaratieAvereBunImobilInfo.setCladireCategorie(new Integer(revenueDeclarationInfo.getCladire14Categoria().substring(0, 1)));
@@ -2565,7 +2591,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(false);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getCladire15Adresa());
-
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getCladire15ExplicatieSuprafata());
             try {
                 declaratieAvereBunImobilInfo.setCladireCategorie(new Integer(revenueDeclarationInfo.getCladire15Categoria().substring(0, 1)));
             } catch (StringIndexOutOfBoundsException e) {
@@ -2629,6 +2655,7 @@ public class DemnitarImportController {
         columnMapping.put("imobt1_cat", "teren1Categoria");
         columnMapping.put("imobt1_an", "teren1AnDobindire");
         columnMapping.put("imobt1_sup", "teren1Suprafata");
+        columnMapping.put("imobt1_sup_e","teren1ExplicatieSuprafata");
         columnMapping.put("imobt1_unit", "teren1UnitateDeMasura");
         columnMapping.put("imobt1_cot", "teren1CotaParte");
         columnMapping.put("imobt1_dob", "teren1ModDobandire");
@@ -2640,6 +2667,7 @@ public class DemnitarImportController {
         columnMapping.put("imobt2_cat", "teren2Categoria");
         columnMapping.put("imobt2_an", "teren2AnDobindire");
         columnMapping.put("imobt2_sup", "teren2Suprafata");
+        columnMapping.put("imobt2_sup_e","teren2ExplicatieSuprafata");
         columnMapping.put("imobt2_unit", "teren2UnitateDeMasura");
         columnMapping.put("imobt2_cot", "teren2CotaParte");
         columnMapping.put("imobt2_dob", "teren2ModDobandire");
@@ -2651,6 +2679,7 @@ public class DemnitarImportController {
         columnMapping.put("imobt3_cat", "teren3Categoria");
         columnMapping.put("imobt3_an", "teren3AnDobindire");
         columnMapping.put("imobt3_sup", "teren3Suprafata");
+        columnMapping.put("imobt3_sup_e","teren3ExplicatieSuprafata");
         columnMapping.put("imobt3_unit", "teren3UnitateDeMasura");
         columnMapping.put("imobt3_cot", "teren3CotaParte");
         columnMapping.put("imobt3_dob", "teren3ModDobandire");
@@ -2662,6 +2691,7 @@ public class DemnitarImportController {
         columnMapping.put("imobt4_cat", "teren4Categoria");
         columnMapping.put("imobt4_an", "teren4AnDobindire");
         columnMapping.put("imobt4_sup", "teren4Suprafata");
+        columnMapping.put("imobt4_sup_e","teren4ExplicatieSuprafata");
         columnMapping.put("imobt4_unit", "teren4UnitateDeMasura");
         columnMapping.put("imobt4_cot", "teren4CotaParte");
         columnMapping.put("imobt4_dob", "teren4ModDobandire");
@@ -2673,6 +2703,7 @@ public class DemnitarImportController {
         columnMapping.put("imobt5_cat", "teren5Categoria");
         columnMapping.put("imobt5_an", "teren5AnDobindire");
         columnMapping.put("imobt5_sup", "teren5Suprafata");
+        columnMapping.put("imobt5_sup_e","teren5ExplicatieSuprafata");
         columnMapping.put("imobt5_unit", "teren5UnitateDeMasura");
         columnMapping.put("imobt5_cot", "teren5CotaParte");
         columnMapping.put("imobt5_dob", "teren5ModDobandire");
@@ -2684,6 +2715,7 @@ public class DemnitarImportController {
         columnMapping.put("imobt6_cat", "teren6Categoria");
         columnMapping.put("imobt6_an", "teren6AnDobindire");
         columnMapping.put("imobt6_sup", "teren6Suprafata");
+        columnMapping.put("imobt6_sup_e","teren6ExplicatieSuprafata");
         columnMapping.put("imobt6_unit", "teren6UnitateDeMasura");
         columnMapping.put("imobt6_cot", "teren6CotaParte");
         columnMapping.put("imobt6_dob", "teren6ModDobandire");
@@ -2695,6 +2727,7 @@ public class DemnitarImportController {
         columnMapping.put("imobt7_cat", "teren7Categoria");
         columnMapping.put("imobt7_an", "teren7AnDobindire");
         columnMapping.put("imobt7_sup", "teren7Suprafata");
+        columnMapping.put("imobt7_sup_e","teren7ExplicatieSuprafata");
         columnMapping.put("imobt7_unit", "teren7UnitateDeMasura");
         columnMapping.put("imobt7_cot", "teren7CotaParte");
         columnMapping.put("imobt7_dob", "teren7ModDobandire");
@@ -2706,6 +2739,7 @@ public class DemnitarImportController {
         columnMapping.put("imobt8_cat", "teren8Categoria");
         columnMapping.put("imobt8_an", "teren8AnDobindire");
         columnMapping.put("imobt8_sup", "teren8Suprafata");
+        columnMapping.put("imobt8_sup_e","teren8ExplicatieSuprafata");
         columnMapping.put("imobt8_unit", "teren8UnitateDeMasura");
         columnMapping.put("imobt8_cot", "teren8CotaParte");
         columnMapping.put("imobt8_dob", "teren8ModDobandire");
@@ -2717,6 +2751,7 @@ public class DemnitarImportController {
         columnMapping.put("imobt9_cat", "teren9Categoria");
         columnMapping.put("imobt9_an", "teren9AnDobindire");
         columnMapping.put("imobt9_sup", "teren9Suprafata");
+        columnMapping.put("imobt9_sup_e","teren9ExplicatieSuprafata");
         columnMapping.put("imobt9_unit", "teren9UnitateDeMasura");
         columnMapping.put("imobt9_cot", "teren9CotaParte");
         columnMapping.put("imobt9_dob", "teren9ModDobandire");
@@ -2728,6 +2763,7 @@ public class DemnitarImportController {
         columnMapping.put("imobt10_cat", "teren10Categoria");
         columnMapping.put("imobt10_an", "teren10AnDobindire");
         columnMapping.put("imobt10_sup", "teren10Suprafata");
+        columnMapping.put("imobt10_sup_e","teren10ExplicatieSuprafata");
         columnMapping.put("imobt10_unit", "teren10UnitateDeMasura");
         columnMapping.put("imobt10_cot", "teren10CotaParte");
         columnMapping.put("imobt10_dob", "teren10ModDobandire");
@@ -2739,6 +2775,7 @@ public class DemnitarImportController {
         columnMapping.put("imobt11_cat", "teren11Categoria");
         columnMapping.put("imobt11_an", "teren11AnDobindire");
         columnMapping.put("imobt11_sup", "teren11Suprafata");
+        columnMapping.put("imobt11_sup_e","teren11ExplicatieSuprafata");
         columnMapping.put("imobt11_unit", "teren11UnitateDeMasura");
         columnMapping.put("imobt11_cot", "teren11CotaParte");
         columnMapping.put("imobt11_dob", "teren11ModDobandire");
@@ -2750,6 +2787,7 @@ public class DemnitarImportController {
         columnMapping.put("imobt12_cat", "teren12Categoria");
         columnMapping.put("imobt12_an", "teren12AnDobindire");
         columnMapping.put("imobt12_sup", "teren12Suprafata");
+        columnMapping.put("imobt12_sup_e","teren12ExplicatieSuprafata");
         columnMapping.put("imobt12_unit", "teren12UnitateDeMasura");
         columnMapping.put("imobt12_cot", "teren12CotaParte");
         columnMapping.put("imobt12_dob", "teren12ModDobandire");
@@ -2761,6 +2799,7 @@ public class DemnitarImportController {
         columnMapping.put("imobt13_cat", "teren13Categoria");
         columnMapping.put("imobt13_an", "teren13AnDobindire");
         columnMapping.put("imobt13_sup", "teren13Suprafata");
+        columnMapping.put("imobt13_sup_e","teren13ExplicatieSuprafata");
         columnMapping.put("imobt13_unit", "teren13UnitateDeMasura");
         columnMapping.put("imobt13_cot", "teren13CotaParte");
         columnMapping.put("imobt13_dob", "teren13ModDobandire");
@@ -2772,6 +2811,7 @@ public class DemnitarImportController {
         columnMapping.put("imobt14_cat", "teren14Categoria");
         columnMapping.put("imobt14_an", "teren14AnDobindire");
         columnMapping.put("imobt14_sup", "teren14Suprafata");
+        columnMapping.put("imobt14_sup_e","teren14ExplicatieSuprafata");
         columnMapping.put("imobt14_unit", "teren14UnitateDeMasura");
         columnMapping.put("imobt14_cot", "teren14CotaParte");
         columnMapping.put("imobt14_dob", "teren14ModDobandire");
@@ -2783,6 +2823,7 @@ public class DemnitarImportController {
         columnMapping.put("imobt15_cat", "teren15Categoria");
         columnMapping.put("imobt15_an", "teren15AnDobindire");
         columnMapping.put("imobt15_sup", "teren15Suprafata");
+        columnMapping.put("imobt15_sup_e","teren15ExplicatieSuprafata");
         columnMapping.put("imobt15_unit", "teren15UnitateDeMasura");
         columnMapping.put("imobt15_cot", "teren15CotaParte");
         columnMapping.put("imobt15_dob", "teren15ModDobandire");
@@ -2797,6 +2838,7 @@ public class DemnitarImportController {
         columnMapping.put("imobc1_cat", "cladire1Categoria");
         columnMapping.put("imobc1_an", "cladire1AnDobindire");
         columnMapping.put("imobc1_sup", "cladire1Suprafata");
+        columnMapping.put("imobc1_sup_e", "cladire1ExplicatieSuprafata");
         columnMapping.put("imobc1_unit", "cladire1UnitateDeMasura");
         columnMapping.put("imobc1_cot", "cladire1CotaParte");
         columnMapping.put("imobc1_dob", "cladire1ModDobandire");
@@ -2807,7 +2849,8 @@ public class DemnitarImportController {
         columnMapping.put("imobc2_adr", "cladire2Adresa");
         columnMapping.put("imobc2_cat", "cladire2Categoria");
         columnMapping.put("imobc2_an", "cladire2AnDobindire");
-        columnMapping.put("imobc2_sup", "cladire2Suprafata");
+        columnMapping.put("imobc2_sup", "cladire2ExplicatieSuprafata");
+        columnMapping.put("imobc2_sup_e", "explicatieImobc2Suprafata");
         columnMapping.put("imobc2_unit", "cladire2UnitateDeMasura");
         columnMapping.put("imobc2_cot", "cladire2CotaParte");
         columnMapping.put("imobc2_dob", "cladire2ModDobandire");
@@ -2819,6 +2862,7 @@ public class DemnitarImportController {
         columnMapping.put("imobc3_cat", "cladire3Categoria");
         columnMapping.put("imobc3_an", "cladire3AnDobindire");
         columnMapping.put("imobc3_sup", "cladire3Suprafata");
+        columnMapping.put("imobc3_sup_e", "cladire3ExplicatieSuprafata");
         columnMapping.put("imobc3_unit", "cladire3UnitateDeMasura");
         columnMapping.put("imobc3_cot", "cladire3CotaParte");
         columnMapping.put("imobc3_dob", "cladire3ModDobandire");
@@ -2830,6 +2874,7 @@ public class DemnitarImportController {
         columnMapping.put("imobc4_cat", "cladire4Categoria");
         columnMapping.put("imobc4_an", "cladire4AnDobindire");
         columnMapping.put("imobc4_sup", "cladire4Suprafata");
+        columnMapping.put("imobc4_sup_e", "cladire4ExplicatieSuprafata");
         columnMapping.put("imobc4_unit", "cladire4UnitateDeMasura");
         columnMapping.put("imobc4_cot", "cladire4CotaParte");
         columnMapping.put("imobc4_dob", "cladire4ModDobandire");
@@ -2841,6 +2886,7 @@ public class DemnitarImportController {
         columnMapping.put("imobc5_cat", "cladire5Categoria");
         columnMapping.put("imobc5_an", "cladire5AnDobindire");
         columnMapping.put("imobc5_sup", "cladire5Suprafata");
+        columnMapping.put("imobc5_sup_e", "cladire5ExplicatieSuprafata");
         columnMapping.put("imobc5_unit", "cladire5UnitateDeMasura");
         columnMapping.put("imobc5_cot", "cladire5CotaParte");
         columnMapping.put("imobc5_dob", "cladire5ModDobandire");
@@ -2852,6 +2898,7 @@ public class DemnitarImportController {
         columnMapping.put("imobc6_cat", "cladire6Categoria");
         columnMapping.put("imobc6_an", "cladire6AnDobindire");
         columnMapping.put("imobc6_sup", "cladire6Suprafata");
+        columnMapping.put("imobc6_sup_e", "cladire6ExplicatieSuprafata");
         columnMapping.put("imobc6_unit", "cladire6UnitateDeMasura");
         columnMapping.put("imobc6_cot", "cladire6CotaParte");
         columnMapping.put("imobc6_dob", "cladire6ModDobandire");
@@ -2863,6 +2910,7 @@ public class DemnitarImportController {
         columnMapping.put("imobc7_cat", "cladire7Categoria");
         columnMapping.put("imobc7_an", "cladire7AnDobindire");
         columnMapping.put("imobc7_sup", "cladire7Suprafata");
+        columnMapping.put("imobc7_sup_e", "cladire7ExplicatieSuprafata");
         columnMapping.put("imobc7_unit", "cladire7UnitateDeMasura");
         columnMapping.put("imobc7_cot", "cladire7CotaParte");
         columnMapping.put("imobc7_dob", "cladire7ModDobandire");
@@ -2874,6 +2922,7 @@ public class DemnitarImportController {
         columnMapping.put("imobc8_cat", "cladire8Categoria");
         columnMapping.put("imobc8_an", "cladire8AnDobindire");
         columnMapping.put("imobc8_sup", "cladire8Suprafata");
+        columnMapping.put("imobc8_sup_e", "cladire8ExplicatieSuprafata");
         columnMapping.put("imobc8_unit", "cladire8UnitateDeMasura");
         columnMapping.put("imobc8_cot", "cladire8CotaParte");
         columnMapping.put("imobc8_dob", "cladire8ModDobandire");
@@ -2885,6 +2934,7 @@ public class DemnitarImportController {
         columnMapping.put("imobc9_cat", "cladire9Categoria");
         columnMapping.put("imobc9_an", "cladire9AnDobindire");
         columnMapping.put("imobc9_sup", "cladire9Suprafata");
+        columnMapping.put("imobc9_sup_e", "cladire9ExplicatieSuprafata");
         columnMapping.put("imobc9_unit", "cladire9UnitateDeMasura");
         columnMapping.put("imobc9_cot", "cladire9CotaParte");
         columnMapping.put("imobc9_dob", "cladire9ModDobandire");
@@ -2896,6 +2946,7 @@ public class DemnitarImportController {
         columnMapping.put("imobc10_cat", "cladire10Categoria");
         columnMapping.put("imobc10_an", "cladire10AnDobindire");
         columnMapping.put("imobc10_sup", "cladire10Suprafata");
+        columnMapping.put("imobc10_sup_e", "cladire10ExplicatieSuprafata");
         columnMapping.put("imobc10_unit", "cladire10UnitateDeMasura");
         columnMapping.put("imobc10_cot", "cladire10CotaParte");
         columnMapping.put("imobc10_dob", "cladire10ModDobandire");
@@ -2907,6 +2958,7 @@ public class DemnitarImportController {
         columnMapping.put("imobc11_cat", "cladire11Categoria");
         columnMapping.put("imobc11_an", "cladire11AnDobindire");
         columnMapping.put("imobc11_sup", "cladire11Suprafata");
+        columnMapping.put("imobc11_sup_e", "cladire11ExplicatieSuprafata");
         columnMapping.put("imobc11_unit", "cladire11UnitateDeMasura");
         columnMapping.put("imobc11_cot", "cladire11CotaParte");
         columnMapping.put("imobc11_dob", "cladire11ModDobandire");
@@ -2918,6 +2970,7 @@ public class DemnitarImportController {
         columnMapping.put("imobc12_cat", "cladire12Categoria");
         columnMapping.put("imobc12_an", "cladire12AnDobindire");
         columnMapping.put("imobc12_sup", "cladire12Suprafata");
+        columnMapping.put("imobc12_sup_e", "cladire12ExplicatieSuprafata");
         columnMapping.put("imobc12_unit", "cladire12UnitateDeMasura");
         columnMapping.put("imobc12_cot", "cladire12CotaParte");
         columnMapping.put("imobc12_dob", "cladire12ModDobandire");
@@ -2929,6 +2982,7 @@ public class DemnitarImportController {
         columnMapping.put("imobc13_cat", "cladire13Categoria");
         columnMapping.put("imobc13_an", "cladire13AnDobindire");
         columnMapping.put("imobc13_sup", "cladire13Suprafata");
+        columnMapping.put("imobc13_sup_e", "cladire13ExplicatieSuprafata");
         columnMapping.put("imobc13_unit", "cladire13UnitateDeMasura");
         columnMapping.put("imobc13_cot", "cladire13CotaParte");
         columnMapping.put("imobc13_dob", "cladire13ModDobandire");
@@ -2940,6 +2994,7 @@ public class DemnitarImportController {
         columnMapping.put("imobc14_cat", "cladire14Categoria");
         columnMapping.put("imobc14_an", "cladire14AnDobindire");
         columnMapping.put("imobc14_sup", "cladire14Suprafata");
+        columnMapping.put("imobc14_sup_e", "cladire14ExplicatieSuprafata");
         columnMapping.put("imobc14_unit", "cladire14UnitateDeMasura");
         columnMapping.put("imobc14_cot", "cladire14CotaParte");
         columnMapping.put("imobc14_dob", "cladire14ModDobandire");
@@ -2951,6 +3006,7 @@ public class DemnitarImportController {
         columnMapping.put("imobc15_cat", "cladire15Categoria");
         columnMapping.put("imobc15_an", "cladire15AnDobindire");
         columnMapping.put("imobc15_sup", "cladire15Suprafata");
+        columnMapping.put("imobc15_sup_e", "cladire15ExplicatieSuprafata");
         columnMapping.put("imobc15_unit", "cladire15UnitateDeMasura");
         columnMapping.put("imobc15_cot", "cladire15CotaParte");
         columnMapping.put("imobc15_dob", "cladire15ModDobandire");
