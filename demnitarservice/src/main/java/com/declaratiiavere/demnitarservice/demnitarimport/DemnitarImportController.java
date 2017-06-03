@@ -2177,7 +2177,7 @@ public class DemnitarImportController {
             DeclaratieAvereBunImobilInfo declaratieAvereBunImobilInfo = new DeclaratieAvereBunImobilInfo();
             declaratieAvereBunImobilInfo.setIsTeren(false);
             declaratieAvereBunImobilInfo.setAdresaImobil(revenueDeclarationInfo.getCladire2Adresa());
-
+            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getCladire2ExplicatieSuprafata());
 
             try {
                 declaratieAvereBunImobilInfo.setCladireCategorie(new Integer(revenueDeclarationInfo.getCladire2Categoria().substring(0, 1)));
@@ -2196,7 +2196,7 @@ public class DemnitarImportController {
             } catch (NumberFormatException nfe) {
                 throw new ValidationException("getCladire2Suprafata format invalid " + revenueDeclarationInfo.getCladire2Suprafata());
             }
-            declaratieAvereBunImobilInfo.setExplicatieSuprafata(revenueDeclarationInfo.getCladire2ExplicatieSuprafata());
+
             declaratieAvereBunImobilInfo.setModDobandire(revenueDeclarationInfo.getCladire2ModDobandire());
             declaratieAvereBunImobilInfo.setTitular(revenueDeclarationInfo.getCladire2Titular());
             declaratieAvereBunImobilInfo.setCotaParte(revenueDeclarationInfo.getCladire2CotaParte());
@@ -2849,7 +2849,7 @@ public class DemnitarImportController {
         columnMapping.put("imobc2_adr", "cladire2Adresa");
         columnMapping.put("imobc2_cat", "cladire2Categoria");
         columnMapping.put("imobc2_an", "cladire2AnDobindire");
-        columnMapping.put("imobc2_sup", "cladire2ExplicatieSuprafata");
+        columnMapping.put("imobc2_sup", "cladire2Suprafata");
         columnMapping.put("imobc2_sup_e", "explicatieImobc2Suprafata");
         columnMapping.put("imobc2_unit", "cladire2UnitateDeMasura");
         columnMapping.put("imobc2_cot", "cladire2CotaParte");
