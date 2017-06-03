@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `declaratie_avere_bun_imobil` (
   `unitate_masura` varchar(10) DEFAULT NULL,
   `cota_parte` varchar(100) DEFAULT NULL,
   `mod_dobandire` text DEFAULT NULL,
-  `titular` varchar(100) DEFAULT NULL,
+  `titular` TEXT DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `declaratieAvereBunuriImobile_declaratieAvere_fk_idx` (`declaratie_avere_id`),
   CONSTRAINT `declaratieAvereBunuriImobile_declaratieAvere_fk` FOREIGN KEY (`declaratie_avere_id`) REFERENCES `declaratie_avere` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
@@ -111,7 +111,7 @@ CREATE TABLE IF NOT EXISTS `declaratie_avere_bijuterie` (
 CREATE TABLE IF NOT EXISTS `declaratie_avere_plasament` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `declaratie_avere_id` int(11) NOT NULL,
-  `titular` varchar(100) NOT NULL,
+  `titular` TEXT NOT NULL,
   `emitent_titlu` text NOT NULL,
   `tipul_plasamentului` int(11) NULL COMMENT '1 - hârtii de valoare deţinute (titluri de stat, certificate, obligaţiuni), 2 - acţiuni sau părţi sociale în societăţi comerciale, 3 - împrumuturi acordate în nume personal',
   `numar_titluri_sau_cota_parte` varchar(500) NOT NULL,
@@ -138,7 +138,7 @@ CREATE TABLE IF NOT EXISTS `declaratie_avere_datorie` (
 CREATE TABLE IF NOT EXISTS `declaratie_avere_cont` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `declaratie_avere_id` int(11) NOT NULL,
-  `titular` varchar(100) NOT NULL,
+  `titular` TEXT NOT NULL,
   `institutie_bancara` text NOT NULL,
   `tip_cont` int(11) NULL COMMENT '1 - cont curent sau echivalente (inclusiv card), 2 - depozit bancar sau echivalente, 3 - fonduri de investiţii sau echivalente, inclusiv fonduri private de pensii sau alte sisteme cu acumulare, 4 - alt tip decât cele de mai sus',
   `moneda` varchar(100) NOT NULL,
