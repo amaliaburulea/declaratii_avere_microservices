@@ -107,6 +107,14 @@ public class DemnitarService {
         demnitarEntitySearchCriteria.setNume(searchDemnitarCriteria.getNume());
         demnitarEntitySearchCriteria.setPrenume(searchDemnitarCriteria.getPrenume());
 
+        if (!Utilities.isEmptyOrNull(searchDemnitarCriteria.getNumeStartsWith())) {
+            demnitarEntitySearchCriteria.setNumeStartsWith(searchDemnitarCriteria.getNumeStartsWith() + "%");
+        }
+
+        if (!Utilities.isEmptyOrNull(searchDemnitarCriteria.getPrenumeStartsWith())) {
+            demnitarEntitySearchCriteria.setPrenumeStartsWith(searchDemnitarCriteria.getPrenumeStartsWith() + "%");
+        }
+
         List<DemnitarEntity> demnitarEntityList = demnitarEAO.findDemnitars(demnitarEntitySearchCriteria);
 
         for (DemnitarEntity demnitarEntity : demnitarEntityList) {

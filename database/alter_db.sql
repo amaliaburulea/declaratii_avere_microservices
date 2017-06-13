@@ -292,3 +292,4 @@ VALUES (1, (SELECT permission_id FROM permission WHERE permission_code='MDEN'));
 INSERT IGNORE INTO role_permission (role_id, permission_id)
 VALUES (2, (SELECT permission_id FROM permission WHERE permission_code='MDEN'));
 
+call CreateIndex('demnitar', 'demnitar_prenume_idx', 'prenume', 0);

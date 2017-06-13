@@ -36,6 +36,14 @@ public class DemnitarEAO extends EntityAccessObjectBase {
             queryBuilder.addCondition("d.prenume = :prenume");
         }
 
+        if (searchCriteria.getNumeStartsWith() != null) {
+            queryBuilder.addCondition("d.nume LIKE :numeStartsWith");
+        }
+
+        if (searchCriteria.getPrenumeStartsWith() != null) {
+            queryBuilder.addCondition("d.prenume LIKE :prenumeStartsWith");
+        }
+
         return queryBuilder;
     }
 
