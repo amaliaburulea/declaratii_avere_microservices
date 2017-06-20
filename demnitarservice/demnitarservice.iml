@@ -175,5 +175,7 @@
     <orderEntry type="library" name="Maven: com.google.guava:guava:18.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.plugin:spring-plugin-core:1.2.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.plugin:spring-plugin-metadata:1.2.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: com.braintreepayments.gateway:braintree-java:2.71.0" level="project" />
+    <orderEntry type="library" name="Maven: org.osgi:org.osgi.core:4.2.0" level="project" />
   </component>
 </module>

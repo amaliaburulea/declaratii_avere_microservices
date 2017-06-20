@@ -6,6 +6,7 @@ import au.com.bytecode.opencsv.bean.HeaderColumnNameTranslateMappingStrategy;
 import com.declaratiiavere.common.utils.DateUtilities;
 import com.declaratiiavere.common.utils.Utilities;
 import com.declaratiiavere.demnitarservice.demnitar.*;
+import com.declaratiiavere.restclient.RestException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -165,7 +166,7 @@ public class DemnitarImportController {
         return builder.toString();
     }
 
-    private DeclaratieAvereInfo getDeclaratieAvereInfo(RevenueDeclarationInfo revenueDeclarationInfo, Integer demnitarId) {
+    private DeclaratieAvereInfo getDeclaratieAvereInfo(RevenueDeclarationInfo revenueDeclarationInfo, Integer demnitarId) throws RestException {
         Date dataDeclaratiei;
 
         try {
@@ -196,9 +197,41 @@ public class DemnitarImportController {
 
         declaratieAvereInfo.setDemnitarId(demnitarId);
         declaratieAvereInfo.setDataDeclaratiei(dataDeclaratiei);
-        declaratieAvereInfo.setFunctie(revenueDeclarationInfo.getFunctie());
-        declaratieAvereInfo.setInstitutie(revenueDeclarationInfo.getInstitutie());
+        
+        if (!revenueDeclarationInfo.getFunctie().equals("")) {
+            Integer functieId = null;
+
+            try {
+                FunctieInfo functieInfo = demnitarService.getFunctieByNume(revenueDeclarationInfo.getFunctie());
+                functieId = functieInfo.getId();
+            } catch (ValidationException e) {
+                FunctieInfo functieInfo = new FunctieInfo();
+                functieInfo.setNume(revenueDeclarationInfo.getFunctie());
+                functieInfo = demnitarService.saveFunctie(functieInfo);
+                functieId = functieInfo.getId();
+            }
+
+            declaratieAvereInfo.setFunctieId(functieId);
+        }
+
+        if (!revenueDeclarationInfo.getInstitutie().equals("")) {
+            Integer institutieId = null;
+
+            try {
+                InstitutieInfo institutieInfo = demnitarService.getInstitutieByNume(revenueDeclarationInfo.getInstitutie());
+                institutieId = institutieInfo.getId();
+            } catch (ValidationException e) {
+                InstitutieInfo institutieInfo = new InstitutieInfo();
+                institutieInfo.setNume(revenueDeclarationInfo.getInstitutie());
+                institutieInfo = demnitarService.saveInstitutie(institutieInfo);
+                institutieId = institutieInfo.getId();
+            }
+
+            declaratieAvereInfo.setInstitutieId(institutieId);
+        }
+
         declaratieAvereInfo.setLinkDeclaratie(revenueDeclarationInfo.getLinkDeclaratie());
+        declaratieAvereInfo.setIsDone(true);
 
 
         List<DeclaratieAvereAlteActiveInfo> declaratieAvereAlteActiveInfoList = getDeclaratieAvereAlteActiveInfoList(revenueDeclarationInfo);

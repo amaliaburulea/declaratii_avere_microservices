@@ -12,6 +12,10 @@ public class DemnitarEntitySearchCriteria extends EntitySearchCriteria {
     private String prenume;
     private String numeStartsWith;
     private String prenumeStartsWith;
+    private Integer functieId;
+    private Integer institutieId;
+    private Integer voluntarId;
+    private boolean eagerLoadAllRelations;
 
     public String getNume() {
         return nume;
@@ -43,5 +47,37 @@ public class DemnitarEntitySearchCriteria extends EntitySearchCriteria {
 
     public void setPrenumeStartsWith(String prenumeStartsWith) {
         this.prenumeStartsWith = prenumeStartsWith;
+    }
+
+    public boolean isEagerLoadAllRelations() {
+        return eagerLoadAllRelations;
+    }
+
+    public void setEagerLoadAllRelations(boolean eagerLoadAllRelations) {
+        this.eagerLoadAllRelations = eagerLoadAllRelations;
+    }
+
+    public Integer getFunctieId() {
+        return functieId;
+    }
+
+    public void setFunctieId(Integer functieId) {
+        this.functieId = functieId;
+    }
+
+    public Integer getInstitutieId() {
+        return institutieId;
+    }
+
+    public void setInstitutieId(Integer institutieId) {
+        this.institutieId = institutieId;
+    }
+
+    public Integer getVoluntarId() {
+        return voluntarId;
+    }
+
+    public void setVoluntarId(Integer voluntarId) {
+        this.voluntarId = voluntarId;
     }
 }

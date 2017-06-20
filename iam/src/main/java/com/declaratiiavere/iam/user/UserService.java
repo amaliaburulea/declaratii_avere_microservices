@@ -76,13 +76,28 @@ public class UserService {
      */
     @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
     public UserInfo saveUser(UserInfo userInfo) throws MessagingException {
+        boolean shouldSendActivationEmail = false;
+
         if (userInfo.getUserId() == null && userInfo.getPassword() == null && userInfo.getTempPassword() == null) {
             String tempPassword = generateTempPassword();
             userInfo.setTempPassword(tempPassword);
-            // todo send email with temp password at the end of the method if temp pass is not null
+
+            shouldSendActivationEmail = true;
         }
 
         validateUser(userInfo);
+
+        if (shouldSendActivationEmail) {
+            emailSenderService.sendEmail(userInfo.getEmail(), "Cerere activare voluntar", "Salut " + userInfo.getUsername() + ",<br>" +
+                    "<br>" +
+                    "Un user de tip voluntar a fost creat pentru tine, cu parola temporara " + userInfo.getTempPassword() + "<br>" +
+                    "<br>" +
+                    "Da click pe acest link pentru a finaliza procesul de inregistrare:<br>" +
+                    "<a href=\"http://google.com?userName=" + userInfo.getUsername() + "&tempPassword=" + userInfo.getTempPassword() + "\">Activare cont</a><br>" +
+                    "<br>" +
+                    "Cu respect,<br>" +
+                    "    Echipa Transparenta GOV");
+        }
 
         UserEntity userEntity = populateUserEntity(userInfo);
 
@@ -90,7 +105,7 @@ public class UserService {
     }
 
     private String generateTempPassword() {
-        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_/?";
+        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_";
         return RandomStringUtils.random(15, characters);
     }
 
@@ -225,7 +240,6 @@ public class UserService {
             return null;
         }
     }
-
 
 
     @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
@@ -425,7 +439,7 @@ public class UserService {
     /**
      * Deletes a role.
      *
-     * @param roleId    The role id
+     * @param roleId The role id
      */
     @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
     public void deleteRole(Integer roleId) {
@@ -446,8 +460,8 @@ public class UserService {
     /**
      * Gets a role.
      *
-     * @param roleId    The role id
-     * @return              The RoleInfo
+     * @param roleId The role id
+     * @return The RoleInfo
      */
     @Transactional(propagation = Propagation.NOT_SUPPORTED, rollbackFor = Exception.class)
     public RoleInfo getRole(Integer roleId) {
@@ -457,8 +471,8 @@ public class UserService {
     /**
      * Finds roles by the specified search criteria.
      *
-     * @param searchRoleCriteria    The SearchRoleCriteria object
-     * @return                          The List of RoleInfo objects
+     * @param searchRoleCriteria The SearchRoleCriteria object
+     * @return The List of RoleInfo objects
      */
     @Transactional(readOnly = true)
     public List<RoleInfo> findRoles(SearchRoleCriteria searchRoleCriteria) {
@@ -479,9 +493,9 @@ public class UserService {
     /**
      * Validates access token and unlocks user.
      *
-     * @param userName      The userName
-     * @param activationToken   The access token
-     * @return              The UserInfo object
+     * @param userName        The userName
+     * @param activationToken The access token
+     * @return The UserInfo object
      */
     @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
     public UserInfo validateActivationTokenAndUnlockUser(String userName, String activationToken) {
@@ -500,13 +514,14 @@ public class UserService {
      * Finds users for specified search criteria.
      *
      * @param searchUserCriteria The SearchUsersCriteria object
-     * @return                   The List of UserInfo objects
+     * @return The List of UserInfo objects
      */
     @Transactional(readOnly = true)
     public List<UserInfo> findUsers(SearchUserCriteria searchUserCriteria) {
         List<UserInfo> userInfoList = new ArrayList<>();
         UserEntitySearchCriteria userEntitySearchCriteria = new UserEntitySearchCriteria();
         userEntitySearchCriteria.setUserIdList(searchUserCriteria.getUserIdList());
+        userEntitySearchCriteria.setRoleId(searchUserCriteria.getRoleId());
 
         List<UserEntity> userEntityList = userEAO.findUsers(userEntitySearchCriteria);
 

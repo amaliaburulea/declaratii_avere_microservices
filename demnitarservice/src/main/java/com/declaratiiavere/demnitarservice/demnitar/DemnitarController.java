@@ -1,5 +1,6 @@
 package com.declaratiiavere.demnitarservice.demnitar;
 
+import com.declaratiiavere.restclient.RestException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -100,7 +101,17 @@ public class DemnitarController {
      * @return                          The list of DeclaratieAvereInfo objects
      */
     @RequestMapping(value = "/declaratieavere/find", method = RequestMethod.POST)
-    public List<DeclaratieAvereInfo> findDeclaratieAveres(@RequestBody SearchDeclaratieAvereCriteria searchDeclaratieAvereCrtieria) {
+    public List<DeclaratieAvereInfo> findDeclaratieAveres(@RequestBody SearchDeclaratieAvereCriteria searchDeclaratieAvereCrtieria) throws RestException {
         return demnitarService.findDeclaratiiAvere(searchDeclaratieAvereCrtieria);
+    }
+
+    @RequestMapping(value = "/functie/find", method = RequestMethod.POST)
+    public List<FunctieInfo> findAllFunctii() {
+        return demnitarService.findAllFunctii();
+    }
+
+    @RequestMapping(value = "/institutie/find", method = RequestMethod.POST)
+    public List<InstitutieInfo> findAllInstitutii() {
+        return demnitarService.findAllInstitutii();
     }
 }

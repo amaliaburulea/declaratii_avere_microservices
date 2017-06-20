@@ -20,12 +20,20 @@ public class DeclaratieAvereInfo {
     private String demnitarPrenume;
     @JsonSerialize(using = JsonDateSerializer.class)
     private Date dataDeclaratiei;
+    private Integer functieId;
+    private Integer functie2Id;
+    private Integer institutieId;
+    private Integer institutie2Id;
+    private String grupPolitic;
+    private String linkDeclaratie;
+    private Integer voluntarId;
+    private Boolean isDone;
+
     private String functie;
     private String functie2;
     private String institutie;
     private String institutie2;
-    private String grupPolitic;
-    private String linkDeclaratie;
+    private String voluntarUserName;
 
     private List<DeclaratieAvereAlteActiveInfo> declaratieAvereAlteActiveInfoList;
     private List<DeclaratieAvereBunImobilInfo> declaratieAvereBunImobilInfoList;
@@ -79,36 +87,36 @@ public class DeclaratieAvereInfo {
         this.dataDeclaratiei = dataDeclaratiei;
     }
 
-    public String getFunctie() {
-        return functie;
+    public Integer getFunctieId() {
+        return functieId;
     }
 
-    public void setFunctie(String functie) {
-        this.functie = functie;
+    public void setFunctieId(Integer functieId) {
+        this.functieId = functieId;
     }
 
-    public String getFunctie2() {
-        return functie2;
+    public Integer getFunctie2Id() {
+        return functie2Id;
     }
 
-    public void setFunctie2(String functie2) {
-        this.functie2 = functie2;
+    public void setFunctie2Id(Integer functie2Id) {
+        this.functie2Id = functie2Id;
     }
 
-    public String getInstitutie() {
-        return institutie;
+    public Integer getInstitutieId() {
+        return institutieId;
     }
 
-    public void setInstitutie(String institutie) {
-        this.institutie = institutie;
+    public void setInstitutieId(Integer institutieId) {
+        this.institutieId = institutieId;
     }
 
-    public String getInstitutie2() {
-        return institutie2;
+    public Integer getInstitutie2Id() {
+        return institutie2Id;
     }
 
-    public void setInstitutie2(String institutie2) {
-        this.institutie2 = institutie2;
+    public void setInstitutie2Id(Integer institutie2Id) {
+        this.institutie2Id = institutie2Id;
     }
 
     public String getGrupPolitic() {
@@ -125,6 +133,22 @@ public class DeclaratieAvereInfo {
 
     public void setLinkDeclaratie(String linkDeclaratie) {
         this.linkDeclaratie = linkDeclaratie;
+    }
+
+    public Integer getVoluntarId() {
+        return voluntarId;
+    }
+
+    public void setVoluntarId(Integer voluntarId) {
+        this.voluntarId = voluntarId;
+    }
+
+    public String getVoluntarUserName() {
+        return voluntarUserName;
+    }
+
+    public void setVoluntarUserName(String voluntarUserName) {
+        this.voluntarUserName = voluntarUserName;
     }
 
     public List<DeclaratieAvereAlteActiveInfo> getDeclaratieAvereAlteActiveInfoList() {
@@ -207,4 +231,47 @@ public class DeclaratieAvereInfo {
         this.declaratieAvereVenitInfoList = declaratieAvereVenitInfoList;
     }
 
+    public String getFunctie() {
+        return functie;
+    }
+
+    public void setFunctie(String functie) {
+        this.functie = functie;
+    }
+
+    public String getFunctie2() {
+        return functie2;
+    }
+
+    public void setFunctie2(String functie2) {
+        this.functie2 = functie2;
+    }
+
+    public String getInstitutie() {
+        return institutie;
+    }
+
+    public void setInstitutie(String institutie) {
+        this.institutie = institutie;
+    }
+
+    public String getInstitutie2() {
+        return institutie2;
+    }
+
+    public void setInstitutie2(String institutie2) {
+        this.institutie2 = institutie2;
+    }
+
+    public long getNegativeTimestamp() {
+        return -dataDeclaratiei.getTime();
+    }
+
+    public Boolean getIsDone() {
+        return isDone;
+    }
+
+    public void setIsDone(Boolean done) {
+        isDone = done;
+    }
 }

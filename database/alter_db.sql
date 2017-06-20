@@ -32,6 +32,7 @@ ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 INSERT IGNORE INTO role (role_name, role_desc, is_predefined_role) VALUES('Super user', 'Super user', 1);
 INSERT IGNORE INTO role (role_name, role_desc, is_predefined_role) VALUES('Organizer', 'Organizer', 1);
+INSERT IGNORE INTO role (role_name, role_desc, is_predefined_role) VALUES('Volunteer', 'Volunteer', 1);
 
 CREATE TABLE IF NOT EXISTS `demnitar` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -186,7 +187,7 @@ CREATE TABLE IF NOT EXISTS `declaratie_avere_venit` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `declaratie_avere_id` INT NOT NULL,
   `tip` INT NOT NULL COMMENT '1 - Salar, 2 - Activitati Independente, 3 - Cedarea Folosintei, 4 - Investitii, 5 - Pensii, 6 - Agricole, 7- Noroc,  8 - Alte Venituri',
-  `titular` VARCHAR(500) NOT NULL,
+  `titular` TEXT NOT NULL,
   `sursa_venit` TEXT NULL,
   `serviciul_prestat` VARCHAR(500) NOT NULL,
   venit_anual DECIMAL(12, 2) NOT NULL,
@@ -248,6 +249,21 @@ CREATE TABLE IF NOT EXISTS permission_rest_method (
 -- add permissions for manage demnitari
 
 INSERT IGNORE INTO permission (permission_name, permission_code, permission_desc, is_deleted)
+VALUES ('Change temporary password', 'CTP', 'Change temporary password', 0);
+
+INSERT IGNORE INTO permission_rest_method (permission_id, rest_request_path, rest_request_method)
+VALUES ((SELECT permission_id FROM permission WHERE permission_code='CTP'), '/iam/iam/changeTemporaryPassword', 'POST');
+
+INSERT IGNORE INTO role_permission (role_id, permission_id)
+VALUES (1, (SELECT permission_id FROM permission WHERE permission_code='CTP'));
+
+INSERT IGNORE INTO role_permission (role_id, permission_id)
+VALUES (2, (SELECT permission_id FROM permission WHERE permission_code='CTP'));
+
+INSERT IGNORE INTO role_permission (role_id, permission_id)
+VALUES (3, (SELECT permission_id FROM permission WHERE permission_code='CTP'));
+
+INSERT IGNORE INTO permission (permission_name, permission_code, permission_desc, is_deleted)
 VALUES ('Manage demnitari', 'MDEN', 'Manage demnitari', 0);
 
 INSERT IGNORE INTO permission_rest_method
@@ -293,3 +309,92 @@ INSERT IGNORE INTO role_permission (role_id, permission_id)
 VALUES (2, (SELECT permission_id FROM permission WHERE permission_code='MDEN'));
 
 call CreateIndex('demnitar', 'demnitar_prenume_idx', 'prenume', 0);
+
+call AddColumn('demnitar', 'grup_politic', "varchar(200) NULL");
+call AddColumn('declaratie_avere', 'link_declaratie', "varchar(200) NULL");
+call AddColumn('declaratie_avere_bun_imobil', 'explicatie_suprafata', "TEXT NULL");
+
+call ChangeColumn('declaratie_avere_venit', 'titular', "TEXT NOT NULL");
+
+CREATE TABLE IF NOT EXISTS `institutie` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nume` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `institutie_unique` (nume)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `functie` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nume` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `functie_unique` (nume)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+call AddColumn('declaratie_avere', 'institutie_id', 'int null');
+call AddColumn('declaratie_avere', 'institutie2_id', 'int null');
+call AddColumn('declaratie_avere', 'functie_id', 'int null');
+call AddColumn('declaratie_avere', 'functie2_id', 'int null');
+call AddForeignKey('fk_declaratie_avere_institutie', 'declaratie_avere', 'institutie_id', 'institutie', 'id');
+call AddForeignKey('fk_declaratie_avere_institutie2', 'declaratie_avere', 'institutie2_id', 'institutie', 'id');
+call AddForeignKey('fk_declaratie_avere_functie', 'declaratie_avere', 'functie_id', 'functie', 'id');
+call AddForeignKey('fk_declaratie_avere_functie2', 'declaratie_avere', 'functie2_id', 'functie', 'id');
+call CreateIndex('declaratie_avere', 'fk_declaratie_avere_institutie_idx', 'institutie_id', 0);
+call CreateIndex('declaratie_avere', 'fk_declaratie_avere_institutie2_idx', 'institutie2_id', 0);
+call CreateIndex('declaratie_avere', 'fk_declaratie_avere_functie_idx', 'functie_id', 0);
+call CreateIndex('declaratie_avere', 'fk_declaratie_avere_functie2_idx', 'functie2_id', 0);
+
+call AddColumn('demnitar', 'institutie_id', 'int null');
+call AddColumn('demnitar', 'institutie2_id', 'int null');
+call AddColumn('demnitar', 'functie_id', 'int null');
+call AddColumn('demnitar', 'functie2_id', 'int null');
+call AddForeignKey('fk_demnitar_institutie', 'demnitar', 'institutie_id', 'institutie', 'id');
+call AddForeignKey('fk_demnitar_institutie2', 'demnitar', 'institutie2_id', 'institutie', 'id');
+call AddForeignKey('fk_demnitar_functie', 'demnitar', 'functie_id', 'functie', 'id');
+call AddForeignKey('fk_demnitar_functie2', 'demnitar', 'functie2_id', 'functie', 'id');
+call CreateIndex('demnitar', 'fk_demnitar_institutie_idx', 'institutie_id', 0);
+call CreateIndex('demnitar', 'fk_demnitar_institutie2_idx', 'institutie2_id', 0);
+call CreateIndex('demnitar', 'fk_demnitar_functie_idx', 'functie_id', 0);
+call CreateIndex('demnitar', 'fk_demnitar_functie2_idx', 'functie2_id', 0);
+
+call DropColumn('declaratie_avere', 'institutie');
+call DropColumn('declaratie_avere', 'institutie2');
+call DropColumn('declaratie_avere', 'functie');
+call DropColumn('declaratie_avere', 'functie2');
+
+call DropColumn('demnitar', 'institutie');
+call DropColumn('demnitar', 'institutie2');
+call DropColumn('demnitar', 'functie');
+call DropColumn('demnitar', 'functie2');
+
+call AddColumn('declaratie_avere', 'voluntar_id', "INT NULL");
+call AddForeignKey('fk_declaratie_avere_voluntar', 'declaratie_avere', 'voluntar_id', 'user', 'user_id');
+call CreateIndex('declaratie_avere', 'fk_declaratie_avere_voluntar_idx', 'voluntar_id', 0);
+
+call AddColumn('declaratie_avere', 'is_done', "BIT NOT NULL DEFAULT 0");
+call CreateIndex('declaratie_avere', 'declaratie_avere_data_idx', 'data_declaratiei', 0);
+
+
+INSERT IGNORE INTO permission (permission_name, permission_code, permission_desc, is_deleted)
+VALUES ('Find declaratii avere', 'FDEC', 'Find declaratii avere', 0);
+
+INSERT IGNORE INTO permission (permission_name, permission_code, permission_desc, is_deleted)
+VALUES ('Update declaratii avere', 'UDEC', 'Update declaratii avere', 0);
+
+
+INSERT IGNORE INTO permission_rest_method
+(permission_id, rest_request_path, rest_request_method)
+VALUES ((SELECT permission_id FROM permission WHERE permission_code='FDEC'), '/demnitarservice/demnitar/declaratieavere', 'GET');
+
+INSERT IGNORE INTO permission_rest_method
+(permission_id, rest_request_path, rest_request_method)
+VALUES ((SELECT permission_id FROM permission WHERE permission_code='FDEC'), '/demnitarservice/demnitar/declaratieavere/find', 'POST');
+
+INSERT IGNORE INTO permission_rest_method
+(permission_id, rest_request_path, rest_request_method)
+VALUES ((SELECT permission_id FROM permission WHERE permission_code='UDEC'), '/demnitarservice/demnitar/declaratieavere', 'PUT');
+
+INSERT IGNORE INTO role_permission (role_id, permission_id)
+VALUES (3, (SELECT permission_id FROM permission WHERE permission_code='FDEC'));
+
+INSERT IGNORE INTO role_permission (role_id, permission_id)
+VALUES (3, (SELECT permission_id FROM permission WHERE permission_code='UDEC'));

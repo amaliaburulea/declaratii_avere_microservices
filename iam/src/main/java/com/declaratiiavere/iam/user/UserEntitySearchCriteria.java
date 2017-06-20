@@ -14,6 +14,7 @@ public class UserEntitySearchCriteria extends EntitySearchCriteria {
     private String email;
     private List<Integer> userIdList;
     private Boolean searchOnlyActive = true;
+    private Integer roleId;
 
     public Boolean getSearchOnlyActive() {
         return searchOnlyActive;
@@ -45,5 +46,13 @@ public class UserEntitySearchCriteria extends EntitySearchCriteria {
 
     public void setUserIdList(List<Integer> userIdList) {
         this.userIdList = userIdList;
+    }
+
+    public Integer getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(Integer roleId) {
+        this.roleId = roleId;
     }
 }

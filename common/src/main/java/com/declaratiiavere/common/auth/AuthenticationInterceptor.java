@@ -31,7 +31,11 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse httpServletResponse, Object o) throws Exception {
         if (request.getHeader("Authorization") != null && request.getHeader("Authorization").startsWith("Basic")
-                && !request.getRequestURI().contains("login") && !request.getRequestURI().contains("resetPassword")) {
+                && !request.getRequestURI().contains("login")
+                && !request.getRequestURI().contains("resetPassword")
+                && !request.getRequestURI().contains("/institutie/find")
+                && !request.getRequestURI().contains("/functie/find")
+                ) {
             UserIdentity.setAuthorizationHeaderToThreadLocal(request.getHeader("Authorization"));
             ServiceInstance serviceInstance = loadBalancer.choose("iam");
 

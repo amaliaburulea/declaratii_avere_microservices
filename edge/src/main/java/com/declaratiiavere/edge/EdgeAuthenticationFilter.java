@@ -62,6 +62,8 @@ public class EdgeAuthenticationFilter extends ZuulFilter {
             if (request.getHeader("Authorization") != null && request.getHeader("Authorization").startsWith("Basic")
                     && !request.getRequestURI().contains("login") && !request.getRequestURI().contains("resetPassword")
                     && !(request.getRequestURI().endsWith("/iam") && request.getMethod().equals("POST"))
+                    && !request.getRequestURI().contains("/institutie/find")
+                    && !request.getRequestURI().contains("/functie/find")
                     && !request.getRequestURI().contains("validateActivationTokenAndUnlockUser")) {
                 User user;
                 serviceInstance = loadBalancer.choose("iam");
@@ -91,6 +93,8 @@ public class EdgeAuthenticationFilter extends ZuulFilter {
             if (!request.getRequestURI().contains("login") && !request.getRequestURI().contains("resetPassword")
                     && !(request.getRequestURI().endsWith("/iam") && request.getMethod().equals("POST"))
                     && !request.getRequestURI().contains("validateActivationTokenAndUnlockUser")
+                    && !request.getRequestURI().contains("/institutie/find")
+                    && !request.getRequestURI().contains("/functie/find")
                     && (serviceInstance == null || !verifyAccess(request.getMethod(), userRoleId, request.getRequestURI(),
                     serviceInstance.getUri() + "/permission/checkPermissionForRequest"))) {
                 return setFailedRequest(new ErrorMessageBody(

@@ -10,6 +10,7 @@ import java.util.Date;
 public class UserInfo {
     private static final Integer ROLE_ID_SUPER_USER = 1;
     private static final Integer ROLE_ID_ORGANIZER = 2;
+    private static final Integer ROLE_ID_VOLUNTEER = 3;
 
     private Integer userId;
     private String username;
@@ -117,5 +118,9 @@ public class UserInfo {
 
     public boolean isOrganizer() {
         return roleId.equals(ROLE_ID_ORGANIZER);
+    }
+
+    public boolean isVolunteer() {
+        return roleId.equals(ROLE_ID_VOLUNTEER);
     }
 }

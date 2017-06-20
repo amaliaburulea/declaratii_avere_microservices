@@ -10,6 +10,9 @@ public class SearchDemnitarCriteria {
     private String prenume;
     private String numeStartsWith;
     private String prenumeStartsWith;
+    private Integer functieId;
+    private Integer institutieId;
+    private boolean searchOnlyDemnitarsAssignedToMe;
 
     public String getNume() {
         return nume;
@@ -41,5 +44,29 @@ public class SearchDemnitarCriteria {
 
     public void setPrenumeStartsWith(String prenumeStartsWith) {
         this.prenumeStartsWith = prenumeStartsWith;
+    }
+
+    public Integer getFunctieId() {
+        return functieId;
+    }
+
+    public void setFunctieId(Integer functieId) {
+        this.functieId = functieId;
+    }
+
+    public Integer getInstitutieId() {
+        return institutieId;
+    }
+
+    public void setInstitutieId(Integer institutieId) {
+        this.institutieId = institutieId;
+    }
+
+    public boolean isSearchOnlyDemnitarsAssignedToMe() {
+        return searchOnlyDemnitarsAssignedToMe;
+    }
+
+    public void setSearchOnlyDemnitarsAssignedToMe(boolean searchOnlyDemnitarsAssignedToMe) {
+        this.searchOnlyDemnitarsAssignedToMe = searchOnlyDemnitarsAssignedToMe;
     }
 }
