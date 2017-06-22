@@ -97,12 +97,12 @@ public class DemnitarController {
     /**
      * Finds declaratieAveres.
      *
-     * @param searchDeclaratieAvereCrtieria    The search criteria
+     * @param searchDeclaratieAvereCriteria    The search criteria
      * @return                          The list of DeclaratieAvereInfo objects
      */
     @RequestMapping(value = "/declaratieavere/find", method = RequestMethod.POST)
-    public List<DeclaratieAvereInfo> findDeclaratieAveres(@RequestBody SearchDeclaratieAvereCriteria searchDeclaratieAvereCrtieria) throws RestException {
-        return demnitarService.findDeclaratiiAvere(searchDeclaratieAvereCrtieria);
+    public List<DeclaratieAvereInfo> findDeclaratieAveres(@RequestBody SearchDeclaratieAvereCriteria searchDeclaratieAvereCriteria) throws RestException {
+        return demnitarService.findDeclaratiiAvere(searchDeclaratieAvereCriteria);
     }
 
     @RequestMapping(value = "/functie/find", method = RequestMethod.POST)
