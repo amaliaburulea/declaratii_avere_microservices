@@ -15,7 +15,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.validation.ValidationException;
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * Demnitar service.
@@ -308,7 +307,7 @@ public class DemnitarService {
         return demnitarInfoList;
     }
 
-    private DeclaratieAvereInfo getDeclaratieAvereInfo(DeclaratieAvereEntity declaratieAvereEntity) {
+    private DeclaratieAvereInfo getDeclaratieAvereInfo(DeclaratieAvereEntity declaratieAvereEntity, boolean eagerLoadAllRelations) {
         DeclaratieAvereInfo declaratieAvereInfo = new DeclaratieAvereInfo();
         declaratieAvereInfo.setId(declaratieAvereEntity.getId());
         declaratieAvereInfo.setDemnitarId(declaratieAvereEntity.getDemnitarId());
@@ -345,115 +344,117 @@ public class DemnitarService {
         declaratieAvereInfo.setLinkDeclaratie(declaratieAvereEntity.getLinkDeclaratie());
         declaratieAvereInfo.setIsDone(declaratieAvereEntity.getIsDone());
 
-        List<DeclaratieAvereAlteActiveInfo> declaratieActiveAlteActiveInfoList = new ArrayList<>();
+        if (eagerLoadAllRelations) {
+            List<DeclaratieAvereAlteActiveInfo> declaratieActiveAlteActiveInfoList = new ArrayList<>();
 
-        if (declaratieAvereEntity.getDeclaratieAvereAlteActiveEntitySet() != null) {
-            for (DeclaratieAvereAlteActiveEntity declaratieAvereAlteActiveEntity : declaratieAvereEntity.getDeclaratieAvereAlteActiveEntitySet()) {
-                DeclaratieAvereAlteActiveInfo declaratieActiveAlteActiveInfo = getDeclaratieActiveAlteActiveInfo(declaratieAvereAlteActiveEntity);
-                declaratieActiveAlteActiveInfoList.add(declaratieActiveAlteActiveInfo);
+            if (declaratieAvereEntity.getDeclaratieAvereAlteActiveEntitySet() != null) {
+                for (DeclaratieAvereAlteActiveEntity declaratieAvereAlteActiveEntity : declaratieAvereEntity.getDeclaratieAvereAlteActiveEntitySet()) {
+                    DeclaratieAvereAlteActiveInfo declaratieActiveAlteActiveInfo = getDeclaratieActiveAlteActiveInfo(declaratieAvereAlteActiveEntity);
+                    declaratieActiveAlteActiveInfoList.add(declaratieActiveAlteActiveInfo);
+                }
             }
-        }
 
-        declaratieAvereInfo.setDeclaratieAvereAlteActiveInfoList(declaratieActiveAlteActiveInfoList);
+            declaratieAvereInfo.setDeclaratieAvereAlteActiveInfoList(declaratieActiveAlteActiveInfoList);
 
-        List<DeclaratieAvereBunImobilInfo> declaratieActiveBunImobilInfoList = new ArrayList<>();
+            List<DeclaratieAvereBunImobilInfo> declaratieActiveBunImobilInfoList = new ArrayList<>();
 
-        if (declaratieAvereEntity.getDeclaratieAvereBunImobilEntitySet() != null) {
-            for (DeclaratieAvereBunImobilEntity declaratieAvereBunImobilEntity : declaratieAvereEntity.getDeclaratieAvereBunImobilEntitySet()) {
-                DeclaratieAvereBunImobilInfo declaratieActiveBunImobilInfo = getDeclaratieActiveBunImobilInfo(declaratieAvereBunImobilEntity);
-                declaratieActiveBunImobilInfoList.add(declaratieActiveBunImobilInfo);
+            if (declaratieAvereEntity.getDeclaratieAvereBunImobilEntitySet() != null) {
+                for (DeclaratieAvereBunImobilEntity declaratieAvereBunImobilEntity : declaratieAvereEntity.getDeclaratieAvereBunImobilEntitySet()) {
+                    DeclaratieAvereBunImobilInfo declaratieActiveBunImobilInfo = getDeclaratieActiveBunImobilInfo(declaratieAvereBunImobilEntity);
+                    declaratieActiveBunImobilInfoList.add(declaratieActiveBunImobilInfo);
+                }
             }
-        }
 
-        declaratieAvereInfo.setDeclaratieAvereBunImobilInfoList(declaratieActiveBunImobilInfoList);
+            declaratieAvereInfo.setDeclaratieAvereBunImobilInfoList(declaratieActiveBunImobilInfoList);
 
-        List<DeclaratieAvereBunMobilInfo> declaratieActiveBunMobilInfoList = new ArrayList<>();
+            List<DeclaratieAvereBunMobilInfo> declaratieActiveBunMobilInfoList = new ArrayList<>();
 
-        if (declaratieAvereEntity.getDeclaratieAvereBunMobilEntitySet() != null) {
-            for (DeclaratieAvereBunMobilEntity declaratieAvereBunMobilEntity : declaratieAvereEntity.getDeclaratieAvereBunMobilEntitySet()) {
-                DeclaratieAvereBunMobilInfo declaratieActiveBunMobilInfo = getDeclaratieActiveBunMobilInfo(declaratieAvereBunMobilEntity);
-                declaratieActiveBunMobilInfoList.add(declaratieActiveBunMobilInfo);
+            if (declaratieAvereEntity.getDeclaratieAvereBunMobilEntitySet() != null) {
+                for (DeclaratieAvereBunMobilEntity declaratieAvereBunMobilEntity : declaratieAvereEntity.getDeclaratieAvereBunMobilEntitySet()) {
+                    DeclaratieAvereBunMobilInfo declaratieActiveBunMobilInfo = getDeclaratieActiveBunMobilInfo(declaratieAvereBunMobilEntity);
+                    declaratieActiveBunMobilInfoList.add(declaratieActiveBunMobilInfo);
+                }
             }
-        }
 
-        declaratieAvereInfo.setDeclaratieAvereBunMobilInfoList(declaratieActiveBunMobilInfoList);
+            declaratieAvereInfo.setDeclaratieAvereBunMobilInfoList(declaratieActiveBunMobilInfoList);
 
-        List<DeclaratieAvereBijuterieInfo> declaratieActiveBijuterieInfoList = new ArrayList<>();
+            List<DeclaratieAvereBijuterieInfo> declaratieActiveBijuterieInfoList = new ArrayList<>();
 
-        if (declaratieAvereEntity.getDeclaratieAvereBijuterieEntitySet() != null) {
-            for (DeclaratieAvereBijuterieEntity declaratieAvereBijuterieEntity : declaratieAvereEntity.getDeclaratieAvereBijuterieEntitySet()) {
-                DeclaratieAvereBijuterieInfo declaratieActiveBijuterieInfo = getDeclaratieActiveBijuterieInfo(declaratieAvereBijuterieEntity);
-                declaratieActiveBijuterieInfoList.add(declaratieActiveBijuterieInfo);
+            if (declaratieAvereEntity.getDeclaratieAvereBijuterieEntitySet() != null) {
+                for (DeclaratieAvereBijuterieEntity declaratieAvereBijuterieEntity : declaratieAvereEntity.getDeclaratieAvereBijuterieEntitySet()) {
+                    DeclaratieAvereBijuterieInfo declaratieActiveBijuterieInfo = getDeclaratieActiveBijuterieInfo(declaratieAvereBijuterieEntity);
+                    declaratieActiveBijuterieInfoList.add(declaratieActiveBijuterieInfo);
+                }
             }
-        }
 
-        declaratieAvereInfo.setDeclaratieAvereBijuterieInfoList(declaratieActiveBijuterieInfoList);
+            declaratieAvereInfo.setDeclaratieAvereBijuterieInfoList(declaratieActiveBijuterieInfoList);
 
-        List<DeclaratieAverePlasamentInfo> declaratieActivePlasamentInfoList = new ArrayList<>();
+            List<DeclaratieAverePlasamentInfo> declaratieActivePlasamentInfoList = new ArrayList<>();
 
-        if (declaratieAvereEntity.getDeclaratieAverePlasamentEntitySet() != null) {
-            for (DeclaratieAverePlasamentEntity declaratieAverePlasamentEntity : declaratieAvereEntity.getDeclaratieAverePlasamentEntitySet()) {
-                DeclaratieAverePlasamentInfo declaratieActivePlasamentInfo = getDeclaratieActivePlasamentInfo(declaratieAverePlasamentEntity);
-                declaratieActivePlasamentInfoList.add(declaratieActivePlasamentInfo);
+            if (declaratieAvereEntity.getDeclaratieAverePlasamentEntitySet() != null) {
+                for (DeclaratieAverePlasamentEntity declaratieAverePlasamentEntity : declaratieAvereEntity.getDeclaratieAverePlasamentEntitySet()) {
+                    DeclaratieAverePlasamentInfo declaratieActivePlasamentInfo = getDeclaratieActivePlasamentInfo(declaratieAverePlasamentEntity);
+                    declaratieActivePlasamentInfoList.add(declaratieActivePlasamentInfo);
+                }
             }
-        }
 
-        declaratieAvereInfo.setDeclaratieAverePlasamentInfoList(declaratieActivePlasamentInfoList);
+            declaratieAvereInfo.setDeclaratieAverePlasamentInfoList(declaratieActivePlasamentInfoList);
 
-        List<DeclaratieAvereDatorieInfo> declaratieActiveDatorieInfoList = new ArrayList<>();
+            List<DeclaratieAvereDatorieInfo> declaratieActiveDatorieInfoList = new ArrayList<>();
 
-        if (declaratieAvereEntity.getDeclaratieAvereDatorieEntitySet() != null) {
-            for (DeclaratieAvereDatorieEntity declaratieAvereDatorieEntity : declaratieAvereEntity.getDeclaratieAvereDatorieEntitySet()) {
-                DeclaratieAvereDatorieInfo declaratieActiveDatorieInfo = getDeclaratieActiveDatorieInfo(declaratieAvereDatorieEntity);
-                declaratieActiveDatorieInfoList.add(declaratieActiveDatorieInfo);
+            if (declaratieAvereEntity.getDeclaratieAvereDatorieEntitySet() != null) {
+                for (DeclaratieAvereDatorieEntity declaratieAvereDatorieEntity : declaratieAvereEntity.getDeclaratieAvereDatorieEntitySet()) {
+                    DeclaratieAvereDatorieInfo declaratieActiveDatorieInfo = getDeclaratieActiveDatorieInfo(declaratieAvereDatorieEntity);
+                    declaratieActiveDatorieInfoList.add(declaratieActiveDatorieInfo);
+                }
             }
-        }
 
-        declaratieAvereInfo.setDeclaratieAvereDatorieInfoList(declaratieActiveDatorieInfoList);
+            declaratieAvereInfo.setDeclaratieAvereDatorieInfoList(declaratieActiveDatorieInfoList);
 
-        List<DeclaratieAvereContInfo> declaratieActiveContInfoList = new ArrayList<>();
+            List<DeclaratieAvereContInfo> declaratieActiveContInfoList = new ArrayList<>();
 
-        if (declaratieAvereEntity.getDeclaratieAvereContEntitySet() != null) {
-            for (DeclaratieAvereContEntity declaratieAvereContEntity : declaratieAvereEntity.getDeclaratieAvereContEntitySet()) {
-                DeclaratieAvereContInfo declaratieActiveContInfo = getDeclaratieActiveContInfo(declaratieAvereContEntity);
-                declaratieActiveContInfoList.add(declaratieActiveContInfo);
+            if (declaratieAvereEntity.getDeclaratieAvereContEntitySet() != null) {
+                for (DeclaratieAvereContEntity declaratieAvereContEntity : declaratieAvereEntity.getDeclaratieAvereContEntitySet()) {
+                    DeclaratieAvereContInfo declaratieActiveContInfo = getDeclaratieActiveContInfo(declaratieAvereContEntity);
+                    declaratieActiveContInfoList.add(declaratieActiveContInfo);
+                }
             }
-        }
 
-        declaratieAvereInfo.setDeclaratieAvereContInfoList(declaratieActiveContInfoList);
+            declaratieAvereInfo.setDeclaratieAvereContInfoList(declaratieActiveContInfoList);
 
-        List<DeclaratieAvereBunInstrainatInfo> declaratieActiveBunInstrainatInfoList = new ArrayList<>();
+            List<DeclaratieAvereBunInstrainatInfo> declaratieActiveBunInstrainatInfoList = new ArrayList<>();
 
-        if (declaratieAvereEntity.getDeclaratieAvereBunInstrainatEntitySet() != null) {
-            for (DeclaratieAvereBunInstrainatEntity declaratieAvereBunInstrainatEntity : declaratieAvereEntity.getDeclaratieAvereBunInstrainatEntitySet()) {
-                DeclaratieAvereBunInstrainatInfo declaratieActiveBunInstrainatInfo = getDeclaratieActiveBunInstrainatInfo(declaratieAvereBunInstrainatEntity);
-                declaratieActiveBunInstrainatInfoList.add(declaratieActiveBunInstrainatInfo);
+            if (declaratieAvereEntity.getDeclaratieAvereBunInstrainatEntitySet() != null) {
+                for (DeclaratieAvereBunInstrainatEntity declaratieAvereBunInstrainatEntity : declaratieAvereEntity.getDeclaratieAvereBunInstrainatEntitySet()) {
+                    DeclaratieAvereBunInstrainatInfo declaratieActiveBunInstrainatInfo = getDeclaratieActiveBunInstrainatInfo(declaratieAvereBunInstrainatEntity);
+                    declaratieActiveBunInstrainatInfoList.add(declaratieActiveBunInstrainatInfo);
+                }
             }
-        }
 
-        declaratieAvereInfo.setDeclaratieAvereBunInstrainatInfoList(declaratieActiveBunInstrainatInfoList);
+            declaratieAvereInfo.setDeclaratieAvereBunInstrainatInfoList(declaratieActiveBunInstrainatInfoList);
 
-        List<DeclaratieAvereCadouInfo> declaratieActiveCadouInfoList = new ArrayList<>();
+            List<DeclaratieAvereCadouInfo> declaratieActiveCadouInfoList = new ArrayList<>();
 
-        if (declaratieAvereEntity.getDeclaratieAvereCadouEntitySet() != null) {
-            for (DeclaratieAvereCadouEntity declaratieAvereCadouEntity : declaratieAvereEntity.getDeclaratieAvereCadouEntitySet()) {
-                DeclaratieAvereCadouInfo declaratieActiveCadouInfo = getDeclaratieActiveCadouInfo(declaratieAvereCadouEntity);
-                declaratieActiveCadouInfoList.add(declaratieActiveCadouInfo);
+            if (declaratieAvereEntity.getDeclaratieAvereCadouEntitySet() != null) {
+                for (DeclaratieAvereCadouEntity declaratieAvereCadouEntity : declaratieAvereEntity.getDeclaratieAvereCadouEntitySet()) {
+                    DeclaratieAvereCadouInfo declaratieActiveCadouInfo = getDeclaratieActiveCadouInfo(declaratieAvereCadouEntity);
+                    declaratieActiveCadouInfoList.add(declaratieActiveCadouInfo);
+                }
             }
-        }
 
-        declaratieAvereInfo.setDeclaratieAvereCadouInfoList(declaratieActiveCadouInfoList);
+            declaratieAvereInfo.setDeclaratieAvereCadouInfoList(declaratieActiveCadouInfoList);
 
-        List<DeclaratieAvereVenitInfo> declaratieActiveVenitInfoList = new ArrayList<>();
+            List<DeclaratieAvereVenitInfo> declaratieActiveVenitInfoList = new ArrayList<>();
 
-        if (declaratieAvereEntity.getDeclaratieAvereVenitEntitySet() != null) {
-            for (DeclaratieAvereVenitEntity declaratieAvereVenitEntity : declaratieAvereEntity.getDeclaratieAvereVenitEntitySet()) {
-                DeclaratieAvereVenitInfo declaratieActiveVenitInfo = getDeclaratieActiveVenitInfo(declaratieAvereVenitEntity);
-                declaratieActiveVenitInfoList.add(declaratieActiveVenitInfo);
+            if (declaratieAvereEntity.getDeclaratieAvereVenitEntitySet() != null) {
+                for (DeclaratieAvereVenitEntity declaratieAvereVenitEntity : declaratieAvereEntity.getDeclaratieAvereVenitEntitySet()) {
+                    DeclaratieAvereVenitInfo declaratieActiveVenitInfo = getDeclaratieActiveVenitInfo(declaratieAvereVenitEntity);
+                    declaratieActiveVenitInfoList.add(declaratieActiveVenitInfo);
+                }
             }
-        }
 
-        declaratieAvereInfo.setDeclaratieAvereVenitInfoList(declaratieActiveVenitInfoList);
+            declaratieAvereInfo.setDeclaratieAvereVenitInfoList(declaratieActiveVenitInfoList);
+        }
 
         return declaratieAvereInfo;
     }
@@ -595,7 +596,7 @@ public class DemnitarService {
     public DeclaratieAvereInfo saveDeclaratieAvere(DeclaratieAvereInfo declaratieAvereInfo) {
         validateDeclaratieAvere(declaratieAvereInfo);
         DeclaratieAvereEntity declaratieAvereEntity = populateDeclaratieAvereEntity(declaratieAvereInfo);
-        declaratieAvereInfo = getDeclaratieAvereInfo(demnitarEAO.saveDeclaratieAvere(declaratieAvereEntity));
+        declaratieAvereInfo = getDeclaratieAvereInfo(demnitarEAO.saveDeclaratieAvere(declaratieAvereEntity), true);
 
         DeclaratieAvereEntitySearchCriteria declaratieAvereEntitySearchCriteria = new DeclaratieAvereEntitySearchCriteria();
         declaratieAvereEntitySearchCriteria.setDemnitarId(declaratieAvereInfo.getDemnitarId());
@@ -1335,7 +1336,7 @@ public class DemnitarService {
      * @param id The declaratieAvere id
      * @return The DeclaratieAvereInfo
      */
-    @Transactional(propagation = Propagation.NOT_SUPPORTED, rollbackFor = Exception.class)
+    @Transactional(readOnly = true)
     public DeclaratieAvereInfo getDeclaratieAvere(Integer id) {
         if (id == null) {
             throw new ValidationException("id is required");
@@ -1347,7 +1348,7 @@ public class DemnitarService {
             throw new ValidationException("declaratie avere nu exista");
         }
 
-        return getDeclaratieAvereInfo(declaratieAvereEntity);
+        return getDeclaratieAvereInfo(declaratieAvereEntity, true);
     }
 
     /**
@@ -1389,7 +1390,9 @@ public class DemnitarService {
 
         declaratieAvereEntitySearchCriteria.setStatus(searchDeclaratieAvereCriteria.getStatus());
 
-        declaratieAvereEntitySearchCriteria.setEagerLoadAllRelations(true);
+        if (searchDeclaratieAvereCriteria.getDemnitarId() != null) {
+            declaratieAvereEntitySearchCriteria.setEagerLoadAllRelations(true);
+        }
 
         List<DeclaratieAvereEntity> declaratieAvereEntityList = demnitarEAO.findDeclaratiiAvere(declaratieAvereEntitySearchCriteria);
         Set<Integer> voluntarIdSet = new HashSet<>();
@@ -1401,7 +1404,7 @@ public class DemnitarService {
         }
 
         for (DeclaratieAvereEntity declaratieAvereEntity : declaratieAvereEntityList) {
-            declaratieAvereInfoList.add(getDeclaratieAvereInfo(declaratieAvereEntity));
+            declaratieAvereInfoList.add(getDeclaratieAvereInfo(declaratieAvereEntity, declaratieAvereEntitySearchCriteria.isEagerLoadAllRelations()));
         }
 
         if (!voluntarIdSet.isEmpty()) {
