@@ -16,6 +16,7 @@ public class DeclaratieAvereBunInstrainatInfo {
     private String persoanaBeneficiara;
     private String formaInstrainarii;
     private BigDecimal valoarea;
+    private String explicatie;
     private String moneda;
 
     public Integer getId() {
@@ -80,6 +81,14 @@ public class DeclaratieAvereBunInstrainatInfo {
 
     public void setValoarea(BigDecimal valoarea) {
         this.valoarea = valoarea;
+    }
+
+    public String getExplicatie() {
+        return explicatie;
+    }
+
+    public void setExplicatie(String explicatie) {
+        this.explicatie = explicatie;
     }
 
     public String getMoneda() {

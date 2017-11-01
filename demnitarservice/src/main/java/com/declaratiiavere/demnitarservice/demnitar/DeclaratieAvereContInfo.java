@@ -16,6 +16,16 @@ public class DeclaratieAvereContInfo {
     private String moneda;
     private String anDeschidereCont;
 
+    public String getExplicatie() {
+        return explicatie;
+    }
+
+    public void setExplicatie(String explicatie) {
+        this.explicatie = explicatie;
+    }
+
+    private String explicatie;
+
     public Integer getId() {
         return id;
     }

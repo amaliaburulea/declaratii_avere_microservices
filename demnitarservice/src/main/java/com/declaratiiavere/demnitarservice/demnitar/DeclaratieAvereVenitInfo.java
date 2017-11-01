@@ -14,6 +14,7 @@ public class DeclaratieAvereVenitInfo {
     private String sursaVenit;
     private String serviciulPrestat;
     private BigDecimal venitAnual;
+    private String explicatieVenit;
     private String moneda;
 
     public Integer getId() {
@@ -62,6 +63,14 @@ public class DeclaratieAvereVenitInfo {
 
     public void setVenitAnual(BigDecimal venitAnual) {
         this.venitAnual = venitAnual;
+    }
+
+    public String getExplicatieVenit() {
+        return explicatieVenit;
+    }
+
+    public void setExplicatieVenit(String explicatieVenit) {
+        this.explicatieVenit = explicatieVenit;
     }
 
     public String getMoneda() {

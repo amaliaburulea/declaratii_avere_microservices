@@ -13,6 +13,16 @@ public class DeclaratieAvereDatorieInfo {
     private BigDecimal valoare;
     private String moneda;
 
+    public String getExplicatie() {
+        return explicatie;
+    }
+
+    public void setExplicatie(String explicatie) {
+        this.explicatie = explicatie;
+    }
+
+    private String explicatie;
+
     public Integer getId() {
         return id;
     }

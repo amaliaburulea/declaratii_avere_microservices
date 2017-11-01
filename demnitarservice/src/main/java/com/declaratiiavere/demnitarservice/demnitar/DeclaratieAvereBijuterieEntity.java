@@ -28,6 +28,9 @@ public class DeclaratieAvereBijuterieEntity {
     @Column(name ="valoare_estimata")
     private BigDecimal valoareEstimate;
 
+    @Column(name ="explicatie_bijuterie")
+    private String explicatieBijuterie;
+
     @Column(name ="moneda")
     private String moneda;
 
@@ -74,6 +77,14 @@ public class DeclaratieAvereBijuterieEntity {
 
     public void setValoareEstimate(BigDecimal valoareEstimate) {
         this.valoareEstimate = valoareEstimate;
+    }
+
+    public String getExplicatieBijuterie() {
+        return explicatieBijuterie;
+    }
+
+    public void setExplicatieBijuterie(String explicatieBijuterie) {
+        this.explicatieBijuterie = explicatieBijuterie;
     }
 
     public String getMoneda() {

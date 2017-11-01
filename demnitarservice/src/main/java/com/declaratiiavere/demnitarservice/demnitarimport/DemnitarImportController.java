@@ -295,7 +295,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenitAlteVenitAnual format invalid " + revenueDeclarationInfo.getVeniAlte1VenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVeniAlte1Explicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitAlte1Moneda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -312,7 +312,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenitAlteVenitAnual format invalid " + revenueDeclarationInfo.getVeniAlte2VenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVeniAlte2Explicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitAlte2Moneda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -330,7 +330,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenitAlteVenitAnual format invalid " + revenueDeclarationInfo.getVeniAlte3VenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVeniAlte3Explicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitAlte3Moneda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -348,7 +348,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenitAlteVenitAnual format invalid " + revenueDeclarationInfo.getVeniAlte4VenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVeniAlte4Explicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitAlte4Moneda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -370,6 +370,8 @@ public class DemnitarImportController {
                 throw new ValidationException("getVenitNoroc1VenitAnual format invalid " + revenueDeclarationInfo.getVenitNoroc1VenitAnual());
             }
 
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVenitNoroc1Explicatie());
+
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitNoroc1Moneda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -386,7 +388,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenitNoroc2VenitAnual format invalid " + revenueDeclarationInfo.getVenitNoroc2VenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVenitNoroc2Explicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitNoroc2Moneda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -407,7 +409,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenitAgricol1VenitAnual format invalid " + revenueDeclarationInfo.getVenitAgricol1VenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVenitAgricol1Explicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitAgricol1Moneda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -424,7 +426,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenitAgricol2VenitAnual format invalid " + revenueDeclarationInfo.getVenitAgricol2VenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVenitAgricol2Explicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitAgricol2Moneda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -446,7 +448,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenitPensii1VenitAnual format invalid " + revenueDeclarationInfo.getVenitPensii1VenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVenitPensii1Explicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitPensii1Moneda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -463,7 +465,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenitPensii2VenitAnual format invalid " + revenueDeclarationInfo.getVenitPensii2VenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVenitPensii2Explicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitPensii2Moneda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -485,7 +487,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenitInvestitii1VenitAnual format invalid " + revenueDeclarationInfo.getVenitInvestitii1VenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVenitInvestitii1Explicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitInvestitii1Moneda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -502,7 +504,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenitInvestitii2VenitAnual format invalid " + revenueDeclarationInfo.getVenitInvestitii2VenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVenitInvestitii2Explicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitInvestitii2Moneda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -520,7 +522,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenitInvestitii3VenitAnual format invalid " + revenueDeclarationInfo.getVenitInvestitii3VenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVenitInvestitii3Explicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitInvestitii3Moneda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -538,7 +540,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenitInvestitii4VenitAnual format invalid " + revenueDeclarationInfo.getVenitInvestitii4VenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVenitInvestitii4Explicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitInvestitii4Moneda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -562,7 +564,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenitCedareaFolosintei1VenitAnual format invalid " + revenueDeclarationInfo.getVenitCedareaFolosintei1VenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVenitCedareaFolosintei1Explicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitCedareaFolosintei1Moneda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -579,7 +581,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenitCedareaFolosintei2VenitAnual format invalid " + revenueDeclarationInfo.getVenitCedareaFolosintei2VenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVenitCedareaFolosintei2Explicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitCedareaFolosintei2Moneda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -597,7 +599,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenitCedareaFolosintei3VenitAnual format invalid " + revenueDeclarationInfo.getVenitCedareaFolosintei3VenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVenitCedareaFolosintei3Explicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitCedareaFolosintei3Moneda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -615,7 +617,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenitCedareaFolosintei4VenitAnual format invalid " + revenueDeclarationInfo.getVenitCedareaFolosintei4VenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVenitCedareaFolosintei4Explicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitCedareaFolosintei4Moneda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -633,7 +635,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenitCedareaFolosintei5VenitAnual format invalid " + revenueDeclarationInfo.getVenitCedareaFolosintei5VenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVenitCedareaFolosintei5Explicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitCedareaFolosintei5Moneda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -651,7 +653,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenitCedareaFolosintei6VenitAnual format invalid " + revenueDeclarationInfo.getVenitCedareaFolosintei6VenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVenitCedareaFolosintei6Explicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitCedareaFolosintei6Moneda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -675,7 +677,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenitActivitatiIndependente1VenitAnual format invalid " + revenueDeclarationInfo.getVenitActivitatiIndependente1VenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVenitActivitatiIndependente1Explicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitActivitatiIndependente1Moneda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -694,7 +696,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenitActivitatiIndependente2VenitAnual format invalid " + revenueDeclarationInfo.getVenitActivitatiIndependente2VenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVenitActivitatiIndependente2Explicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitActivitatiIndependente2Moneda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -713,7 +715,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenitActivitatiIndependente3VenitAnual format invalid " + revenueDeclarationInfo.getVenitActivitatiIndependente3VenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVenitActivitatiIndependente3Explicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitActivitatiIndependente3Moneda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -732,7 +734,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenitActivitatiIndependente4VenitAnual format invalid " + revenueDeclarationInfo.getVenitActivitatiIndependente4VenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVenitActivitatiIndependente4Explicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenitActivitatiIndependente4Moneda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -757,7 +759,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenit1SalariuVenitAnual format invalid " + revenueDeclarationInfo.getVenit1SalariuVenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVenit1SalariuExplicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenit1SalariuMonenda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -776,7 +778,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenit2SalariuVenitAnual format invalid " + revenueDeclarationInfo.getVenit2SalariuVenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVenit2SalariuExplicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenit2SalariuMonenda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -795,7 +797,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenit3SalariuVenitAnual format invalid " + revenueDeclarationInfo.getVenit3SalariuVenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVenit3SalariuExplicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenit3SalariuMonenda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -814,7 +816,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenit4SalariuVenitAnual format invalid " + revenueDeclarationInfo.getVenit4SalariuVenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVenit4SalariuExplicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenit4SalariuMonenda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -833,7 +835,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenit5SalariuVenitAnual format invalid " + revenueDeclarationInfo.getVenit5SalariuVenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVenit5SalariuExplicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenit5SalariuMonenda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -852,7 +854,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getVenit6SalariuVenitAnual format invalid " + revenueDeclarationInfo.getVenit6SalariuVenitAnual());
             }
-
+            declaratieAvereVenitInfo.setExplicatieVenit(revenueDeclarationInfo.getVenit6SalariuExplicatie());
             declaratieAvereVenitInfo.setMoneda(revenueDeclarationInfo.getVenit6SalariuMonenda());
 
             declaratieAvereVenitInfoList.add(declaratieAvereVenitInfo);
@@ -876,7 +878,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getCadou1VenitAnual format invalid " + revenueDeclarationInfo.getCadou1VenitAnual());
             }
-
+            declaratieAvereCadouInfo.setExplicatie(revenueDeclarationInfo.getCadou1Explicatie());
             declaratieAvereCadouInfo.setMoneda(revenueDeclarationInfo.getCadou1Monenda());
 
             declaratieAvereCadouInfoList.add(declaratieAvereCadouInfo);
@@ -894,7 +896,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getCadou2VenitAnual format invalid " + revenueDeclarationInfo.getCadou2VenitAnual());
             }
-
+            declaratieAvereCadouInfo.setExplicatie(revenueDeclarationInfo.getCadou2Explicatie());
             declaratieAvereCadouInfo.setMoneda(revenueDeclarationInfo.getCadou2Monenda());
 
             declaratieAvereCadouInfoList.add(declaratieAvereCadouInfo);
@@ -919,7 +921,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getBunInstrainat1Valoarea format invalid " + revenueDeclarationInfo.getBunInstrainat1Valoarea());
             }
-
+            declaratieAvereBunInstrainatInfo.setExplicatie(revenueDeclarationInfo.getBunInstrainat1Explicatie());
             declaratieAvereBunInstrainatInfo.setMoneda(revenueDeclarationInfo.getBunInstrainat1Moneda());
 
             declaratieAvereBunInstrainatInfoList.add(declaratieAvereBunInstrainatInfo);
@@ -938,7 +940,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getBunInstrainat2Valoarea format invalid " + revenueDeclarationInfo.getBunInstrainat2Valoarea());
             }
-
+            declaratieAvereBunInstrainatInfo.setExplicatie(revenueDeclarationInfo.getBunInstrainat2Explicatie());
             declaratieAvereBunInstrainatInfo.setMoneda(revenueDeclarationInfo.getBunInstrainat2Moneda());
 
             declaratieAvereBunInstrainatInfoList.add(declaratieAvereBunInstrainatInfo);
@@ -957,7 +959,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getBunInstrainat3Valoarea format invalid " + revenueDeclarationInfo.getBunInstrainat3Valoarea());
             }
-
+            declaratieAvereBunInstrainatInfo.setExplicatie(revenueDeclarationInfo.getBunInstrainat3Explicatie());
             declaratieAvereBunInstrainatInfo.setMoneda(revenueDeclarationInfo.getBunInstrainat3Moneda());
 
             declaratieAvereBunInstrainatInfoList.add(declaratieAvereBunInstrainatInfo);
@@ -976,7 +978,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getBunInstrainat4Valoarea format invalid " + revenueDeclarationInfo.getBunInstrainat4Valoarea());
             }
-
+            declaratieAvereBunInstrainatInfo.setExplicatie(revenueDeclarationInfo.getBunInstrainat4Explicatie());
             declaratieAvereBunInstrainatInfo.setMoneda(revenueDeclarationInfo.getBunInstrainat4Moneda());
 
             declaratieAvereBunInstrainatInfoList.add(declaratieAvereBunInstrainatInfo);
@@ -995,7 +997,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getBunInstrainat5Valoarea format invalid " + revenueDeclarationInfo.getBunInstrainat5Valoarea());
             }
-
+            declaratieAvereBunInstrainatInfo.setExplicatie(revenueDeclarationInfo.getBunInstrainat5Explicatie());
             declaratieAvereBunInstrainatInfo.setMoneda(revenueDeclarationInfo.getBunInstrainat5Moneda());
 
             declaratieAvereBunInstrainatInfoList.add(declaratieAvereBunInstrainatInfo);
@@ -1028,7 +1030,7 @@ public class DemnitarImportController {
                 throw new ValidationException("getCont1Sold format invalid " + revenueDeclarationInfo.getCont1Sold());
             }
 
-
+            declaratieAvereContInfo.setExplicatie(revenueDeclarationInfo.getCont1Explicatie());
             declaratieAvereContInfo.setMoneda(revenueDeclarationInfo.getCont1Moneda());
             declaratieAvereContInfo.setAnDeschidereCont(revenueDeclarationInfo.getCont1AnDeschidere());
 
@@ -1056,7 +1058,7 @@ public class DemnitarImportController {
                 throw new ValidationException("getCont2Sold format invalid " + revenueDeclarationInfo.getCont2Sold());
             }
 
-
+            declaratieAvereContInfo.setExplicatie(revenueDeclarationInfo.getCont2Explicatie());
             declaratieAvereContInfo.setMoneda(revenueDeclarationInfo.getCont2Moneda());
             declaratieAvereContInfo.setAnDeschidereCont(revenueDeclarationInfo.getCont2AnDeschidere());
 
@@ -1084,7 +1086,7 @@ public class DemnitarImportController {
                 throw new ValidationException("getCont3Sold format invalid " + revenueDeclarationInfo.getCont3Sold());
             }
 
-
+            declaratieAvereContInfo.setExplicatie(revenueDeclarationInfo.getCont3Explicatie());
             declaratieAvereContInfo.setMoneda(revenueDeclarationInfo.getCont3Moneda());
             declaratieAvereContInfo.setAnDeschidereCont(revenueDeclarationInfo.getCont3AnDeschidere());
 
@@ -1112,7 +1114,7 @@ public class DemnitarImportController {
                 throw new ValidationException("getCont4Sold format invalid " + revenueDeclarationInfo.getCont4Sold());
             }
 
-
+            declaratieAvereContInfo.setExplicatie(revenueDeclarationInfo.getCont4Explicatie());
             declaratieAvereContInfo.setMoneda(revenueDeclarationInfo.getCont4Moneda());
             declaratieAvereContInfo.setAnDeschidereCont(revenueDeclarationInfo.getCont4AnDeschidere());
 
@@ -1139,7 +1141,7 @@ public class DemnitarImportController {
                 throw new ValidationException("getCont5Sold format invalid " + revenueDeclarationInfo.getCont5Sold());
             }
 
-
+            declaratieAvereContInfo.setExplicatie(revenueDeclarationInfo.getCont5Explicatie());
             declaratieAvereContInfo.setMoneda(revenueDeclarationInfo.getCont5Moneda());
             declaratieAvereContInfo.setAnDeschidereCont(revenueDeclarationInfo.getCont5AnDeschidere());
 
@@ -1166,7 +1168,7 @@ public class DemnitarImportController {
                 throw new ValidationException("getCont6Sold format invalid " + revenueDeclarationInfo.getCont6Sold());
             }
 
-
+            declaratieAvereContInfo.setExplicatie(revenueDeclarationInfo.getCont6Explicatie());
             declaratieAvereContInfo.setMoneda(revenueDeclarationInfo.getCont6Moneda());
             declaratieAvereContInfo.setAnDeschidereCont(revenueDeclarationInfo.getCont6AnDeschidere());
 
@@ -1193,7 +1195,7 @@ public class DemnitarImportController {
                 throw new ValidationException("getCont7Sold format invalid " + revenueDeclarationInfo.getCont7Sold());
             }
 
-
+            declaratieAvereContInfo.setExplicatie(revenueDeclarationInfo.getCont7Explicatie());
             declaratieAvereContInfo.setMoneda(revenueDeclarationInfo.getCont7Moneda());
             declaratieAvereContInfo.setAnDeschidereCont(revenueDeclarationInfo.getCont7AnDeschidere());
 
@@ -1220,7 +1222,7 @@ public class DemnitarImportController {
                 throw new ValidationException("getCont8Sold format invalid " + revenueDeclarationInfo.getCont8Sold());
             }
 
-
+            declaratieAvereContInfo.setExplicatie(revenueDeclarationInfo.getCont8Explicatie());
             declaratieAvereContInfo.setMoneda(revenueDeclarationInfo.getCont8Moneda());
             declaratieAvereContInfo.setAnDeschidereCont(revenueDeclarationInfo.getCont8AnDeschidere());
 
@@ -1247,7 +1249,7 @@ public class DemnitarImportController {
                 throw new ValidationException("getCont9Sold format invalid " + revenueDeclarationInfo.getCont9Sold());
             }
 
-
+            declaratieAvereContInfo.setExplicatie(revenueDeclarationInfo.getCont9Explicatie());
             declaratieAvereContInfo.setMoneda(revenueDeclarationInfo.getCont9Moneda());
             declaratieAvereContInfo.setAnDeschidereCont(revenueDeclarationInfo.getCont9AnDeschidere());
 
@@ -1274,7 +1276,7 @@ public class DemnitarImportController {
                 throw new ValidationException("getCont10Sold format invalid " + revenueDeclarationInfo.getCont10Sold());
             }
 
-
+            declaratieAvereContInfo.setExplicatie(revenueDeclarationInfo.getCont10Explicatie());
             declaratieAvereContInfo.setMoneda(revenueDeclarationInfo.getCont10Moneda());
             declaratieAvereContInfo.setAnDeschidereCont(revenueDeclarationInfo.getCont10AnDeschidere());
 
@@ -1300,7 +1302,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getDatorie1Valoare format invalid " + revenueDeclarationInfo.getDatorie1Valoare());
             }
-
+            declaratieAvereDatorieInfo.setExplicatie(revenueDeclarationInfo.getDatorie1Explicatie());
             declaratieAvereDatorieInfoList.add(declaratieAvereDatorieInfo);
         }
 
@@ -1317,7 +1319,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getDatorie2Valoare format invalid " + revenueDeclarationInfo.getDatorie2Valoare());
             }
-
+            declaratieAvereDatorieInfo.setExplicatie(revenueDeclarationInfo.getDatorie2Explicatie());
             declaratieAvereDatorieInfoList.add(declaratieAvereDatorieInfo);
         }
 
@@ -1334,7 +1336,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getDatorie3Valoare format invalid " + revenueDeclarationInfo.getDatorie3Valoare());
             }
-
+            declaratieAvereDatorieInfo.setExplicatie(revenueDeclarationInfo.getDatorie3Explicatie());
             declaratieAvereDatorieInfoList.add(declaratieAvereDatorieInfo);
         }
 
@@ -1351,7 +1353,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getDatorie4Valoare format invalid " + revenueDeclarationInfo.getDatorie4Valoare());
             }
-
+            declaratieAvereDatorieInfo.setExplicatie(revenueDeclarationInfo.getDatorie4Explicatie());
             declaratieAvereDatorieInfoList.add(declaratieAvereDatorieInfo);
         }
 
@@ -1368,7 +1370,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getDatorie5Valoare format invalid " + revenueDeclarationInfo.getDatorie5Valoare());
             }
-
+            declaratieAvereDatorieInfo.setExplicatie(revenueDeclarationInfo.getDatorie5Explicatie());
             declaratieAvereDatorieInfoList.add(declaratieAvereDatorieInfo);
         }
 
@@ -1399,7 +1401,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getPlasament1Valoare format invalid " + revenueDeclarationInfo.getPlasament1Valoare());
             }
-
+            declaratieAverePlasamentInfo.setExplicatie(revenueDeclarationInfo.getPlasament1Explicatie());
             declaratieAverePlasamentInfo.setMoneda(revenueDeclarationInfo.getPlasament1Moneda());
 
             declaratieAverePlasamentInfoList.add(declaratieAverePlasamentInfo);
@@ -1426,7 +1428,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getPlasament2Valoare format invalid " + revenueDeclarationInfo.getPlasament2Valoare());
             }
-
+            declaratieAverePlasamentInfo.setExplicatie(revenueDeclarationInfo.getPlasament2Explicatie());
             declaratieAverePlasamentInfo.setMoneda(revenueDeclarationInfo.getPlasament2Moneda());
 
             declaratieAverePlasamentInfoList.add(declaratieAverePlasamentInfo);
@@ -1453,7 +1455,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getPlasament3Valoare format invalid " + revenueDeclarationInfo.getPlasament3Valoare());
             }
-
+            declaratieAverePlasamentInfo.setExplicatie(revenueDeclarationInfo.getPlasament3Explicatie());
             declaratieAverePlasamentInfo.setMoneda(revenueDeclarationInfo.getPlasament3Moneda());
 
             declaratieAverePlasamentInfoList.add(declaratieAverePlasamentInfo);
@@ -1480,7 +1482,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getPlasament4Valoare format invalid " + revenueDeclarationInfo.getPlasament4Valoare());
             }
-
+            declaratieAverePlasamentInfo.setExplicatie(revenueDeclarationInfo.getPlasament4Explicatie());
             declaratieAverePlasamentInfo.setMoneda(revenueDeclarationInfo.getPlasament4Moneda());
 
             declaratieAverePlasamentInfoList.add(declaratieAverePlasamentInfo);
@@ -1507,7 +1509,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getPlasament5Valoare format invalid " + revenueDeclarationInfo.getPlasament5Valoare());
             }
-
+            declaratieAverePlasamentInfo.setExplicatie(revenueDeclarationInfo.getPlasament5Explicatie());
             declaratieAverePlasamentInfo.setMoneda(revenueDeclarationInfo.getPlasament5Moneda());
 
             declaratieAverePlasamentInfoList.add(declaratieAverePlasamentInfo);
@@ -1529,7 +1531,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getBijuterie1ValoareEstimata format invalid " + revenueDeclarationInfo.getBijuterie1ValoareEstimata());
             }
-
+            declaratieAvereBijuterieInfo.setExplicatieBijuterie(revenueDeclarationInfo.getBijuterie1Explicatie());
             declaratieAvereBijuterieInfo.setMoneda(revenueDeclarationInfo.getBijuterie1Moneda());
 
             declaratieAvereBijuterieInfoList.add(declaratieAvereBijuterieInfo);
@@ -1545,7 +1547,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getBijuterie2ValoareEstimata format invalid " + revenueDeclarationInfo.getBijuterie2ValoareEstimata());
             }
-
+            declaratieAvereBijuterieInfo.setExplicatieBijuterie(revenueDeclarationInfo.getBijuterie2Explicatie());
             declaratieAvereBijuterieInfo.setMoneda(revenueDeclarationInfo.getBijuterie2Moneda());
 
             declaratieAvereBijuterieInfoList.add(declaratieAvereBijuterieInfo);
@@ -1561,7 +1563,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getBijuterie3ValoareEstimata format invalid " + revenueDeclarationInfo.getBijuterie3ValoareEstimata());
             }
-
+            declaratieAvereBijuterieInfo.setExplicatieBijuterie(revenueDeclarationInfo.getBijuterie3Explicatie());
             declaratieAvereBijuterieInfo.setMoneda(revenueDeclarationInfo.getBijuterie3Moneda());
 
             declaratieAvereBijuterieInfoList.add(declaratieAvereBijuterieInfo);
@@ -1577,7 +1579,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getBijuterie4ValoareEstimata format invalid " + revenueDeclarationInfo.getBijuterie4ValoareEstimata());
             }
-
+            declaratieAvereBijuterieInfo.setExplicatieBijuterie(revenueDeclarationInfo.getBijuterie4Explicatie());
             declaratieAvereBijuterieInfo.setMoneda(revenueDeclarationInfo.getBijuterie4Moneda());
 
             declaratieAvereBijuterieInfoList.add(declaratieAvereBijuterieInfo);
@@ -1594,7 +1596,7 @@ public class DemnitarImportController {
             } catch (Exception e) {
                 throw new ValidationException("getBijuterie5ValoareEstimata format invalid " + revenueDeclarationInfo.getBijuterie5ValoareEstimata());
             }
-
+            declaratieAvereBijuterieInfo.setExplicatieBijuterie(revenueDeclarationInfo.getBijuterie5Explicatie());
             declaratieAvereBijuterieInfo.setMoneda(revenueDeclarationInfo.getBijuterie5Moneda());
 
             declaratieAvereBijuterieInfoList.add(declaratieAvereBijuterieInfo);
@@ -2883,7 +2885,7 @@ public class DemnitarImportController {
         columnMapping.put("imobc2_cat", "cladire2Categoria");
         columnMapping.put("imobc2_an", "cladire2AnDobindire");
         columnMapping.put("imobc2_sup", "cladire2Suprafata");
-        columnMapping.put("imobc2_sup_e", "explicatieImobc2Suprafata");
+        columnMapping.put("imobc2_sup_e", "cladire2ExplicatieSuprafata");
         columnMapping.put("imobc2_unit", "cladire2UnitateDeMasura");
         columnMapping.put("imobc2_cot", "cladire2CotaParte");
         columnMapping.put("imobc2_dob", "cladire2ModDobandire");
@@ -3096,6 +3098,7 @@ public class DemnitarImportController {
         columnMapping.put("mobb1_desc", "bijuterie1Descriere");
         columnMapping.put("mobb1_an", "bijuterie1AnDobandire");
         columnMapping.put("mobb1_val", "bijuterie1ValoareEstimata");
+        columnMapping.put("mobb1_val_e", "bijuterie1Explicatie");
         columnMapping.put("mobb1_mon", "bijuterie1Moneda");
 
         // bijuterie 2
@@ -3103,6 +3106,7 @@ public class DemnitarImportController {
         columnMapping.put("mobb2_desc", "bijuterie2Descriere");
         columnMapping.put("mobb2_an", "bijuterie2AnDobandire");
         columnMapping.put("mobb2_val", "bijuterie2ValoareEstimata");
+        columnMapping.put("mobb2_val_e", "bijuterie2Explicatie");
         columnMapping.put("mobb2_mon", "bijuterie2Moneda");
 
         // bijuterie 3
@@ -3110,6 +3114,7 @@ public class DemnitarImportController {
         columnMapping.put("mobb3_desc", "bijuterie3Descriere");
         columnMapping.put("mobb3_an", "bijuterie3AnDobandire");
         columnMapping.put("mobb3_val", "bijuterie3ValoareEstimata");
+        columnMapping.put("mobb3_val_e", "bijuterie3Explicatie");
         columnMapping.put("mobb3_mon", "bijuterie3Moneda");
 
         // bijuterie 4
@@ -3117,6 +3122,7 @@ public class DemnitarImportController {
         columnMapping.put("mobb4_desc", "bijuterie4Descriere");
         columnMapping.put("mobb4_an", "bijuterie4AnDobandire");
         columnMapping.put("mobb4_val", "bijuterie4ValoareEstimata");
+        columnMapping.put("mobb4_val_e", "bijuterie4Explicatie");
         columnMapping.put("mobb4_mon", "bijuterie4Moneda");
 
         // bijuterie 5
@@ -3124,6 +3130,7 @@ public class DemnitarImportController {
         columnMapping.put("mobb5_desc", "bijuterie5Descriere");
         columnMapping.put("mobb5_an", "bijuterie5AnDobandire");
         columnMapping.put("mobb5_val", "bijuterie5ValoareEstimata");
+        columnMapping.put("mobb5_val_e", "bijuterie5Explicatie");
         columnMapping.put("mobb5_mon", "bijuterie5Moneda");
 
         // alte bijuterii
@@ -3136,6 +3143,7 @@ public class DemnitarImportController {
         columnMapping.put("instr1_pers", "bunInstrainat1PersoanaCatreCare");
         columnMapping.put("instr1_form", "bunInstrainat1FormaInstrainarii");
         columnMapping.put("instr1_val", "bunInstrainat1Valoarea");
+        columnMapping.put("instr1_val_e", "bunInstrainat1Explicatie");
         columnMapping.put("instr1_mon", "bunInstrainat1Moneda");
 
         // bunuri instrainate 2
@@ -3145,6 +3153,7 @@ public class DemnitarImportController {
         columnMapping.put("instr2_pers", "bunInstrainat2PersoanaCatreCare");
         columnMapping.put("instr2_form", "bunInstrainat2FormaInstrainarii");
         columnMapping.put("instr2_val", "bunInstrainat2Valoarea");
+        columnMapping.put("instr2_val_e", "bunInstrainat2Explicatie");
         columnMapping.put("instr2_mon", "bunInstrainat2Moneda");
 
         // bunuri instrainate 3
@@ -3154,6 +3163,7 @@ public class DemnitarImportController {
         columnMapping.put("instr3_pers", "bunInstrainat3PersoanaCatreCare");
         columnMapping.put("instr3_form", "bunInstrainat3FormaInstrainarii");
         columnMapping.put("instr3_val", "bunInstrainat3Valoarea");
+        columnMapping.put("instr3_val_e", "bunInstrainat3Explicatie");
         columnMapping.put("instr3_mon", "bunInstrainat3Moneda");
 
         // bunuri instrainate 4
@@ -3163,6 +3173,7 @@ public class DemnitarImportController {
         columnMapping.put("instr4_pers", "bunInstrainat4PersoanaCatreCare");
         columnMapping.put("instr4_form", "bunInstrainat4FormaInstrainarii");
         columnMapping.put("instr4_val", "bunInstrainat4Valoarea");
+        columnMapping.put("instr4_val_e", "bunInstrainat4Explicatie");
         columnMapping.put("instr4_mon", "bunInstrainat4Moneda");
 
         // bunuri instrainate 5
@@ -3172,6 +3183,7 @@ public class DemnitarImportController {
         columnMapping.put("instr5_pers", "bunInstrainat5PersoanaCatreCare");
         columnMapping.put("instr5_form", "bunInstrainat5FormaInstrainarii");
         columnMapping.put("instr5_val", "bunInstrainat5Valoarea");
+        columnMapping.put("instr5_val_e", "bunInstrainat5Explicatie");
         columnMapping.put("instr5_mon", "bunInstrainat5Moneda");
 
         // alte bunuri instrainate
@@ -3185,6 +3197,7 @@ public class DemnitarImportController {
         columnMapping.put("AFcd1_mon", "cont1Moneda");
         columnMapping.put("AFcd1_an", "cont1AnDeschidere");
         columnMapping.put("AFcd1_sold", "cont1Sold");
+        columnMapping.put("AFcd1_sold_e", "cont1Explicatie");
 
         // cont 2
         columnMapping.put("dAFcd1", "existaConturi2");
@@ -3194,6 +3207,7 @@ public class DemnitarImportController {
         columnMapping.put("AFcd2_mon", "cont2Moneda");
         columnMapping.put("AFcd2_an", "cont2AnDeschidere");
         columnMapping.put("AFcd2_sold", "cont2Sold");
+        columnMapping.put("AFcd2_sold_e", "cont2Explicatie");
 
         // cont 3
         columnMapping.put("dAFcd2", "existaConturi3");
@@ -3203,6 +3217,7 @@ public class DemnitarImportController {
         columnMapping.put("AFcd3_mon", "cont3Moneda");
         columnMapping.put("AFcd3_an", "cont3AnDeschidere");
         columnMapping.put("AFcd3_sold", "cont3Sold");
+        columnMapping.put("AFcd3_sold_e", "cont3Explicatie");
 
         // cont 4
         columnMapping.put("dAFcd3", "existaConturi4");
@@ -3212,6 +3227,7 @@ public class DemnitarImportController {
         columnMapping.put("AFcd4_mon", "cont4Moneda");
         columnMapping.put("AFcd4_an", "cont4AnDeschidere");
         columnMapping.put("AFcd4_sold", "cont4Sold");
+        columnMapping.put("AFcd4_sold_e", "cont4Explicatie");
 
         // cont 5
         columnMapping.put("dAFcd4", "existaConturi5");
@@ -3221,6 +3237,7 @@ public class DemnitarImportController {
         columnMapping.put("AFcd5_mon", "cont5Moneda");
         columnMapping.put("AFcd5_an", "cont5AnDeschidere");
         columnMapping.put("AFcd5_sold", "cont5Sold");
+        columnMapping.put("AFcd5_sold_e", "cont5Explicatie");
 
         // cont 6
         columnMapping.put("dAFcd5", "existaConturi6");
@@ -3230,6 +3247,7 @@ public class DemnitarImportController {
         columnMapping.put("AFcd6_mon", "cont6Moneda");
         columnMapping.put("AFcd6_an", "cont6AnDeschidere");
         columnMapping.put("AFcd6_sold", "cont6Sold");
+        columnMapping.put("AFcd6_sold_e", "cont6Explicatie");
 
         // cont 7
         columnMapping.put("dAFcd6", "existaConturi7");
@@ -3239,6 +3257,7 @@ public class DemnitarImportController {
         columnMapping.put("AFcd7_mon", "cont7Moneda");
         columnMapping.put("AFcd7_an", "cont7AnDeschidere");
         columnMapping.put("AFcd7_sold", "cont7Sold");
+        columnMapping.put("AFcd7_sold_e", "cont7Explicatie");
 
         // cont 8
         columnMapping.put("dAFcd7", "existaConturi8");
@@ -3248,6 +3267,7 @@ public class DemnitarImportController {
         columnMapping.put("AFcd8_mon", "cont8Moneda");
         columnMapping.put("AFcd8_an", "cont8AnDeschidere");
         columnMapping.put("AFcd8_sold", "cont8Sold");
+        columnMapping.put("AFcd8_sold_e", "cont8Explicatie");
 
         // cont 9
         columnMapping.put("dAFcd8", "existaConturi9");
@@ -3257,6 +3277,7 @@ public class DemnitarImportController {
         columnMapping.put("AFcd9_mon", "cont9Moneda");
         columnMapping.put("AFcd9_an", "cont9AnDeschidere");
         columnMapping.put("AFcd9_sold", "cont9Sold");
+        columnMapping.put("AFcd9_sold_e", "cont9Explicatie");
 
         // cont 10
         columnMapping.put("dAFcd9", "existaConturi10");
@@ -3266,6 +3287,7 @@ public class DemnitarImportController {
         columnMapping.put("AFcd10_mon", "cont10Moneda");
         columnMapping.put("AFcd10_an", "cont10AnDeschidere");
         columnMapping.put("AFcd10_sold", "cont10Sold");
+        columnMapping.put("AFcd10_sold_e", "cont10Explicatie");
 
         // alte conturi mai futu-ti dumnezeii matii baescu si iliescu si dragnea su constantinescu???
         // alte conturi free text
@@ -3278,6 +3300,7 @@ public class DemnitarImportController {
         columnMapping.put("AFp1_tip", "plasament1Tip");
         columnMapping.put("AFp1_cot", "plasament1NumarTitluri");
         columnMapping.put("AFp1_val", "plasament1Valoare");
+        columnMapping.put("AFp1_val_e", "plasament1Explicatie");
         columnMapping.put("AFp1_mon", "plasament1Moneda");
 
         // plasament 2
@@ -3287,6 +3310,7 @@ public class DemnitarImportController {
         columnMapping.put("AFp2_tip", "plasament2Tip");
         columnMapping.put("AFp2_cot", "plasament2NumarTitluri");
         columnMapping.put("AFp2_val", "plasament2Valoare");
+        columnMapping.put("AFp2_val_e", "plasament2Explicatie");
         columnMapping.put("AFp2_mon", "plasament2Moneda");
 
         // plasament 3
@@ -3296,6 +3320,7 @@ public class DemnitarImportController {
         columnMapping.put("AFp3_tip", "plasament3Tip");
         columnMapping.put("AFp3_cot", "plasament3NumarTitluri");
         columnMapping.put("AFp3_val", "plasament3Valoare");
+        columnMapping.put("AFp3_val_e", "plasament3Explicatie");
         columnMapping.put("AFp3_mon", "plasament3Moneda");
 
         // plasament 4
@@ -3305,6 +3330,7 @@ public class DemnitarImportController {
         columnMapping.put("AFp4_tip", "plasament4Tip");
         columnMapping.put("AFp4_cot", "plasament4NumarTitluri");
         columnMapping.put("AFp4_val", "plasament4Valoare");
+        columnMapping.put("AFp4_val_e", "plasament4Explicatie");
         columnMapping.put("AFp4_mon", "plasament4Moneda");
 
         // plasament 5
@@ -3314,6 +3340,7 @@ public class DemnitarImportController {
         columnMapping.put("AFp5_tip", "plasament5Tip");
         columnMapping.put("AFp5_cot", "plasament5NumarTitluri");
         columnMapping.put("AFp5_val", "plasament5Valoare");
+        columnMapping.put("AFp5_val_e", "plasament5Explicatie");
         columnMapping.put("AFp5_mon", "plasament5Moneda");
 
         // alte plasamente
@@ -3328,6 +3355,7 @@ public class DemnitarImportController {
         columnMapping.put("dat1_an", "datorie1AnContractare");
         columnMapping.put("dat1_scad", "datorie1DataScadenta");
         columnMapping.put("dat1_val", "datorie1Valoare");
+        columnMapping.put("dat1_val_e", "datorie1Explicatie");
         columnMapping.put("dat1_mon", "datorie1Moneda");
 
         // datorie 2
@@ -3336,6 +3364,7 @@ public class DemnitarImportController {
         columnMapping.put("dat2_an", "datorie2AnContractare");
         columnMapping.put("dat2_scad", "datorie2DataScadenta");
         columnMapping.put("dat2_val", "datorie2Valoare");
+        columnMapping.put("dat2_val_e", "datorie2Explicatie");
         columnMapping.put("dat2_mon", "datorie2Moneda");
 
         // datorie 3
@@ -3344,6 +3373,7 @@ public class DemnitarImportController {
         columnMapping.put("dat3_an", "datorie3AnContractare");
         columnMapping.put("dat3_scad", "datorie3DataScadenta");
         columnMapping.put("dat3_val", "datorie3Valoare");
+        columnMapping.put("dat3_val_e", "datorie3Explicatie");
         columnMapping.put("dat3_mon", "datorie3Moneda");
 
         // datorie 4
@@ -3352,6 +3382,7 @@ public class DemnitarImportController {
         columnMapping.put("dat4_an", "datorie4AnContractare");
         columnMapping.put("dat4_scad", "datorie4DataScadenta");
         columnMapping.put("dat4_val", "datorie4Valoare");
+        columnMapping.put("dat4_val_e", "datorie4Explicatie");
         columnMapping.put("dat4_mon", "datorie4Moneda");
 
         // datorie 5
@@ -3360,6 +3391,7 @@ public class DemnitarImportController {
         columnMapping.put("dat5_an", "datorie5AnContractare");
         columnMapping.put("dat5_scad", "datorie5DataScadenta");
         columnMapping.put("dat5_val", "datorie5Valoare");
+        columnMapping.put("dat5_val_e", "datorie5Explicatie");
         columnMapping.put("dat5_mon", "datorie5Moneda");
 
         // alte datorii free text
@@ -3371,6 +3403,7 @@ public class DemnitarImportController {
         columnMapping.put("cad1_surs", "cadou1SursaVenit");
         columnMapping.put("cad1_serv", "cadou1ServiciuPrestat");
         columnMapping.put("cad1_ven", "cadou1VenitAnual");
+        columnMapping.put("cad1_ven_e", "cadou1Explicatie");
         columnMapping.put("cad1_mon", "cadou1Monenda");
 
         // cadou 2
@@ -3379,6 +3412,7 @@ public class DemnitarImportController {
         columnMapping.put("cad2_surs", "cadou2SursaVenit");
         columnMapping.put("cad2_serv", "cadou2ServiciuPrestat");
         columnMapping.put("cad2_ven", "cadou2VenitAnual");
+        columnMapping.put("cad2_ven_e", "cadou2Explicatie");
         columnMapping.put("cad2_mon", "cadou2Monenda");
 
         // alte cadouri free text
@@ -3390,6 +3424,7 @@ public class DemnitarImportController {
         columnMapping.put("VenSal1_surs", "venitSalariu1Sursa");
         columnMapping.put("VenSal1_serv", "venit1SalariuServiciPrestat");
         columnMapping.put("VenSal1_ven", "venit1SalariuVenitAnual");
+        columnMapping.put("VenSal1_ven_e", "venit1SalariuExplicatie");
         columnMapping.put("VenSal1_mon", "venit1SalariuMonenda");
 
         // venit salar 2
@@ -3398,6 +3433,7 @@ public class DemnitarImportController {
         columnMapping.put("VenSal2_surs", "venitSalariu2Sursa");
         columnMapping.put("VenSal2_serv", "venit2SalariuServiciPrestat");
         columnMapping.put("VenSal2_ven", "venit2SalariuVenitAnual");
+        columnMapping.put("VenSal2_ven_e", "venit2SalariuExplicatie");
         columnMapping.put("VenSal2_mon", "venit2SalariuMonenda");
 
         // venit salar 3
@@ -3406,6 +3442,7 @@ public class DemnitarImportController {
         columnMapping.put("VenSal3_surs", "venitSalariu3Sursa");
         columnMapping.put("VenSal3_serv", "venit3SalariuServiciPrestat");
         columnMapping.put("VenSal3_ven", "venit3SalariuVenitAnual");
+        columnMapping.put("VenSal3_ven_e", "venit3SalariuExplicatie");
         columnMapping.put("VenSal3_mon", "venit3SalariuMonenda");
 
         // venit salar 4
@@ -3414,6 +3451,7 @@ public class DemnitarImportController {
         columnMapping.put("VenSal4_surs", "venitSalariu4Sursa");
         columnMapping.put("VenSal4_serv", "venit4SalariuServiciPrestat");
         columnMapping.put("VenSal4_ven", "venit4SalariuVenitAnual");
+        columnMapping.put("VenSal4_ven_e", "venit4SalariuExplicatie");
         columnMapping.put("VenSal4_mon", "venit4SalariuMonenda");
 
         // venit salar 5
@@ -3422,6 +3460,7 @@ public class DemnitarImportController {
         columnMapping.put("VenSal5_surs", "venitSalariu5Sursa");
         columnMapping.put("VenSal5_serv", "venit5SalariuServiciPrestat");
         columnMapping.put("VenSal5_ven", "venit5SalariuVenitAnual");
+        columnMapping.put("VenSal5_ven_e", "venit5SalariuExplicatie");
         columnMapping.put("VenSal5_mon", "venit5SalariuMonenda");
 
         // venit salar 6
@@ -3430,6 +3469,7 @@ public class DemnitarImportController {
         columnMapping.put("VenSal6_surs", "venitSalariu6Sursa");
         columnMapping.put("VenSal6_serv", "venit6SalariuServiciPrestat");
         columnMapping.put("VenSal6_ven", "venit6SalariuVenitAnual");
+        columnMapping.put("VenSal6_ven_e", "venit6SalariuExplicatie");
         columnMapping.put("VenSal6_mon", "venit6SalariuMonenda");
 
         // alte venituri salar free text
@@ -3441,6 +3481,7 @@ public class DemnitarImportController {
         columnMapping.put("venInd1_sursa", "venitActivitatiIndependente1Sursa");
         columnMapping.put("venInd1_serv", "venitActivitatiIndependente1ServiciPrestat");
         columnMapping.put("venInd1_c", "venitActivitatiIndependente1VenitAnual");
+        columnMapping.put("venInd1_c_e", "venitActivitatiIndependente1Explicatie");
         columnMapping.put("venInd1_mon", "venitActivitatiIndependente1Moneda");
 
         // venit activitati independente 2
@@ -3449,6 +3490,7 @@ public class DemnitarImportController {
         columnMapping.put("venInd2_sursa", "venitActivitatiIndependente2Sursa");
         columnMapping.put("venInd2_serv", "venitActivitatiIndependente2ServiciPrestat");
         columnMapping.put("venInd2_c", "venitActivitatiIndependente2VenitAnual");
+        columnMapping.put("venInd2_c_e", "venitActivitatiIndependente2Explicatie");
         columnMapping.put("venInd2_mon", "venitActivitatiIndependente2Moneda");
 
         // venit activitati independente 3
@@ -3457,6 +3499,7 @@ public class DemnitarImportController {
         columnMapping.put("venInd3_sursa", "venitActivitatiIndependente3Sursa");
         columnMapping.put("venInd3_serv", "venitActivitatiIndependente3ServiciPrestat");
         columnMapping.put("venInd3_c", "venitActivitatiIndependente3VenitAnual");
+        columnMapping.put("venInd3_c_e", "venitActivitatiIndependente3Explicatie");
         columnMapping.put("venInd3_mon", "venitActivitatiIndependente3Moneda");
 
         // venit activitati independente 4
@@ -3465,6 +3508,7 @@ public class DemnitarImportController {
         columnMapping.put("venInd4_sursa", "venitActivitatiIndependente4Sursa");
         columnMapping.put("venInd4_serv", "venitActivitatiIndependente4ServiciPrestat");
         columnMapping.put("venInd4_c", "venitActivitatiIndependente4VenitAnual");
+        columnMapping.put("venInd4_c_e", "venitActivitatiIndependente4Explicatie");
         columnMapping.put("venInd4_mon", "venitActivitatiIndependente4Moneda");
 
         // alte venituri activitati independente
@@ -3476,6 +3520,7 @@ public class DemnitarImportController {
         columnMapping.put("venCed1_surs", "venitCedareaFolosintei1Sursa");
         columnMapping.put("venCed1_serv", "venitCedareaFolosintei1ServiciPrestat");
         columnMapping.put("venCed1_c", "venitCedareaFolosintei1VenitAnual");
+        columnMapping.put("venCed1_c_e", "venitCedareaFolosintei1Explicatie");
         columnMapping.put("venCed1_mon", "venitCedareaFolosintei1Moneda");
 
         // venit cedarea folosintei 2
@@ -3484,6 +3529,7 @@ public class DemnitarImportController {
         columnMapping.put("venCed2_surs", "venitCedareaFolosintei2Sursa");
         columnMapping.put("venCed2_serv", "venitCedareaFolosintei2ServiciPrestat");
         columnMapping.put("venCed2_c", "venitCedareaFolosintei2VenitAnual");
+        columnMapping.put("venCed2_c_e", "venitCedareaFolosintei2Explicatie");
         columnMapping.put("venCed2_mon", "venitCedareaFolosintei2Moneda");
 
         // venit cedarea folosintei 3
@@ -3492,6 +3538,7 @@ public class DemnitarImportController {
         columnMapping.put("venCed3_surs", "venitCedareaFolosintei3Sursa");
         columnMapping.put("venCed3_serv", "venitCedareaFolosintei3ServiciPrestat");
         columnMapping.put("venCed3_c", "venitCedareaFolosintei3VenitAnual");
+        columnMapping.put("venCed3_c_e", "venitCedareaFolosintei3Explicatie");
         columnMapping.put("venCed3_mon", "venitCedareaFolosintei3Moneda");
 
         // venit cedarea folosintei 4
@@ -3500,6 +3547,7 @@ public class DemnitarImportController {
         columnMapping.put("venCed4_surs", "venitCedareaFolosintei4Sursa");
         columnMapping.put("venCed4_serv", "venitCedareaFolosintei4ServiciPrestat");
         columnMapping.put("venCed4_c", "venitCedareaFolosintei4VenitAnual");
+        columnMapping.put("venCed4_c_e", "venitCedareaFolosintei4Explicatie");
         columnMapping.put("venCed4_mon", "venitCedareaFolosintei4Moneda");
 
         // venit cedarea folosintei 5
@@ -3508,6 +3556,7 @@ public class DemnitarImportController {
         columnMapping.put("venCed5_surs", "venitCedareaFolosintei5Sursa");
         columnMapping.put("venCed5_serv", "venitCedareaFolosintei5ServiciPrestat");
         columnMapping.put("venCed5_c", "venitCedareaFolosintei5VenitAnual");
+        columnMapping.put("venCed5_c_e", "venitCedareaFolosintei5Explicatie");
         columnMapping.put("venCed5_mon", "venitCedareaFolosintei5Moneda");
 
         // venit cedarea folosintei 6
@@ -3516,6 +3565,7 @@ public class DemnitarImportController {
         columnMapping.put("venCed6_surs", "venitCedareaFolosintei6Sursa");
         columnMapping.put("venCed6_serv", "venitCedareaFolosintei6ServiciPrestat");
         columnMapping.put("venCed6_c", "venitCedareaFolosintei6VenitAnual");
+        columnMapping.put("venCed6_c_e", "venitCedareaFolosintei6Explicatie");
         columnMapping.put("venCed6_mon", "venitCedareaFolosintei6Moneda");
 
         // alte venituri cedarea folosintei
@@ -3527,6 +3577,7 @@ public class DemnitarImportController {
         columnMapping.put("venInv1_sursa", "venitInvestitii1Sursa");
         columnMapping.put("venInv1_serv", "venitInvestitii1ServiciPrestat");
         columnMapping.put("venInv1_c", "venitInvestitii1VenitAnual");
+        columnMapping.put("venInv1_c_e", "venitInvestitii1Explicatie");
         columnMapping.put("venInv1_mon", "venitInvestitii1Moneda");
 
         // venit investitii 2
@@ -3535,6 +3586,7 @@ public class DemnitarImportController {
         columnMapping.put("venInv2_sursa", "venitInvestitii2Sursa");
         columnMapping.put("venInv2_serv", "venitInvestitii2ServiciPrestat");
         columnMapping.put("venInv2_c", "venitInvestitii2VenitAnual");
+        columnMapping.put("venInv2_c_e", "venitInvestitii2Explicatie");
         columnMapping.put("venInv2_mon", "venitInvestitii2Moneda");
 
         // venit investitii 3
@@ -3543,6 +3595,7 @@ public class DemnitarImportController {
         columnMapping.put("venInv3_sursa", "venitInvestitii3Sursa");
         columnMapping.put("venInv3_serv", "venitInvestitii3ServiciPrestat");
         columnMapping.put("venInv3_c", "venitInvestitii3VenitAnual");
+        columnMapping.put("venInv3_c_e", "venitInvestitii3Explicatie");
         columnMapping.put("venInv3_mon", "venitInvestitii3Moneda");
 
         // venit investitii 4
@@ -3551,6 +3604,7 @@ public class DemnitarImportController {
         columnMapping.put("venInv4_sursa", "venitInvestitii4Sursa");
         columnMapping.put("venInv4_serv", "venitInvestitii4ServiciPrestat");
         columnMapping.put("venInv4_c", "venitInvestitii4VenitAnual");
+        columnMapping.put("venInv4_c_e", "venitInvestitii4Explicatie");
         columnMapping.put("venInv4_mon", "venitInvestitii4Moneda");
 
         // alte venituri din investitii
@@ -3562,6 +3616,7 @@ public class DemnitarImportController {
         columnMapping.put("venPen1_surs", "venitPensii1Sursa");
         columnMapping.put("venPen1_serv", "venitPensii1ServiciPrestat");
         columnMapping.put("venPen1_c", "venitPensii1VenitAnual");
+        columnMapping.put("venPen1_c_e", "venitPensii1Explicatie");
         columnMapping.put("venPen1_mon", "venitPensii1Moneda");
 
         // venituri pensii 2
@@ -3570,6 +3625,7 @@ public class DemnitarImportController {
         columnMapping.put("venPen2_surs", "venitPensii2Sursa");
         columnMapping.put("venPen2_serv", "venitPensii2ServiciPrestat");
         columnMapping.put("venPen2_c", "venitPensii2VenitAnual");
+        columnMapping.put("venPen2_c_e", "venitPensii2Explicatie");
         columnMapping.put("venPen2_mon", "venitPensii2Moneda");
 
         // alte venituri pensii
@@ -3581,6 +3637,7 @@ public class DemnitarImportController {
         columnMapping.put("venAgr1_surs", "venitAgricol1Sursa");
         columnMapping.put("venAgr1_serv", "venitAgricol1ServiciPrestat");
         columnMapping.put("venAgr1_c", "venitAgricol1VenitAnual");
+        columnMapping.put("venAgr1_c_e", "venitAgricol1Explicatie");
         columnMapping.put("venAgr1_mon", "venitAgricol1Moneda");
 
         // venituri agricole 2
@@ -3589,6 +3646,7 @@ public class DemnitarImportController {
         columnMapping.put("venAgr2_surs", "venitAgricol2Sursa");
         columnMapping.put("venAgr2_serv", "venitAgricol2ServiciPrestat");
         columnMapping.put("venAgr2_c", "venitAgricol2VenitAnual");
+        columnMapping.put("venAgr2_c_e", "venitAgricol2Explicatie");
         columnMapping.put("venAgr2_mon", "venitAgricol2Moneda");
 
         // alte venituri agricole
@@ -3600,6 +3658,7 @@ public class DemnitarImportController {
         columnMapping.put("venNor1_surs", "venitNoroc1Sursa");
         columnMapping.put("venNor1_serv", "venitNoroc1ServiciPrestat");
         columnMapping.put("venNor1_c", "venitNoroc1VenitAnual");
+        columnMapping.put("venNor1_c_e", "venitNoroc1Explicatie");
         columnMapping.put("venNor1_mon", "venitNoroc1Moneda");
 
         // venituri noroc 2
@@ -3608,6 +3667,7 @@ public class DemnitarImportController {
         columnMapping.put("venNor2_surs", "venitNoroc2Sursa");
         columnMapping.put("venNor2_serv", "venitNoroc2ServiciPrestat");
         columnMapping.put("venNor2_c", "venitNoroc2VenitAnual");
+        columnMapping.put("venNor2_c_e", "venitNoroc2Explicatie");
         columnMapping.put("venNor2_mon", "venitNoroc2Moneda");
 
         // alte venituri noroc
@@ -3619,6 +3679,7 @@ public class DemnitarImportController {
         columnMapping.put("venAlt1_surs", "venitAlte1Sursa");
         columnMapping.put("venAlt1_serv", "venitAlte1ServiciPrestat");
         columnMapping.put("venAlt1_c", "veniAlte1VenitAnual");
+        columnMapping.put("venAlt1_c_e", "veniAlte1Explicatie");
         columnMapping.put("venAlt1_mon", "venitAlte1Moneda");
 
         // alte venituri 2
@@ -3627,6 +3688,7 @@ public class DemnitarImportController {
         columnMapping.put("venAlt2_surs", "venitAlte2Sursa");
         columnMapping.put("venAlt2_serv", "venitAlte2ServiciPrestat");
         columnMapping.put("venAlt2_c", "veniAlte2VenitAnual");
+        columnMapping.put("venAlt2_c_e", "veniAlte2Explicatie");
         columnMapping.put("venAlt2_mon", "venitAlte2Moneda");
 
         // alte venituri 3
@@ -3635,6 +3697,7 @@ public class DemnitarImportController {
         columnMapping.put("venAlt3_surs", "venitAlte3Sursa");
         columnMapping.put("venAlt3_serv", "venitAlte3ServiciPrestat");
         columnMapping.put("venAlt3_c", "veniAlte3VenitAnual");
+        columnMapping.put("venAlt3_c_e", "veniAlte3Explicatie");
         columnMapping.put("venAlt3_mon", "venitAlte3Moneda");
 
         // alte venituri 4
@@ -3643,6 +3706,7 @@ public class DemnitarImportController {
         columnMapping.put("venAlt4_surs", "venitAlte4Sursa");
         columnMapping.put("venAlt4_serv", "venitAlte4ServiciPrestat");
         columnMapping.put("venAlt4_c", "veniAlte4VenitAnual");
+        columnMapping.put("venAlt4_c_e", "veniAlte4Explicatie");
         columnMapping.put("venAlt4_mon", "venitAlte4Moneda");
 
         // alte venituri
