@@ -197,6 +197,7 @@ public class DemnitarImportController {
 
         declaratieAvereInfo.setDemnitarId(demnitarId);
         declaratieAvereInfo.setDataDeclaratiei(dataDeclaratiei);
+
         
         if (!revenueDeclarationInfo.getFunctie().equals("")) {
             Integer functieId = null;
@@ -231,6 +232,8 @@ public class DemnitarImportController {
         }
 
         declaratieAvereInfo.setLinkDeclaratie(revenueDeclarationInfo.getLinkDeclaratie());
+        String date = revenueDeclarationInfo.getDataDepunerii().replaceAll("[.]", "/");
+        declaratieAvereInfo.setDataDepunerii(DateUtilities.parseDate(date, "dd/MM/yyyy"));
         declaratieAvereInfo.setIsDone(true);
 
 
@@ -2680,6 +2683,7 @@ public class DemnitarImportController {
         columnMapping.put("pnDem", "firstName");
         columnMapping.put("nDem", "lastName");
         columnMapping.put("datSem", "dataDeclaratiei");
+        columnMapping.put("datDec", "dataDepunerii");
         columnMapping.put("funct", "functie");
         columnMapping.put("inst", "institutie");
         columnMapping.put("l_Fis", "linkDeclaratie");

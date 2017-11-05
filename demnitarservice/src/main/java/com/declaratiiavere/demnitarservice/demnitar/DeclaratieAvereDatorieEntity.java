@@ -36,6 +36,9 @@ public class DeclaratieAvereDatorieEntity extends EntityBase {
     @Column(name ="moneda")
     private String moneda;
 
+    @Column(name ="explicatie_datorie")
+    private String explicatieDatorie;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "declaratie_avere_id", nullable = false)
     private DeclaratieAvereEntity declaratieAvereEntity;
@@ -94,6 +97,14 @@ public class DeclaratieAvereDatorieEntity extends EntityBase {
 
     public void setMoneda(String moneda) {
         this.moneda = moneda;
+    }
+
+    public String getExplicatieDatorie() {
+        return explicatieDatorie;
+    }
+
+    public void setExplicatieDatorie(String explicatieDatorie) {
+        this.explicatieDatorie = explicatieDatorie;
     }
 
     public DeclaratieAvereEntity getDeclaratieAvereEntity() {

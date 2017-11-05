@@ -9,6 +9,7 @@ public class RevenueDeclarationInfo {
     private String firstName;
     private String lastName;
     private String dataDeclaratiei;
+    private String dataDepunerii;
     private String functie;
     private String institutie;
     private String linkDeclaratie;
@@ -1067,6 +1068,14 @@ public class RevenueDeclarationInfo {
 
     public void setDataDeclaratiei(String dataDeclaratiei) {
         this.dataDeclaratiei = dataDeclaratiei;
+    }
+
+    public String getDataDepunerii() {
+        return dataDepunerii;
+    }
+
+    public void setDataDepunerii(String dataDepunerii) {
+        this.dataDepunerii = dataDepunerii;
     }
 
     public String getFunctie() {

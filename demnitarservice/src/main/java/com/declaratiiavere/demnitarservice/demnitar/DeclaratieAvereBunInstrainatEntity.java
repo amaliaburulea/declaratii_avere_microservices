@@ -46,6 +46,9 @@ public class DeclaratieAvereBunInstrainatEntity extends EntityBase {
     @Column(name ="moneda")
     private String moneda;
 
+    @Column(name ="explicatie_suma")
+    private String explicatieSuma;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "declaratie_avere_id", nullable = false)
     private DeclaratieAvereEntity declaratieAvereEntity;
@@ -129,6 +132,15 @@ public class DeclaratieAvereBunInstrainatEntity extends EntityBase {
     public void setMoneda(String moneda) {
         this.moneda = moneda;
     }
+
+    public String getExplicatieSuma() {
+        return explicatieSuma;
+    }
+
+    public void setExplicatieSuma(String explicatieSuma) {
+        this.explicatieSuma = explicatieSuma;
+    }
+
 
     public DeclaratieAvereEntity getDeclaratieAvereEntity() {
         return declaratieAvereEntity;
