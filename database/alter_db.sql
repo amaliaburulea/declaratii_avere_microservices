@@ -117,11 +117,11 @@ CREATE TABLE IF NOT EXISTS `declaratie_avere_plasament` (
   `declaratie_avere_id` int(11) NOT NULL,
   `titular` TEXT NOT NULL,
   `emitent_titlu` text NOT NULL,
-  `tipul_plasamentului` int(11) NULL COMMENT '1 - hârtii de valoare deţinute (titluri de stat, certificate, obligaţiuni), 2 - acţiuni sau părţi sociale în societăţi comerciale, 3 - împrumuturi acordate în nume personal',
+  `tipul_plasamentului` int(11) NULL COMMENT '1 - hârtii de valoare deţinute (titluri de stat, certificate, obligaţiuni), 2 - acţiuni sau părţi sociale în societăţi comerciale, 3 - împrumuturi acordate în nume personal, 4 - altele',
   `numar_titluri_sau_cota_parte` varchar(500) NOT NULL,
   `valoare` decimal(12,2) NOT NULL,
-  `explicatie_plasament` TEXT DEFAULT NULL,
   `moneda` varchar(100) NOT NULL,
+  `explicatie_plasament` TEXT DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `declaratieAverePlasament_declaratieAvere_fk_idx` (`declaratie_avere_id`),
   CONSTRAINT `declaratieAverePlasament_declaratieAvere_fk` FOREIGN KEY (`declaratie_avere_id`) REFERENCES `declaratie_avere` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
@@ -160,8 +160,6 @@ CREATE TABLE IF NOT EXISTS `declaratie_avere_bun_instrainat` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `declaratie_avere_id` int(11) NOT NULL,
   `tip` varchar(500) NOT NULL,
-  `is_imobil` bit(1)  NULL,
-  `marca` varchar(100) NULL,
   `data_instrainarii` varchar(45) NOT NULL COMMENT 'éste varchar pt ca nu poate fi parsat din excel',
   `persoana_beneficiara` varchar(100) NOT NULL,
   `forma_instrainarii` varchar(100) NOT NULL,
@@ -358,7 +356,7 @@ call AddColumn('demnitar', 'functie2_id', 'int null');
 call AddForeignKey('fk_demnitar_institutie', 'demnitar', 'institutie_id', 'institutie', 'id');
 call AddForeignKey('fk_demnitar_institutie2', 'demnitar', 'institutie2_id', 'institutie', 'id');
 call AddForeignKey('fk_demnitar_functie', 'demnitar', 'functie_id', 'functie', 'id');
-call AddForeignKey('fk_demnitar_functie2', 'demnitar', 'functie2_id', 'functie', 'id');
+call AddForeignKey('fk_demnitar_functie2', 'demnitar', 'functie2_id', 'functie', 'id'); 
 call CreateIndex('demnitar', 'fk_demnitar_institutie_idx', 'institutie_id', 0);
 call CreateIndex('demnitar', 'fk_demnitar_institutie2_idx', 'institutie2_id', 0);
 call CreateIndex('demnitar', 'fk_demnitar_functie_idx', 'functie_id', 0);
