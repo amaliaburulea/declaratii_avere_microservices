@@ -39,6 +39,9 @@ public class DeclaratieAvereContEntity extends EntityBase {
     @Column(name ="an_deschidere_cont")
     private String anDeschidereCont;
 
+    @Column(name ="explicatie_sold")
+    private String explicatieSold;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "declaratie_avere_id", nullable = false)
     private DeclaratieAvereEntity declaratieAvereEntity;
@@ -105,6 +108,14 @@ public class DeclaratieAvereContEntity extends EntityBase {
 
     public void setAnDeschidereCont(String anDeschidereCont) {
         this.anDeschidereCont = anDeschidereCont;
+    }
+
+    public String getExplicatieSold() {
+        return explicatieSold;
+    }
+
+    public void setExplicatieSold(String explicatieSold) {
+        this.explicatieSold = explicatieSold;
     }
 
     public DeclaratieAvereEntity getDeclaratieAvereEntity() {

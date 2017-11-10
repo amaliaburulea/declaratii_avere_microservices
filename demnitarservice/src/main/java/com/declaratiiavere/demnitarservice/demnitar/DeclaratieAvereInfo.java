@@ -20,6 +20,7 @@ public class DeclaratieAvereInfo {
     private String demnitarPrenume;
     @JsonSerialize(using = JsonDateSerializer.class)
     private Date dataDeclaratiei;
+    private Date dataDepunerii;
     private Integer functieId;
     private Integer functie2Id;
     private Integer institutieId;
@@ -141,6 +142,14 @@ public class DeclaratieAvereInfo {
 
     public void setVoluntarId(Integer voluntarId) {
         this.voluntarId = voluntarId;
+    }
+
+    public Date getDataDepunerii() {
+        return dataDepunerii;
+    }
+
+    public void setDataDepunerii(Date dataDepunerii) {
+        this.dataDepunerii = dataDepunerii;
     }
 
     public String getVoluntarUserName() {

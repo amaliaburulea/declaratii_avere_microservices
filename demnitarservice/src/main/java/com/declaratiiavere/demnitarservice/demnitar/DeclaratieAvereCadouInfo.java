@@ -13,6 +13,7 @@ public class DeclaratieAvereCadouInfo {
     private String sursaVenit;
     private String serviciulPrestat;
     private BigDecimal venit;
+    private String explicatie;
     private String moneda;
 
     public Integer getId() {
@@ -53,6 +54,14 @@ public class DeclaratieAvereCadouInfo {
 
     public void setVenit(BigDecimal venit) {
         this.venit = venit;
+    }
+
+    public String getExplicatie() {
+        return explicatie;
+    }
+
+    public void setExplicatie(String explicatie) {
+        this.explicatie = explicatie;
     }
 
     public String getMoneda() {

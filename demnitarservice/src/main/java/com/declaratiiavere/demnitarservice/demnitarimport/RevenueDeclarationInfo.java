@@ -1,7 +1,7 @@
 package com.declaratiiavere.demnitarservice.demnitarimport;
 
 /**
- * MOARTE COMUNIWMULUI. Dar pe bune, e un obiect care agrega declaratiile de avere ale fututilor de demnitari din Romania.
+ * MOARTE COMUNISMULUI. Dar pe bune, e un obiect care agrega declaratiile de avere ale fututilor de demnitari din Romania.
  *
  * @author Razvan Dani
  */
@@ -9,6 +9,7 @@ public class RevenueDeclarationInfo {
     private String firstName;
     private String lastName;
     private String dataDeclaratiei;
+    private String dataDepunerii;
     private String functie;
     private String institutie;
     private String linkDeclaratie;
@@ -428,6 +429,7 @@ public class RevenueDeclarationInfo {
     private String bijuterie1Descriere;
     private String bijuterie1AnDobandire;
     private String bijuterie1ValoareEstimata;
+    private String bijuterie1Explicatie;
     private String bijuterie1Moneda;
 
     // bijuterie 2
@@ -435,6 +437,7 @@ public class RevenueDeclarationInfo {
     private String bijuterie2Descriere;
     private String bijuterie2AnDobandire;
     private String bijuterie2ValoareEstimata;
+    private String bijuterie2Explicatie;
     private String bijuterie2Moneda;
 
     // bijuterie 3
@@ -442,6 +445,7 @@ public class RevenueDeclarationInfo {
     private String bijuterie3Descriere;
     private String bijuterie3AnDobandire;
     private String bijuterie3ValoareEstimata;
+    private String bijuterie3Explicatie;
     private String bijuterie3Moneda;
 
     // bijuterie 4
@@ -449,6 +453,7 @@ public class RevenueDeclarationInfo {
     private String bijuterie4Descriere;
     private String bijuterie4AnDobandire;
     private String bijuterie4ValoareEstimata;
+    private String bijuterie4Explicatie;
     private String bijuterie4Moneda;
 
     // bijuterie 5
@@ -456,6 +461,7 @@ public class RevenueDeclarationInfo {
     private String bijuterie5Descriere;
     private String bijuterie5AnDobandire;
     private String bijuterie5ValoareEstimata;
+    private String bijuterie5Explicatie;
     private String bijuterie5Moneda;
 
     // alte bujiterii (muie PSD)
@@ -468,6 +474,7 @@ public class RevenueDeclarationInfo {
     private String bunInstrainat1PersoanaCatreCare;
     private String bunInstrainat1FormaInstrainarii;
     private String bunInstrainat1Valoarea;
+    private String bunInstrainat1Explicatie;
     private String bunInstrainat1Moneda;
 
     // bun instrainat 2
@@ -477,6 +484,7 @@ public class RevenueDeclarationInfo {
     private String bunInstrainat2PersoanaCatreCare;
     private String bunInstrainat2FormaInstrainarii;
     private String bunInstrainat2Valoarea;
+    private String bunInstrainat2Explicatie;
     private String bunInstrainat2Moneda;
 
     // bun instrainat 3
@@ -486,6 +494,7 @@ public class RevenueDeclarationInfo {
     private String bunInstrainat3PersoanaCatreCare;
     private String bunInstrainat3FormaInstrainarii;
     private String bunInstrainat3Valoarea;
+    private String bunInstrainat3Explicatie;
     private String bunInstrainat3Moneda;
 
     // bun instrainat 4
@@ -495,6 +504,7 @@ public class RevenueDeclarationInfo {
     private String bunInstrainat4PersoanaCatreCare;
     private String bunInstrainat4FormaInstrainarii;
     private String bunInstrainat4Valoarea;
+    private String bunInstrainat4Explicatie;
     private String bunInstrainat4Moneda;
 
     // bun instrainat 5
@@ -504,6 +514,7 @@ public class RevenueDeclarationInfo {
     private String bunInstrainat5PersoanaCatreCare;
     private String bunInstrainat5FormaInstrainarii;
     private String bunInstrainat5Valoarea;
+    private String bunInstrainat5Explicatie;
     private String bunInstrainat5Moneda;
 
     // MUIE DRAGNEA MUIE TARICEANU ALTA INTREBARE
@@ -518,6 +529,7 @@ public class RevenueDeclarationInfo {
     private String cont1Moneda;
     private String cont1AnDeschidere;
     private String cont1Sold;
+    private String cont1Explicatie;
 
     // cont 2
     private String existaConturi2;
@@ -527,6 +539,7 @@ public class RevenueDeclarationInfo {
     private String cont2Moneda;
     private String cont2AnDeschidere;
     private String cont2Sold;
+    private String cont2Explicatie;
 
     // cont 3
     private String existaConturi3;
@@ -536,6 +549,7 @@ public class RevenueDeclarationInfo {
     private String cont3Moneda;
     private String cont3AnDeschidere;
     private String cont3Sold;
+    private String cont3Explicatie;
 
     // cont 4
     private String existaConturi4;
@@ -545,6 +559,7 @@ public class RevenueDeclarationInfo {
     private String cont4Moneda;
     private String cont4AnDeschidere;
     private String cont4Sold;
+    private String cont4Explicatie;
 
     // cont 5
     private String existaConturi5;
@@ -554,6 +569,7 @@ public class RevenueDeclarationInfo {
     private String cont5Moneda;
     private String cont5AnDeschidere;
     private String cont5Sold;
+    private String cont5Explicatie;
 
     // cont 6
     private String existaConturi6;
@@ -563,6 +579,7 @@ public class RevenueDeclarationInfo {
     private String cont6Moneda;
     private String cont6AnDeschidere;
     private String cont6Sold;
+    private String cont6Explicatie;
 
     // cont 7
     private String existaConturi7;
@@ -572,6 +589,7 @@ public class RevenueDeclarationInfo {
     private String cont7Moneda;
     private String cont7AnDeschidere;
     private String cont7Sold;
+    private String cont7Explicatie;
 
     // cont 8
     private String existaConturi8;
@@ -581,6 +599,7 @@ public class RevenueDeclarationInfo {
     private String cont8Moneda;
     private String cont8AnDeschidere;
     private String cont8Sold;
+    private String cont8Explicatie;
 
     // cont 9
     private String existaConturi9;
@@ -590,6 +609,7 @@ public class RevenueDeclarationInfo {
     private String cont9Moneda;
     private String cont9AnDeschidere;
     private String cont9Sold;
+    private String cont9Explicatie;
 
     // cont 10
     private String existaConturi10;
@@ -599,6 +619,7 @@ public class RevenueDeclarationInfo {
     private String cont10Moneda;
     private String cont10AnDeschidere;
     private String cont10Sold;
+    private String cont10Explicatie;
 
     // muie firea!!!!
     // sa moara iliescu in inchisoare!!!!
@@ -613,6 +634,7 @@ public class RevenueDeclarationInfo {
     private String plasament1Tip;
     private String plasament1NumarTitluri;
     private String plasament1Valoare;
+    private String plasament1Explicatie;
     private String plasament1Moneda;
 
     // plasament 2
@@ -622,6 +644,7 @@ public class RevenueDeclarationInfo {
     private String plasament2Tip;
     private String plasament2NumarTitluri;
     private String plasament2Valoare;
+    private String plasament2Explicatie;
     private String plasament2Moneda;
 
     // plasament 3
@@ -631,6 +654,7 @@ public class RevenueDeclarationInfo {
     private String plasament3Tip;
     private String plasament3NumarTitluri;
     private String plasament3Valoare;
+    private String plasament3Explicatie;
     private String plasament3Moneda;
 
     // plasament 4
@@ -640,6 +664,7 @@ public class RevenueDeclarationInfo {
     private String plasament4Tip;
     private String plasament4NumarTitluri;
     private String plasament4Valoare;
+    private String plasament4Explicatie;
     private String plasament4Moneda;
 
     // plasament 5
@@ -649,6 +674,7 @@ public class RevenueDeclarationInfo {
     private String plasament5Tip;
     private String plasament5NumarTitluri;
     private String plasament5Valoare;
+    private String plasament5Explicatie;
     private String plasament5Moneda;
 
     // alte plasamente free text
@@ -663,6 +689,7 @@ public class RevenueDeclarationInfo {
     private String datorie1AnContractare;
     private String datorie1DataScadenta;
     private String datorie1Valoare;
+    private String datorie1Explicatie;
     private String datorie1Moneda;
 
     // datorie 2
@@ -671,6 +698,7 @@ public class RevenueDeclarationInfo {
     private String datorie2AnContractare;
     private String datorie2DataScadenta;
     private String datorie2Valoare;
+    private String datorie2Explicatie;
     private String datorie2Moneda;
 
     // datorie 3
@@ -679,6 +707,7 @@ public class RevenueDeclarationInfo {
     private String datorie3AnContractare;
     private String datorie3DataScadenta;
     private String datorie3Valoare;
+    private String datorie3Explicatie;
     private String datorie3Moneda;
 
     // datorie 4
@@ -687,6 +716,7 @@ public class RevenueDeclarationInfo {
     private String datorie4AnContractare;
     private String datorie4DataScadenta;
     private String datorie4Valoare;
+    private String datorie4Explicatie;
     private String datorie4Moneda;
 
     // datorie 5
@@ -695,6 +725,7 @@ public class RevenueDeclarationInfo {
     private String datorie5AnContractare;
     private String datorie5DataScadenta;
     private String datorie5Valoare;
+    private String datorie5Explicatie;
     private String datorie5Moneda;
 
     // alte datorii
@@ -706,6 +737,7 @@ public class RevenueDeclarationInfo {
     private String cadou1SursaVenit;
     private String cadou1ServiciuPrestat;
     private String cadou1VenitAnual;
+    private String cadou1Explicatie;
     private String cadou1Monenda;
 
     // cadou 2
@@ -714,6 +746,7 @@ public class RevenueDeclarationInfo {
     private String cadou2SursaVenit;
     private String cadou2ServiciuPrestat;
     private String cadou2VenitAnual;
+    private String cadou2Explicatie;
     private String cadou2Monenda;
 
     // alte cadouri
@@ -725,6 +758,7 @@ public class RevenueDeclarationInfo {
     private String venitSalariu1Sursa;
     private String venit1SalariuServiciPrestat;
     private String venit1SalariuVenitAnual;
+    private String venit1SalariuExplicatie;
     private String venit1SalariuMonenda;
 
     // venit salar 2
@@ -733,6 +767,7 @@ public class RevenueDeclarationInfo {
     private String venitSalariu2Sursa;
     private String venit2SalariuServiciPrestat;
     private String venit2SalariuVenitAnual;
+    private String venit2SalariuExplicatie;
     private String venit2SalariuMonenda;
 
     // venit salar 3
@@ -741,6 +776,7 @@ public class RevenueDeclarationInfo {
     private String venitSalariu3Sursa;
     private String venit3SalariuServiciPrestat;
     private String venit3SalariuVenitAnual;
+    private String venit3SalariuExplicatie;
     private String venit3SalariuMonenda;
 
     // venit salar 4
@@ -749,6 +785,7 @@ public class RevenueDeclarationInfo {
     private String venitSalariu4Sursa;
     private String venit4SalariuServiciPrestat;
     private String venit4SalariuVenitAnual;
+    private String venit4SalariuExplicatie;
     private String venit4SalariuMonenda;
 
     // venit salar 5
@@ -757,6 +794,7 @@ public class RevenueDeclarationInfo {
     private String venitSalariu5Sursa;
     private String venit5SalariuServiciPrestat;
     private String venit5SalariuVenitAnual;
+    private String venit5SalariuExplicatie;
     private String venit5SalariuMonenda;
 
     // venit salar 6
@@ -765,6 +803,7 @@ public class RevenueDeclarationInfo {
     private String venitSalariu6Sursa;
     private String venit6SalariuServiciPrestat;
     private String venit6SalariuVenitAnual;
+    private String venit6SalariuExplicatie;
     private String venit6SalariuMonenda;
 
     // alte venituri salarii
@@ -776,6 +815,7 @@ public class RevenueDeclarationInfo {
     private String venitActivitatiIndependente1Sursa;
     private String venitActivitatiIndependente1ServiciPrestat;
     private String venitActivitatiIndependente1VenitAnual;
+    private String venitActivitatiIndependente1Explicatie;
     private String venitActivitatiIndependente1Moneda;
 
     // venituri activitati independente 2
@@ -784,6 +824,7 @@ public class RevenueDeclarationInfo {
     private String venitActivitatiIndependente2Sursa;
     private String venitActivitatiIndependente2ServiciPrestat;
     private String venitActivitatiIndependente2VenitAnual;
+    private String venitActivitatiIndependente2Explicatie;
     private String venitActivitatiIndependente2Moneda;
 
     // venituri activitati independente 3
@@ -792,6 +833,7 @@ public class RevenueDeclarationInfo {
     private String venitActivitatiIndependente3Sursa;
     private String venitActivitatiIndependente3ServiciPrestat;
     private String venitActivitatiIndependente3VenitAnual;
+    private String venitActivitatiIndependente3Explicatie;
     private String venitActivitatiIndependente3Moneda;
 
     // venituri activitati independente 4
@@ -800,6 +842,7 @@ public class RevenueDeclarationInfo {
     private String venitActivitatiIndependente4Sursa;
     private String venitActivitatiIndependente4ServiciPrestat;
     private String venitActivitatiIndependente4VenitAnual;
+    private String venitActivitatiIndependente4Explicatie;
     private String venitActivitatiIndependente4Moneda;
 
     // alte venituri activitati independente
@@ -811,6 +854,7 @@ public class RevenueDeclarationInfo {
     private String venitCedareaFolosintei1Sursa;
     private String venitCedareaFolosintei1ServiciPrestat;
     private String venitCedareaFolosintei1VenitAnual;
+    private String venitCedareaFolosintei1Explicatie;
     private String venitCedareaFolosintei1Moneda;
 
     // venituri cedarea folosintei 2
@@ -819,6 +863,7 @@ public class RevenueDeclarationInfo {
     private String venitCedareaFolosintei2Sursa;
     private String venitCedareaFolosintei2ServiciPrestat;
     private String venitCedareaFolosintei2VenitAnual;
+    private String venitCedareaFolosintei2Explicatie;
     private String venitCedareaFolosintei2Moneda;
 
     // venituri cedarea folosintei 3
@@ -827,6 +872,7 @@ public class RevenueDeclarationInfo {
     private String venitCedareaFolosintei3Sursa;
     private String venitCedareaFolosintei3ServiciPrestat;
     private String venitCedareaFolosintei3VenitAnual;
+    private String venitCedareaFolosintei3Explicatie;
     private String venitCedareaFolosintei3Moneda;
 
     // venituri cedarea folosintei 4
@@ -835,6 +881,7 @@ public class RevenueDeclarationInfo {
     private String venitCedareaFolosintei4Sursa;
     private String venitCedareaFolosintei4ServiciPrestat;
     private String venitCedareaFolosintei4VenitAnual;
+    private String venitCedareaFolosintei4Explicatie;
     private String venitCedareaFolosintei4Moneda;
 
     // venituri cedarea folosintei 5
@@ -843,6 +890,7 @@ public class RevenueDeclarationInfo {
     private String venitCedareaFolosintei5Sursa;
     private String venitCedareaFolosintei5ServiciPrestat;
     private String venitCedareaFolosintei5VenitAnual;
+    private String venitCedareaFolosintei5Explicatie;
     private String venitCedareaFolosintei5Moneda;
 
     // venituri cedarea folosintei 6
@@ -851,6 +899,7 @@ public class RevenueDeclarationInfo {
     private String venitCedareaFolosintei6Sursa;
     private String venitCedareaFolosintei6ServiciPrestat;
     private String venitCedareaFolosintei6VenitAnual;
+    private String venitCedareaFolosintei6Explicatie;
     private String venitCedareaFolosintei6Moneda;
 
     // alte venituri cedarea folosintei (MUIE PSD CIUMA ROSIE)
@@ -862,6 +911,7 @@ public class RevenueDeclarationInfo {
     private String venitInvestitii1Sursa;
     private String venitInvestitii1ServiciPrestat;
     private String venitInvestitii1VenitAnual;
+    private String venitInvestitii1Explicatie;
     private String venitInvestitii1Moneda;
 
     // venituri investitii 2
@@ -870,6 +920,7 @@ public class RevenueDeclarationInfo {
     private String venitInvestitii2Sursa;
     private String venitInvestitii2ServiciPrestat;
     private String venitInvestitii2VenitAnual;
+    private String venitInvestitii2Explicatie;
     private String venitInvestitii2Moneda;
 
     // venituri investitii 3
@@ -878,6 +929,7 @@ public class RevenueDeclarationInfo {
     private String venitInvestitii3Sursa;
     private String venitInvestitii3ServiciPrestat;
     private String venitInvestitii3VenitAnual;
+    private String venitInvestitii3Explicatie;
     private String venitInvestitii3Moneda;
 
     // venituri investitii 4
@@ -886,6 +938,7 @@ public class RevenueDeclarationInfo {
     private String venitInvestitii4Sursa;
     private String venitInvestitii4ServiciPrestat;
     private String venitInvestitii4VenitAnual;
+    private String venitInvestitii4Explicatie;
     private String venitInvestitii4Moneda;
 
     // alte venituri din investitii (muie ALDE)
@@ -897,6 +950,7 @@ public class RevenueDeclarationInfo {
     private String venitPensii1Sursa;
     private String venitPensii1ServiciPrestat;
     private String venitPensii1VenitAnual;
+    private String venitPensii1Explicatie;
     private String venitPensii1Moneda;
 
     // venituri pensii 2
@@ -905,6 +959,7 @@ public class RevenueDeclarationInfo {
     private String venitPensii2Sursa;
     private String venitPensii2ServiciPrestat;
     private String venitPensii2VenitAnual;
+    private String venitPensii2Explicatie;
     private String venitPensii2Moneda;
 
     // alte venituri pensii
@@ -916,6 +971,7 @@ public class RevenueDeclarationInfo {
     private String venitAgricol1Sursa;
     private String venitAgricol1ServiciPrestat;
     private String venitAgricol1VenitAnual;
+    private String venitAgricol1Explicatie;
     private String venitAgricol1Moneda;
 
     // venituri agricole 2
@@ -924,6 +980,7 @@ public class RevenueDeclarationInfo {
     private String venitAgricol2Sursa;
     private String venitAgricol2ServiciPrestat;
     private String venitAgricol2VenitAnual;
+    private String venitAgricol2Explicatie;
     private String venitAgricol2Moneda;
 
     // alte venituri agricole
@@ -935,6 +992,7 @@ public class RevenueDeclarationInfo {
     private String venitNoroc1Sursa;
     private String venitNoroc1ServiciPrestat;
     private String venitNoroc1VenitAnual;
+    private String venitNoroc1Explicatie;
     private String venitNoroc1Moneda;
 
     // venituri noroc 2
@@ -943,6 +1001,7 @@ public class RevenueDeclarationInfo {
     private String venitNoroc2Sursa;
     private String venitNoroc2ServiciPrestat;
     private String venitNoroc2VenitAnual;
+    private String venitNoroc2Explicatie;
     private String venitNoroc2Moneda;
 
     // alte venituri noroc
@@ -954,6 +1013,7 @@ public class RevenueDeclarationInfo {
     private String venitAlte1Sursa;
     private String venitAlte1ServiciPrestat;
     private String veniAlte1VenitAnual;
+    private String veniAlte1Explicatie;
     private String venitAlte1Moneda;
 
     // alte venituri 2
@@ -962,6 +1022,7 @@ public class RevenueDeclarationInfo {
     private String venitAlte2Sursa;
     private String venitAlte2ServiciPrestat;
     private String veniAlte2VenitAnual;
+    private String veniAlte2Explicatie;
     private String venitAlte2Moneda;
 
     // alte venituri 3
@@ -970,6 +1031,7 @@ public class RevenueDeclarationInfo {
     private String venitAlte3Sursa;
     private String venitAlte3ServiciPrestat;
     private String veniAlte3VenitAnual;
+    private String veniAlte3Explicatie;
     private String venitAlte3Moneda;
 
     // alte venituri 4
@@ -978,6 +1040,7 @@ public class RevenueDeclarationInfo {
     private String venitAlte4Sursa;
     private String venitAlte4ServiciPrestat;
     private String veniAlte4VenitAnual;
+    private String veniAlte4Explicatie;
     private String venitAlte4Moneda;
 
     // alte venituri free text ALTA INTREBARE: POT SA VA FUT PE TOTI DIN PSD SI ALDE?????
@@ -1005,6 +1068,14 @@ public class RevenueDeclarationInfo {
 
     public void setDataDeclaratiei(String dataDeclaratiei) {
         this.dataDeclaratiei = dataDeclaratiei;
+    }
+
+    public String getDataDepunerii() {
+        return dataDepunerii;
+    }
+
+    public void setDataDepunerii(String dataDepunerii) {
+        this.dataDepunerii = dataDepunerii;
     }
 
     public String getFunctie() {
@@ -1070,12 +1141,12 @@ public class RevenueDeclarationInfo {
     public void setTeren1Suprafata(String teren1Suprafata) {
         this.teren1Suprafata = teren1Suprafata;
     }
-    
-    public String getTeren1ExplicatieSuprafata(){
+
+    public String getTeren1ExplicatieSuprafata() {
         return teren1ExplicatieSuprafata;
     }
-    
-    public void setTeren1ExplicatieSuprafata(String teren1ExplicatieSuprafata){
+
+    public void setTeren1ExplicatieSuprafata(String teren1ExplicatieSuprafata) {
         this.teren1ExplicatieSuprafata = teren1ExplicatieSuprafata;
     }
 
@@ -1150,12 +1221,12 @@ public class RevenueDeclarationInfo {
     public void setTeren2Suprafata(String teren2Suprafata) {
         this.teren2Suprafata = teren2Suprafata;
     }
-    
-    public String getTeren2ExplicatieSuprafata(){
+
+    public String getTeren2ExplicatieSuprafata() {
         return teren2ExplicatieSuprafata;
     }
 
-    public void setTeren2ExplicatieSuprafata(String teren2ExplicatieSuprafata){
+    public void setTeren2ExplicatieSuprafata(String teren2ExplicatieSuprafata) {
         this.teren2ExplicatieSuprafata = teren2ExplicatieSuprafata;
     }
 
@@ -1231,11 +1302,11 @@ public class RevenueDeclarationInfo {
         this.teren3Suprafata = teren3Suprafata;
     }
 
-    public String getTeren3ExplicatieSuprafata(){
+    public String getTeren3ExplicatieSuprafata() {
         return teren3ExplicatieSuprafata;
     }
 
-    public void setTeren3ExplicatieSuprafata(String teren3ExplicatieSuprafata){
+    public void setTeren3ExplicatieSuprafata(String teren3ExplicatieSuprafata) {
         this.teren3ExplicatieSuprafata = teren3ExplicatieSuprafata;
     }
 
@@ -1311,11 +1382,11 @@ public class RevenueDeclarationInfo {
         this.teren4Suprafata = teren4Suprafata;
     }
 
-    public String getTeren4ExplicatieSuprafata(){
+    public String getTeren4ExplicatieSuprafata() {
         return teren4ExplicatieSuprafata;
     }
 
-    public void setTeren4ExplicatieSuprafata(String teren4ExplicatieSuprafata){
+    public void setTeren4ExplicatieSuprafata(String teren4ExplicatieSuprafata) {
         this.teren4ExplicatieSuprafata = teren4ExplicatieSuprafata;
     }
 
@@ -1391,11 +1462,11 @@ public class RevenueDeclarationInfo {
         this.teren5Suprafata = teren5Suprafata;
     }
 
-    public String getTeren5ExplicatieSuprafata(){
+    public String getTeren5ExplicatieSuprafata() {
         return teren5ExplicatieSuprafata;
     }
 
-    public void setTeren5ExplicatieSuprafata(String teren5ExplicatieSuprafata){
+    public void setTeren5ExplicatieSuprafata(String teren5ExplicatieSuprafata) {
         this.teren5ExplicatieSuprafata = teren5ExplicatieSuprafata;
     }
 
@@ -1471,11 +1542,11 @@ public class RevenueDeclarationInfo {
         this.teren6Suprafata = teren6Suprafata;
     }
 
-    public String getTeren6ExplicatieSuprafata(){
+    public String getTeren6ExplicatieSuprafata() {
         return teren6ExplicatieSuprafata;
     }
 
-    public void setTeren6ExplicatieSuprafata(String teren6ExplicatieSuprafata){
+    public void setTeren6ExplicatieSuprafata(String teren6ExplicatieSuprafata) {
         this.teren6ExplicatieSuprafata = teren6ExplicatieSuprafata;
     }
 
@@ -1551,11 +1622,11 @@ public class RevenueDeclarationInfo {
         this.teren7Suprafata = teren7Suprafata;
     }
 
-    public String getTeren7ExplicatieSuprafata(){
+    public String getTeren7ExplicatieSuprafata() {
         return teren7ExplicatieSuprafata;
     }
 
-    public void setTeren7ExplicatieSuprafata(String teren7ExplicatieSuprafata){
+    public void setTeren7ExplicatieSuprafata(String teren7ExplicatieSuprafata) {
         this.teren7ExplicatieSuprafata = teren7ExplicatieSuprafata;
     }
 
@@ -1631,11 +1702,11 @@ public class RevenueDeclarationInfo {
         this.teren8Suprafata = teren8Suprafata;
     }
 
-    public String getTeren8ExplicatieSuprafata(){
+    public String getTeren8ExplicatieSuprafata() {
         return teren8ExplicatieSuprafata;
     }
 
-    public void setTeren8ExplicatieSuprafata(String teren8ExplicatieSuprafata){
+    public void setTeren8ExplicatieSuprafata(String teren8ExplicatieSuprafata) {
         this.teren8ExplicatieSuprafata = teren8ExplicatieSuprafata;
     }
 
@@ -1711,11 +1782,11 @@ public class RevenueDeclarationInfo {
         this.teren9Suprafata = teren9Suprafata;
     }
 
-    public String getTeren9ExplicatieSuprafata(){
+    public String getTeren9ExplicatieSuprafata() {
         return teren9ExplicatieSuprafata;
     }
 
-    public void setTeren9ExplicatieSuprafata(String teren9ExplicatieSuprafata){
+    public void setTeren9ExplicatieSuprafata(String teren9ExplicatieSuprafata) {
         this.teren9ExplicatieSuprafata = teren9ExplicatieSuprafata;
     }
 
@@ -1791,11 +1862,11 @@ public class RevenueDeclarationInfo {
         this.teren10Suprafata = teren10Suprafata;
     }
 
-    public String getTeren10ExplicatieSuprafata(){
+    public String getTeren10ExplicatieSuprafata() {
         return teren10ExplicatieSuprafata;
     }
 
-    public void setTeren10ExplicatieSuprafata(String teren10ExplicatieSuprafata){
+    public void setTeren10ExplicatieSuprafata(String teren10ExplicatieSuprafata) {
         this.teren10ExplicatieSuprafata = teren10ExplicatieSuprafata;
     }
 
@@ -1871,11 +1942,11 @@ public class RevenueDeclarationInfo {
         this.teren11Suprafata = teren11Suprafata;
     }
 
-    public String getTeren11ExplicatieSuprafata(){
+    public String getTeren11ExplicatieSuprafata() {
         return teren11ExplicatieSuprafata;
     }
 
-    public void setTeren11ExplicatieSuprafata(String teren11ExplicatieSuprafata){
+    public void setTeren11ExplicatieSuprafata(String teren11ExplicatieSuprafata) {
         this.teren11ExplicatieSuprafata = teren11ExplicatieSuprafata;
     }
 
@@ -1951,11 +2022,11 @@ public class RevenueDeclarationInfo {
         this.teren12Suprafata = teren12Suprafata;
     }
 
-    public String getTeren12ExplicatieSuprafata(){
+    public String getTeren12ExplicatieSuprafata() {
         return teren12ExplicatieSuprafata;
     }
 
-    public void setTeren12ExplicatieSuprafata(String teren12ExplicatieSuprafata){
+    public void setTeren12ExplicatieSuprafata(String teren12ExplicatieSuprafata) {
         this.teren12ExplicatieSuprafata = teren12ExplicatieSuprafata;
     }
 
@@ -2031,11 +2102,11 @@ public class RevenueDeclarationInfo {
         this.teren13Suprafata = teren13Suprafata;
     }
 
-    public String getTeren13ExplicatieSuprafata(){
+    public String getTeren13ExplicatieSuprafata() {
         return teren13ExplicatieSuprafata;
     }
 
-    public void setTeren13ExplicatieSuprafata(String teren13ExplicatieSuprafata){
+    public void setTeren13ExplicatieSuprafata(String teren13ExplicatieSuprafata) {
         this.teren13ExplicatieSuprafata = teren13ExplicatieSuprafata;
     }
 
@@ -2111,11 +2182,11 @@ public class RevenueDeclarationInfo {
         this.teren14Suprafata = teren14Suprafata;
     }
 
-    public String getTeren14ExplicatieSuprafata(){
+    public String getTeren14ExplicatieSuprafata() {
         return teren14ExplicatieSuprafata;
     }
 
-    public void setTeren14ExplicatieSuprafata(String teren14ExplicatieSuprafata){
+    public void setTeren14ExplicatieSuprafata(String teren14ExplicatieSuprafata) {
         this.teren14ExplicatieSuprafata = teren14ExplicatieSuprafata;
     }
 
@@ -2191,11 +2262,11 @@ public class RevenueDeclarationInfo {
         this.teren15Suprafata = teren15Suprafata;
     }
 
-    public String getTeren15ExplicatieSuprafata(){
+    public String getTeren15ExplicatieSuprafata() {
         return teren15ExplicatieSuprafata;
     }
 
-    public void setTeren15ExplicatieSuprafata(String teren15ExplicatieSuprafata){
+    public void setTeren15ExplicatieSuprafata(String teren15ExplicatieSuprafata) {
         this.teren15ExplicatieSuprafata = teren15ExplicatieSuprafata;
     }
 
@@ -2274,17 +2345,17 @@ public class RevenueDeclarationInfo {
     public String getCladire1Suprafata() {
         return cladire1Suprafata;
     }
-    
-    public String getCladire1ExplicatieSuprafata(){
-        return cladire1ExplicatieSuprafata;
-    }
-    
-    public void setCladire1ExplicatieSuprafata(String cladire1ExplicatieSuprafata){
-        this.cladire1ExplicatieSuprafata = cladire1ExplicatieSuprafata;
-    }
 
     public void setCladire1Suprafata(String cladire1Suprafata) {
         this.cladire1Suprafata = cladire1Suprafata;
+    }
+
+    public String getCladire1ExplicatieSuprafata() {
+        return cladire1ExplicatieSuprafata;
+    }
+
+    public void setCladire1ExplicatieSuprafata(String cladire1ExplicatieSuprafata) {
+        this.cladire1ExplicatieSuprafata = cladire1ExplicatieSuprafata;
     }
 
     public String getCladire1UnitateDeMasura() {
@@ -2359,11 +2430,11 @@ public class RevenueDeclarationInfo {
         this.cladire2Suprafata = cladire2Suprafata;
     }
 
-    public String getCladire2ExplicatieSuprafata(){
+    public String getCladire2ExplicatieSuprafata() {
         return cladire2ExplicatieSuprafata;
     }
 
-    public void setCladire2ExplicatieSuprafata(String cladire2ExplicatieSuprafata){
+    public void setCladire2ExplicatieSuprafata(String cladire2ExplicatieSuprafata) {
         this.cladire2ExplicatieSuprafata = cladire2ExplicatieSuprafata;
     }
 
@@ -2439,11 +2510,11 @@ public class RevenueDeclarationInfo {
         this.cladire3Suprafata = cladire3Suprafata;
     }
 
-    public String getCladire3ExplicatieSuprafata(){
+    public String getCladire3ExplicatieSuprafata() {
         return cladire3ExplicatieSuprafata;
     }
 
-    public void setCladire3ExplicatieSuprafata(String cladire3ExplicatieSuprafata){
+    public void setCladire3ExplicatieSuprafata(String cladire3ExplicatieSuprafata) {
         this.cladire3ExplicatieSuprafata = cladire3ExplicatieSuprafata;
     }
 
@@ -2519,11 +2590,11 @@ public class RevenueDeclarationInfo {
         this.cladire4Suprafata = cladire4Suprafata;
     }
 
-    public String getCladire4ExplicatieSuprafata(){
+    public String getCladire4ExplicatieSuprafata() {
         return cladire4ExplicatieSuprafata;
     }
 
-    public void setCladire4ExplicatieSuprafata(String cladire4ExplicatieSuprafata){
+    public void setCladire4ExplicatieSuprafata(String cladire4ExplicatieSuprafata) {
         this.cladire4ExplicatieSuprafata = cladire4ExplicatieSuprafata;
     }
 
@@ -2599,11 +2670,11 @@ public class RevenueDeclarationInfo {
         this.cladire5Suprafata = cladire5Suprafata;
     }
 
-    public String getCladire5ExplicatieSuprafata(){
+    public String getCladire5ExplicatieSuprafata() {
         return cladire5ExplicatieSuprafata;
     }
 
-    public void setCladire5ExplicatieSuprafata(String cladire5ExplicatieSuprafata){
+    public void setCladire5ExplicatieSuprafata(String cladire5ExplicatieSuprafata) {
         this.cladire5ExplicatieSuprafata = cladire5ExplicatieSuprafata;
     }
 
@@ -2679,11 +2750,11 @@ public class RevenueDeclarationInfo {
         this.cladire6Suprafata = cladire6Suprafata;
     }
 
-    public String getCladire6ExplicatieSuprafata(){
+    public String getCladire6ExplicatieSuprafata() {
         return cladire6ExplicatieSuprafata;
     }
 
-    public void setCladire6ExplicatieSuprafata(String cladire6ExplicatieSuprafata){
+    public void setCladire6ExplicatieSuprafata(String cladire6ExplicatieSuprafata) {
         this.cladire6ExplicatieSuprafata = cladire6ExplicatieSuprafata;
     }
 
@@ -2759,11 +2830,11 @@ public class RevenueDeclarationInfo {
         this.cladire7Suprafata = cladire7Suprafata;
     }
 
-    public String getCladire7ExplicatieSuprafata(){
+    public String getCladire7ExplicatieSuprafata() {
         return cladire7ExplicatieSuprafata;
     }
 
-    public void setCladire7ExplicatieSuprafata(String cladire7ExplicatieSuprafata){
+    public void setCladire7ExplicatieSuprafata(String cladire7ExplicatieSuprafata) {
         this.cladire7ExplicatieSuprafata = cladire7ExplicatieSuprafata;
     }
 
@@ -2839,11 +2910,11 @@ public class RevenueDeclarationInfo {
         this.cladire8Suprafata = cladire8Suprafata;
     }
 
-    public String getCladire8ExplicatieSuprafata(){
+    public String getCladire8ExplicatieSuprafata() {
         return cladire8ExplicatieSuprafata;
     }
 
-    public void setCladire8ExplicatieSuprafata(String cladire8ExplicatieSuprafata){
+    public void setCladire8ExplicatieSuprafata(String cladire8ExplicatieSuprafata) {
         this.cladire8ExplicatieSuprafata = cladire8ExplicatieSuprafata;
     }
 
@@ -2919,11 +2990,11 @@ public class RevenueDeclarationInfo {
         this.cladire9Suprafata = cladire9Suprafata;
     }
 
-    public String getCladire9ExplicatieSuprafata(){
+    public String getCladire9ExplicatieSuprafata() {
         return cladire9ExplicatieSuprafata;
     }
 
-    public void setCladire9ExplicatieSuprafata(String cladire9ExplicatieSuprafata){
+    public void setCladire9ExplicatieSuprafata(String cladire9ExplicatieSuprafata) {
         this.cladire9ExplicatieSuprafata = cladire9ExplicatieSuprafata;
     }
 
@@ -2983,14 +3054,6 @@ public class RevenueDeclarationInfo {
         this.cladire10Categoria = cladire10Categoria;
     }
 
-    public String getCladire10ExplicatieSuprafata(){
-        return cladire10ExplicatieSuprafata;
-    }
-
-    public void setCladire10ExplicatieSuprafata(String cladire10ExplicatieSuprafata){
-        this.cladire10ExplicatieSuprafata = cladire10ExplicatieSuprafata;
-    }
-
     public String getCladire10AnDobindire() {
         return cladire10AnDobindire;
     }
@@ -3005,6 +3068,14 @@ public class RevenueDeclarationInfo {
 
     public void setCladire10Suprafata(String cladire10Suprafata) {
         this.cladire10Suprafata = cladire10Suprafata;
+    }
+
+    public String getCladire10ExplicatieSuprafata() {
+        return cladire10ExplicatieSuprafata;
+    }
+
+    public void setCladire10ExplicatieSuprafata(String cladire10ExplicatieSuprafata) {
+        this.cladire10ExplicatieSuprafata = cladire10ExplicatieSuprafata;
     }
 
     public String getCladire10UnitateDeMasura() {
@@ -3079,11 +3150,11 @@ public class RevenueDeclarationInfo {
         this.cladire11Suprafata = cladire11Suprafata;
     }
 
-    public String getCladire11ExplicatieSuprafata(){
+    public String getCladire11ExplicatieSuprafata() {
         return cladire11ExplicatieSuprafata;
     }
 
-    public void setCladire11ExplicatieSuprafata(String cladire11ExplicatieSuprafata){
+    public void setCladire11ExplicatieSuprafata(String cladire11ExplicatieSuprafata) {
         this.cladire11ExplicatieSuprafata = cladire11ExplicatieSuprafata;
     }
 
@@ -3159,11 +3230,11 @@ public class RevenueDeclarationInfo {
         this.cladire12Suprafata = cladire12Suprafata;
     }
 
-    public String getCladire12ExplicatieSuprafata(){
+    public String getCladire12ExplicatieSuprafata() {
         return cladire12ExplicatieSuprafata;
     }
 
-    public void setCladire12ExplicatieSuprafata(String cladire12ExplicatieSuprafata){
+    public void setCladire12ExplicatieSuprafata(String cladire12ExplicatieSuprafata) {
         this.cladire12ExplicatieSuprafata = cladire12ExplicatieSuprafata;
     }
 
@@ -3239,11 +3310,11 @@ public class RevenueDeclarationInfo {
         this.cladire13Suprafata = cladire13Suprafata;
     }
 
-    public String getCladire13ExplicatieSuprafata(){
+    public String getCladire13ExplicatieSuprafata() {
         return cladire13ExplicatieSuprafata;
     }
 
-    public void setCladire13ExplicatieSuprafata(String cladire13ExplicatieSuprafata){
+    public void setCladire13ExplicatieSuprafata(String cladire13ExplicatieSuprafata) {
         this.cladire13ExplicatieSuprafata = cladire13ExplicatieSuprafata;
     }
 
@@ -3319,11 +3390,11 @@ public class RevenueDeclarationInfo {
         this.cladire14Suprafata = cladire14Suprafata;
     }
 
-    public String getCladire14ExplicatieSuprafata(){
+    public String getCladire14ExplicatieSuprafata() {
         return cladire14ExplicatieSuprafata;
     }
 
-    public void setCladire14ExplicatieSuprafata(String cladire14ExplicatieSuprafata){
+    public void setCladire14ExplicatieSuprafata(String cladire14ExplicatieSuprafata) {
         this.cladire14ExplicatieSuprafata = cladire14ExplicatieSuprafata;
     }
 
@@ -3399,11 +3470,11 @@ public class RevenueDeclarationInfo {
         this.cladire15Suprafata = cladire15Suprafata;
     }
 
-    public String getCladire15ExplicatieSuprafata(){
+    public String getCladire15ExplicatieSuprafata() {
         return cladire15ExplicatieSuprafata;
     }
 
-    public void setCladire15ExplicatieSuprafata(String cladire15ExplicatieSuprafata){
+    public void setCladire15ExplicatieSuprafata(String cladire15ExplicatieSuprafata) {
         this.cladire15ExplicatieSuprafata = cladire15ExplicatieSuprafata;
     }
 
@@ -3727,6 +3798,14 @@ public class RevenueDeclarationInfo {
         this.bijuterie1ValoareEstimata = bijuterie1ValoareEstimata;
     }
 
+    public String getBijuterie1Explicatie() {
+        return bijuterie1Explicatie;
+    }
+
+    public void setBijuterie1Explicatie(String bijuterie1Explicatie) {
+        this.bijuterie1Explicatie = bijuterie1Explicatie;
+    }
+
     public String getBijuterie1Moneda() {
         return bijuterie1Moneda;
     }
@@ -3765,6 +3844,14 @@ public class RevenueDeclarationInfo {
 
     public void setBijuterie2ValoareEstimata(String bijuterie2ValoareEstimata) {
         this.bijuterie2ValoareEstimata = bijuterie2ValoareEstimata;
+    }
+
+    public String getBijuterie2Explicatie() {
+        return bijuterie2Explicatie;
+    }
+
+    public void setBijuterie2Explicatie(String bijuterie2Explicatie) {
+        this.bijuterie2Explicatie = bijuterie2Explicatie;
     }
 
     public String getBijuterie2Moneda() {
@@ -3807,6 +3894,14 @@ public class RevenueDeclarationInfo {
         this.bijuterie3ValoareEstimata = bijuterie3ValoareEstimata;
     }
 
+    public String getBijuterie3Explicatie() {
+        return bijuterie3Explicatie;
+    }
+
+    public void setBijuterie3Explicatie(String bijuterie3Explicatie) {
+        this.bijuterie3Explicatie = bijuterie3Explicatie;
+    }
+
     public String getBijuterie3Moneda() {
         return bijuterie3Moneda;
     }
@@ -3847,6 +3942,14 @@ public class RevenueDeclarationInfo {
         this.bijuterie4ValoareEstimata = bijuterie4ValoareEstimata;
     }
 
+    public String getBijuterie4Explicatie() {
+        return bijuterie4Explicatie;
+    }
+
+    public void setBijuterie4Explicatie(String bijuterie4Explicatie) {
+        this.bijuterie4Explicatie = bijuterie4Explicatie;
+    }
+
     public String getBijuterie4Moneda() {
         return bijuterie4Moneda;
     }
@@ -3885,6 +3988,14 @@ public class RevenueDeclarationInfo {
 
     public void setBijuterie5ValoareEstimata(String bijuterie5ValoareEstimata) {
         this.bijuterie5ValoareEstimata = bijuterie5ValoareEstimata;
+    }
+
+    public String getBijuterie5Explicatie() {
+        return bijuterie5Explicatie;
+    }
+
+    public void setBijuterie5Explicatie(String bijuterie5Explicatie) {
+        this.bijuterie5Explicatie = bijuterie5Explicatie;
     }
 
     public String getBijuterie5Moneda() {
@@ -3951,6 +4062,14 @@ public class RevenueDeclarationInfo {
         this.bunInstrainat1Valoarea = bunInstrainat1Valoarea;
     }
 
+    public String getBunInstrainat1Explicatie() {
+        return bunInstrainat1Explicatie;
+    }
+
+    public void setBunInstrainat1Explicatie(String bunInstrainat1Explicatie) {
+        this.bunInstrainat1Explicatie = bunInstrainat1Explicatie;
+    }
+
     public String getBunInstrainat1Moneda() {
         return bunInstrainat1Moneda;
     }
@@ -4005,6 +4124,14 @@ public class RevenueDeclarationInfo {
 
     public void setBunInstrainat2Valoarea(String bunInstrainat2Valoarea) {
         this.bunInstrainat2Valoarea = bunInstrainat2Valoarea;
+    }
+
+    public String getBunInstrainat2Explicatie() {
+        return bunInstrainat2Explicatie;
+    }
+
+    public void setBunInstrainat2Explicatie(String bunInstrainat2Explicatie) {
+        this.bunInstrainat2Explicatie = bunInstrainat2Explicatie;
     }
 
     public String getBunInstrainat2Moneda() {
@@ -4063,6 +4190,14 @@ public class RevenueDeclarationInfo {
         this.bunInstrainat3Valoarea = bunInstrainat3Valoarea;
     }
 
+    public String getBunInstrainat3Explicatie() {
+        return bunInstrainat3Explicatie;
+    }
+
+    public void setBunInstrainat3Explicatie(String bunInstrainat3Explicatie) {
+        this.bunInstrainat3Explicatie = bunInstrainat3Explicatie;
+    }
+
     public String getBunInstrainat3Moneda() {
         return bunInstrainat3Moneda;
     }
@@ -4119,6 +4254,14 @@ public class RevenueDeclarationInfo {
         this.bunInstrainat4Valoarea = bunInstrainat4Valoarea;
     }
 
+    public String getBunInstrainat4Explicatie() {
+        return bunInstrainat4Explicatie;
+    }
+
+    public void setBunInstrainat4Explicatie(String bunInstrainat4Explicatie) {
+        this.bunInstrainat4Explicatie = bunInstrainat4Explicatie;
+    }
+
     public String getBunInstrainat4Moneda() {
         return bunInstrainat4Moneda;
     }
@@ -4173,6 +4316,14 @@ public class RevenueDeclarationInfo {
 
     public void setBunInstrainat5Valoarea(String bunInstrainat5Valoarea) {
         this.bunInstrainat5Valoarea = bunInstrainat5Valoarea;
+    }
+
+    public String getBunInstrainat5Explicatie() {
+        return bunInstrainat5Explicatie;
+    }
+
+    public void setBunInstrainat5Explicatie(String bunInstrainat5Explicatie) {
+        this.bunInstrainat5Explicatie = bunInstrainat5Explicatie;
     }
 
     public String getBunInstrainat5Moneda() {
@@ -4247,6 +4398,14 @@ public class RevenueDeclarationInfo {
         this.cont1Sold = cont1Sold;
     }
 
+    public String getCont1Explicatie() {
+        return cont1Explicatie;
+    }
+
+    public void setCont1Explicatie(String cont1Explicatie) {
+        this.cont1Explicatie = cont1Explicatie;
+    }
+
     public String getExistaConturi2() {
         return existaConturi2;
     }
@@ -4301,6 +4460,14 @@ public class RevenueDeclarationInfo {
 
     public void setCont2Sold(String cont2Sold) {
         this.cont2Sold = cont2Sold;
+    }
+
+    public String getCont2Explicatie() {
+        return cont2Explicatie;
+    }
+
+    public void setCont2Explicatie(String cont2Explicatie) {
+        this.cont2Explicatie = cont2Explicatie;
     }
 
     public String getExistaConturi3() {
@@ -4359,6 +4526,14 @@ public class RevenueDeclarationInfo {
         this.cont3Sold = cont3Sold;
     }
 
+    public String getCont3Explicatie() {
+        return cont3Explicatie;
+    }
+
+    public void setCont3Explicatie(String cont3Explicatie) {
+        this.cont3Explicatie = cont3Explicatie;
+    }
+
     public String getExistaConturi4() {
         return existaConturi4;
     }
@@ -4413,6 +4588,14 @@ public class RevenueDeclarationInfo {
 
     public void setCont4Sold(String cont4Sold) {
         this.cont4Sold = cont4Sold;
+    }
+
+    public String getCont4Explicatie() {
+        return cont4Explicatie;
+    }
+
+    public void setCont4Explicatie(String cont4Explicatie) {
+        this.cont4Explicatie = cont4Explicatie;
     }
 
     public String getExistaConturi5() {
@@ -4471,6 +4654,14 @@ public class RevenueDeclarationInfo {
         this.cont5Sold = cont5Sold;
     }
 
+    public String getCont5Explicatie() {
+        return cont5Explicatie;
+    }
+
+    public void setCont5Explicatie(String cont5Explicatie) {
+        this.cont5Explicatie = cont5Explicatie;
+    }
+
     public String getExistaConturi6() {
         return existaConturi6;
     }
@@ -4525,6 +4716,14 @@ public class RevenueDeclarationInfo {
 
     public void setCont6Sold(String cont6Sold) {
         this.cont6Sold = cont6Sold;
+    }
+
+    public String getCont6Explicatie() {
+        return cont6Explicatie;
+    }
+
+    public void setCont6Explicatie(String cont6Explicatie) {
+        this.cont6Explicatie = cont6Explicatie;
     }
 
     public String getExistaConturi7() {
@@ -4583,6 +4782,14 @@ public class RevenueDeclarationInfo {
         this.cont7Sold = cont7Sold;
     }
 
+    public String getCont7Explicatie() {
+        return cont7Explicatie;
+    }
+
+    public void setCont7Explicatie(String cont7Explicatie) {
+        this.cont7Explicatie = cont7Explicatie;
+    }
+
     public String getExistaConturi8() {
         return existaConturi8;
     }
@@ -4637,6 +4844,14 @@ public class RevenueDeclarationInfo {
 
     public void setCont8Sold(String cont8Sold) {
         this.cont8Sold = cont8Sold;
+    }
+
+    public String getCont8Explicatie() {
+        return cont8Explicatie;
+    }
+
+    public void setCont8Explicatie(String cont8Explicatie) {
+        this.cont8Explicatie = cont8Explicatie;
     }
 
     public String getExistaConturi9() {
@@ -4695,6 +4910,14 @@ public class RevenueDeclarationInfo {
         this.cont9Sold = cont9Sold;
     }
 
+    public String getCont9Explicatie() {
+        return cont9Explicatie;
+    }
+
+    public void setCont9Explicatie(String cont9Explicatie) {
+        this.cont9Explicatie = cont9Explicatie;
+    }
+
     public String getExistaConturi10() {
         return existaConturi10;
     }
@@ -4749,6 +4972,14 @@ public class RevenueDeclarationInfo {
 
     public void setCont10Sold(String cont10Sold) {
         this.cont10Sold = cont10Sold;
+    }
+
+    public String getCont10Explicatie() {
+        return cont10Explicatie;
+    }
+
+    public void setCont10Explicatie(String cont10Explicatie) {
+        this.cont10Explicatie = cont10Explicatie;
     }
 
     public String getAlteConturiFreeText() {
@@ -4807,6 +5038,14 @@ public class RevenueDeclarationInfo {
         this.plasament1Valoare = plasament1Valoare;
     }
 
+    public String getPlasament1Explicatie() {
+        return plasament1Explicatie;
+    }
+
+    public void setPlasament1Explicatie(String plasament1Explicatie) {
+        this.plasament1Explicatie = plasament1Explicatie;
+    }
+
     public String getPlasament1Moneda() {
         return plasament1Moneda;
     }
@@ -4861,6 +5100,14 @@ public class RevenueDeclarationInfo {
 
     public void setPlasament2Valoare(String plasament2Valoare) {
         this.plasament2Valoare = plasament2Valoare;
+    }
+
+    public String getPlasament2Explicatie() {
+        return plasament2Explicatie;
+    }
+
+    public void setPlasament2Explicatie(String plasament2Explicatie) {
+        this.plasament2Explicatie = plasament2Explicatie;
     }
 
     public String getPlasament2Moneda() {
@@ -4919,6 +5166,14 @@ public class RevenueDeclarationInfo {
         this.plasament3Valoare = plasament3Valoare;
     }
 
+    public String getPlasament3Explicatie() {
+        return plasament3Explicatie;
+    }
+
+    public void setPlasament3Explicatie(String plasament3Explicatie) {
+        this.plasament3Explicatie = plasament3Explicatie;
+    }
+
     public String getPlasament3Moneda() {
         return plasament3Moneda;
     }
@@ -4975,6 +5230,14 @@ public class RevenueDeclarationInfo {
         this.plasament4Valoare = plasament4Valoare;
     }
 
+    public String getPlasament4Explicatie() {
+        return plasament4Explicatie;
+    }
+
+    public void setPlasament4Explicatie(String plasament4Explicatie) {
+        this.plasament4Explicatie = plasament4Explicatie;
+    }
+
     public String getPlasament4Moneda() {
         return plasament4Moneda;
     }
@@ -5029,6 +5292,14 @@ public class RevenueDeclarationInfo {
 
     public void setPlasament5Valoare(String plasament5Valoare) {
         this.plasament5Valoare = plasament5Valoare;
+    }
+
+    public String getPlasament5Explicatie() {
+        return plasament5Explicatie;
+    }
+
+    public void setPlasament5Explicatie(String plasament5Explicatie) {
+        this.plasament5Explicatie = plasament5Explicatie;
     }
 
     public String getPlasament5Moneda() {
@@ -5095,6 +5366,14 @@ public class RevenueDeclarationInfo {
         this.datorie1Valoare = datorie1Valoare;
     }
 
+    public String getDatorie1Explicatie() {
+        return datorie1Explicatie;
+    }
+
+    public void setDatorie1Explicatie(String datorie1Explicatie) {
+        this.datorie1Explicatie = datorie1Explicatie;
+    }
+
     public String getDatorie1Moneda() {
         return datorie1Moneda;
     }
@@ -5141,6 +5420,14 @@ public class RevenueDeclarationInfo {
 
     public void setDatorie2Valoare(String datorie2Valoare) {
         this.datorie2Valoare = datorie2Valoare;
+    }
+
+    public String getDatorie2Explicatie() {
+        return datorie2Explicatie;
+    }
+
+    public void setDatorie2Explicatie(String datorie2Explicatie) {
+        this.datorie2Explicatie = datorie2Explicatie;
     }
 
     public String getDatorie2Moneda() {
@@ -5191,6 +5478,14 @@ public class RevenueDeclarationInfo {
         this.datorie3Valoare = datorie3Valoare;
     }
 
+    public String getDatorie3Explicatie() {
+        return datorie3Explicatie;
+    }
+
+    public void setDatorie3Explicatie(String datorie3Explicatie) {
+        this.datorie3Explicatie = datorie3Explicatie;
+    }
+
     public String getDatorie3Moneda() {
         return datorie3Moneda;
     }
@@ -5239,6 +5534,14 @@ public class RevenueDeclarationInfo {
         this.datorie4Valoare = datorie4Valoare;
     }
 
+    public String getDatorie4Explicatie() {
+        return datorie4Explicatie;
+    }
+
+    public void setDatorie4Explicatie(String datorie4Explicatie) {
+        this.datorie4Explicatie = datorie4Explicatie;
+    }
+
     public String getDatorie4Moneda() {
         return datorie4Moneda;
     }
@@ -5285,6 +5588,14 @@ public class RevenueDeclarationInfo {
 
     public void setDatorie5Valoare(String datorie5Valoare) {
         this.datorie5Valoare = datorie5Valoare;
+    }
+
+    public String getDatorie5Explicatie() {
+        return datorie5Explicatie;
+    }
+
+    public void setDatorie5Explicatie(String datorie5Explicatie) {
+        this.datorie5Explicatie = datorie5Explicatie;
     }
 
     public String getDatorie5Moneda() {
@@ -5343,6 +5654,14 @@ public class RevenueDeclarationInfo {
         this.cadou1VenitAnual = cadou1VenitAnual;
     }
 
+    public String getCadou1Explicatie() {
+        return cadou1Explicatie;
+    }
+
+    public void setCadou1Explicatie(String cadou1Explicatie) {
+        this.cadou1Explicatie = cadou1Explicatie;
+    }
+
     public String getCadou1Monenda() {
         return cadou1Monenda;
     }
@@ -5389,6 +5708,14 @@ public class RevenueDeclarationInfo {
 
     public void setCadou2VenitAnual(String cadou2VenitAnual) {
         this.cadou2VenitAnual = cadou2VenitAnual;
+    }
+
+    public String getCadou2Explicatie() {
+        return cadou2Explicatie;
+    }
+
+    public void setCadou2Explicatie(String cadou2Explicatie) {
+        this.cadou2Explicatie = cadou2Explicatie;
     }
 
     public String getCadou2Monenda() {
@@ -5447,6 +5774,14 @@ public class RevenueDeclarationInfo {
         this.venit1SalariuVenitAnual = venit1SalariuVenitAnual;
     }
 
+    public String getVenit1SalariuExplicatie() {
+        return venit1SalariuExplicatie;
+    }
+
+    public void setVenit1SalariuExplicatie(String venit1SalariuExplicatie) {
+        this.venit1SalariuExplicatie = venit1SalariuExplicatie;
+    }
+
     public String getVenit1SalariuMonenda() {
         return venit1SalariuMonenda;
     }
@@ -5493,6 +5828,14 @@ public class RevenueDeclarationInfo {
 
     public void setVenit2SalariuVenitAnual(String venit2SalariuVenitAnual) {
         this.venit2SalariuVenitAnual = venit2SalariuVenitAnual;
+    }
+
+    public String getVenit2SalariuExplicatie() {
+        return venit2SalariuExplicatie;
+    }
+
+    public void setVenit2SalariuExplicatie(String venit2SalariuExplicatie) {
+        this.venit2SalariuExplicatie = venit2SalariuExplicatie;
     }
 
     public String getVenit2SalariuMonenda() {
@@ -5543,6 +5886,14 @@ public class RevenueDeclarationInfo {
         this.venit3SalariuVenitAnual = venit3SalariuVenitAnual;
     }
 
+    public String getVenit3SalariuExplicatie() {
+        return venit3SalariuExplicatie;
+    }
+
+    public void setVenit3SalariuExplicatie(String venit3SalariuExplicatie) {
+        this.venit3SalariuExplicatie = venit3SalariuExplicatie;
+    }
+
     public String getVenit3SalariuMonenda() {
         return venit3SalariuMonenda;
     }
@@ -5589,6 +5940,14 @@ public class RevenueDeclarationInfo {
 
     public void setVenit4SalariuVenitAnual(String venit4SalariuVenitAnual) {
         this.venit4SalariuVenitAnual = venit4SalariuVenitAnual;
+    }
+
+    public String getVenit4SalariuExplicatie() {
+        return venit4SalariuExplicatie;
+    }
+
+    public void setVenit4SalariuExplicatie(String venit4SalariuExplicatie) {
+        this.venit4SalariuExplicatie = venit4SalariuExplicatie;
     }
 
     public String getVenit4SalariuMonenda() {
@@ -5639,20 +5998,20 @@ public class RevenueDeclarationInfo {
         this.venit5SalariuVenitAnual = venit5SalariuVenitAnual;
     }
 
+    public String getVenit5SalariuExplicatie() {
+        return venit5SalariuExplicatie;
+    }
+
+    public void setVenit5SalariuExplicatie(String venit5SalariuExplicatie) {
+        this.venit5SalariuExplicatie = venit5SalariuExplicatie;
+    }
+
     public String getVenit5SalariuMonenda() {
         return venit5SalariuMonenda;
     }
 
     public void setVenit5SalariuMonenda(String venit5SalariuMonenda) {
         this.venit5SalariuMonenda = venit5SalariuMonenda;
-    }
-
-    public String getAlteVenituriSalarFreeText() {
-        return alteVenituriSalarFreeText;
-    }
-
-    public void setAlteVenituriSalarFreeText(String alteVenituriSalarFreeText) {
-        this.alteVenituriSalarFreeText = alteVenituriSalarFreeText;
     }
 
     public String getExistaVenituriSalarii6() {
@@ -5695,12 +6054,28 @@ public class RevenueDeclarationInfo {
         this.venit6SalariuVenitAnual = venit6SalariuVenitAnual;
     }
 
+    public String getVenit6SalariuExplicatie() {
+        return venit6SalariuExplicatie;
+    }
+
+    public void setVenit6SalariuExplicatie(String venit6SalariuExplicatie) {
+        this.venit6SalariuExplicatie = venit6SalariuExplicatie;
+    }
+
     public String getVenit6SalariuMonenda() {
         return venit6SalariuMonenda;
     }
 
     public void setVenit6SalariuMonenda(String venit6SalariuMonenda) {
         this.venit6SalariuMonenda = venit6SalariuMonenda;
+    }
+
+    public String getAlteVenituriSalarFreeText() {
+        return alteVenituriSalarFreeText;
+    }
+
+    public void setAlteVenituriSalarFreeText(String alteVenituriSalarFreeText) {
+        this.alteVenituriSalarFreeText = alteVenituriSalarFreeText;
     }
 
     public String getExistaVenituriActivitatiIndependente1() {
@@ -5741,6 +6116,14 @@ public class RevenueDeclarationInfo {
 
     public void setVenitActivitatiIndependente1VenitAnual(String venitActivitatiIndependente1VenitAnual) {
         this.venitActivitatiIndependente1VenitAnual = venitActivitatiIndependente1VenitAnual;
+    }
+
+    public String getVenitActivitatiIndependente1Explicatie() {
+        return venitActivitatiIndependente1Explicatie;
+    }
+
+    public void setVenitActivitatiIndependente1Explicatie(String venitActivitatiIndependente1Explicatie) {
+        this.venitActivitatiIndependente1Explicatie = venitActivitatiIndependente1Explicatie;
     }
 
     public String getVenitActivitatiIndependente1Moneda() {
@@ -5791,6 +6174,14 @@ public class RevenueDeclarationInfo {
         this.venitActivitatiIndependente2VenitAnual = venitActivitatiIndependente2VenitAnual;
     }
 
+    public String getVenitActivitatiIndependente2Explicatie() {
+        return venitActivitatiIndependente2Explicatie;
+    }
+
+    public void setVenitActivitatiIndependente2Explicatie(String venitActivitatiIndependente2Explicatie) {
+        this.venitActivitatiIndependente2Explicatie = venitActivitatiIndependente2Explicatie;
+    }
+
     public String getVenitActivitatiIndependente2Moneda() {
         return venitActivitatiIndependente2Moneda;
     }
@@ -5839,6 +6230,14 @@ public class RevenueDeclarationInfo {
         this.venitActivitatiIndependente3VenitAnual = venitActivitatiIndependente3VenitAnual;
     }
 
+    public String getVenitActivitatiIndependente3Explicatie() {
+        return venitActivitatiIndependente3Explicatie;
+    }
+
+    public void setVenitActivitatiIndependente3Explicatie(String venitActivitatiIndependente3Explicatie) {
+        this.venitActivitatiIndependente3Explicatie = venitActivitatiIndependente3Explicatie;
+    }
+
     public String getVenitActivitatiIndependente3Moneda() {
         return venitActivitatiIndependente3Moneda;
     }
@@ -5885,6 +6284,14 @@ public class RevenueDeclarationInfo {
 
     public void setVenitActivitatiIndependente4VenitAnual(String venitActivitatiIndependente4VenitAnual) {
         this.venitActivitatiIndependente4VenitAnual = venitActivitatiIndependente4VenitAnual;
+    }
+
+    public String getVenitActivitatiIndependente4Explicatie() {
+        return venitActivitatiIndependente4Explicatie;
+    }
+
+    public void setVenitActivitatiIndependente4Explicatie(String venitActivitatiIndependente4Explicatie) {
+        this.venitActivitatiIndependente4Explicatie = venitActivitatiIndependente4Explicatie;
     }
 
     public String getVenitActivitatiIndependente4Moneda() {
@@ -5943,6 +6350,14 @@ public class RevenueDeclarationInfo {
         this.venitCedareaFolosintei1VenitAnual = venitCedareaFolosintei1VenitAnual;
     }
 
+    public String getVenitCedareaFolosintei1Explicatie() {
+        return venitCedareaFolosintei1Explicatie;
+    }
+
+    public void setVenitCedareaFolosintei1Explicatie(String venitCedareaFolosintei1Explicatie) {
+        this.venitCedareaFolosintei1Explicatie = venitCedareaFolosintei1Explicatie;
+    }
+
     public String getVenitCedareaFolosintei1Moneda() {
         return venitCedareaFolosintei1Moneda;
     }
@@ -5989,6 +6404,14 @@ public class RevenueDeclarationInfo {
 
     public void setVenitCedareaFolosintei2VenitAnual(String venitCedareaFolosintei2VenitAnual) {
         this.venitCedareaFolosintei2VenitAnual = venitCedareaFolosintei2VenitAnual;
+    }
+
+    public String getVenitCedareaFolosintei2Explicatie() {
+        return venitCedareaFolosintei2Explicatie;
+    }
+
+    public void setVenitCedareaFolosintei2Explicatie(String venitCedareaFolosintei2Explicatie) {
+        this.venitCedareaFolosintei2Explicatie = venitCedareaFolosintei2Explicatie;
     }
 
     public String getVenitCedareaFolosintei2Moneda() {
@@ -6039,6 +6462,14 @@ public class RevenueDeclarationInfo {
         this.venitCedareaFolosintei3VenitAnual = venitCedareaFolosintei3VenitAnual;
     }
 
+    public String getVenitCedareaFolosintei3Explicatie() {
+        return venitCedareaFolosintei3Explicatie;
+    }
+
+    public void setVenitCedareaFolosintei3Explicatie(String venitCedareaFolosintei3Explicatie) {
+        this.venitCedareaFolosintei3Explicatie = venitCedareaFolosintei3Explicatie;
+    }
+
     public String getVenitCedareaFolosintei3Moneda() {
         return venitCedareaFolosintei3Moneda;
     }
@@ -6085,6 +6516,14 @@ public class RevenueDeclarationInfo {
 
     public void setVenitCedareaFolosintei4VenitAnual(String venitCedareaFolosintei4VenitAnual) {
         this.venitCedareaFolosintei4VenitAnual = venitCedareaFolosintei4VenitAnual;
+    }
+
+    public String getVenitCedareaFolosintei4Explicatie() {
+        return venitCedareaFolosintei4Explicatie;
+    }
+
+    public void setVenitCedareaFolosintei4Explicatie(String venitCedareaFolosintei4Explicatie) {
+        this.venitCedareaFolosintei4Explicatie = venitCedareaFolosintei4Explicatie;
     }
 
     public String getVenitCedareaFolosintei4Moneda() {
@@ -6135,6 +6574,14 @@ public class RevenueDeclarationInfo {
         this.venitCedareaFolosintei5VenitAnual = venitCedareaFolosintei5VenitAnual;
     }
 
+    public String getVenitCedareaFolosintei5Explicatie() {
+        return venitCedareaFolosintei5Explicatie;
+    }
+
+    public void setVenitCedareaFolosintei5Explicatie(String venitCedareaFolosintei5Explicatie) {
+        this.venitCedareaFolosintei5Explicatie = venitCedareaFolosintei5Explicatie;
+    }
+
     public String getVenitCedareaFolosintei5Moneda() {
         return venitCedareaFolosintei5Moneda;
     }
@@ -6181,6 +6628,14 @@ public class RevenueDeclarationInfo {
 
     public void setVenitCedareaFolosintei6VenitAnual(String venitCedareaFolosintei6VenitAnual) {
         this.venitCedareaFolosintei6VenitAnual = venitCedareaFolosintei6VenitAnual;
+    }
+
+    public String getVenitCedareaFolosintei6Explicatie() {
+        return venitCedareaFolosintei6Explicatie;
+    }
+
+    public void setVenitCedareaFolosintei6Explicatie(String venitCedareaFolosintei6Explicatie) {
+        this.venitCedareaFolosintei6Explicatie = venitCedareaFolosintei6Explicatie;
     }
 
     public String getVenitCedareaFolosintei6Moneda() {
@@ -6239,6 +6694,14 @@ public class RevenueDeclarationInfo {
         this.venitInvestitii1VenitAnual = venitInvestitii1VenitAnual;
     }
 
+    public String getVenitInvestitii1Explicatie() {
+        return venitInvestitii1Explicatie;
+    }
+
+    public void setVenitInvestitii1Explicatie(String venitInvestitii1Explicatie) {
+        this.venitInvestitii1Explicatie = venitInvestitii1Explicatie;
+    }
+
     public String getVenitInvestitii1Moneda() {
         return venitInvestitii1Moneda;
     }
@@ -6285,6 +6748,14 @@ public class RevenueDeclarationInfo {
 
     public void setVenitInvestitii2VenitAnual(String venitInvestitii2VenitAnual) {
         this.venitInvestitii2VenitAnual = venitInvestitii2VenitAnual;
+    }
+
+    public String getVenitInvestitii2Explicatie() {
+        return venitInvestitii2Explicatie;
+    }
+
+    public void setVenitInvestitii2Explicatie(String venitInvestitii2Explicatie) {
+        this.venitInvestitii2Explicatie = venitInvestitii2Explicatie;
     }
 
     public String getVenitInvestitii2Moneda() {
@@ -6335,6 +6806,14 @@ public class RevenueDeclarationInfo {
         this.venitInvestitii3VenitAnual = venitInvestitii3VenitAnual;
     }
 
+    public String getVenitInvestitii3Explicatie() {
+        return venitInvestitii3Explicatie;
+    }
+
+    public void setVenitInvestitii3Explicatie(String venitInvestitii3Explicatie) {
+        this.venitInvestitii3Explicatie = venitInvestitii3Explicatie;
+    }
+
     public String getVenitInvestitii3Moneda() {
         return venitInvestitii3Moneda;
     }
@@ -6381,6 +6860,14 @@ public class RevenueDeclarationInfo {
 
     public void setVenitInvestitii4VenitAnual(String venitInvestitii4VenitAnual) {
         this.venitInvestitii4VenitAnual = venitInvestitii4VenitAnual;
+    }
+
+    public String getVenitInvestitii4Explicatie() {
+        return venitInvestitii4Explicatie;
+    }
+
+    public void setVenitInvestitii4Explicatie(String venitInvestitii4Explicatie) {
+        this.venitInvestitii4Explicatie = venitInvestitii4Explicatie;
     }
 
     public String getVenitInvestitii4Moneda() {
@@ -6439,6 +6926,14 @@ public class RevenueDeclarationInfo {
         this.venitPensii1VenitAnual = venitPensii1VenitAnual;
     }
 
+    public String getVenitPensii1Explicatie() {
+        return venitPensii1Explicatie;
+    }
+
+    public void setVenitPensii1Explicatie(String venitPensii1Explicatie) {
+        this.venitPensii1Explicatie = venitPensii1Explicatie;
+    }
+
     public String getVenitPensii1Moneda() {
         return venitPensii1Moneda;
     }
@@ -6485,6 +6980,14 @@ public class RevenueDeclarationInfo {
 
     public void setVenitPensii2VenitAnual(String venitPensii2VenitAnual) {
         this.venitPensii2VenitAnual = venitPensii2VenitAnual;
+    }
+
+    public String getVenitPensii2Explicatie() {
+        return venitPensii2Explicatie;
+    }
+
+    public void setVenitPensii2Explicatie(String venitPensii2Explicatie) {
+        this.venitPensii2Explicatie = venitPensii2Explicatie;
     }
 
     public String getVenitPensii2Moneda() {
@@ -6543,6 +7046,14 @@ public class RevenueDeclarationInfo {
         this.venitAgricol1VenitAnual = venitAgricol1VenitAnual;
     }
 
+    public String getVenitAgricol1Explicatie() {
+        return venitAgricol1Explicatie;
+    }
+
+    public void setVenitAgricol1Explicatie(String venitAgricol1Explicatie) {
+        this.venitAgricol1Explicatie = venitAgricol1Explicatie;
+    }
+
     public String getVenitAgricol1Moneda() {
         return venitAgricol1Moneda;
     }
@@ -6589,6 +7100,14 @@ public class RevenueDeclarationInfo {
 
     public void setVenitAgricol2VenitAnual(String venitAgricol2VenitAnual) {
         this.venitAgricol2VenitAnual = venitAgricol2VenitAnual;
+    }
+
+    public String getVenitAgricol2Explicatie() {
+        return venitAgricol2Explicatie;
+    }
+
+    public void setVenitAgricol2Explicatie(String venitAgricol2Explicatie) {
+        this.venitAgricol2Explicatie = venitAgricol2Explicatie;
     }
 
     public String getVenitAgricol2Moneda() {
@@ -6647,6 +7166,14 @@ public class RevenueDeclarationInfo {
         this.venitNoroc1VenitAnual = venitNoroc1VenitAnual;
     }
 
+    public String getVenitNoroc1Explicatie() {
+        return venitNoroc1Explicatie;
+    }
+
+    public void setVenitNoroc1Explicatie(String venitNoroc1Explicatie) {
+        this.venitNoroc1Explicatie = venitNoroc1Explicatie;
+    }
+
     public String getVenitNoroc1Moneda() {
         return venitNoroc1Moneda;
     }
@@ -6693,6 +7220,14 @@ public class RevenueDeclarationInfo {
 
     public void setVenitNoroc2VenitAnual(String venitNoroc2VenitAnual) {
         this.venitNoroc2VenitAnual = venitNoroc2VenitAnual;
+    }
+
+    public String getVenitNoroc2Explicatie() {
+        return venitNoroc2Explicatie;
+    }
+
+    public void setVenitNoroc2Explicatie(String venitNoroc2Explicatie) {
+        this.venitNoroc2Explicatie = venitNoroc2Explicatie;
     }
 
     public String getVenitNoroc2Moneda() {
@@ -6751,6 +7286,14 @@ public class RevenueDeclarationInfo {
         this.veniAlte1VenitAnual = veniAlte1VenitAnual;
     }
 
+    public String getVeniAlte1Explicatie() {
+        return veniAlte1Explicatie;
+    }
+
+    public void setVeniAlte1Explicatie(String veniAlte1Explicatie) {
+        this.veniAlte1Explicatie = veniAlte1Explicatie;
+    }
+
     public String getVenitAlte1Moneda() {
         return venitAlte1Moneda;
     }
@@ -6797,6 +7340,14 @@ public class RevenueDeclarationInfo {
 
     public void setVeniAlte2VenitAnual(String veniAlte2VenitAnual) {
         this.veniAlte2VenitAnual = veniAlte2VenitAnual;
+    }
+
+    public String getVeniAlte2Explicatie() {
+        return veniAlte2Explicatie;
+    }
+
+    public void setVeniAlte2Explicatie(String veniAlte2Explicatie) {
+        this.veniAlte2Explicatie = veniAlte2Explicatie;
     }
 
     public String getVenitAlte2Moneda() {
@@ -6847,6 +7398,14 @@ public class RevenueDeclarationInfo {
         this.veniAlte3VenitAnual = veniAlte3VenitAnual;
     }
 
+    public String getVeniAlte3Explicatie() {
+        return veniAlte3Explicatie;
+    }
+
+    public void setVeniAlte3Explicatie(String veniAlte3Explicatie) {
+        this.veniAlte3Explicatie = veniAlte3Explicatie;
+    }
+
     public String getVenitAlte3Moneda() {
         return venitAlte3Moneda;
     }
@@ -6893,6 +7452,14 @@ public class RevenueDeclarationInfo {
 
     public void setVeniAlte4VenitAnual(String veniAlte4VenitAnual) {
         this.veniAlte4VenitAnual = veniAlte4VenitAnual;
+    }
+
+    public String getVeniAlte4Explicatie() {
+        return veniAlte4Explicatie;
+    }
+
+    public void setVeniAlte4Explicatie(String veniAlte4Explicatie) {
+        this.veniAlte4Explicatie = veniAlte4Explicatie;
     }
 
     public String getVenitAlte4Moneda() {

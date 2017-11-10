@@ -499,6 +499,7 @@ public class DemnitarService {
         declaratieActiveBunInstrainatInfo.setPersoanaBeneficiara(declaratieAvereBunInstrainatEntity.getPersoanaBeneficiara());
         declaratieActiveBunInstrainatInfo.setFormaInstrainarii(declaratieAvereBunInstrainatEntity.getFormaInstrainarii());
         declaratieActiveBunInstrainatInfo.setValoarea(declaratieAvereBunInstrainatEntity.getValoarea());
+        declaratieActiveBunInstrainatInfo.setExplicatie(declaratieAvereBunInstrainatEntity.getExplicatieSuma());
         declaratieActiveBunInstrainatInfo.setMoneda(declaratieAvereBunInstrainatEntity.getMoneda());
 
         return declaratieActiveBunInstrainatInfo;
@@ -511,6 +512,7 @@ public class DemnitarService {
         declaratieActiveCadouInfo.setSursaVenit(declaratieAvereCadouEntity.getSursaVenit());
         declaratieActiveCadouInfo.setServiciulPrestat(declaratieAvereCadouEntity.getServiciulPrestat());
         declaratieActiveCadouInfo.setVenit(declaratieAvereCadouEntity.getVenit());
+        declaratieActiveCadouInfo.setExplicatie(declaratieAvereCadouEntity.getExplicatieCadou());
         declaratieActiveCadouInfo.setMoneda(declaratieAvereCadouEntity.getMoneda());
 
         return declaratieActiveCadouInfo;
@@ -525,6 +527,7 @@ public class DemnitarService {
         declaratieActiveVenitInfo.setServiciulPrestat(declaratieAvereVenitEntity.getServiciulPrestat());
         declaratieActiveVenitInfo.setVenitAnual(declaratieAvereVenitEntity.getVenitAnual());
         declaratieActiveVenitInfo.setMoneda(declaratieAvereVenitEntity.getMoneda());
+        declaratieActiveVenitInfo.setExplicatieVenit(declaratieAvereVenitEntity.getExplicatieVenit());
 
         return declaratieActiveVenitInfo;
     }
@@ -535,6 +538,7 @@ public class DemnitarService {
         declaratieActiveBijuterieInfo.setDescriere(declaratieAvereBijuterieEntity.getDescriere());
         declaratieActiveBijuterieInfo.setAnDobandire(declaratieAvereBijuterieEntity.getAnDobandire());
         declaratieActiveBijuterieInfo.setValoareEstimate(declaratieAvereBijuterieEntity.getValoareEstimate());
+        declaratieActiveBijuterieInfo.setExplicatieBijuterie(declaratieAvereBijuterieEntity.getExplicatieBijuterie());
         declaratieActiveBijuterieInfo.setMoneda(declaratieAvereBijuterieEntity.getMoneda());
 
         return declaratieActiveBijuterieInfo;
@@ -548,6 +552,7 @@ public class DemnitarService {
         declaratieActivePlasamentInfo.setTipulPlasamentului(declaratieAverePlasamentEntity.getTipulPlasamentului());
         declaratieActivePlasamentInfo.setNumarTitluriSauCotaParte(declaratieAverePlasamentEntity.getNumarTitluriSauCotaParte());
         declaratieActivePlasamentInfo.setValoare(declaratieAverePlasamentEntity.getValoare());
+        declaratieActivePlasamentInfo.setExplicatie(declaratieAverePlasamentEntity.getExplicatiePlasament());
         declaratieActivePlasamentInfo.setMoneda(declaratieAverePlasamentEntity.getMoneda());
 
         return declaratieActivePlasamentInfo;
@@ -561,6 +566,7 @@ public class DemnitarService {
         declaratieActiveDatorieInfo.setScadenta(declaratieAvereDatorieEntity.getScadenta());
         declaratieActiveDatorieInfo.setValoare(declaratieAvereDatorieEntity.getValoare());
         declaratieActiveDatorieInfo.setMoneda(declaratieAvereDatorieEntity.getMoneda());
+        declaratieActiveDatorieInfo.setExplicatie(declaratieAvereDatorieEntity.getExplicatieDatorie());
 
         return declaratieActiveDatorieInfo;
     }
@@ -572,6 +578,7 @@ public class DemnitarService {
         declaratieActiveContInfo.setInstitutieBancara(declaratieAvereContEntity.getInstitutieBancara());
         declaratieActiveContInfo.setTipCont(declaratieAvereContEntity.getTipCont());
         declaratieActiveContInfo.setSoldCont(declaratieAvereContEntity.getSoldCont());
+        declaratieActiveContInfo.setExplicatie(declaratieAvereContEntity.getExplicatieSold());
         declaratieActiveContInfo.setMoneda(declaratieAvereContEntity.getMoneda());
         declaratieActiveContInfo.setAnDeschidereCont(declaratieAvereContEntity.getAnDeschidereCont());
 
@@ -740,6 +747,7 @@ public class DemnitarService {
 
         declaratieAvereEntity.setDemnitarId(declaratieAvereInfo.getDemnitarId());
         declaratieAvereEntity.setDataDeclaratiei(declaratieAvereInfo.getDataDeclaratiei());
+        declaratieAvereEntity.setDataDepunerii(declaratieAvereInfo.getDataDepunerii());
         declaratieAvereEntity.setFunctieId(declaratieAvereInfo.getFunctieId());
         declaratieAvereEntity.setFunctie2Id(declaratieAvereInfo.getFunctie2Id());
         declaratieAvereEntity.setInstitutieId(declaratieAvereInfo.getInstitutieId());
@@ -762,6 +770,8 @@ public class DemnitarService {
         populateDeclaratieAvereBunInstrainatEntitySet(declaratieAvereEntity.getDeclaratieAvereBunInstrainatEntitySet(),
                 declaratieAvereEntity, declaratieAvereInfo);
         populateDeclaratieAvereCadouEntitySet(declaratieAvereEntity.getDeclaratieAvereCadouEntitySet(),
+                declaratieAvereEntity, declaratieAvereInfo);
+        populateDeclaratieAvereDatorieEntitySet(declaratieAvereEntity.getDeclaratieAvereDatorieEntitySet(),
                 declaratieAvereEntity, declaratieAvereInfo);
         populateDeclaratieAvereVenitEntitySet(declaratieAvereEntity.getDeclaratieAvereVenitEntitySet(),
                 declaratieAvereEntity, declaratieAvereInfo);
@@ -828,6 +838,7 @@ public class DemnitarService {
         declaratieAvereVenitEntity.setServiciulPrestat(declaratieAvereVenitInfo.getServiciulPrestat());
         declaratieAvereVenitEntity.setMoneda(declaratieAvereVenitInfo.getMoneda());
         declaratieAvereVenitEntity.setVenitAnual(declaratieAvereVenitInfo.getVenitAnual());
+        declaratieAvereVenitEntity.setExplicatieVenit(declaratieAvereVenitInfo.getExplicatieVenit());
     }
 
     private void populateDeclaratieAvereCadouEntitySet(Set<DeclaratieAvereCadouEntity> declaratieAvereCadouEntitySet,
@@ -880,6 +891,78 @@ public class DemnitarService {
         }
     }
 
+    private void populateDeclaratieAvereCadouEntity(DeclaratieAvereCadouEntity declaratieAvereCadouEntity, DeclaratieAvereEntity declaratieAvereEntity,
+                                                    DeclaratieAvereCadouInfo declaratieAvereCadouInfo) {
+        declaratieAvereCadouEntity.setDeclaratieAvereEntity(declaratieAvereEntity);
+        declaratieAvereCadouEntity.setTitular(declaratieAvereCadouInfo.getTitular());
+        declaratieAvereCadouEntity.setSursaVenit(declaratieAvereCadouInfo.getSursaVenit());
+        declaratieAvereCadouEntity.setServiciulPrestat(declaratieAvereCadouInfo.getServiciulPrestat());
+        declaratieAvereCadouEntity.setVenit(declaratieAvereCadouInfo.getVenit());
+        declaratieAvereCadouEntity.setMoneda(declaratieAvereCadouInfo.getMoneda());
+        declaratieAvereCadouEntity.setExplicatieCadou(declaratieAvereCadouInfo.getExplicatie());
+    }
+
+    private void populateDeclaratieAvereDatorieEntitySet(Set<DeclaratieAvereDatorieEntity> declaratieAvereDatorieEntitySet,
+                                                       DeclaratieAvereEntity declaratieAvereEntity, DeclaratieAvereInfo declaratieAvereInfo) {
+        if (declaratieAvereDatorieEntitySet == null) {
+            declaratieAvereDatorieEntitySet = new HashSet<>();
+            declaratieAvereEntity.setDeclaratieAvereDatorieEntitySet(declaratieAvereDatorieEntitySet);
+        }
+
+        // prepare maps that are needed in order to identify what entities news to be added, modified and deleted
+        Map<Integer, DeclaratieAvereDatorieInfo> declaratieAvereDatorieInfoByIdHashMap = new HashMap<>();
+
+        if (declaratieAvereInfo.getDeclaratieAvereDatorieInfoList() != null) {
+            for (DeclaratieAvereDatorieInfo declaratieAvereDatorieInfo : declaratieAvereInfo.getDeclaratieAvereDatorieInfoList()) {
+                declaratieAvereDatorieInfoByIdHashMap.put(declaratieAvereDatorieInfo.getId(), declaratieAvereDatorieInfo);
+            }
+        }
+
+        Map<Integer, DeclaratieAvereDatorieEntity> declaratieAvereDatorieEntityByIdMap = new HashMap<>();
+
+        for (DeclaratieAvereDatorieEntity declaratieAvereDatorieEntity : declaratieAvereDatorieEntitySet) {
+            declaratieAvereDatorieEntityByIdMap.put(declaratieAvereDatorieEntity.getId(), declaratieAvereDatorieEntity);
+        }
+
+
+        if (declaratieAvereInfo.getDeclaratieAvereDatorieInfoList() != null) {
+            for (DeclaratieAvereDatorieInfo declaratieAvereDatorieInfo : declaratieAvereInfo.getDeclaratieAvereDatorieInfoList()) {
+                DeclaratieAvereDatorieEntity declaratieAvereDatorieEntity = declaratieAvereDatorieEntityByIdMap.get(declaratieAvereDatorieInfo.getId());
+
+                if (declaratieAvereDatorieEntity == null) {
+                    declaratieAvereDatorieEntity = new DeclaratieAvereDatorieEntity();
+                    declaratieAvereDatorieEntitySet.add(declaratieAvereDatorieEntity);
+                }
+
+                populateDeclaratieAvereDatorieEntity(declaratieAvereDatorieEntity, declaratieAvereEntity,
+                        declaratieAvereDatorieInfo);
+            }
+        }
+
+        // delete the relevant DeclaratieAvereDatorieEntities
+        Iterator<DeclaratieAvereDatorieEntity> declaratieAvereDatorieEntitySetIterator =
+                declaratieAvereDatorieEntitySet.iterator();
+
+        while (declaratieAvereDatorieEntitySetIterator.hasNext()) {
+            DeclaratieAvereDatorieEntity declaratieAvereDatorieEntity = declaratieAvereDatorieEntitySetIterator.next();
+
+            if (!declaratieAvereDatorieInfoByIdHashMap.containsKey(declaratieAvereDatorieEntity.getId())) {
+                declaratieAvereDatorieEntitySetIterator.remove();
+            }
+        }
+    }
+
+    private void populateDeclaratieAvereDatorieEntity(DeclaratieAvereDatorieEntity declaratieAvereDatorieEntity, DeclaratieAvereEntity declaratieAvereEntity,
+                                                    DeclaratieAvereDatorieInfo declaratieAvereDatorieInfo) {
+        declaratieAvereDatorieEntity.setDeclaratieAvereEntity(declaratieAvereEntity);
+        declaratieAvereDatorieEntity.setCreditor(declaratieAvereDatorieInfo.getCreditor());
+        declaratieAvereDatorieEntity.setAnContractare(declaratieAvereDatorieInfo.getAnContractare());
+        declaratieAvereDatorieEntity.setScadenta(declaratieAvereDatorieInfo.getScadenta());
+        declaratieAvereDatorieEntity.setValoare(declaratieAvereDatorieInfo.getValoare());
+        declaratieAvereDatorieEntity.setMoneda(declaratieAvereDatorieInfo.getMoneda());
+        declaratieAvereDatorieEntity.setExplicatieDatorie(declaratieAvereDatorieInfo.getExplicatie());
+    }
+
     private void populateDeclaratieAvereBunInstrainatEntitySet(Set<DeclaratieAvereBunInstrainatEntity> declaratieAvereBunInstrainatEntitySet,
                                                                DeclaratieAvereEntity declaratieAvereEntity,
                                                                DeclaratieAvereInfo declaratieAvereInfo) {
@@ -929,16 +1012,6 @@ public class DemnitarService {
                 declaratieAvereBunInstrainatEntitySetIterator.remove();
             }
         }
-    }
-
-    private void populateDeclaratieAvereCadouEntity(DeclaratieAvereCadouEntity declaratieAvereCadouEntity, DeclaratieAvereEntity declaratieAvereEntity,
-                                                    DeclaratieAvereCadouInfo declaratieAvereCadouInfo) {
-        declaratieAvereCadouEntity.setDeclaratieAvereEntity(declaratieAvereEntity);
-        declaratieAvereCadouEntity.setTitular(declaratieAvereCadouInfo.getTitular());
-        declaratieAvereCadouEntity.setSursaVenit(declaratieAvereCadouInfo.getSursaVenit());
-        declaratieAvereCadouEntity.setServiciulPrestat(declaratieAvereCadouInfo.getServiciulPrestat());
-        declaratieAvereCadouEntity.setVenit(declaratieAvereCadouInfo.getVenit());
-        declaratieAvereCadouEntity.setMoneda(declaratieAvereCadouInfo.getMoneda());
     }
 
     private void populateDeclaratieAvereBunInstrainatEntity(DeclaratieAvereBunInstrainatEntity declaratieAvereBunInstrainatEntity,
@@ -1016,6 +1089,7 @@ public class DemnitarService {
         declaratieAvereContEntity.setMoneda(declaratieAvereContInfo.getMoneda());
         declaratieAvereContEntity.setAnDeschidereCont(declaratieAvereContInfo.getAnDeschidereCont());
         declaratieAvereContEntity.setSoldCont(declaratieAvereContInfo.getSoldCont());
+        declaratieAvereContEntity.setExplicatieSold(declaratieAvereContInfo.getExplicatie());
     }
 
     private void populateDeclaratieAverePlasamentEntitySet(Set<DeclaratieAverePlasamentEntity> declaratieAverePlasamentEntitySet,
@@ -1078,6 +1152,7 @@ public class DemnitarService {
         declaratieAverePlasamentEntity.setTipulPlasamentului(declaratieAverePlasamentInfo.getTipulPlasamentului());
         declaratieAverePlasamentEntity.setNumarTitluriSauCotaParte(declaratieAverePlasamentInfo.getNumarTitluriSauCotaParte());
         declaratieAverePlasamentEntity.setValoare(declaratieAverePlasamentInfo.getValoare());
+        declaratieAverePlasamentEntity.setExplicatiePlasament(declaratieAverePlasamentInfo.getExplicatie());
         declaratieAverePlasamentEntity.setMoneda(declaratieAverePlasamentInfo.getMoneda());
     }
 
@@ -1139,6 +1214,7 @@ public class DemnitarService {
         declaratieAvereBijuterieEntity.setDescriere(declaratieAvereBijuterieInfo.getDescriere());
         declaratieAvereBijuterieEntity.setAnDobandire(declaratieAvereBijuterieInfo.getAnDobandire());
         declaratieAvereBijuterieEntity.setValoareEstimate(declaratieAvereBijuterieInfo.getValoareEstimate());
+        declaratieAvereBijuterieEntity.setExplicatieBijuterie(declaratieAvereBijuterieInfo.getExplicatieBijuterie());
         declaratieAvereBijuterieEntity.setMoneda(declaratieAvereBijuterieInfo.getMoneda());
     }
 

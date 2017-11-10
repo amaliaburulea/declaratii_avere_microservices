@@ -46,11 +46,12 @@ CREATE TABLE IF NOT EXISTS `declaratie_avere` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `demnitar_id` int(11) NOT NULL,
   `data_declaratiei` date NOT NULL,
+  `data_depunerii` date DEFAULT NULL,
   `functie` varchar(200) NOT NULL,
   `functie2` varchar(200) DEFAULT NULL,
   `institutie` varchar(400) NOT NULL,
   `institutie2` varchar(400) DEFAULT NULL,
-  `grup_politic` varchar(200) DEFAULT NULL
+  `grup_politic` varchar(200) DEFAULT NULL,
   `link_declaratie` VARCHAR(200) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `declaratieAvere_unique` (`demnitar_id`,`data_declaratiei`),
@@ -104,6 +105,7 @@ CREATE TABLE IF NOT EXISTS `declaratie_avere_bijuterie` (
   `descriere` text NOT NULL,
   `an_dobandire` VARCHAR(100) NULL,
   `valoare_estimata` decimal(12,2) NOT NULL,
+  `explicatie_bijuterie` TEXT DEFAULT NULL,
   `moneda` varchar(45) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `declaratieAvereBijuterie_declaratieAvere_fk_idx` (`declaratie_avere_id`),
@@ -115,10 +117,11 @@ CREATE TABLE IF NOT EXISTS `declaratie_avere_plasament` (
   `declaratie_avere_id` int(11) NOT NULL,
   `titular` TEXT NOT NULL,
   `emitent_titlu` text NOT NULL,
-  `tipul_plasamentului` int(11) NULL COMMENT '1 - hârtii de valoare deţinute (titluri de stat, certificate, obligaţiuni), 2 - acţiuni sau părţi sociale în societăţi comerciale, 3 - împrumuturi acordate în nume personal',
+  `tipul_plasamentului` int(11) NULL COMMENT '1 - hârtii de valoare deţinute (titluri de stat, certificate, obligaţiuni), 2 - acţiuni sau părţi sociale în societăţi comerciale, 3 - împrumuturi acordate în nume personal, 4 - altele',
   `numar_titluri_sau_cota_parte` varchar(500) NOT NULL,
   `valoare` decimal(12,2) NOT NULL,
   `moneda` varchar(100) NOT NULL,
+  `explicatie_plasament` TEXT DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `declaratieAverePlasament_declaratieAvere_fk_idx` (`declaratie_avere_id`),
   CONSTRAINT `declaratieAverePlasament_declaratieAvere_fk` FOREIGN KEY (`declaratie_avere_id`) REFERENCES `declaratie_avere` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
@@ -128,9 +131,10 @@ CREATE TABLE IF NOT EXISTS `declaratie_avere_datorie` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `declaratie_avere_id` int(11) NOT NULL,
   `creditor` varchar(200) NOT NULL,
-  `an_contractare` varchar(100) NOT NULL COMMENT 'e varchar pt ca nu se poate parsa automat',
+  `an_contractare` varchar(200) NOT NULL COMMENT 'e varchar pt ca nu se poate parsa automat',
   `scadenta` varchar(100) NOT NULL COMMENT 'e varchar pt ca nu se poate parsa automat',
   `valoare` decimal(12,2) NOT NULL,
+  `explicatie_datorie` TEXT DEFAULT NULL,
   `moneda` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `declaratieAvereDatorie_declaratieAvere_fk_idx` (`declaratie_avere_id`),
@@ -146,6 +150,7 @@ CREATE TABLE IF NOT EXISTS `declaratie_avere_cont` (
   `moneda` varchar(100) NOT NULL,
   `an_deschidere_cont` varchar(100) NOT NULL,
   `sold_cont` decimal(12,2) NOT NULL,
+  `explicatie_sold` TEXT DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `declaratieAvereCont_declaratieAvere_fk_idx` (`declaratie_avere_id`),
   CONSTRAINT `declaratieAvereCont_declaratieAvere_fk` FOREIGN KEY (`declaratie_avere_id`) REFERENCES `declaratie_avere` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
@@ -155,12 +160,11 @@ CREATE TABLE IF NOT EXISTS `declaratie_avere_bun_instrainat` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `declaratie_avere_id` int(11) NOT NULL,
   `tip` varchar(500) NOT NULL,
-  `is_imobil` bit(1)  NULL,
-  `marca` varchar(100) NULL,
   `data_instrainarii` varchar(45) NOT NULL COMMENT 'éste varchar pt ca nu poate fi parsat din excel',
   `persoana_beneficiara` varchar(100) NOT NULL,
   `forma_instrainarii` varchar(100) NOT NULL,
   `valoarea` decimal(12,2) NOT NULL,
+  `explicatie_suma` TEXT DEFAULT NULL,
   `moneda` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `declaratieAvereBunInstrainat_declaratieAvere_fk_idx` (`declaratie_avere_id`),
@@ -174,6 +178,7 @@ CREATE TABLE IF NOT EXISTS `declaratie_avere_cadou` (
   `sursa_venit` TEXT NOT NULL,
   `serviciul_prestat` VARCHAR(500) NULL,
   `venit` DECIMAL(12,2) NOT NULL,
+  `explicatie_cadou` TEXT DEFAULT NULL,
   `moneda` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `declaratieAvereCadou_declaratieAvere_fk_idx` (`declaratie_avere_id` ASC),
@@ -191,6 +196,7 @@ CREATE TABLE IF NOT EXISTS `declaratie_avere_venit` (
   `sursa_venit` TEXT NULL,
   `serviciul_prestat` VARCHAR(500) NOT NULL,
   venit_anual DECIMAL(12, 2) NOT NULL,
+  `explicatie_venit` TEXT DEFAULT NULL,
   `moneda` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `declaratieAvereVenit_declaratieAvere_fk_idx` (`declaratie_avere_id` ASC),
@@ -350,7 +356,7 @@ call AddColumn('demnitar', 'functie2_id', 'int null');
 call AddForeignKey('fk_demnitar_institutie', 'demnitar', 'institutie_id', 'institutie', 'id');
 call AddForeignKey('fk_demnitar_institutie2', 'demnitar', 'institutie2_id', 'institutie', 'id');
 call AddForeignKey('fk_demnitar_functie', 'demnitar', 'functie_id', 'functie', 'id');
-call AddForeignKey('fk_demnitar_functie2', 'demnitar', 'functie2_id', 'functie', 'id');
+call AddForeignKey('fk_demnitar_functie2', 'demnitar', 'functie2_id', 'functie', 'id'); 
 call CreateIndex('demnitar', 'fk_demnitar_institutie_idx', 'institutie_id', 0);
 call CreateIndex('demnitar', 'fk_demnitar_institutie2_idx', 'institutie2_id', 0);
 call CreateIndex('demnitar', 'fk_demnitar_functie_idx', 'functie_id', 0);

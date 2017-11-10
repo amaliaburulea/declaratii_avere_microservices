@@ -7,6 +7,7 @@ public class DeclaratieAvereBijuterieInfo {
     private String descriere;
     private String anDobandire;
     private BigDecimal valoareEstimate;
+    private String explicatieBijuterie;
     private String moneda;
 
     public Integer getId() {
@@ -39,6 +40,14 @@ public class DeclaratieAvereBijuterieInfo {
 
     public void setValoareEstimate(BigDecimal valoareEstimate) {
         this.valoareEstimate = valoareEstimate;
+    }
+
+    public String getExplicatieBijuterie() {
+        return explicatieBijuterie;
+    }
+
+    public void setExplicatieBijuterie(String explicatieBijuterie) {
+        this.explicatieBijuterie = explicatieBijuterie;
     }
 
     public String getMoneda() {

@@ -37,6 +37,9 @@ public class DeclaratieAverePlasamentEntity {
     @Column(name ="moneda")
     private String moneda;
 
+    @Column(name ="explicatie_plasament")
+    private String explicatiePlasament;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "declaratie_avere_id", nullable = false)
     private DeclaratieAvereEntity declaratieAvereEntity;
@@ -103,6 +106,14 @@ public class DeclaratieAverePlasamentEntity {
 
     public void setMoneda(String moneda) {
         this.moneda = moneda;
+    }
+
+    public String getExplicatiePlasament() {
+        return explicatiePlasament;
+    }
+
+    public void setExplicatiePlasament(String explicatiePlasamen) {
+        this.explicatiePlasament = explicatiePlasamen;
     }
 
     public DeclaratieAvereEntity getDeclaratieAvereEntity() {

@@ -12,6 +12,15 @@ public class DeclaratieAvereDatorieInfo {
     private String scadenta;
     private BigDecimal valoare;
     private String moneda;
+    private String explicatie;
+
+    public String getExplicatie() {
+        return explicatie;
+    }
+
+    public void setExplicatie(String explicatie) {
+        this.explicatie = explicatie;
+    }
 
     public Integer getId() {
         return id;

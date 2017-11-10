@@ -25,6 +25,9 @@ public class DeclaratieAvereEntity extends EntityBase {
     @Column(name ="data_declaratiei")
     private Date dataDeclaratiei;
 
+    @Column(name ="data_depunerii")
+    private Date dataDepunerii;
+
     @Column(name ="functie_id")
     private Integer functieId;
 
@@ -169,6 +172,14 @@ public class DeclaratieAvereEntity extends EntityBase {
 
     public void setLinkDeclaratie(String linkDeclaratie) {
         this.linkDeclaratie = linkDeclaratie;
+    }
+
+    public Date getDataDepunerii() {
+        return dataDepunerii;
+    }
+
+    public void setDataDepunerii(Date dataDepunerii) {
+        this.dataDepunerii = dataDepunerii;
     }
 
     public Set<DeclaratieAvereAlteActiveEntity> getDeclaratieAvereAlteActiveEntitySet() {
