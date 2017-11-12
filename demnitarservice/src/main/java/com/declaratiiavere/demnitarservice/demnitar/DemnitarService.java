@@ -34,6 +34,7 @@ public class DemnitarService {
         demnitarInfo.setId(demnitarEntity.getId());
         demnitarInfo.setNume(demnitarEntity.getNume());
         demnitarInfo.setPrenume(demnitarEntity.getPrenume());
+        demnitarInfo.setAnNastere(demnitarEntity.getAnNastere());
 
         demnitarInfo.setFunctieId(demnitarEntity.getFunctieId());
         demnitarInfo.setFunctie2Id(demnitarEntity.getFunctie2Id());
@@ -167,6 +168,7 @@ public class DemnitarService {
 
         demnitarEntity.setNume(demnitarInfo.getNume());
         demnitarEntity.setPrenume(demnitarInfo.getPrenume());
+        demnitarEntity.setAnNastere(demnitarInfo.getAnNastere());
 
         return demnitarEntity;
     }
@@ -317,6 +319,7 @@ public class DemnitarService {
         if (declaratieAvereEntity.getDemnitarEntity() != null) {
             declaratieAvereInfo.setDemnitarNume(declaratieAvereEntity.getDemnitarEntity().getNume());
             declaratieAvereInfo.setDemnitarPrenume(declaratieAvereEntity.getDemnitarEntity().getPrenume());
+            declaratieAvereInfo.setAnNastere(declaratieAvereEntity.getDemnitarEntity().getAnNastere());
         }
 
         declaratieAvereInfo.setDataDeclaratiei(declaratieAvereEntity.getDataDeclaratiei());
@@ -342,6 +345,8 @@ public class DemnitarService {
         }
 
         declaratieAvereInfo.setLinkDeclaratie(declaratieAvereEntity.getLinkDeclaratie());
+        declaratieAvereInfo.setGrupPolitic(declaratieAvereEntity.getGrupPolitic());
+        declaratieAvereInfo.setCircumscriptie(declaratieAvereEntity.getCircumscriptie());
         declaratieAvereInfo.setIsDone(declaratieAvereEntity.getIsDone());
 
         if (eagerLoadAllRelations) {
@@ -493,8 +498,6 @@ public class DemnitarService {
         DeclaratieAvereBunInstrainatInfo declaratieActiveBunInstrainatInfo = new DeclaratieAvereBunInstrainatInfo();
         declaratieActiveBunInstrainatInfo.setId(declaratieAvereBunInstrainatEntity.getId());
         declaratieActiveBunInstrainatInfo.setTip(declaratieAvereBunInstrainatEntity.getTip());
-        declaratieActiveBunInstrainatInfo.setIsImobil(declaratieAvereBunInstrainatEntity.getIsImobil());
-        declaratieActiveBunInstrainatInfo.setMarca(declaratieAvereBunInstrainatEntity.getMarca());
         declaratieActiveBunInstrainatInfo.setDataInstrainarii(declaratieAvereBunInstrainatEntity.getDataInstrainarii());
         declaratieActiveBunInstrainatInfo.setPersoanaBeneficiara(declaratieAvereBunInstrainatEntity.getPersoanaBeneficiara());
         declaratieActiveBunInstrainatInfo.setFormaInstrainarii(declaratieAvereBunInstrainatEntity.getFormaInstrainarii());
@@ -753,6 +756,9 @@ public class DemnitarService {
         declaratieAvereEntity.setInstitutieId(declaratieAvereInfo.getInstitutieId());
         declaratieAvereEntity.setInstitutie2Id(declaratieAvereInfo.getInstitutie2Id());
         declaratieAvereEntity.setLinkDeclaratie(declaratieAvereInfo.getLinkDeclaratie());
+        declaratieAvereEntity.setGrupPolitic(declaratieAvereInfo.getGrupPolitic());
+        declaratieAvereEntity.setCircumscriptie(declaratieAvereInfo.getCircumscriptie());
+
         declaratieAvereEntity.setIsDone(declaratieAvereInfo.getIsDone());
 
         populateDeclaratieAvereAlteActiveEntitySet(declaratieAvereEntity.getDeclaratieAvereAlteActiveEntitySet(),
@@ -1019,8 +1025,6 @@ public class DemnitarService {
                                                             DeclaratieAvereBunInstrainatInfo declaratieAvereBunInstrainatInfo) {
         declaratieAvereBunInstrainatEntity.setDeclaratieAvereEntity(declaratieAvereEntity);
         declaratieAvereBunInstrainatEntity.setTip(declaratieAvereBunInstrainatInfo.getTip());
-        declaratieAvereBunInstrainatEntity.setIsImobil(declaratieAvereBunInstrainatInfo.getIsImobil());
-        declaratieAvereBunInstrainatEntity.setMarca(declaratieAvereBunInstrainatInfo.getMarca());
         declaratieAvereBunInstrainatEntity.setDataInstrainarii(declaratieAvereBunInstrainatInfo.getDataInstrainarii());
         declaratieAvereBunInstrainatEntity.setPersoanaBeneficiara(declaratieAvereBunInstrainatInfo.getPersoanaBeneficiara());
         declaratieAvereBunInstrainatEntity.setFormaInstrainarii(declaratieAvereBunInstrainatInfo.getFormaInstrainarii());

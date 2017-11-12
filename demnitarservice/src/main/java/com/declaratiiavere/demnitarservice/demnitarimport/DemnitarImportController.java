@@ -232,6 +232,8 @@ public class DemnitarImportController {
         }
 
         declaratieAvereInfo.setLinkDeclaratie(revenueDeclarationInfo.getLinkDeclaratie());
+        declaratieAvereInfo.setGrupPolitic(revenueDeclarationInfo.getGrupPolitic());
+        declaratieAvereInfo.setCircumscriptie(revenueDeclarationInfo.getCircumscriptie());
         String date = revenueDeclarationInfo.getDataDepunerii().replaceAll("[.]", "/");
         declaratieAvereInfo.setDataDepunerii(DateUtilities.parseDate(date, "dd/MM/yyyy"));
         declaratieAvereInfo.setIsDone(true);
@@ -2676,6 +2678,7 @@ public class DemnitarImportController {
     private void populateDemnitarInfo(DemnitarInfo demnitarInfo, RevenueDeclarationInfo revenueDeclarationInfo) {
         demnitarInfo.setNume(revenueDeclarationInfo.getLastName());
         demnitarInfo.setPrenume(revenueDeclarationInfo.getFirstName());
+        demnitarInfo.setAnNastere(revenueDeclarationInfo.getAnNastere());
     }
 
     private static Map<String, String> getColumnMapping() {
@@ -2687,6 +2690,9 @@ public class DemnitarImportController {
         columnMapping.put("funct", "functie");
         columnMapping.put("inst", "institutie");
         columnMapping.put("l_Fis", "linkDeclaratie");
+        columnMapping.put("circ", "circumscriptie");
+        columnMapping.put("part", "grupPolitic");
+        columnMapping.put("datNDem", "anNastere");
 
         // teren 1
         columnMapping.put("dimobt", "existaTerenuri1");

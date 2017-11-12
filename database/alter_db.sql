@@ -38,6 +38,7 @@ CREATE TABLE IF NOT EXISTS `demnitar` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nume` varchar(100) NOT NULL,
   `prenume` varchar(100) NOT NULL,
+  `an_nastere` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `demnitar_unique` (`nume`,`prenume`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -53,6 +54,7 @@ CREATE TABLE IF NOT EXISTS `declaratie_avere` (
   `institutie2` varchar(400) DEFAULT NULL,
   `grup_politic` varchar(200) DEFAULT NULL,
   `link_declaratie` VARCHAR(200) DEFAULT NULL,
+  `circumscriptia` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `declaratieAvere_unique` (`demnitar_id`,`data_declaratiei`),
   CONSTRAINT `declaratieAvere_demnitar_fk` FOREIGN KEY (`demnitar_id`) REFERENCES `demnitar` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION

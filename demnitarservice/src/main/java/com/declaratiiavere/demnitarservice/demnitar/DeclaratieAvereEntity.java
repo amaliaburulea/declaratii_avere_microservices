@@ -46,6 +46,9 @@ public class DeclaratieAvereEntity extends EntityBase {
     @Column(name ="link_declaratie")
     private String linkDeclaratie;
 
+    @Column(name ="circumscriptia")
+    private String circumscriptie;
+
     @Column(name ="voluntar_id")
     private Integer voluntarId;
 
@@ -172,6 +175,14 @@ public class DeclaratieAvereEntity extends EntityBase {
 
     public void setLinkDeclaratie(String linkDeclaratie) {
         this.linkDeclaratie = linkDeclaratie;
+    }
+
+    public String getCircumscriptie() {
+        return circumscriptie;
+    }
+
+    public void setCircumscriptie(String circumscriptie) {
+        this.circumscriptie = circumscriptie;
     }
 
     public Date getDataDepunerii() {

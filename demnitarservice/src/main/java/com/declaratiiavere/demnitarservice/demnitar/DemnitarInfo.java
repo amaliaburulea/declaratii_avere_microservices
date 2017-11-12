@@ -17,6 +17,7 @@ public class DemnitarInfo {
     private String functie2;
     private String institutie;
     private String institutie2;
+    private String anNastere;
 
     public Integer getId() {
         return id;
@@ -106,4 +107,11 @@ public class DemnitarInfo {
         this.institutie2 = institutie2;
     }
 
+    public String getAnNastere() {
+        return anNastere;
+    }
+
+    public void setAnNastere(String anNastere) {
+        this.anNastere = anNastere;
+    }
 }

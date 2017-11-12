@@ -13,6 +13,9 @@ public class RevenueDeclarationInfo {
     private String functie;
     private String institutie;
     private String linkDeclaratie;
+    private String grupPolitic;
+    private String circumscriptie;
+    private String anNastere;
 
     // teren 1
     private String existaTerenuri1;
@@ -1100,6 +1103,30 @@ public class RevenueDeclarationInfo {
 
     public void setLinkDeclaratie(String linkDeclaratie) {
         this.linkDeclaratie = linkDeclaratie;
+    }
+
+    public String getGrupPolitic() {
+        return grupPolitic;
+    }
+
+    public void setGrupPolitic(String grupPolitic) {
+        this.grupPolitic = grupPolitic;
+    }
+
+    public String getCircumscriptie() {
+        return circumscriptie;
+    }
+
+    public void setCircumscriptie(String circumscriptie) {
+        this.circumscriptie = circumscriptie;
+    }
+
+    public String getAnNastere() {
+        return anNastere;
+    }
+
+    public void setAnNastere(String anNastere) {
+        this.anNastere = anNastere;
     }
 
     public String getExistaTerenuri1() {

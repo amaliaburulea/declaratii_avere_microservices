@@ -38,6 +38,9 @@ public class DemnitarEntity extends EntityBase {
     @Column(name ="grup_politic")
     private String grupPolitic;
 
+    @Column(name ="an_nastere")
+    private String anNastere;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "functie_id", nullable = false, insertable = false, updatable = false)
     private FunctieEntity functieEntity;
@@ -150,4 +153,11 @@ public class DemnitarEntity extends EntityBase {
         this.institutie2Entity = institutie2Entity;
     }
 
+    public String getAnNastere() {
+        return anNastere;
+    }
+
+    public void setAnNastere(String anNastere) {
+        this.anNastere = anNastere;
+    }
 }

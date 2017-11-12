@@ -25,11 +25,8 @@ public class DeclaratieAvereBunInstrainatEntity extends EntityBase {
     @Column(name ="tip")
     private String tip;
 
-    @Column(name ="is_imobil")
-    private Boolean isImobil;
-
-    @Column(name ="marca")
-    private String marca;
+    /*@Column(name ="is_imobil")
+    private Boolean isImobil;*/
 
     @Column(name ="data_instrainarii")
     private String dataInstrainarii;
@@ -77,21 +74,13 @@ public class DeclaratieAvereBunInstrainatEntity extends EntityBase {
         this.tip = tip;
     }
 
-    public Boolean getIsImobil() {
+   /* public Boolean getIsImobil() {
         return isImobil;
     }
 
     public void setIsImobil(Boolean imobil) {
         isImobil = imobil;
-    }
-
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
+    }*/
 
     public String getDataInstrainarii() {
         return dataInstrainarii;

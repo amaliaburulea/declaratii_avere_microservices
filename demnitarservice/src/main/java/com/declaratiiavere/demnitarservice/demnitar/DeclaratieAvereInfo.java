@@ -5,6 +5,7 @@ import com.declaratiiavere.common.utils.JsonDateSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
+import javax.persistence.Column;
 import java.util.Date;
 import java.util.List;
 
@@ -18,6 +19,7 @@ public class DeclaratieAvereInfo {
     private Integer demnitarId;
     private String demnitarNume;
     private String demnitarPrenume;
+    private String anNastere;
     @JsonSerialize(using = JsonDateSerializer.class)
     private Date dataDeclaratiei;
     private Date dataDepunerii;
@@ -27,6 +29,7 @@ public class DeclaratieAvereInfo {
     private Integer institutie2Id;
     private String grupPolitic;
     private String linkDeclaratie;
+    private String circumscriptie;
     private Integer voluntarId;
     private Boolean isDone;
 
@@ -134,6 +137,14 @@ public class DeclaratieAvereInfo {
 
     public void setLinkDeclaratie(String linkDeclaratie) {
         this.linkDeclaratie = linkDeclaratie;
+    }
+
+    public String getCircumscriptie() {
+        return circumscriptie;
+    }
+
+    public void setCircumscriptie(String circumscriptie) {
+        this.circumscriptie = circumscriptie;
     }
 
     public Integer getVoluntarId() {
@@ -282,5 +293,13 @@ public class DeclaratieAvereInfo {
 
     public void setIsDone(Boolean done) {
         isDone = done;
+    }
+
+    public String getAnNastere() {
+        return anNastere;
+    }
+
+    public void setAnNastere(String anNastere) {
+        this.anNastere = anNastere;
     }
 }
