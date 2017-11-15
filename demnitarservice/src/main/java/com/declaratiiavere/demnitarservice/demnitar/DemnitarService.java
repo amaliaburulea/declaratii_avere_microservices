@@ -464,6 +464,62 @@ public class DemnitarService {
         return declaratieAvereInfo;
     }
 
+    private DeclaratieIntereseInfo getDeclaratieIntereseInfo(DeclaratieIntereseEntity declaratieIntereseEntity, boolean eagerLoadAllRelations) {
+        DeclaratieIntereseInfo declaratieIntereseInfo = new DeclaratieIntereseInfo();
+        declaratieIntereseInfo.setId(declaratieIntereseEntity.getId());
+        declaratieIntereseInfo.setDemnitarId(declaratieIntereseEntity.getDemnitarId());
+
+        declaratieIntereseInfo.setVoluntarId(declaratieIntereseEntity.getVoluntarId());
+
+        if (declaratieIntereseEntity.getDemnitarEntity() != null) {
+            declaratieIntereseInfo.setDemnitarNume(declaratieIntereseEntity.getDemnitarEntity().getNume());
+            declaratieIntereseInfo.setDemnitarPrenume(declaratieIntereseEntity.getDemnitarEntity().getPrenume());
+            declaratieIntereseInfo.setAnNastere(declaratieIntereseEntity.getDemnitarEntity().getAnNastere());
+        }
+
+        declaratieIntereseInfo.setDataDeclaratiei(declaratieIntereseEntity.getDataDeclaratiei());
+        declaratieIntereseInfo.setFunctieId(declaratieIntereseEntity.getFunctieId());
+        declaratieIntereseInfo.setFunctie2Id(declaratieIntereseEntity.getFunctie2Id());
+        declaratieIntereseInfo.setInstitutieId(declaratieIntereseEntity.getInstitutieId());
+        declaratieIntereseInfo.setInstitutie2Id(declaratieIntereseEntity.getInstitutie2Id());
+
+        if (declaratieIntereseEntity.getFunctieEntity() != null) {
+            declaratieIntereseInfo.setFunctie(declaratieIntereseEntity.getFunctieEntity().getNume());
+        }
+
+        if (declaratieIntereseEntity.getFunctie2Entity() != null) {
+            declaratieIntereseInfo.setFunctie2(declaratieIntereseEntity.getFunctie2Entity().getNume());
+        }
+
+        if (declaratieIntereseEntity.getInstitutieEntity() != null) {
+            declaratieIntereseInfo.setInstitutie(declaratieIntereseEntity.getInstitutieEntity().getNume());
+        }
+
+        if (declaratieIntereseEntity.getInstitutie2Entity() != null) {
+            declaratieIntereseInfo.setInstitutie2(declaratieIntereseEntity.getInstitutie2Entity().getNume());
+        }
+
+        declaratieIntereseInfo.setLinkDeclaratie(declaratieIntereseEntity.getLinkDeclaratie());
+        declaratieIntereseInfo.setGrupPolitic(declaratieIntereseEntity.getGrupPolitic());
+        declaratieIntereseInfo.setCircumscriptie(declaratieIntereseEntity.getCircumscriptie());
+        declaratieIntereseInfo.setIsDone(declaratieIntereseEntity.getIsDone());
+
+        if (eagerLoadAllRelations) {
+            List<DeclaratieIntereseAsociatInfo> declaratieIntereseAsociatInfoList = new ArrayList<>();
+
+            if (declaratieIntereseEntity.getDeclaratieIntereseAsociatEntitySet() != null) {
+                for (DeclaratieIntereseAsociatEntity declaratieIntereseAsociatEntity : declaratieIntereseEntity.getDeclaratieIntereseAsociatEntitySet()) {
+                    DeclaratieIntereseAsociatInfo declaratieInterseAsociatInfo = getDeclaratieAsociatInfo(declaratieIntereseAsociatEntity);
+                    declaratieIntereseAsociatInfoList.add(declaratieInterseAsociatInfo);
+                }
+            }
+
+            declaratieIntereseInfo.setDeclaratieIntereseAsociatInfoList(declaratieIntereseAsociatInfoList);
+        }
+
+        return declaratieIntereseInfo;
+    }
+
     private DeclaratieAvereBunImobilInfo getDeclaratieActiveBunImobilInfo(DeclaratieAvereBunImobilEntity declaratieAvereBunImobilEntity) {
         DeclaratieAvereBunImobilInfo declaratieActiveBunImobilInfo = new DeclaratieAvereBunImobilInfo();
         declaratieActiveBunImobilInfo.setId(declaratieAvereBunImobilEntity.getId());
@@ -596,6 +652,19 @@ public class DemnitarService {
         return declaratieActiveAlteActiveInfo;
     }
 
+    private DeclaratieIntereseAsociatInfo getDeclaratieAsociatInfo(DeclaratieIntereseAsociatEntity declaratieIntereseAsociatEntity) {
+        DeclaratieIntereseAsociatInfo declaratieAsociatInfo = new DeclaratieIntereseAsociatInfo();
+        declaratieAsociatInfo.setId(declaratieIntereseAsociatEntity.getId());
+        declaratieAsociatInfo.setUnitatea(declaratieIntereseAsociatEntity.getUnitatea());
+        declaratieAsociatInfo.setRolul(declaratieIntereseAsociatEntity.getRolul());
+        declaratieAsociatInfo.setPartiSociale(declaratieIntereseAsociatEntity.getPartiSociale());
+        declaratieAsociatInfo.setValoare(declaratieIntereseAsociatEntity.getValoarea());
+        declaratieAsociatInfo.setMoneda(declaratieIntereseAsociatEntity.getMoneda());
+        declaratieAsociatInfo.setExplicatie(declaratieIntereseAsociatEntity.getExplicatieVenit());
+
+        return declaratieAsociatInfo;
+    }
+
     /**
      * Saves a declaratieAvere.
      *
@@ -625,6 +694,28 @@ public class DemnitarService {
         return declaratieAvereInfo;
     }
 
+    public DeclaratieIntereseInfo saveDeclaratieInterese(DeclaratieIntereseInfo declaratieIntereseInfo) {
+        validateDeclaratieInterese(declaratieIntereseInfo);
+        DeclaratieIntereseEntity declaratieIntereseEntity = populateDeclaratieIntereseEntity(declaratieIntereseInfo);
+        declaratieIntereseInfo = getDeclaratieIntereseInfo(demnitarEAO.saveDeclaratieInterese(declaratieIntereseEntity), true);
+
+        DeclaratieIntereseEntitySearchCriteria declaratieIntereseEntitySearchCriteria = new DeclaratieIntereseEntitySearchCriteria();
+        declaratieIntereseEntitySearchCriteria.setDemnitarId(declaratieIntereseInfo.getDemnitarId());
+        declaratieIntereseEntitySearchCriteria.setOrderByInfoList(Arrays.asList(new OrderByInfo("dataDeclaratiei", OrderType.DESCENDING)));
+        List<DeclaratieIntereseEntity> allDeclaratiiIntereseEntityList = demnitarEAO.findDeclaratiiInterese(declaratieIntereseEntitySearchCriteria);
+        DeclaratieIntereseEntity mostRecentDeclaratieIntereseEntity = allDeclaratiiIntereseEntityList.get(0);
+
+        DemnitarEntity demnitarEntity = demnitarEAO.getDemnitar(declaratieIntereseInfo.getDemnitarId());
+        demnitarEntity.setInstitutieId(mostRecentDeclaratieIntereseEntity.getInstitutieId());
+        demnitarEntity.setInstitutie2Id(mostRecentDeclaratieIntereseEntity.getInstitutie2Id());
+        demnitarEntity.setFunctieId(mostRecentDeclaratieIntereseEntity.getFunctieId());
+        demnitarEntity.setFunctie2Id(mostRecentDeclaratieIntereseEntity.getFunctie2Id());
+        demnitarEntity.setGrupPolitic(mostRecentDeclaratieIntereseEntity.getGrupPolitic());
+        demnitarEAO.saveDemnitar(demnitarEntity);
+
+        return declaratieIntereseInfo;
+    }
+
     private void validateDeclaratieAvere(DeclaratieAvereInfo declaratieAvereInfo) {
         if (declaratieAvereInfo.getDemnitarId() == null) {
             throw new ValidationException("demnitarId este obligatoriu");
@@ -648,6 +739,29 @@ public class DemnitarService {
 
         validateAlteActive(declaratieAvereInfo);
         validateBunuriImobile(declaratieAvereInfo);
+    }
+
+    private void validateDeclaratieInterese(DeclaratieIntereseInfo declaratieIntereseInfo) {
+        if (declaratieIntereseInfo.getDemnitarId() == null) {
+            throw new ValidationException("demnitarId este obligatoriu");
+        }
+
+        if (demnitarEAO.getDemnitar(declaratieIntereseInfo.getDemnitarId()) == null) {
+            throw new ValidationException("demnitar nu exista");
+        }
+
+//        if (Utilities.isEmptyOrNull(declaratieAvereInfo.getFunctie())) {
+//            throw new ValidationException("functie este obligatorie");
+//        }
+
+//        if (Utilities.isEmptyOrNull(declaratieAvereInfo.getInstitutie())) {
+//            throw new ValidationException("institutie este obligatorie");
+//        }
+
+        if (declaratieIntereseInfo.getDataDeclaratiei() == null) {
+            throw new ValidationException("dataDeclaratiei este obligatorie");
+        }
+
     }
 
     private void validateBunuriImobile(DeclaratieAvereInfo declaratieAvereInfo) {
@@ -784,6 +898,49 @@ public class DemnitarService {
 
         return declaratieAvereEntity;
     }
+
+        private DeclaratieIntereseEntity populateDeclaratieIntereseEntity(DeclaratieIntereseInfo declaratieIntereseInfo) {
+            DeclaratieIntereseEntity DeclaratieIntereseEntity;
+            UserInfo loginUserInfo = UserIdentity.getLoginUser();
+
+            if (declaratieIntereseInfo.getId() != null) {
+                DeclaratieIntereseEntity = demnitarEAO.getDeclaratieInterese(declaratieIntereseInfo.getId());
+
+                if (DeclaratieIntereseEntity == null) {
+                    throw new ValidationException("declaratie avere nu exista");
+                }
+
+                if (loginUserInfo.isVolunteer() && !loginUserInfo.getUserId().equals(DeclaratieIntereseEntity.getVoluntarId())) {
+                    throw new ValidationException("userul nu este autorizat sa editeze declaratia de avere");
+                }
+            } else {
+                DeclaratieIntereseEntity = new DeclaratieIntereseEntity();
+            }
+
+            if (!loginUserInfo.isVolunteer()) {
+                DeclaratieIntereseEntity.setVoluntarId(declaratieIntereseInfo.getVoluntarId());
+            }
+
+            DeclaratieIntereseEntity.setDemnitarId(declaratieIntereseInfo.getDemnitarId());
+            DeclaratieIntereseEntity.setDataDeclaratiei(declaratieIntereseInfo.getDataDeclaratiei());
+            DeclaratieIntereseEntity.setDataDepunerii(declaratieIntereseInfo.getDataDepunerii());
+            DeclaratieIntereseEntity.setFunctieId(declaratieIntereseInfo.getFunctieId());
+            DeclaratieIntereseEntity.setFunctie2Id(declaratieIntereseInfo.getFunctie2Id());
+            DeclaratieIntereseEntity.setInstitutieId(declaratieIntereseInfo.getInstitutieId());
+            DeclaratieIntereseEntity.setInstitutie2Id(declaratieIntereseInfo.getInstitutie2Id());
+            DeclaratieIntereseEntity.setLinkDeclaratie(declaratieIntereseInfo.getLinkDeclaratie());
+            DeclaratieIntereseEntity.setGrupPolitic(declaratieIntereseInfo.getGrupPolitic());
+            DeclaratieIntereseEntity.setCircumscriptie(declaratieIntereseInfo.getCircumscriptie());
+
+            DeclaratieIntereseEntity.setIsDone(declaratieIntereseInfo.getIsDone());
+
+            populateDeclaratieIntereseAsociatEntitySet(DeclaratieIntereseEntity.getDeclaratieIntereseAsociatEntitySet(),
+                    DeclaratieIntereseEntity, declaratieIntereseInfo);
+
+
+            return DeclaratieIntereseEntity;
+        }
+
 
     private void populateDeclaratieAvereVenitEntitySet(Set<DeclaratieAvereVenitEntity> declaratieAvereVenitEntitySet,
                                                        DeclaratieAvereEntity declaratieAvereEntity, DeclaratieAvereInfo declaratieAvereInfo) {
@@ -1410,6 +1567,68 @@ public class DemnitarService {
         declaratieAvereAlteActiveEntity.setDescriere(declaratieAvereAlteActiveInfo.getDescriere());
     }
 
+    private void populateDeclaratieIntereseAsociatEntitySet(Set<DeclaratieIntereseAsociatEntity> declaratieIntereseAsociatEntitySet,
+                                                            DeclaratieIntereseEntity declaratieIntereseEntity,
+                                                            DeclaratieIntereseInfo declaratieIntereseInfo) {
+        if (declaratieIntereseAsociatEntitySet == null) {
+            declaratieIntereseAsociatEntitySet = new HashSet<>();
+            declaratieIntereseEntity.setDeclaratieIntereseAsociatEntitySet(declaratieIntereseAsociatEntitySet);
+        }
+
+        // prepare maps that are needed in order to identify what entities news to be added, modified and deleted
+        Map<Integer, DeclaratieIntereseAsociatInfo> declaratieIntereseAsociatInfoByIdHashMap = new HashMap<>();
+
+        if (declaratieIntereseInfo.getDeclaratieIntereseAsociatInfoList() != null) {
+            for (DeclaratieIntereseAsociatInfo declaratieIntereseAsociatInfo : declaratieIntereseInfo.getDeclaratieIntereseAsociatInfoList()) {
+                declaratieIntereseAsociatInfoByIdHashMap.put(declaratieIntereseAsociatInfo.getId(), declaratieIntereseAsociatInfo);
+            }
+        }
+
+        Map<Integer, DeclaratieIntereseAsociatEntity> declaratieIntereseAsociatEntityByIdMap = new HashMap<>();
+
+        for (DeclaratieIntereseAsociatEntity declaratieAvereAlteActiveEntity : declaratieIntereseAsociatEntitySet) {
+            declaratieIntereseAsociatEntityByIdMap.put(declaratieAvereAlteActiveEntity.getId(), declaratieAvereAlteActiveEntity);
+        }
+
+
+        if (declaratieIntereseInfo.getDeclaratieIntereseAsociatInfoList() != null) {
+            for (DeclaratieIntereseAsociatInfo declaratieIntereseAsociatInfo : declaratieIntereseInfo.getDeclaratieIntereseAsociatInfoList()) {
+                DeclaratieIntereseAsociatEntity declaratieIntereseAsociatEntity = declaratieIntereseAsociatEntityByIdMap.get(declaratieIntereseAsociatInfo.getId());
+
+                if (declaratieIntereseAsociatEntity == null) {
+                    declaratieIntereseAsociatEntity = new DeclaratieIntereseAsociatEntity();
+                    declaratieIntereseAsociatEntitySet.add(declaratieIntereseAsociatEntity);
+                }
+
+                populateDeclaratieIntereseAsociatEntity(declaratieIntereseAsociatEntity, declaratieIntereseEntity,
+                        declaratieIntereseAsociatInfo);
+            }
+        }
+
+        // delete the relevant DeclaratieIntereseAsociatEntity
+        Iterator<DeclaratieIntereseAsociatEntity> declaratieIntereseAsociatEntitySetIterator =
+                declaratieIntereseAsociatEntitySet.iterator();
+
+        while (declaratieIntereseAsociatEntitySetIterator.hasNext()) {
+            DeclaratieIntereseAsociatEntity declaratieAvereAlteActiveEntity = declaratieIntereseAsociatEntitySetIterator.next();
+
+            if (!declaratieIntereseAsociatInfoByIdHashMap.containsKey(declaratieAvereAlteActiveEntity.getId())) {
+                declaratieIntereseAsociatEntitySetIterator.remove();
+            }
+        }
+    }
+
+    private void populateDeclaratieIntereseAsociatEntity(DeclaratieIntereseAsociatEntity declaratieIntereseAsociatEntity,
+                                                         DeclaratieIntereseEntity declaratieIntereseEntity,
+                                                         DeclaratieIntereseAsociatInfo declaratieIntereseAsociatInfo) {
+        declaratieIntereseAsociatEntity.setDeclaratieIntereseEntity(declaratieIntereseEntity);
+        declaratieIntereseAsociatEntity.setUnitatea(declaratieIntereseAsociatInfo.getUnitatea());
+        declaratieIntereseAsociatEntity.setRolul(declaratieIntereseAsociatInfo.getRolul());
+        declaratieIntereseAsociatEntity.setPartiSociale(declaratieIntereseAsociatInfo.getPartiSociale());
+        declaratieIntereseAsociatEntity.setValoarea(declaratieIntereseAsociatInfo.getValoare());
+        declaratieIntereseAsociatEntity.setMoneda(declaratieIntereseAsociatInfo.getMoneda());
+        declaratieIntereseAsociatEntity.setExplicatieVenit(declaratieIntereseAsociatInfo.getExplicatie());
+    }
     /**
      * Gets a declaratieAvere.
      *
@@ -1429,6 +1648,20 @@ public class DemnitarService {
         }
 
         return getDeclaratieAvereInfo(declaratieAvereEntity, true);
+    }
+
+    public DeclaratieIntereseInfo getDeclaratieInterese(Integer id) {
+        if (id == null) {
+            throw new ValidationException("id is required");
+        }
+
+        DeclaratieIntereseEntity declaratieIntereseEntity = demnitarEAO.getDeclaratieInterese(id);
+
+        if (declaratieIntereseEntity == null) {
+            throw new ValidationException("declaratie avere nu exista");
+        }
+
+        return getDeclaratieIntereseInfo(declaratieIntereseEntity, true);
     }
 
     /**
@@ -1505,5 +1738,74 @@ public class DemnitarService {
         declaratieAvereInfoList.sort(objectComparator);
 
         return declaratieAvereInfoList;
+    }
+
+    public List<DeclaratieIntereseInfo> findDeclaratiiInterese(SearchDeclaratieIntereseCriteria searchDeclaratieIntereseCriteria) throws RestException {
+        List<DeclaratieIntereseInfo> declaratieIntereseInfoList = new ArrayList<>();
+
+        DeclaratieIntereseEntitySearchCriteria declaratieIntereseEntitySearchCriteria = new DeclaratieIntereseEntitySearchCriteria();
+        declaratieIntereseEntitySearchCriteria.setDemnitarId(searchDeclaratieIntereseCriteria.getDemnitarId());
+        declaratieIntereseEntitySearchCriteria.setDataDeclaratiei(searchDeclaratieIntereseCriteria.getDataDeclaratiei());
+        declaratieIntereseEntitySearchCriteria.setFunctieId(searchDeclaratieIntereseCriteria.getFunctieId());
+        declaratieIntereseEntitySearchCriteria.setInstitutieId(searchDeclaratieIntereseCriteria.getInstitutieId());
+
+        if (UserIdentity.getLoginUser() != null && UserIdentity.getLoginUser().isVolunteer()) {
+            declaratieIntereseEntitySearchCriteria.setVoluntarId(UserIdentity.getLoginUser().getUserId());
+        } else {
+            declaratieIntereseEntitySearchCriteria.setVoluntarId(searchDeclaratieIntereseCriteria.getVoluntarId());
+        }
+
+        if (!Utilities.isEmptyOrNull(searchDeclaratieIntereseCriteria.getDemnitarNumeLike())) {
+            declaratieIntereseEntitySearchCriteria.setDemnitarNumeLike(searchDeclaratieIntereseCriteria.getDemnitarNumeLike() + "%");
+        }
+
+        if (!Utilities.isEmptyOrNull(searchDeclaratieIntereseCriteria.getDemnitarPrenumeLike())) {
+            declaratieIntereseEntitySearchCriteria.setDemnitarPrenumeLike(searchDeclaratieIntereseCriteria.getDemnitarPrenumeLike() + "%");
+        }
+
+        if (searchDeclaratieIntereseCriteria.getAnulDeclaratiei() != null) {
+            declaratieIntereseEntitySearchCriteria.setStartDataDeclaratiei(DateUtilities.parseDate(searchDeclaratieIntereseCriteria.getAnulDeclaratiei()
+                    + "-01-01", "yyyy-MM-dd"));
+            declaratieIntereseEntitySearchCriteria.setEndDataDeclaratiei(DateUtilities.parseDate((searchDeclaratieIntereseCriteria.getAnulDeclaratiei())
+                    + "-12-31", "yyyy-MM-dd"));
+        }
+
+        declaratieIntereseEntitySearchCriteria.setStatus(searchDeclaratieIntereseCriteria.getStatus());
+
+        if (searchDeclaratieIntereseCriteria.getDemnitarId() != null) {
+            declaratieIntereseEntitySearchCriteria.setEagerLoadAllRelations(true);
+        }
+
+        List<DeclaratieIntereseEntity> declaratieIntereseEntityList = demnitarEAO.findDeclaratiiInterese(declaratieIntereseEntitySearchCriteria);
+        Set<Integer> voluntarIdSet = new HashSet<>();
+
+        for (DeclaratieIntereseEntity declaratieIntereseEntity : declaratieIntereseEntityList) {
+            if (declaratieIntereseEntity.getVoluntarId() != null) {
+                voluntarIdSet.add(declaratieIntereseEntity.getVoluntarId());
+            }
+        }
+
+        for (DeclaratieIntereseEntity declaratieIntereseEntity : declaratieIntereseEntityList) {
+            declaratieIntereseInfoList.add(getDeclaratieIntereseInfo(declaratieIntereseEntity, declaratieIntereseEntitySearchCriteria.isEagerLoadAllRelations()));
+        }
+
+        if (!voluntarIdSet.isEmpty()) {
+            Map<Integer, UserInfo> voluntarUserInfoByIdMap = new HashMap<>();
+            voluntarUserInfoByIdMap = userServiceAdapter.getUserInfoByIdMap(voluntarIdSet);
+
+            for (DeclaratieIntereseInfo declaratieIntereseInfo : declaratieIntereseInfoList) {
+                if (declaratieIntereseInfo.getVoluntarId() != null) {
+                    UserInfo voluntarUserInfo = voluntarUserInfoByIdMap.get(declaratieIntereseInfo.getVoluntarId());
+                    declaratieIntereseInfo.setVoluntarUserName(voluntarUserInfo.getUsername());
+                }
+            }
+        }
+
+        ObjectComparator<DeclaratieIntereseInfo> objectComparator = new ObjectComparator<>(DeclaratieIntereseInfo.class,
+                Arrays.asList("demnitarNume",
+                        "demnitarPrenume", "negativeTimestamp"));
+        declaratieIntereseInfoList.sort(objectComparator);
+
+        return declaratieIntereseInfoList;
     }
 }

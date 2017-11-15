@@ -60,6 +60,38 @@ CREATE TABLE IF NOT EXISTS `declaratie_avere` (
   CONSTRAINT `declaratieAvere_demnitar_fk` FOREIGN KEY (`demnitar_id`) REFERENCES `demnitar` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+CREATE TABLE IF NOT EXISTS `declaratie_interese` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `demnitar_id` int(11) NOT NULL,
+  `data_declaratiei` date NOT NULL,
+  `data_depunerii` date DEFAULT NULL,
+  `functie` varchar(200) NOT NULL,
+  `functie2` varchar(200) DEFAULT NULL,
+  `institutie` varchar(400) NOT NULL,
+  `institutie2` varchar(400) DEFAULT NULL,
+  `grup_politic` varchar(200) DEFAULT NULL,
+  `link_declaratie` VARCHAR(200) DEFAULT NULL,
+  `circumscriptia` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `declaratieInterese_unique` (`demnitar_id`,`data_declaratiei`),
+  CONSTRAINT `declaratieAvere_demnitar_fk` FOREIGN KEY (`demnitar_id`) REFERENCES `demnitar` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `declaratie_interese_asociat_sc` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `declaratie_interese_id` int(11) NOT NULL,
+  `unitatea` text NOT NULL,
+  `calitatea` varchar(100) DEFAULT NULL,
+  `parti_sociale_actiuni` varchar(100) DEFAULT NULL,
+  `valoarea` decimal(12,2) DEFAULT NULL,
+  `moneda` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `declaratieIntereseAsociatSc_declaratieInterese_fk_idx` (`declaratie_interese_id`),
+  CONSTRAINT `declaratieIntereseAsociatSc_declaratieInterese_fk` FOREIGN KEY (`declaratie_interese_id`) REFERENCES `declaratie_interese` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
 CREATE TABLE IF NOT EXISTS `declaratie_avere_alte_active` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `declaratie_avere_id` int(11) NOT NULL,
