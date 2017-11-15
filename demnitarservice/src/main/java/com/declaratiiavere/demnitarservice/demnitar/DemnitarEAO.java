@@ -150,6 +150,12 @@ public class DemnitarEAO extends EntityAccessObjectBase {
         return findEntities(queryBuilder, searchCriteria);
     }
 
+    public List<DeclaratieIntereseEntity> findDeclaratiiInterese(DeclaratieIntereseEntitySearchCriteria searchCriteria) {
+        JpaQueryBuilder queryBuilder = constructFindDeclaratieIntereseBuilder(searchCriteria);
+
+        return findEntities(queryBuilder, searchCriteria);
+    }
+
     private JpaQueryBuilder constructFindDeclaratieAveresBuilder(DeclaratieAvereEntitySearchCriteria searchCriteria) {
         JpaQueryBuilder queryBuilder = new JpaQueryBuilder("DeclaratieAvereEntity", "d");
 
@@ -219,12 +225,80 @@ public class DemnitarEAO extends EntityAccessObjectBase {
         return queryBuilder;
     }
 
+    private JpaQueryBuilder constructFindDeclaratieIntereseBuilder(DeclaratieIntereseEntitySearchCriteria searchCriteria) {
+        JpaQueryBuilder queryBuilder = new JpaQueryBuilder("DeclaratieIntereseEntity", "d");
+
+        if (searchCriteria.getDemnitarId() != null) {
+            queryBuilder.addCondition("d.demnitarId= :demnitarId");
+        }
+
+        if (searchCriteria.getDataDeclaratiei() != null) {
+            queryBuilder.addCondition("d.dataDeclaratiei = :dataDeclaratiei");
+        }
+
+        queryBuilder.addInnerFetchJoin("d.demnitarEntity de");
+        queryBuilder.addLeftFetchJoin("d.functieEntity f");
+        queryBuilder.addLeftFetchJoin("d.functie2Entity f2");
+        queryBuilder.addLeftFetchJoin("d.institutieEntity i");
+        queryBuilder.addLeftFetchJoin("d.institutie2Entity i2");
+
+        if (searchCriteria.isEagerLoadAllRelations()) {
+            queryBuilder.addLeftFetchJoin("d.declaratieIntereseAsociatEntitySet");
+
+        }
+
+        if (searchCriteria.getFunctieId() != null) {
+            queryBuilder.addCondition("f.id = :functieId");
+        }
+
+        if (searchCriteria.getInstitutieId() != null) {
+            queryBuilder.addCondition("i.id = :institutieId");
+        }
+
+        if (searchCriteria.getDemnitarNumeLike() != null) {
+            queryBuilder.addCondition("de.nume LIKE :demnitarNumeLike");
+        }
+
+        if (searchCriteria.getDemnitarPrenumeLike() != null) {
+            queryBuilder.addCondition("de.prenume LIKE :demnitarPrenumeLike");
+        }
+
+        if (searchCriteria.getVoluntarId() != null) {
+            queryBuilder.addCondition("d.voluntarId = :voluntarId");
+        }
+
+        if (searchCriteria.getStartDataDeclaratiei() != null && searchCriteria.getEndDataDeclaratiei() != null) {
+            queryBuilder.addCondition("d.dataDeclaratiei BETWEEN :startDataDeclaratiei AND :endDataDeclaratiei");
+        }
+
+        if (STATUS_NEINCEPUT.equals(searchCriteria.getStatus())) {
+            queryBuilder.addCondition("d.voluntarId IS NULL AND d.isDone = false");
+        } else if (STATUS_INCEPUT.equals(searchCriteria.getStatus())) {
+            queryBuilder.addCondition("d.voluntarId IS NOT NULL AND d.isDone = false");
+        } else if (STATUS_FINALIZAT.equals(searchCriteria.getStatus())) {
+            queryBuilder.addCondition("d.isDone = true");
+        }
+
+        if (searchCriteria.getOrderByInfoList() != null) {
+            queryBuilder.addOrderByStatements(searchCriteria.getOrderByInfoList());
+        }
+
+        return queryBuilder;
+    }
     public DeclaratieAvereEntity saveDeclaratieAvere(DeclaratieAvereEntity declaratieAvereEntity) {
         return storeEntity(declaratieAvereEntity);
     }
 
     public DeclaratieAvereEntity getDeclaratieAvere(Integer declaratieAvereId) {
         return getEntity(DeclaratieAvereEntity.class, declaratieAvereId);
+    }
+
+    public DeclaratieIntereseEntity saveDeclaratieInterese(DeclaratieIntereseEntity declaratieAvereEntity) {
+        return storeEntity(declaratieAvereEntity);
+    }
+
+    public DeclaratieIntereseEntity getDeclaratieInterese(Integer declaratieAvereId) {
+        return getEntity(DeclaratieIntereseEntity.class, declaratieAvereId);
     }
 
     public FunctieEntity getFunctie(Integer functieId) {

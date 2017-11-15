@@ -1,5 +1,7 @@
 package com.declaratiiavere.demnitarservice.demnitarimport;
 
+import java.math.BigDecimal;
+
 /**
  * MOARTE COMUNISMULUI. Dar pe bune, e un obiect care agrega declaratiile de avere ale fututilor de demnitari din Romania.
  *
@@ -1048,6 +1050,51 @@ public class RevenueDeclarationInfo {
 
     // alte venituri free text ALTA INTREBARE: POT SA VA FUT PE TOTI DIN PSD SI ALDE?????
     private String alteVenituriAlteFreeText;
+
+    //declaratie interese asociat 1
+    private String existaAsociat1;
+    private String asociat1unitatea;
+    private String asociat1rolul;
+    private String asociat1partiSociale;
+    private String asociat1valoare;
+    private String asociat1explicatie;
+    private String asociat1moneda;
+
+    //declaratie interese asociat 2
+    private String existaAsociat2;
+    private String asociat2unitatea;
+    private String asociat2rolul;
+    private String asociat2partiSociale;
+    private String asociat2valoare;
+    private String asociat2explicatie;
+    private String asociat2moneda;
+
+    //declaratie interese asociat 3
+    private String existaAsociat3;
+    private String asociat3unitatea;
+    private String asociat3rolul;
+    private String asociat3partiSociale;
+    private String asociat3valoare;
+    private String asociat3explicatie;
+    private String asociat3moneda;
+
+    //declaratie interese asociat 4
+    private String existaAsociat4;
+    private String asociat4unitatea;
+    private String asociat4rolul;
+    private String asociat4partiSociale;
+    private String asociat4valoare;
+    private String asociat4explicatie;
+    private String asociat4moneda;
+
+    //declaratie interese asociat 5
+    private String existaAsociat5;
+    private String asociat5unitatea;
+    private String asociat5rolul;
+    private String asociat5partiSociale;
+    private String asociat5valoare;
+    private String asociat5explicatie;
+    private String asociat5moneda;
 
     public String getFirstName() {
         return firstName;
@@ -7505,5 +7552,283 @@ public class RevenueDeclarationInfo {
         this.alteVenituriAlteFreeText = alteVenituriAlteFreeText;
     }
 
+    public String getExistaAsociat1() {
+        return existaAsociat1;
+    }
 
+    public void setExistaAsociat1(String existaAsociat1) {
+        this.existaAsociat1 = existaAsociat1;
+    }
+
+    public String getAsociat1unitatea() {
+        return asociat1unitatea;
+    }
+
+    public void setAsociat1unitatea(String asociat1unitatea) {
+        this.asociat1unitatea = asociat1unitatea;
+    }
+
+    public String getAsociat1rolul() {
+        return asociat1rolul;
+    }
+
+    public void setAsociat1rolul(String asociat1rolul) {
+        this.asociat1rolul = asociat1rolul;
+    }
+
+    public String getAsociat1partiSociale() {
+        return asociat1partiSociale;
+    }
+
+    public void setAsociat1partiSociale(String asociat1partiSociale) {
+        this.asociat1partiSociale = asociat1partiSociale;
+    }
+
+    public String getAsociat1valoare() {
+        return asociat1valoare;
+    }
+
+    public void setAsociat1valoare(String asociat1valoare) {
+        this.asociat1valoare = asociat1valoare;
+    }
+
+    public String getAsociat1explicatie() {
+        return asociat1explicatie;
+    }
+
+    public void setAsociat1explicatie(String asociat1explicatie) {
+        this.asociat1explicatie = asociat1explicatie;
+    }
+
+    public String getAsociat1moneda() {
+        return asociat1moneda;
+    }
+
+    public void setAsociat1moneda(String asociat1moneda) {
+        this.asociat1moneda = asociat1moneda;
+    }
+
+    public String getExistaAsociat2() {
+        return existaAsociat2;
+    }
+
+    public void setExistaAsociat2(String existaAsociat2) {
+        this.existaAsociat2 = existaAsociat2;
+    }
+
+    public String getAsociat2unitatea() {
+        return asociat2unitatea;
+    }
+
+    public void setAsociat2unitatea(String asociat2unitatea) {
+        this.asociat2unitatea = asociat2unitatea;
+    }
+
+    public String getAsociat2rolul() {
+        return asociat2rolul;
+    }
+
+    public void setAsociat2rolul(String asociat2rolul) {
+        this.asociat2rolul = asociat2rolul;
+    }
+
+    public String getAsociat2partiSociale() {
+        return asociat2partiSociale;
+    }
+
+    public void setAsociat2partiSociale(String asociat2partiSociale) {
+        this.asociat2partiSociale = asociat2partiSociale;
+    }
+
+    public String getAsociat2valoare() {
+        return asociat2valoare;
+    }
+
+    public void setAsociat2valoare(String asociat2valoare) {
+        this.asociat2valoare = asociat2valoare;
+    }
+
+    public String getAsociat2explicatie() {
+        return asociat2explicatie;
+    }
+
+    public void setAsociat2explicatie(String asociat2explicatie) {
+        this.asociat2explicatie = asociat2explicatie;
+    }
+
+    public String getAsociat2moneda() {
+        return asociat2moneda;
+    }
+
+    public void setAsociat2moneda(String asociat2moneda) {
+        this.asociat2moneda = asociat2moneda;
+    }
+
+    public String getExistaAsociat3() {
+        return existaAsociat3;
+    }
+
+    public void setExistaAsociat3(String existaAsociat3) {
+        this.existaAsociat3 = existaAsociat3;
+    }
+
+    public String getAsociat3unitatea() {
+        return asociat3unitatea;
+    }
+
+    public void setAsociat3unitatea(String asociat3unitatea) {
+        this.asociat3unitatea = asociat3unitatea;
+    }
+
+    public String getAsociat3rolul() {
+        return asociat3rolul;
+    }
+
+    public void setAsociat3rolul(String asociat3rolul) {
+        this.asociat3rolul = asociat3rolul;
+    }
+
+    public String getAsociat3partiSociale() {
+        return asociat3partiSociale;
+    }
+
+    public void setAsociat3partiSociale(String asociat3partiSociale) {
+        this.asociat3partiSociale = asociat3partiSociale;
+    }
+
+    public String getAsociat3valoare() {
+        return asociat3valoare;
+    }
+
+    public void setAsociat3valoare(String asociat3valoare) {
+        this.asociat3valoare = asociat3valoare;
+    }
+
+    public String getAsociat3explicatie() {
+        return asociat3explicatie;
+    }
+
+    public void setAsociat3explicatie(String asociat3explicatie) {
+        this.asociat3explicatie = asociat3explicatie;
+    }
+
+    public String getAsociat3moneda() {
+        return asociat3moneda;
+    }
+
+    public void setAsociat3moneda(String asociat3moneda) {
+        this.asociat3moneda = asociat3moneda;
+    }
+
+    public String getExistaAsociat4() {
+        return existaAsociat4;
+    }
+
+    public void setExistaAsociat4(String existaAsociat4) {
+        this.existaAsociat4 = existaAsociat4;
+    }
+
+    public String getAsociat4unitatea() {
+        return asociat4unitatea;
+    }
+
+    public void setAsociat4unitatea(String asociat4unitatea) {
+        this.asociat4unitatea = asociat4unitatea;
+    }
+
+    public String getAsociat4rolul() {
+        return asociat4rolul;
+    }
+
+    public void setAsociat4rolul(String asociat4rolul) {
+        this.asociat4rolul = asociat4rolul;
+    }
+
+    public String getAsociat4partiSociale() {
+        return asociat4partiSociale;
+    }
+
+    public void setAsociat4partiSociale(String asociat4partiSociale) {
+        this.asociat4partiSociale = asociat4partiSociale;
+    }
+
+    public String getAsociat4valoare() {
+        return asociat4valoare;
+    }
+
+    public void setAsociat4valoare(String asociat4valoare) {
+        this.asociat4valoare = asociat4valoare;
+    }
+
+    public String getAsociat4explicatie() {
+        return asociat4explicatie;
+    }
+
+    public void setAsociat4explicatie(String asociat4explicatie) {
+        this.asociat4explicatie = asociat4explicatie;
+    }
+
+    public String getAsociat4moneda() {
+        return asociat4moneda;
+    }
+
+    public void setAsociat4moneda(String asociat4moneda) {
+        this.asociat4moneda = asociat4moneda;
+    }
+
+    public String getExistaAsociat5() {
+        return existaAsociat5;
+    }
+
+    public void setExistaAsociat5(String existaAsociat5) {
+        this.existaAsociat5 = existaAsociat5;
+    }
+
+    public String getAsociat5unitatea() {
+        return asociat5unitatea;
+    }
+
+    public void setAsociat5unitatea(String asociat5unitatea) {
+        this.asociat5unitatea = asociat5unitatea;
+    }
+
+    public String getAsociat5rolul() {
+        return asociat5rolul;
+    }
+
+    public void setAsociat5rolul(String asociat5rolul) {
+        this.asociat5rolul = asociat5rolul;
+    }
+
+    public String getAsociat5partiSociale() {
+        return asociat5partiSociale;
+    }
+
+    public void setAsociat5partiSociale(String asociat5partiSociale) {
+        this.asociat5partiSociale = asociat5partiSociale;
+    }
+
+    public String getAsociat5valoare() {
+        return asociat5valoare;
+    }
+
+    public void setAsociat5valoare(String asociat5valoare) {
+        this.asociat5valoare = asociat5valoare;
+    }
+
+    public String getAsociat5explicatie() {
+        return asociat5explicatie;
+    }
+
+    public void setAsociat5explicatie(String asociat5explicatie) {
+        this.asociat5explicatie = asociat5explicatie;
+    }
+
+    public String getAsociat5moneda() {
+        return asociat5moneda;
+    }
+
+    public void setAsociat5moneda(String asociat5moneda) {
+        this.asociat5moneda = asociat5moneda;
+    }
 }
