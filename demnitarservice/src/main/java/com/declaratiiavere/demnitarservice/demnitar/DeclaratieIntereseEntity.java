@@ -27,16 +27,16 @@ public class DeclaratieIntereseEntity extends EntityBase {
     @Column(name ="data_depunerii")
     private Date dataDepunerii;
 
-    @Column(name ="functie_id")
+    @Column(name ="functie")
     private Integer functieId;
 
-    @Column(name ="functie2_id")
+    @Column(name ="functie2")
     private Integer functie2Id;
 
-    @Column(name ="institutie_id")
+    @Column(name ="institutie")
     private Integer institutieId;
 
-    @Column(name ="institutie2_id")
+    @Column(name ="institutie2")
     private Integer institutie2Id;
 
     @Column(name ="grup_politic")
@@ -63,19 +63,19 @@ public class DeclaratieIntereseEntity extends EntityBase {
 
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "functie_id", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "functie", nullable = false, insertable = false, updatable = false)
     private FunctieEntity functieEntity;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "functie2_id", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "functie2", nullable = false, insertable = false, updatable = false)
     private FunctieEntity functie2Entity;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "institutie_id", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "institutie", nullable = false, insertable = false, updatable = false)
     private InstitutieEntity institutieEntity;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "institutie2_id", nullable = false, insertable = false, updatable = false)
+    @JoinColumn(name = "institutie2", nullable = false, insertable = false, updatable = false)
     private InstitutieEntity institutie2Entity;
 
     public Integer getId() {
