@@ -293,12 +293,12 @@ public class DemnitarEAO extends EntityAccessObjectBase {
         return getEntity(DeclaratieAvereEntity.class, declaratieAvereId);
     }
 
-    public DeclaratieIntereseEntity saveDeclaratieInterese(DeclaratieIntereseEntity declaratieAvereEntity) {
-        return storeEntity(declaratieAvereEntity);
+    public DeclaratieIntereseEntity saveDeclaratieInterese(DeclaratieIntereseEntity declaratieIntereseEntity) {
+        return storeEntity(declaratieIntereseEntity);
     }
 
-    public DeclaratieIntereseEntity getDeclaratieInterese(Integer declaratieAvereId) {
-        return getEntity(DeclaratieIntereseEntity.class, declaratieAvereId);
+    public DeclaratieIntereseEntity getDeclaratieInterese(Integer declaratieIntereseId) {
+        return getEntity(DeclaratieIntereseEntity.class, declaratieIntereseId);
     }
 
     public FunctieEntity getFunctie(Integer functieId) {

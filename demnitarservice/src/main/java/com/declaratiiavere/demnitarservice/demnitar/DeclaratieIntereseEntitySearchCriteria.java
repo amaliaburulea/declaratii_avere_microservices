@@ -36,6 +36,14 @@ public class DeclaratieIntereseEntitySearchCriteria extends EntitySearchCriteria
         this.dataDeclaratiei = dataDeclaratiei;
     }
 
+    public boolean isEagerLoadAllRelations() {
+        return eagerLoadAllRelations;
+    }
+
+    public void setEagerLoadAllRelations(boolean eagerLoadAllRelations) {
+        this.eagerLoadAllRelations = eagerLoadAllRelations;
+    }
+
     public Integer getFunctieId() {
         return functieId;
     }
@@ -98,13 +106,5 @@ public class DeclaratieIntereseEntitySearchCriteria extends EntitySearchCriteria
 
     public void setStatus(Integer status) {
         this.status = status;
-    }
-
-    public boolean isEagerLoadAllRelations() {
-        return eagerLoadAllRelations;
-    }
-
-    public void setEagerLoadAllRelations(boolean eagerLoadAllRelations) {
-        this.eagerLoadAllRelations = eagerLoadAllRelations;
     }
 }

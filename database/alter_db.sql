@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `declaratie_avere` (
   `data_declaratiei` date NOT NULL,
   `data_depunerii` date DEFAULT NULL,
   `functie` varchar(200) NOT NULL,
-  `functie2` varchar(200) DEFAULT NULL,
+  `functie2id` varchar(200) DEFAULT NULL,
   `institutie` varchar(400) NOT NULL,
   `institutie2` varchar(400) DEFAULT NULL,
   `grup_politic` varchar(200) DEFAULT NULL,
@@ -85,6 +85,7 @@ CREATE TABLE IF NOT EXISTS `declaratie_interese_asociat_sc` (
   `parti_sociale_actiuni` varchar(100) DEFAULT NULL,
   `valoarea` decimal(12,2) DEFAULT NULL,
   `moneda` varchar(100) NOT NULL,
+  `explicatie_venit` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `declaratieIntereseAsociatSc_declaratieInterese_fk_idx` (`declaratie_interese_id`),
   CONSTRAINT `declaratieIntereseAsociatSc_declaratieInterese_fk` FOREIGN KEY (`declaratie_interese_id`) REFERENCES `declaratie_interese` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
@@ -342,6 +343,10 @@ INSERT IGNORE INTO permission_rest_method
 (permission_id, rest_request_path, rest_request_method)
 VALUES ((SELECT permission_id FROM permission WHERE permission_code='MDEN'), '/demnitarservice/demnitar/import', 'POST');
 
+INSERT IGNORE INTO permission_rest_method
+(permission_id, rest_request_path, rest_request_method)
+VALUES ((SELECT permission_id FROM permission WHERE permission_code='MDEN'), '/demnitarservice/demnitar/importdi', 'POST');
+
 INSERT IGNORE INTO role_permission (role_id, permission_id)
 VALUES (1, (SELECT permission_id FROM permission WHERE permission_code='MDEN'));
 
@@ -411,6 +416,7 @@ call AddForeignKey('fk_declaratie_avere_voluntar', 'declaratie_avere', 'voluntar
 call CreateIndex('declaratie_avere', 'fk_declaratie_avere_voluntar_idx', 'voluntar_id', 0);
 
 call AddColumn('declaratie_avere', 'is_done', "BIT NOT NULL DEFAULT 0");
+call AddColumn('declaratie_interese', 'is_done', "BIT NOT NULL DEFAULT 0");
 call CreateIndex('declaratie_avere', 'declaratie_avere_data_idx', 'data_declaratiei', 0);
 
 

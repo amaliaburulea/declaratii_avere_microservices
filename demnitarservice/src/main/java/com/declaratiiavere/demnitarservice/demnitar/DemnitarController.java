@@ -72,6 +72,11 @@ public class DemnitarController {
         return demnitarService.getDeclaratieAvere(id);
     }
 
+    @RequestMapping(value = "/declaratieinterese/{id}/", method = RequestMethod.GET)
+    public DeclaratieIntereseInfo getDeclaratieInterese(@PathVariable Integer id) {
+        return demnitarService.getDeclaratieInterese(id);
+    }
+
     /**
      * Creates a declaratieAvere.
      *
@@ -81,6 +86,11 @@ public class DemnitarController {
     @RequestMapping(value = "/declaratieavere", method = RequestMethod.POST)
     public DeclaratieAvereInfo createDeclaratieAvere(@RequestBody DeclaratieAvereInfo declaratieAvereInfo) {
         return demnitarService.saveDeclaratieAvere(declaratieAvereInfo);
+    }
+
+    @RequestMapping(value = "/declaratieinterese", method = RequestMethod.POST)
+    public DeclaratieIntereseInfo createDeclaratieInterese(@RequestBody DeclaratieIntereseInfo declaratieIntereseInfo) {
+        return demnitarService.saveDeclaratieInterese(declaratieIntereseInfo);
     }
 
     /**
@@ -94,6 +104,11 @@ public class DemnitarController {
         return demnitarService.saveDeclaratieAvere(declaratieAvereInfo);
     }
 
+    @RequestMapping(value = "/declaratieinterese", method = RequestMethod.PUT)
+    public DeclaratieIntereseInfo updateDeclaratieInterese(@RequestBody DeclaratieIntereseInfo declaratieIntereseInfo) {
+        return demnitarService.saveDeclaratieInterese(declaratieIntereseInfo);
+    }
+
     /**
      * Finds declaratieAveres.
      *
@@ -103,6 +118,11 @@ public class DemnitarController {
     @RequestMapping(value = "/declaratieavere/find", method = RequestMethod.POST)
     public List<DeclaratieAvereInfo> findDeclaratieAveres(@RequestBody SearchDeclaratieAvereCriteria searchDeclaratieAvereCriteria) throws RestException {
         return demnitarService.findDeclaratiiAvere(searchDeclaratieAvereCriteria);
+    }
+
+    @RequestMapping(value = "/declaratieinterese/find", method = RequestMethod.POST)
+    public List<DeclaratieIntereseInfo> findDeclaratieInterese(@RequestBody SearchDeclaratieIntereseCriteria searchDeclaratieIntereseCriteria) throws RestException {
+        return demnitarService.findDeclaratiiInterese(searchDeclaratieIntereseCriteria);
     }
 
     @RequestMapping(value = "/functie/find", method = RequestMethod.POST)

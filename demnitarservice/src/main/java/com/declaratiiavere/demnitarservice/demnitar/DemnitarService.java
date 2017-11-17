@@ -693,7 +693,7 @@ public class DemnitarService {
 
         return declaratieAvereInfo;
     }
-
+    @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
     public DeclaratieIntereseInfo saveDeclaratieInterese(DeclaratieIntereseInfo declaratieIntereseInfo) {
         validateDeclaratieInterese(declaratieIntereseInfo);
         DeclaratieIntereseEntity declaratieIntereseEntity = populateDeclaratieIntereseEntity(declaratieIntereseInfo);
@@ -1649,7 +1649,7 @@ public class DemnitarService {
 
         return getDeclaratieAvereInfo(declaratieAvereEntity, true);
     }
-
+    @Transactional(readOnly = true)
     public DeclaratieIntereseInfo getDeclaratieInterese(Integer id) {
         if (id == null) {
             throw new ValidationException("id is required");
@@ -1739,7 +1739,7 @@ public class DemnitarService {
 
         return declaratieAvereInfoList;
     }
-
+    @Transactional(readOnly = true)
     public List<DeclaratieIntereseInfo> findDeclaratiiInterese(SearchDeclaratieIntereseCriteria searchDeclaratieIntereseCriteria) throws RestException {
         List<DeclaratieIntereseInfo> declaratieIntereseInfoList = new ArrayList<>();
 
@@ -1774,8 +1774,8 @@ public class DemnitarService {
 
         if (searchDeclaratieIntereseCriteria.getDemnitarId() != null) {
             declaratieIntereseEntitySearchCriteria.setEagerLoadAllRelations(true);
-        }
 
+        }
         List<DeclaratieIntereseEntity> declaratieIntereseEntityList = demnitarEAO.findDeclaratiiInterese(declaratieIntereseEntitySearchCriteria);
         Set<Integer> voluntarIdSet = new HashSet<>();
 

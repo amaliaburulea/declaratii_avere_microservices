@@ -32,14 +32,6 @@ import java.util.stream.Stream;
 @RestController
 @RequestMapping(value = "/demnitar/importdi")
 public class DemnitarImportDiController {
-        private static final Integer TIP_VENIT_SALAR = 1;
-        private static final Integer TIP_VENIT_ACTIVITATI_INDEPENDENTE = 2;
-        private static final Integer TIP_VENIT_CEDAREA_FOLOSINTEI = 3;
-        private static final Integer TIP_VENIT_INVESTITII = 4;
-        private static final Integer TIP_VENIT_PENSII = 5;
-        private static final Integer TIP_VENIT_AGRICOL = 6;
-        private static final Integer TIP_VENIT_NOROC = 7;
-        private static final Integer TIP_VENIT_ALTE_VENITURI = 8;
 
         @Autowired
         private DemnitarService demnitarService;
@@ -357,6 +349,33 @@ public class DemnitarImportDiController {
             columnMapping.put("valAssoc3", "asociat3valoare");
             columnMapping.put("currAssoc3", "asociat3moneda");
             columnMapping.put("expl3", "asociat3explicatie");
+
+            //asociat 4
+            columnMapping.put("moreAssoc3", "existaAsociat4");
+            columnMapping.put("companyName4", "asociat4unitatea");
+            columnMapping.put("roleInComp4", "asociat4rolul");
+            columnMapping.put("noAct4", "asociat4partiSociale");
+            columnMapping.put("valAssoc4", "asociat4valoare");
+            columnMapping.put("currAssoc4", "asociat4moneda");
+            columnMapping.put("expl4", "asociat4explicatie");
+
+            //asociat 5
+            columnMapping.put("moreAssoc4", "existaAsociat5");
+            columnMapping.put("companyName5", "asociat5unitatea");
+            columnMapping.put("roleInComp5", "asociat5rolul");
+            columnMapping.put("noAct5", "asociat5partiSociale");
+            columnMapping.put("valAssoc5", "asociat5valoare");
+            columnMapping.put("currAssoc5", "asociat5moneda");
+            columnMapping.put("expl5", "asociat5explicatie");
+
+            //asociat 6
+            columnMapping.put("moreAssoc5", "existaAsociat6");
+            columnMapping.put("companyName6", "asociat6unitatea");
+            columnMapping.put("roleInComp6", "asociat6rolul");
+            columnMapping.put("noAct6", "asociat6partiSociale");
+            columnMapping.put("valAssoc6", "asociat6valoare");
+            columnMapping.put("currAssoc6", "asociat6moneda");
+            columnMapping.put("expl6", "asociat6explicatie");
 
             return columnMapping;
         }
