@@ -29,6 +29,7 @@ public class RevenueDeclarationInfo {
     private String teren1UnitateDeMasura;
     private String teren1CotaParte;
     private String teren1ModDobandire;
+    private String teren1ExplicatieDobandire;
     private String teren1Titular;
 
     // teren 2
@@ -41,6 +42,7 @@ public class RevenueDeclarationInfo {
     private String teren2UnitateDeMasura;
     private String teren2CotaParte;
     private String teren2ModDobandire;
+    private String teren2ExplicatieDobandire;
     private String teren2Titular;
 
     // teren 3
@@ -53,6 +55,7 @@ public class RevenueDeclarationInfo {
     private String teren3UnitateDeMasura;
     private String teren3CotaParte;
     private String teren3ModDobandire;
+    private String teren3ExplicatieDobandire;
     private String teren3Titular;
 
     // teren 4
@@ -65,6 +68,7 @@ public class RevenueDeclarationInfo {
     private String teren4UnitateDeMasura;
     private String teren4CotaParte;
     private String teren4ModDobandire;
+    private String teren4ExplicatieDobandire;
     private String teren4Titular;
 
     // teren 5
@@ -77,6 +81,7 @@ public class RevenueDeclarationInfo {
     private String teren5UnitateDeMasura;
     private String teren5CotaParte;
     private String teren5ModDobandire;
+    private String teren5ExplicatieDobandire;
     private String teren5Titular;
 
     // teren 6
@@ -89,6 +94,7 @@ public class RevenueDeclarationInfo {
     private String teren6UnitateDeMasura;
     private String teren6CotaParte;
     private String teren6ModDobandire;
+    private String teren6ExplicatieDobandire;
     private String teren6Titular;
 
     // teren 7
@@ -101,6 +107,7 @@ public class RevenueDeclarationInfo {
     private String teren7UnitateDeMasura;
     private String teren7CotaParte;
     private String teren7ModDobandire;
+    private String teren7ExplicatieDobandire;
     private String teren7Titular;
 
     // teren 8
@@ -113,6 +120,7 @@ public class RevenueDeclarationInfo {
     private String teren8UnitateDeMasura;
     private String teren8CotaParte;
     private String teren8ModDobandire;
+    private String teren8ExplicatieDobandire;
     private String teren8Titular;
 
     // teren 9
@@ -125,6 +133,7 @@ public class RevenueDeclarationInfo {
     private String teren9UnitateDeMasura;
     private String teren9CotaParte;
     private String teren9ModDobandire;
+    private String teren9ExplicatieDobandire;
     private String teren9Titular;
 
     // teren 10
@@ -137,6 +146,7 @@ public class RevenueDeclarationInfo {
     private String teren10UnitateDeMasura;
     private String teren10CotaParte;
     private String teren10ModDobandire;
+    private String teren10ExplicatieDobandire;
     private String teren10Titular;
 
     // teren 11
@@ -149,6 +159,7 @@ public class RevenueDeclarationInfo {
     private String teren11UnitateDeMasura;
     private String teren11CotaParte;
     private String teren11ModDobandire;
+    private String teren11ExplicatieDobandire;
     private String teren11Titular;
 
     // teren 12
@@ -161,6 +172,7 @@ public class RevenueDeclarationInfo {
     private String teren12UnitateDeMasura;
     private String teren12CotaParte;
     private String teren12ModDobandire;
+    private String teren12ExplicatieDobandire;
     private String teren12Titular;
 
     // teren 13
@@ -173,6 +185,7 @@ public class RevenueDeclarationInfo {
     private String teren13UnitateDeMasura;
     private String teren13CotaParte;
     private String teren13ModDobandire;
+    private String teren13ExplicatieDobandire;
     private String teren13Titular;
 
     // teren 14
@@ -185,6 +198,7 @@ public class RevenueDeclarationInfo {
     private String teren14UnitateDeMasura;
     private String teren14CotaParte;
     private String teren14ModDobandire;
+    private String teren14ExplicatieDobandire;
     private String teren14Titular;
 
     // teren 15
@@ -197,6 +211,7 @@ public class RevenueDeclarationInfo {
     private String teren15UnitateDeMasura;
     private String teren15CotaParte;
     private String teren15ModDobandire;
+    private String teren15ExplicatieDobandire;
     private String teren15Titular;
 
     // alte terenuri free text
@@ -212,6 +227,7 @@ public class RevenueDeclarationInfo {
     private String cladire1UnitateDeMasura;
     private String cladire1CotaParte;
     private String cladire1ModDobandire;
+    private String cladire1ExplicatieDobandire;
     private String cladire1Titular;
 
     // cladire 2
@@ -224,6 +240,7 @@ public class RevenueDeclarationInfo {
     private String cladire2UnitateDeMasura;
     private String cladire2CotaParte;
     private String cladire2ModDobandire;
+    private String cladire2ExplicatieDobandire;
     private String cladire2Titular;
 
     // cladire 3
@@ -236,6 +253,7 @@ public class RevenueDeclarationInfo {
     private String cladire3UnitateDeMasura;
     private String cladire3CotaParte;
     private String cladire3ModDobandire;
+    private String cladire3ExplicatieDobandire;
     private String cladire3Titular;
 
     // cladire 4
@@ -248,6 +266,7 @@ public class RevenueDeclarationInfo {
     private String cladire4UnitateDeMasura;
     private String cladire4CotaParte;
     private String cladire4ModDobandire;
+    private String cladire4ExplicatieDobandire;
     private String cladire4Titular;
 
     // cladire 5
@@ -260,6 +279,7 @@ public class RevenueDeclarationInfo {
     private String cladire5UnitateDeMasura;
     private String cladire5CotaParte;
     private String cladire5ModDobandire;
+    private String cladire5ExplicatieDobandire;
     private String cladire5Titular;
 
     // cladire 6
@@ -272,6 +292,7 @@ public class RevenueDeclarationInfo {
     private String cladire6UnitateDeMasura;
     private String cladire6CotaParte;
     private String cladire6ModDobandire;
+    private String cladire6ExplicatieDobandire;
     private String cladire6Titular;
 
     // cladire 7
@@ -284,6 +305,7 @@ public class RevenueDeclarationInfo {
     private String cladire7UnitateDeMasura;
     private String cladire7CotaParte;
     private String cladire7ModDobandire;
+    private String cladire7ExplicatieDobandire;
     private String cladire7Titular;
 
     // cladire 8
@@ -296,6 +318,7 @@ public class RevenueDeclarationInfo {
     private String cladire8UnitateDeMasura;
     private String cladire8CotaParte;
     private String cladire8ModDobandire;
+    private String cladire8ExplicatieDobandire;
     private String cladire8Titular;
 
     // cladire 9
@@ -308,6 +331,7 @@ public class RevenueDeclarationInfo {
     private String cladire9UnitateDeMasura;
     private String cladire9CotaParte;
     private String cladire9ModDobandire;
+    private String cladire9ExplicatieDobandire;
     private String cladire9Titular;
 
     // cladire 10
@@ -320,6 +344,7 @@ public class RevenueDeclarationInfo {
     private String cladire10UnitateDeMasura;
     private String cladire10CotaParte;
     private String cladire10ModDobandire;
+    private String cladire10ExplicatieDobandire;
     private String cladire10Titular;
 
     // cladire 11
@@ -332,6 +357,7 @@ public class RevenueDeclarationInfo {
     private String cladire11UnitateDeMasura;
     private String cladire11CotaParte;
     private String cladire11ModDobandire;
+    private String cladire11ExplicatieDobandire;
     private String cladire11Titular;
 
     // cladire 12
@@ -344,6 +370,7 @@ public class RevenueDeclarationInfo {
     private String cladire12UnitateDeMasura;
     private String cladire12CotaParte;
     private String cladire12ModDobandire;
+    private String cladire12ExplicatieDobandire;
     private String cladire12Titular;
 
     // cladire 13
@@ -356,6 +383,7 @@ public class RevenueDeclarationInfo {
     private String cladire13UnitateDeMasura;
     private String cladire13CotaParte;
     private String cladire13ModDobandire;
+    private String cladire13ExplicatieDobandire;
     private String cladire13Titular;
 
     // cladire 14
@@ -368,6 +396,7 @@ public class RevenueDeclarationInfo {
     private String cladire14UnitateDeMasura;
     private String cladire14CotaParte;
     private String cladire14ModDobandire;
+    private String cladire14ExplicatieDobandire;
     private String cladire14Titular;
 
     // cladire 15
@@ -380,6 +409,7 @@ public class RevenueDeclarationInfo {
     private String cladire15UnitateDeMasura;
     private String cladire15CotaParte;
     private String cladire15ModDobandire;
+    private String cladire15ExplicatieDobandire;
     private String cladire15Titular;
 
     // alte cladiri
@@ -7830,5 +7860,245 @@ public class RevenueDeclarationInfo {
 
     public void setAsociat5moneda(String asociat5moneda) {
         this.asociat5moneda = asociat5moneda;
+    }
+
+    public String getTeren1ExplicatieDobandire() {
+        return teren1ExplicatieDobandire;
+    }
+
+    public void setTeren1ExplicatieDobandire(String teren1ExplicatieDobandire) {
+        this.teren1ExplicatieDobandire = teren1ExplicatieDobandire;
+    }
+
+    public String getTeren2ExplicatieDobandire() {
+        return teren2ExplicatieDobandire;
+    }
+
+    public void setTeren2ExplicatieDobandire(String teren2ExplicatieDobandire) {
+        this.teren2ExplicatieDobandire = teren2ExplicatieDobandire;
+    }
+
+    public String getTeren3ExplicatieDobandire() {
+        return teren3ExplicatieDobandire;
+    }
+
+    public void setTeren3ExplicatieDobandire(String teren3ExplicatieDobandire) {
+        this.teren3ExplicatieDobandire = teren3ExplicatieDobandire;
+    }
+
+    public String getTeren4ExplicatieDobandire() {
+        return teren4ExplicatieDobandire;
+    }
+
+    public void setTeren4ExplicatieDobandire(String teren4ExplicatieDobandire) {
+        this.teren4ExplicatieDobandire = teren4ExplicatieDobandire;
+    }
+
+    public String getTeren5ExplicatieDobandire() {
+        return teren5ExplicatieDobandire;
+    }
+
+    public void setTeren5ExplicatieDobandire(String teren5ExplicatieDobandire) {
+        this.teren5ExplicatieDobandire = teren5ExplicatieDobandire;
+    }
+
+    public String getTeren6ExplicatieDobandire() {
+        return teren6ExplicatieDobandire;
+    }
+
+    public void setTeren6ExplicatieDobandire(String teren6ExplicatieDobandire) {
+        this.teren6ExplicatieDobandire = teren6ExplicatieDobandire;
+    }
+
+    public String getTeren7ExplicatieDobandire() {
+        return teren7ExplicatieDobandire;
+    }
+
+    public void setTeren7ExplicatieDobandire(String teren7ExplicatieDobandire) {
+        this.teren7ExplicatieDobandire = teren7ExplicatieDobandire;
+    }
+
+    public String getTeren8ExplicatieDobandire() {
+        return teren8ExplicatieDobandire;
+    }
+
+    public void setTeren8ExplicatieDobandire(String teren8ExplicatieDobandire) {
+        this.teren8ExplicatieDobandire = teren8ExplicatieDobandire;
+    }
+
+    public String getTeren9ExplicatieDobandire() {
+        return teren9ExplicatieDobandire;
+    }
+
+    public void setTeren9ExplicatieDobandire(String teren9ExplicatieDobandire) {
+        this.teren9ExplicatieDobandire = teren9ExplicatieDobandire;
+    }
+
+    public String getTeren10ExplicatieDobandire() {
+        return teren10ExplicatieDobandire;
+    }
+
+    public void setTeren10ExplicatieDobandire(String teren10ExplicatieDobandire) {
+        this.teren10ExplicatieDobandire = teren10ExplicatieDobandire;
+    }
+
+    public String getTeren11ExplicatieDobandire() {
+        return teren11ExplicatieDobandire;
+    }
+
+    public void setTeren11ExplicatieDobandire(String teren11ExplicatieDobandire) {
+        this.teren11ExplicatieDobandire = teren11ExplicatieDobandire;
+    }
+
+    public String getTeren12ExplicatieDobandire() {
+        return teren12ExplicatieDobandire;
+    }
+
+    public void setTeren12ExplicatieDobandire(String teren12ExplicatieDobandire) {
+        this.teren12ExplicatieDobandire = teren12ExplicatieDobandire;
+    }
+
+    public String getTeren13ExplicatieDobandire() {
+        return teren13ExplicatieDobandire;
+    }
+
+    public void setTeren13ExplicatieDobandire(String teren13ExplicatieDobandire) {
+        this.teren13ExplicatieDobandire = teren13ExplicatieDobandire;
+    }
+
+    public String getTeren14ExplicatieDobandire() {
+        return teren14ExplicatieDobandire;
+    }
+
+    public void setTeren14ExplicatieDobandire(String teren14ExplicatieDobandire) {
+        this.teren14ExplicatieDobandire = teren14ExplicatieDobandire;
+    }
+
+    public String getTeren15ExplicatieDobandire() {
+        return teren15ExplicatieDobandire;
+    }
+
+    public void setTeren15ExplicatieDobandire(String teren15ExplicatieDobandire) {
+        this.teren15ExplicatieDobandire = teren15ExplicatieDobandire;
+    }
+
+    public String getCladire1ExplicatieDobandire() {
+        return cladire1ExplicatieDobandire;
+    }
+
+    public void setCladire1ExplicatieDobandire(String cladire1ExplicatieDobandire) {
+        this.cladire1ExplicatieDobandire = cladire1ExplicatieDobandire;
+    }
+
+    public String getCladire2ExplicatieDobandire() {
+        return cladire2ExplicatieDobandire;
+    }
+
+    public void setCladire2ExplicatieDobandire(String cladire2ExplicatieDobandire) {
+        this.cladire2ExplicatieDobandire = cladire2ExplicatieDobandire;
+    }
+
+    public String getCladire3ExplicatieDobandire() {
+        return cladire3ExplicatieDobandire;
+    }
+
+    public void setCladire3ExplicatieDobandire(String cladire3ExplicatieDobandire) {
+        this.cladire3ExplicatieDobandire = cladire3ExplicatieDobandire;
+    }
+
+    public String getCladire4ExplicatieDobandire() {
+        return cladire4ExplicatieDobandire;
+    }
+
+    public void setCladire4ExplicatieDobandire(String cladire4ExplicatieDobandire) {
+        this.cladire4ExplicatieDobandire = cladire4ExplicatieDobandire;
+    }
+
+    public String getCladire5ExplicatieDobandire() {
+        return cladire5ExplicatieDobandire;
+    }
+
+    public void setCladire5ExplicatieDobandire(String cladire5ExplicatieDobandire) {
+        this.cladire5ExplicatieDobandire = cladire5ExplicatieDobandire;
+    }
+
+    public String getCladire6ExplicatieDobandire() {
+        return cladire6ExplicatieDobandire;
+    }
+
+    public void setCladire6ExplicatieDobandire(String cladire6ExplicatieDobandire) {
+        this.cladire6ExplicatieDobandire = cladire6ExplicatieDobandire;
+    }
+
+    public String getCladire7ExplicatieDobandire() {
+        return cladire7ExplicatieDobandire;
+    }
+
+    public void setCladire7ExplicatieDobandire(String cladire7ExplicatieDobandire) {
+        this.cladire7ExplicatieDobandire = cladire7ExplicatieDobandire;
+    }
+
+    public String getCladire8ExplicatieDobandire() {
+        return cladire8ExplicatieDobandire;
+    }
+
+    public void setCladire8ExplicatieDobandire(String cladire8ExplicatieDobandire) {
+        this.cladire8ExplicatieDobandire = cladire8ExplicatieDobandire;
+    }
+
+    public String getCladire9ExplicatieDobandire() {
+        return cladire9ExplicatieDobandire;
+    }
+
+    public void setCladire9ExplicatieDobandire(String cladire9ExplicatieDobandire) {
+        this.cladire9ExplicatieDobandire = cladire9ExplicatieDobandire;
+    }
+
+    public String getCladire10ExplicatieDobandire() {
+        return cladire10ExplicatieDobandire;
+    }
+
+    public void setCladire10ExplicatieDobandire(String cladire10ExplicatieDobandire) {
+        this.cladire10ExplicatieDobandire = cladire10ExplicatieDobandire;
+    }
+
+    public String getCladire11ExplicatieDobandire() {
+        return cladire11ExplicatieDobandire;
+    }
+
+    public void setCladire11ExplicatieDobandire(String cladire11ExplicatieDobandire) {
+        this.cladire11ExplicatieDobandire = cladire11ExplicatieDobandire;
+    }
+
+    public String getCladire12ExplicatieDobandire() {
+        return cladire12ExplicatieDobandire;
+    }
+
+    public void setCladire12ExplicatieDobandire(String cladire12ExplicatieDobandire) {
+        this.cladire12ExplicatieDobandire = cladire12ExplicatieDobandire;
+    }
+
+    public String getCladire13ExplicatieDobandire() {
+        return cladire13ExplicatieDobandire;
+    }
+
+    public void setCladire13ExplicatieDobandire(String cladire13ExplicatieDobandire) {
+        this.cladire13ExplicatieDobandire = cladire13ExplicatieDobandire;
+    }
+
+    public String getCladire14ExplicatieDobandire() {
+        return cladire14ExplicatieDobandire;
+    }
+
+    public void setCladire14ExplicatieDobandire(String cladire14ExplicatieDobandire) {
+        this.cladire14ExplicatieDobandire = cladire14ExplicatieDobandire;
+    }
+
+    public String getCladire15ExplicatieDobandire() {
+        return cladire15ExplicatieDobandire;
+    }
+
+    public void setCladire15ExplicatieDobandire(String cladire15ExplicatieDobandire) {
+        this.cladire15ExplicatieDobandire = cladire15ExplicatieDobandire;
     }
 }

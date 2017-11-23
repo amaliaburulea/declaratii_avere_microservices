@@ -74,14 +74,14 @@ CREATE TABLE IF NOT EXISTS `declaratie_interese` (
   `circumscriptia` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `declaratieInterese_unique` (`demnitar_id`,`data_declaratiei`),
-  CONSTRAINT `declaratieAvere_demnitar_fk` FOREIGN KEY (`demnitar_id`) REFERENCES `demnitar` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
+  CONSTRAINT `declaratieInterese_demnitar_fk` FOREIGN KEY (`demnitar_id`) REFERENCES `demnitar` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `declaratie_interese_asociat_sc` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `declaratie_interese_id` int(11) NOT NULL,
   `unitatea` text NOT NULL,
-  `calitatea` varchar(100) DEFAULT NULL,
+  `rolul` varchar(100) DEFAULT NULL,
   `parti_sociale_actiuni` varchar(100) DEFAULT NULL,
   `valoarea` decimal(12,2) DEFAULT NULL,
   `moneda` varchar(100) NOT NULL,
@@ -115,6 +115,7 @@ CREATE TABLE IF NOT EXISTS `declaratie_avere_bun_imobil` (
   `unitate_masura` varchar(10) DEFAULT NULL,
   `cota_parte` varchar(100) DEFAULT NULL,
   `mod_dobandire` text DEFAULT NULL,
+  `explicatie_dobandire` TEXT DEFAULT NULL,
   `titular` TEXT DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `declaratieAvereBunuriImobile_declaratieAvere_fk_idx` (`declaratie_avere_id`),
