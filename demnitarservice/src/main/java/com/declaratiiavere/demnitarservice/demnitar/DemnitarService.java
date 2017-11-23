@@ -533,6 +533,7 @@ public class DemnitarService {
         declaratieActiveBunImobilInfo.setUnitateMasura(declaratieAvereBunImobilEntity.getUnitateMasura());
         declaratieActiveBunImobilInfo.setCotaParte(declaratieAvereBunImobilEntity.getCotaParte());
         declaratieActiveBunImobilInfo.setModDobandire(declaratieAvereBunImobilEntity.getModDobandire());
+        declaratieActiveBunImobilInfo.setExplicatieDobandire(declaratieAvereBunImobilEntity.getExplicatieDobandire());
         declaratieActiveBunImobilInfo.setTitular(declaratieAvereBunImobilEntity.getTitular());
 
         return declaratieActiveBunImobilInfo;
@@ -1557,6 +1558,7 @@ public class DemnitarService {
         declaratieAvereBunImobilEntity.setUnitateMasura(declaratieAvereBunImobilInfo.getUnitateMasura());
         declaratieAvereBunImobilEntity.setCotaParte(declaratieAvereBunImobilInfo.getCotaParte());
         declaratieAvereBunImobilEntity.setModDobandire(declaratieAvereBunImobilInfo.getModDobandire());
+        declaratieAvereBunImobilEntity.setExplicatieDobandire(declaratieAvereBunImobilInfo.getExplicatieDobandire());
         declaratieAvereBunImobilEntity.setTitular(declaratieAvereBunImobilInfo.getTitular());
     }
 

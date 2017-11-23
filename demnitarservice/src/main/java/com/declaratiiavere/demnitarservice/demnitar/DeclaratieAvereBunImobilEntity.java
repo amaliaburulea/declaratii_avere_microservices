@@ -46,6 +46,9 @@ public class DeclaratieAvereBunImobilEntity {
     @Column(name ="cota_parte")
     private String cotaParte;
 
+    @Column(name ="explicatie_dobandire")
+    private String explicatieDobandire;
+
     @Column(name ="mod_dobandire")
     private String modDobandire;
 
@@ -166,5 +169,13 @@ public class DeclaratieAvereBunImobilEntity {
 
     public void setDeclaratieAvereEntity(DeclaratieAvereEntity declaratieAvereEntity) {
         this.declaratieAvereEntity = declaratieAvereEntity;
+    }
+
+    public String getExplicatieDobandire() {
+        return explicatieDobandire;
+    }
+
+    public void setExplicatieDobandire(String explicatieDobandire) {
+        this.explicatieDobandire = explicatieDobandire;
     }
 }

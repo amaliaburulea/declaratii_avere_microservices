@@ -19,6 +19,7 @@ public class DeclaratieAvereBunImobilInfo {
     private String unitateMasura;
     private String cotaParte;
     private String modDobandire;
+    private String explicatieDobandire;
     private String titular;
 
     public Integer getId() {
@@ -115,5 +116,13 @@ public class DeclaratieAvereBunImobilInfo {
 
     public void setTitular(String titular) {
         this.titular = titular;
+    }
+
+    public String getExplicatieDobandire() {
+        return explicatieDobandire;
+    }
+
+    public void setExplicatieDobandire(String explicatieDobandire) {
+        this.explicatieDobandire = explicatieDobandire;
     }
 }
