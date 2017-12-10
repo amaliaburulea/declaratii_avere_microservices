@@ -1,17 +1,16 @@
 package com.declaratiiavere.demnitarservice.demnitar;
 
-import java.math.BigDecimal;
-
 /**
  * Created by Amalia on 11/14/2017.
  */
 public class DeclaratieIntereseAsociatInfo {
     private Integer id;
     private String unitatea;
+    private String adresa;
     private String rolul;
     private String partiSociale;
     private String valoare;
-    private String explicatie;
+    private String explicatieVenitAsoc;
     private String moneda;
 
     public Integer getId() {
@@ -54,12 +53,12 @@ public class DeclaratieIntereseAsociatInfo {
         this.valoare = valoare;
     }
 
-    public String getExplicatie() {
-        return explicatie;
+    public String getExplicatieVenitAsoc() {
+        return explicatieVenitAsoc;
     }
 
-    public void setExplicatie(String explicatie) {
-        this.explicatie = explicatie;
+    public void setExplicatieVenitAsoc(String explicatieVenitAsoc) {
+        this.explicatieVenitAsoc = explicatieVenitAsoc;
     }
 
     public String getMoneda() {
@@ -68,5 +67,13 @@ public class DeclaratieIntereseAsociatInfo {
 
     public void setMoneda(String moneda) {
         this.moneda = moneda;
+    }
+
+    public String getAdresa() {
+        return adresa;
+    }
+
+    public void setAdresa(String adresa) {
+        this.adresa = adresa;
     }
 }

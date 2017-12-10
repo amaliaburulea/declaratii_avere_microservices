@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.ValidationException;
 import java.io.IOException;
 import java.io.StringReader;
-import java.math.BigDecimal;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -227,19 +226,21 @@ public class DemnitarImportDiController {
         declaratieIntereseInfo.setLinkDeclaratie(revenueDeclarationInfo.getLinkDeclaratie());
         declaratieIntereseInfo.setGrupPolitic(revenueDeclarationInfo.getGrupPolitic());
         declaratieIntereseInfo.setCircumscriptie(revenueDeclarationInfo.getCircumscriptie());
-        String date = revenueDeclarationInfo.getDataDepunerii().replaceAll("[.]", "/");
-        declaratieIntereseInfo.setDataDepunerii(DateUtilities.parseDate(date, "dd/MM/yyyy"));
-        declaratieIntereseInfo.setIsDone(true);
+        String date = revenueDeclarationInfo.getDataDepunerii();
+        if (!date.contentEquals("")){
+            date = date.replaceAll("[.]", "/");
+            declaratieIntereseInfo.setDataDepunerii(DateUtilities.parseDate(date, "dd/MM/yyyy"));
+        } else{
+            declaratieIntereseInfo.setDataDepunerii(null);
+        }
 
+        declaratieIntereseInfo.setIsDone(true);
 
         List<DeclaratieIntereseAsociatInfo> declaratieIntereseAsociatInfoList = getDeclaratieIntereseAsociatInfoList(revenueDeclarationInfo);
         declaratieIntereseInfo.setDeclaratieIntereseAsociatInfoList(declaratieIntereseAsociatInfoList);
 
-
-
         return declaratieIntereseInfo;
     }
-
 
     private List<DeclaratieIntereseAsociatInfo> getDeclaratieIntereseAsociatInfoList(RevenueDeclarationInfo revenueDeclarationInfo) {
         List<DeclaratieIntereseAsociatInfo> declaratieIntereseAsociatInfoList = new ArrayList<>();
@@ -247,54 +248,179 @@ public class DemnitarImportDiController {
         if (revenueDeclarationInfo.getExistaAsociat1().equals("Da")) {
             DeclaratieIntereseAsociatInfo declaratieIntereseAsociatInfo = new DeclaratieIntereseAsociatInfo();
             declaratieIntereseAsociatInfo.setUnitatea(revenueDeclarationInfo.getAsociat1unitatea());
+            declaratieIntereseAsociatInfo.setAdresa(revenueDeclarationInfo.getAsociat1adresa());
             declaratieIntereseAsociatInfo.setRolul(revenueDeclarationInfo.getAsociat1rolul());
             declaratieIntereseAsociatInfo.setPartiSociale(revenueDeclarationInfo.getAsociat1partiSociale());
             declaratieIntereseAsociatInfo.setValoare(revenueDeclarationInfo.getAsociat1valoare());
             declaratieIntereseAsociatInfo.setMoneda(revenueDeclarationInfo.getAsociat1moneda());
-            declaratieIntereseAsociatInfo.setExplicatie(revenueDeclarationInfo.getAsociat1explicatie());
+            declaratieIntereseAsociatInfo.setExplicatieVenitAsoc(revenueDeclarationInfo.getAsociat1explicatie());
             declaratieIntereseAsociatInfoList.add(declaratieIntereseAsociatInfo);
         }
         if (revenueDeclarationInfo.getExistaAsociat2().equals("Da")) {
             DeclaratieIntereseAsociatInfo declaratieIntereseAsociatInfo = new DeclaratieIntereseAsociatInfo();
             declaratieIntereseAsociatInfo.setUnitatea(revenueDeclarationInfo.getAsociat2unitatea());
+            declaratieIntereseAsociatInfo.setAdresa(revenueDeclarationInfo.getAsociat2adresa());
             declaratieIntereseAsociatInfo.setRolul(revenueDeclarationInfo.getAsociat2rolul());
             declaratieIntereseAsociatInfo.setPartiSociale(revenueDeclarationInfo.getAsociat2partiSociale());
             declaratieIntereseAsociatInfo.setValoare(revenueDeclarationInfo.getAsociat2valoare());
             declaratieIntereseAsociatInfo.setMoneda(revenueDeclarationInfo.getAsociat2moneda());
-            declaratieIntereseAsociatInfo.setExplicatie(revenueDeclarationInfo.getAsociat2explicatie());
+            declaratieIntereseAsociatInfo.setExplicatieVenitAsoc(revenueDeclarationInfo.getAsociat2explicatie());
             declaratieIntereseAsociatInfoList.add(declaratieIntereseAsociatInfo);
         }
 
         if (revenueDeclarationInfo.getExistaAsociat3().equals("Da")) {
             DeclaratieIntereseAsociatInfo declaratieIntereseAsociatInfo = new DeclaratieIntereseAsociatInfo();
             declaratieIntereseAsociatInfo.setUnitatea(revenueDeclarationInfo.getAsociat3unitatea());
+            declaratieIntereseAsociatInfo.setAdresa(revenueDeclarationInfo.getAsociat3adresa());
             declaratieIntereseAsociatInfo.setRolul(revenueDeclarationInfo.getAsociat3rolul());
             declaratieIntereseAsociatInfo.setPartiSociale(revenueDeclarationInfo.getAsociat3partiSociale());
             declaratieIntereseAsociatInfo.setValoare(revenueDeclarationInfo.getAsociat3valoare());
             declaratieIntereseAsociatInfo.setMoneda(revenueDeclarationInfo.getAsociat3moneda());
-            declaratieIntereseAsociatInfo.setExplicatie(revenueDeclarationInfo.getAsociat3explicatie());
+            declaratieIntereseAsociatInfo.setExplicatieVenitAsoc(revenueDeclarationInfo.getAsociat3explicatie());
             declaratieIntereseAsociatInfoList.add(declaratieIntereseAsociatInfo);
         }
 
         if (revenueDeclarationInfo.getExistaAsociat4().equals("Da")) {
             DeclaratieIntereseAsociatInfo declaratieIntereseAsociatInfo = new DeclaratieIntereseAsociatInfo();
             declaratieIntereseAsociatInfo.setUnitatea(revenueDeclarationInfo.getAsociat4unitatea());
+            declaratieIntereseAsociatInfo.setAdresa(revenueDeclarationInfo.getAsociat4adresa());
             declaratieIntereseAsociatInfo.setRolul(revenueDeclarationInfo.getAsociat4rolul());
             declaratieIntereseAsociatInfo.setPartiSociale(revenueDeclarationInfo.getAsociat4partiSociale());
             declaratieIntereseAsociatInfo.setValoare(revenueDeclarationInfo.getAsociat4valoare());
             declaratieIntereseAsociatInfo.setMoneda(revenueDeclarationInfo.getAsociat4moneda());
-            declaratieIntereseAsociatInfo.setExplicatie(revenueDeclarationInfo.getAsociat4explicatie());
+            declaratieIntereseAsociatInfo.setExplicatieVenitAsoc(revenueDeclarationInfo.getAsociat4explicatie());
             declaratieIntereseAsociatInfoList.add(declaratieIntereseAsociatInfo);
         }
 
         if (revenueDeclarationInfo.getExistaAsociat5().equals("Da")) {
             DeclaratieIntereseAsociatInfo declaratieIntereseAsociatInfo = new DeclaratieIntereseAsociatInfo();
             declaratieIntereseAsociatInfo.setUnitatea(revenueDeclarationInfo.getAsociat5unitatea());
+            declaratieIntereseAsociatInfo.setAdresa(revenueDeclarationInfo.getAsociat5adresa());
             declaratieIntereseAsociatInfo.setRolul(revenueDeclarationInfo.getAsociat5rolul());
             declaratieIntereseAsociatInfo.setPartiSociale(revenueDeclarationInfo.getAsociat5partiSociale());
             declaratieIntereseAsociatInfo.setValoare(revenueDeclarationInfo.getAsociat5valoare());
             declaratieIntereseAsociatInfo.setMoneda(revenueDeclarationInfo.getAsociat5moneda());
-            declaratieIntereseAsociatInfo.setExplicatie(revenueDeclarationInfo.getAsociat5explicatie());
+            declaratieIntereseAsociatInfo.setExplicatieVenitAsoc(revenueDeclarationInfo.getAsociat5explicatie());
+            declaratieIntereseAsociatInfoList.add(declaratieIntereseAsociatInfo);
+        }
+
+        if (revenueDeclarationInfo.getExistaAsociat6().equals("Da")) {
+            DeclaratieIntereseAsociatInfo declaratieIntereseAsociatInfo = new DeclaratieIntereseAsociatInfo();
+            declaratieIntereseAsociatInfo.setUnitatea(revenueDeclarationInfo.getAsociat6unitatea());
+            declaratieIntereseAsociatInfo.setAdresa(revenueDeclarationInfo.getAsociat6adresa());
+            declaratieIntereseAsociatInfo.setRolul(revenueDeclarationInfo.getAsociat6rolul());
+            declaratieIntereseAsociatInfo.setPartiSociale(revenueDeclarationInfo.getAsociat6partiSociale());
+            declaratieIntereseAsociatInfo.setValoare(revenueDeclarationInfo.getAsociat6valoare());
+            declaratieIntereseAsociatInfo.setMoneda(revenueDeclarationInfo.getAsociat6moneda());
+            declaratieIntereseAsociatInfo.setExplicatieVenitAsoc(revenueDeclarationInfo.getAsociat6explicatie());
+            declaratieIntereseAsociatInfoList.add(declaratieIntereseAsociatInfo);
+        }
+
+        if (revenueDeclarationInfo.getExistaAsociat7().equals("Da")) {
+            DeclaratieIntereseAsociatInfo declaratieIntereseAsociatInfo = new DeclaratieIntereseAsociatInfo();
+            declaratieIntereseAsociatInfo.setUnitatea(revenueDeclarationInfo.getAsociat7unitatea());
+            declaratieIntereseAsociatInfo.setAdresa(revenueDeclarationInfo.getAsociat7adresa());
+            declaratieIntereseAsociatInfo.setRolul(revenueDeclarationInfo.getAsociat7rolul());
+            declaratieIntereseAsociatInfo.setPartiSociale(revenueDeclarationInfo.getAsociat7partiSociale());
+            declaratieIntereseAsociatInfo.setValoare(revenueDeclarationInfo.getAsociat7valoare());
+            declaratieIntereseAsociatInfo.setMoneda(revenueDeclarationInfo.getAsociat7moneda());
+            declaratieIntereseAsociatInfo.setExplicatieVenitAsoc(revenueDeclarationInfo.getAsociat7explicatie());
+            declaratieIntereseAsociatInfoList.add(declaratieIntereseAsociatInfo);
+        }
+
+        if (revenueDeclarationInfo.getExistaAsociat8().equals("Da")) {
+            DeclaratieIntereseAsociatInfo declaratieIntereseAsociatInfo = new DeclaratieIntereseAsociatInfo();
+            declaratieIntereseAsociatInfo.setUnitatea(revenueDeclarationInfo.getAsociat8unitatea());
+            declaratieIntereseAsociatInfo.setAdresa(revenueDeclarationInfo.getAsociat8adresa());
+            declaratieIntereseAsociatInfo.setRolul(revenueDeclarationInfo.getAsociat8rolul());
+            declaratieIntereseAsociatInfo.setPartiSociale(revenueDeclarationInfo.getAsociat8partiSociale());
+            declaratieIntereseAsociatInfo.setValoare(revenueDeclarationInfo.getAsociat8valoare());
+            declaratieIntereseAsociatInfo.setMoneda(revenueDeclarationInfo.getAsociat8moneda());
+            declaratieIntereseAsociatInfo.setExplicatieVenitAsoc(revenueDeclarationInfo.getAsociat8explicatie());
+            declaratieIntereseAsociatInfoList.add(declaratieIntereseAsociatInfo);
+        }
+
+        if (revenueDeclarationInfo.getExistaAsociat9().equals("Da")) {
+            DeclaratieIntereseAsociatInfo declaratieIntereseAsociatInfo = new DeclaratieIntereseAsociatInfo();
+            declaratieIntereseAsociatInfo.setUnitatea(revenueDeclarationInfo.getAsociat9unitatea());
+            declaratieIntereseAsociatInfo.setAdresa(revenueDeclarationInfo.getAsociat9adresa());
+            declaratieIntereseAsociatInfo.setRolul(revenueDeclarationInfo.getAsociat9rolul());
+            declaratieIntereseAsociatInfo.setPartiSociale(revenueDeclarationInfo.getAsociat9partiSociale());
+            declaratieIntereseAsociatInfo.setValoare(revenueDeclarationInfo.getAsociat9valoare());
+            declaratieIntereseAsociatInfo.setMoneda(revenueDeclarationInfo.getAsociat9moneda());
+            declaratieIntereseAsociatInfo.setExplicatieVenitAsoc(revenueDeclarationInfo.getAsociat9explicatie());
+            declaratieIntereseAsociatInfoList.add(declaratieIntereseAsociatInfo);
+        }
+
+        if (revenueDeclarationInfo.getExistaAsociat10().equals("Da")) {
+            DeclaratieIntereseAsociatInfo declaratieIntereseAsociatInfo = new DeclaratieIntereseAsociatInfo();
+            declaratieIntereseAsociatInfo.setUnitatea(revenueDeclarationInfo.getAsociat10unitatea());
+            declaratieIntereseAsociatInfo.setAdresa(revenueDeclarationInfo.getAsociat10adresa());
+            declaratieIntereseAsociatInfo.setRolul(revenueDeclarationInfo.getAsociat10rolul());
+            declaratieIntereseAsociatInfo.setPartiSociale(revenueDeclarationInfo.getAsociat10partiSociale());
+            declaratieIntereseAsociatInfo.setValoare(revenueDeclarationInfo.getAsociat10valoare());
+            declaratieIntereseAsociatInfo.setMoneda(revenueDeclarationInfo.getAsociat10moneda());
+            declaratieIntereseAsociatInfo.setExplicatieVenitAsoc(revenueDeclarationInfo.getAsociat10explicatie());
+            declaratieIntereseAsociatInfoList.add(declaratieIntereseAsociatInfo);
+        }
+
+        if (revenueDeclarationInfo.getExistaAsociat11().equals("Da")) {
+            DeclaratieIntereseAsociatInfo declaratieIntereseAsociatInfo = new DeclaratieIntereseAsociatInfo();
+            declaratieIntereseAsociatInfo.setUnitatea(revenueDeclarationInfo.getAsociat11unitatea());
+            declaratieIntereseAsociatInfo.setAdresa(revenueDeclarationInfo.getAsociat11adresa());
+            declaratieIntereseAsociatInfo.setRolul(revenueDeclarationInfo.getAsociat11rolul());
+            declaratieIntereseAsociatInfo.setPartiSociale(revenueDeclarationInfo.getAsociat11partiSociale());
+            declaratieIntereseAsociatInfo.setValoare(revenueDeclarationInfo.getAsociat11valoare());
+            declaratieIntereseAsociatInfo.setMoneda(revenueDeclarationInfo.getAsociat11moneda());
+            declaratieIntereseAsociatInfo.setExplicatieVenitAsoc(revenueDeclarationInfo.getAsociat11explicatie());
+            declaratieIntereseAsociatInfoList.add(declaratieIntereseAsociatInfo);
+        }
+
+        if (revenueDeclarationInfo.getExistaAsociat12().equals("Da")) {
+            DeclaratieIntereseAsociatInfo declaratieIntereseAsociatInfo = new DeclaratieIntereseAsociatInfo();
+            declaratieIntereseAsociatInfo.setUnitatea(revenueDeclarationInfo.getAsociat12unitatea());
+            declaratieIntereseAsociatInfo.setAdresa(revenueDeclarationInfo.getAsociat12adresa());
+            declaratieIntereseAsociatInfo.setRolul(revenueDeclarationInfo.getAsociat12rolul());
+            declaratieIntereseAsociatInfo.setPartiSociale(revenueDeclarationInfo.getAsociat12partiSociale());
+            declaratieIntereseAsociatInfo.setValoare(revenueDeclarationInfo.getAsociat12valoare());
+            declaratieIntereseAsociatInfo.setMoneda(revenueDeclarationInfo.getAsociat12moneda());
+            declaratieIntereseAsociatInfo.setExplicatieVenitAsoc(revenueDeclarationInfo.getAsociat12explicatie());
+            declaratieIntereseAsociatInfoList.add(declaratieIntereseAsociatInfo);
+        }
+
+        if (revenueDeclarationInfo.getExistaAsociat13().equals("Da")) {
+            DeclaratieIntereseAsociatInfo declaratieIntereseAsociatInfo = new DeclaratieIntereseAsociatInfo();
+            declaratieIntereseAsociatInfo.setUnitatea(revenueDeclarationInfo.getAsociat13unitatea());
+            declaratieIntereseAsociatInfo.setAdresa(revenueDeclarationInfo.getAsociat13adresa());
+            declaratieIntereseAsociatInfo.setRolul(revenueDeclarationInfo.getAsociat13rolul());
+            declaratieIntereseAsociatInfo.setPartiSociale(revenueDeclarationInfo.getAsociat13partiSociale());
+            declaratieIntereseAsociatInfo.setValoare(revenueDeclarationInfo.getAsociat13valoare());
+            declaratieIntereseAsociatInfo.setMoneda(revenueDeclarationInfo.getAsociat13moneda());
+            declaratieIntereseAsociatInfo.setExplicatieVenitAsoc(revenueDeclarationInfo.getAsociat13explicatie());
+            declaratieIntereseAsociatInfoList.add(declaratieIntereseAsociatInfo);
+        }
+
+        if (revenueDeclarationInfo.getExistaAsociat14().equals("Da")) {
+            DeclaratieIntereseAsociatInfo declaratieIntereseAsociatInfo = new DeclaratieIntereseAsociatInfo();
+            declaratieIntereseAsociatInfo.setUnitatea(revenueDeclarationInfo.getAsociat14unitatea());
+            declaratieIntereseAsociatInfo.setAdresa(revenueDeclarationInfo.getAsociat14adresa());
+            declaratieIntereseAsociatInfo.setRolul(revenueDeclarationInfo.getAsociat14rolul());
+            declaratieIntereseAsociatInfo.setPartiSociale(revenueDeclarationInfo.getAsociat14partiSociale());
+            declaratieIntereseAsociatInfo.setValoare(revenueDeclarationInfo.getAsociat14valoare());
+            declaratieIntereseAsociatInfo.setMoneda(revenueDeclarationInfo.getAsociat14moneda());
+            declaratieIntereseAsociatInfo.setExplicatieVenitAsoc(revenueDeclarationInfo.getAsociat14explicatie());
+            declaratieIntereseAsociatInfoList.add(declaratieIntereseAsociatInfo);
+        }
+
+        if (revenueDeclarationInfo.getExistaAsociat15().equals("Da")) {
+            DeclaratieIntereseAsociatInfo declaratieIntereseAsociatInfo = new DeclaratieIntereseAsociatInfo();
+            declaratieIntereseAsociatInfo.setUnitatea(revenueDeclarationInfo.getAsociat15unitatea());
+            declaratieIntereseAsociatInfo.setAdresa(revenueDeclarationInfo.getAsociat15adresa());
+            declaratieIntereseAsociatInfo.setRolul(revenueDeclarationInfo.getAsociat15rolul());
+            declaratieIntereseAsociatInfo.setPartiSociale(revenueDeclarationInfo.getAsociat15partiSociale());
+            declaratieIntereseAsociatInfo.setValoare(revenueDeclarationInfo.getAsociat15valoare());
+            declaratieIntereseAsociatInfo.setMoneda(revenueDeclarationInfo.getAsociat15moneda());
+            declaratieIntereseAsociatInfo.setExplicatieVenitAsoc(revenueDeclarationInfo.getAsociat15explicatie());
             declaratieIntereseAsociatInfoList.add(declaratieIntereseAsociatInfo);
         }
 
@@ -325,57 +451,153 @@ public class DemnitarImportDiController {
 
             columnMapping.put("isAssoc", "existaAsociat1");
             columnMapping.put("companyName", "asociat1unitatea");
+            columnMapping.put("companyAddress", "asociat1adresa");
             columnMapping.put("roleInComp", "asociat1rolul");
             columnMapping.put("noAct", "asociat1partiSociale");
             columnMapping.put("valAssoc", "asociat1valoare");
             columnMapping.put("currAssoc", "asociat1moneda");
-            columnMapping.put("expl", "asociat1explicatie");
+            columnMapping.put("valAssoc_e", "asociat1explicatie");
 
             //asociat 2
 
             columnMapping.put("moreAssoc", "existaAsociat2");
             columnMapping.put("companyName2", "asociat2unitatea");
+            columnMapping.put("companyAddress2", "asociat2adresa");
             columnMapping.put("roleInComp2", "asociat2rolul");
             columnMapping.put("noAct2", "asociat2partiSociale");
             columnMapping.put("valAssoc2", "asociat2valoare");
             columnMapping.put("currAssoc2", "asociat2moneda");
-            columnMapping.put("expl2", "asociat2explicatie");
+            columnMapping.put("valAssoc_e2", "asociat2explicatie");
 
             //asociat 3
             columnMapping.put("moreAssoc2", "existaAsociat3");
             columnMapping.put("companyName3", "asociat3unitatea");
+            columnMapping.put("companyAddress3", "asociat3adresa");
             columnMapping.put("roleInComp3", "asociat3rolul");
             columnMapping.put("noAct3", "asociat3partiSociale");
             columnMapping.put("valAssoc3", "asociat3valoare");
             columnMapping.put("currAssoc3", "asociat3moneda");
-            columnMapping.put("expl3", "asociat3explicatie");
+            columnMapping.put("valAssoc_e3", "asociat3explicatie");
 
             //asociat 4
             columnMapping.put("moreAssoc3", "existaAsociat4");
             columnMapping.put("companyName4", "asociat4unitatea");
+            columnMapping.put("companyAddress4", "asociat4adresa");
             columnMapping.put("roleInComp4", "asociat4rolul");
             columnMapping.put("noAct4", "asociat4partiSociale");
             columnMapping.put("valAssoc4", "asociat4valoare");
             columnMapping.put("currAssoc4", "asociat4moneda");
-            columnMapping.put("expl4", "asociat4explicatie");
+            columnMapping.put("valAssoc_e4", "asociat4explicatie");
 
             //asociat 5
             columnMapping.put("moreAssoc4", "existaAsociat5");
             columnMapping.put("companyName5", "asociat5unitatea");
+            columnMapping.put("companyAddress5", "asociat5adresa");
             columnMapping.put("roleInComp5", "asociat5rolul");
             columnMapping.put("noAct5", "asociat5partiSociale");
             columnMapping.put("valAssoc5", "asociat5valoare");
             columnMapping.put("currAssoc5", "asociat5moneda");
-            columnMapping.put("expl5", "asociat5explicatie");
+            columnMapping.put("valAssoc_e5", "asociat5explicatie");
 
             //asociat 6
             columnMapping.put("moreAssoc5", "existaAsociat6");
             columnMapping.put("companyName6", "asociat6unitatea");
+            columnMapping.put("companyAddress6", "asociat6adresa");
             columnMapping.put("roleInComp6", "asociat6rolul");
             columnMapping.put("noAct6", "asociat6partiSociale");
             columnMapping.put("valAssoc6", "asociat6valoare");
             columnMapping.put("currAssoc6", "asociat6moneda");
-            columnMapping.put("expl6", "asociat6explicatie");
+            columnMapping.put("valAssoc_e6", "asociat6explicatie");
+
+            //asociat 7
+            columnMapping.put("moreAssoc6", "existaAsociat7");
+            columnMapping.put("companyName7", "asociat7unitatea");
+            columnMapping.put("companyAddress7", "asociat7adresa");
+            columnMapping.put("roleInComp7", "asociat7rolul");
+            columnMapping.put("noAct7", "asociat7partiSociale");
+            columnMapping.put("valAssoc7", "asociat7valoare");
+            columnMapping.put("currAssoc7", "asociat7moneda");
+            columnMapping.put("valAssoc_e7", "asociat7explicatie");
+
+            //asociat 8
+            columnMapping.put("moreAssoc7", "existaAsociat8");
+            columnMapping.put("companyName8", "asociat8unitatea");
+            columnMapping.put("companyAddress8", "asociat8adresa");
+            columnMapping.put("roleInComp8", "asociat8rolul");
+            columnMapping.put("noAct8", "asociat8partiSociale");
+            columnMapping.put("valAssoc8", "asociat8valoare");
+            columnMapping.put("currAssoc8", "asociat8moneda");
+            columnMapping.put("valAssoc_e8", "asociat8explicatie");
+
+            //asociat 9
+            columnMapping.put("moreAssoc8", "existaAsociat9");
+            columnMapping.put("companyName9", "asociat9unitatea");
+            columnMapping.put("companyAddress9", "asociat9adresa");
+            columnMapping.put("roleInComp9", "asociat9rolul");
+            columnMapping.put("noAct9", "asociat9partiSociale");
+            columnMapping.put("valAssoc9", "asociat9valoare");
+            columnMapping.put("currAssoc9", "asociat9moneda");
+            columnMapping.put("valAssoc_e9", "asociat9explicatie");
+
+            //asociat 10
+            columnMapping.put("moreAssoc9", "existaAsociat10");
+            columnMapping.put("companyName10", "asociat10unitatea");
+            columnMapping.put("companyAddress10", "asociat10adresa");
+            columnMapping.put("roleInComp10", "asociat10rolul");
+            columnMapping.put("noAct10", "asociat10partiSociale");
+            columnMapping.put("valAssoc10", "asociat10valoare");
+            columnMapping.put("currAssoc10", "asociat10moneda");
+            columnMapping.put("valAssoc_e10", "asociat10explicatie");
+
+            //asociat 11
+            columnMapping.put("moreAssoc10", "existaAsociat11");
+            columnMapping.put("companyName11", "asociat11unitatea");
+            columnMapping.put("companyAddress11", "asociat11adresa");
+            columnMapping.put("roleInComp11", "asociat11rolul");
+            columnMapping.put("noAct11", "asociat11partiSociale");
+            columnMapping.put("valAssoc11", "asociat11valoare");
+            columnMapping.put("currAssoc11", "asociat11moneda");
+            columnMapping.put("valAssoc_e11", "asociat11explicatie");
+
+            //asociat 12
+            columnMapping.put("moreAssoc11", "existaAsociat12");
+            columnMapping.put("companyName12", "asociat12unitatea");
+            columnMapping.put("companyAddress12", "asociat12adresa");
+            columnMapping.put("roleInComp12", "asociat12rolul");
+            columnMapping.put("noAct12", "asociat12partiSociale");
+            columnMapping.put("valAssoc12", "asociat12valoare");
+            columnMapping.put("currAssoc12", "asociat12moneda");
+            columnMapping.put("valAssoc_e12", "asociat12explicatie");
+
+            //asociat 13
+            columnMapping.put("moreAssoc12", "existaAsociat13");
+            columnMapping.put("companyName13", "asociat13unitatea");
+            columnMapping.put("companyAddress13", "asociat13adresa");
+            columnMapping.put("roleInComp13", "asociat13rolul");
+            columnMapping.put("noAct13", "asociat13partiSociale");
+            columnMapping.put("valAssoc13", "asociat13valoare");
+            columnMapping.put("currAssoc13", "asociat13moneda");
+            columnMapping.put("valAssoc_e13", "asociat13explicatie");
+
+            //asociat 14
+            columnMapping.put("moreAssoc13", "existaAsociat14");
+            columnMapping.put("companyName14", "asociat14unitatea");
+            columnMapping.put("companyAddress14", "asociat14adresa");
+            columnMapping.put("roleInComp14", "asociat14rolul");
+            columnMapping.put("noAct14", "asociat14partiSociale");
+            columnMapping.put("valAssoc14", "asociat14valoare");
+            columnMapping.put("currAssoc14", "asociat14moneda");
+            columnMapping.put("valAssoc_e14", "asociat14explicatie");
+
+            //asociat 15
+            columnMapping.put("moreAssoc14", "existaAsociat15");
+            columnMapping.put("companyName15", "asociat15unitatea");
+            columnMapping.put("companyAddress15", "asociat15adresa");
+            columnMapping.put("roleInComp15", "asociat15rolul");
+            columnMapping.put("noAct15", "asociat15partiSociale");
+            columnMapping.put("valAssoc15", "asociat15valoare");
+            columnMapping.put("currAssoc15", "asociat15moneda");
+            columnMapping.put("valAssoc_e15", "asociat15explicatie");
 
             return columnMapping;
         }
