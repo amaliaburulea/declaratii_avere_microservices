@@ -1,9 +1,6 @@
 package com.declaratiiavere.demnitarservice.demnitar;
 
-import com.declaratiiavere.jpaframework.EntityBase;
-
 import javax.persistence.*;
-import java.math.BigDecimal;
 
 /**
  * Created by Amalia on 11/14/2017.
@@ -11,7 +8,7 @@ import java.math.BigDecimal;
 
 @Table(name = "declaratie_interese_asociat_sc")
 @Entity
-public class DeclaratieIntereseAsociatEntity extends EntityBase {
+public class DeclaratieIntereseAsociatEntity  {
     @Column(name = "id")
     @Id
     @GeneratedValue
@@ -22,6 +19,9 @@ public class DeclaratieIntereseAsociatEntity extends EntityBase {
 
     @Column(name ="unitatea")
     private String unitatea;
+
+    @Column(name ="adresa")
+    private String adresa;
 
     @Column(name ="rolul")
     private String rolul;
@@ -36,7 +36,7 @@ public class DeclaratieIntereseAsociatEntity extends EntityBase {
     private String moneda;
 
     @Column(name ="explicatie_venit")
-    private String explicatieVenit;
+    private String explicatieVenitAsoc;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "declaratie_interese_id", nullable = false)
@@ -98,12 +98,12 @@ public class DeclaratieIntereseAsociatEntity extends EntityBase {
         this.moneda = moneda;
     }
 
-    public String getExplicatieVenit() {
-        return explicatieVenit;
+    public String getExplicatieVenitAsoc() {
+        return explicatieVenitAsoc;
     }
 
-    public void setExplicatieVenit(String explicatieVenit) {
-        this.explicatieVenit = explicatieVenit;
+    public void setExplicatieVenitAsoc(String explicatieVenitAsoc) {
+        this.explicatieVenitAsoc = explicatieVenitAsoc;
     }
 
     public DeclaratieIntereseEntity getDeclaratieIntereseEntity() {
@@ -112,5 +112,13 @@ public class DeclaratieIntereseAsociatEntity extends EntityBase {
 
     public void setDeclaratieIntereseEntity(DeclaratieIntereseEntity declaratieIntereseEntity) {
         this.declaratieIntereseEntity = declaratieIntereseEntity;
+    }
+
+    public String getAdresa() {
+        return adresa;
+    }
+
+    public void setAdresa(String adresa) {
+        this.adresa = adresa;
     }
 }

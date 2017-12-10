@@ -1084,6 +1084,7 @@ public class RevenueDeclarationInfo {
     //declaratie interese asociat 1
     private String existaAsociat1;
     private String asociat1unitatea;
+    private String asociat1adresa;
     private String asociat1rolul;
     private String asociat1partiSociale;
     private String asociat1valoare;
@@ -1093,6 +1094,7 @@ public class RevenueDeclarationInfo {
     //declaratie interese asociat 2
     private String existaAsociat2;
     private String asociat2unitatea;
+    private String asociat2adresa;
     private String asociat2rolul;
     private String asociat2partiSociale;
     private String asociat2valoare;
@@ -1102,6 +1104,7 @@ public class RevenueDeclarationInfo {
     //declaratie interese asociat 3
     private String existaAsociat3;
     private String asociat3unitatea;
+    private String asociat3adresa;
     private String asociat3rolul;
     private String asociat3partiSociale;
     private String asociat3valoare;
@@ -1111,6 +1114,7 @@ public class RevenueDeclarationInfo {
     //declaratie interese asociat 4
     private String existaAsociat4;
     private String asociat4unitatea;
+    private String asociat4adresa;
     private String asociat4rolul;
     private String asociat4partiSociale;
     private String asociat4valoare;
@@ -1120,11 +1124,112 @@ public class RevenueDeclarationInfo {
     //declaratie interese asociat 5
     private String existaAsociat5;
     private String asociat5unitatea;
+    private String asociat5adresa;
     private String asociat5rolul;
     private String asociat5partiSociale;
     private String asociat5valoare;
     private String asociat5explicatie;
     private String asociat5moneda;
+
+    //declaratie interese asociat 6
+    private String existaAsociat6;
+    private String asociat6unitatea;
+    private String asociat6adresa;
+    private String asociat6rolul;
+    private String asociat6partiSociale;
+    private String asociat6valoare;
+    private String asociat6explicatie;
+    private String asociat6moneda;
+
+    //declaratie interese asociat 7
+    private String existaAsociat7;
+    private String asociat7unitatea;
+    private String asociat7adresa;
+    private String asociat7rolul;
+    private String asociat7partiSociale;
+    private String asociat7valoare;
+    private String asociat7explicatie;
+    private String asociat7moneda;
+
+    //declaratie interese asociat 8
+    private String existaAsociat8;
+    private String asociat8unitatea;
+    private String asociat8adresa;
+    private String asociat8rolul;
+    private String asociat8partiSociale;
+    private String asociat8valoare;
+    private String asociat8explicatie;
+    private String asociat8moneda;
+
+    //declaratie interese asociat 9
+    private String existaAsociat9;
+    private String asociat9unitatea;
+    private String asociat9adresa;
+    private String asociat9rolul;
+    private String asociat9partiSociale;
+    private String asociat9valoare;
+    private String asociat9explicatie;
+    private String asociat9moneda;
+
+    //declaratie interese asociat 10
+    private String existaAsociat10;
+    private String asociat10unitatea;
+    private String asociat10adresa;
+    private String asociat10rolul;
+    private String asociat10partiSociale;
+    private String asociat10valoare;
+    private String asociat10explicatie;
+    private String asociat10moneda;
+
+    //declaratie interese asociat 11
+    private String existaAsociat11;
+    private String asociat11unitatea;
+    private String asociat11adresa;
+    private String asociat11rolul;
+    private String asociat11partiSociale;
+    private String asociat11valoare;
+    private String asociat11explicatie;
+    private String asociat11moneda;
+
+    //declaratie interese asociat 12
+    private String existaAsociat12;
+    private String asociat12unitatea;
+    private String asociat12adresa;
+    private String asociat12rolul;
+    private String asociat12partiSociale;
+    private String asociat12valoare;
+    private String asociat12explicatie;
+    private String asociat12moneda;
+
+    //declaratie interese asociat 13
+    private String existaAsociat13;
+    private String asociat13unitatea;
+    private String asociat13adresa;
+    private String asociat13rolul;
+    private String asociat13partiSociale;
+    private String asociat13valoare;
+    private String asociat13explicatie;
+    private String asociat13moneda;
+
+    //declaratie interese asociat 14
+    private String existaAsociat14;
+    private String asociat14unitatea;
+    private String asociat14adresa;
+    private String asociat14rolul;
+    private String asociat14partiSociale;
+    private String asociat14valoare;
+    private String asociat14explicatie;
+    private String asociat14moneda;
+
+    //declaratie interese asociat 15
+    private String existaAsociat15;
+    private String asociat15unitatea;
+    private String asociat15adresa;
+    private String asociat15rolul;
+    private String asociat15partiSociale;
+    private String asociat15valoare;
+    private String asociat15explicatie;
+    private String asociat15moneda;
 
     public String getFirstName() {
         return firstName;
@@ -8100,5 +8205,685 @@ public class RevenueDeclarationInfo {
 
     public void setCladire15ExplicatieDobandire(String cladire15ExplicatieDobandire) {
         this.cladire15ExplicatieDobandire = cladire15ExplicatieDobandire;
+    }
+
+    public String getAsociat1adresa() {
+        return asociat1adresa;
+    }
+
+    public void setAsociat1adresa(String asociat1adresa) {
+        this.asociat1adresa = asociat1adresa;
+    }
+
+    public String getAsociat2adresa() {
+        return asociat2adresa;
+    }
+
+    public void setAsociat2adresa(String asociat2adresa) {
+        this.asociat2adresa = asociat2adresa;
+    }
+
+    public String getAsociat3adresa() {
+        return asociat3adresa;
+    }
+
+    public void setAsociat3adresa(String asociat3adresa) {
+        this.asociat3adresa = asociat3adresa;
+    }
+
+    public String getAsociat4adresa() {
+        return asociat4adresa;
+    }
+
+    public void setAsociat4adresa(String asociat4adresa) {
+        this.asociat4adresa = asociat4adresa;
+    }
+
+    public String getAsociat5adresa() {
+        return asociat5adresa;
+    }
+
+    public void setAsociat5adresa(String asociat5adresa) {
+        this.asociat5adresa = asociat5adresa;
+    }
+
+    public String getExistaAsociat6() {
+        return existaAsociat6;
+    }
+
+    public void setExistaAsociat6(String existaAsociat6) {
+        this.existaAsociat6 = existaAsociat6;
+    }
+
+    public String getAsociat6unitatea() {
+        return asociat6unitatea;
+    }
+
+    public void setAsociat6unitatea(String asociat6unitatea) {
+        this.asociat6unitatea = asociat6unitatea;
+    }
+
+    public String getAsociat6adresa() {
+        return asociat6adresa;
+    }
+
+    public void setAsociat6adresa(String asociat6adresa) {
+        this.asociat6adresa = asociat6adresa;
+    }
+
+    public String getAsociat6rolul() {
+        return asociat6rolul;
+    }
+
+    public void setAsociat6rolul(String asociat6rolul) {
+        this.asociat6rolul = asociat6rolul;
+    }
+
+    public String getAsociat6partiSociale() {
+        return asociat6partiSociale;
+    }
+
+    public void setAsociat6partiSociale(String asociat6partiSociale) {
+        this.asociat6partiSociale = asociat6partiSociale;
+    }
+
+    public String getAsociat6valoare() {
+        return asociat6valoare;
+    }
+
+    public void setAsociat6valoare(String asociat6valoare) {
+        this.asociat6valoare = asociat6valoare;
+    }
+
+    public String getAsociat6explicatie() {
+        return asociat6explicatie;
+    }
+
+    public void setAsociat6explicatie(String asociat6explicatie) {
+        this.asociat6explicatie = asociat6explicatie;
+    }
+
+    public String getAsociat6moneda() {
+        return asociat6moneda;
+    }
+
+    public void setAsociat6moneda(String asociat6moneda) {
+        this.asociat6moneda = asociat6moneda;
+    }
+
+    public String getExistaAsociat7() {
+        return existaAsociat7;
+    }
+
+    public void setExistaAsociat7(String existaAsociat7) {
+        this.existaAsociat7 = existaAsociat7;
+    }
+
+    public String getAsociat7unitatea() {
+        return asociat7unitatea;
+    }
+
+    public void setAsociat7unitatea(String asociat7unitatea) {
+        this.asociat7unitatea = asociat7unitatea;
+    }
+
+    public String getAsociat7adresa() {
+        return asociat7adresa;
+    }
+
+    public void setAsociat7adresa(String asociat7adresa) {
+        this.asociat7adresa = asociat7adresa;
+    }
+
+    public String getAsociat7rolul() {
+        return asociat7rolul;
+    }
+
+    public void setAsociat7rolul(String asociat7rolul) {
+        this.asociat7rolul = asociat7rolul;
+    }
+
+    public String getAsociat7partiSociale() {
+        return asociat7partiSociale;
+    }
+
+    public void setAsociat7partiSociale(String asociat7partiSociale) {
+        this.asociat7partiSociale = asociat7partiSociale;
+    }
+
+    public String getAsociat7valoare() {
+        return asociat7valoare;
+    }
+
+    public void setAsociat7valoare(String asociat7valoare) {
+        this.asociat7valoare = asociat7valoare;
+    }
+
+    public String getAsociat7explicatie() {
+        return asociat7explicatie;
+    }
+
+    public void setAsociat7explicatie(String asociat7explicatie) {
+        this.asociat7explicatie = asociat7explicatie;
+    }
+
+    public String getAsociat7moneda() {
+        return asociat7moneda;
+    }
+
+    public void setAsociat7moneda(String asociat7moneda) {
+        this.asociat7moneda = asociat7moneda;
+    }
+
+    public String getExistaAsociat8() {
+        return existaAsociat8;
+    }
+
+    public void setExistaAsociat8(String existaAsociat8) {
+        this.existaAsociat8 = existaAsociat8;
+    }
+
+    public String getAsociat8unitatea() {
+        return asociat8unitatea;
+    }
+
+    public void setAsociat8unitatea(String asociat8unitatea) {
+        this.asociat8unitatea = asociat8unitatea;
+    }
+
+    public String getAsociat8adresa() {
+        return asociat8adresa;
+    }
+
+    public void setAsociat8adresa(String asociat8adresa) {
+        this.asociat8adresa = asociat8adresa;
+    }
+
+    public String getAsociat8rolul() {
+        return asociat8rolul;
+    }
+
+    public void setAsociat8rolul(String asociat8rolul) {
+        this.asociat8rolul = asociat8rolul;
+    }
+
+    public String getAsociat8partiSociale() {
+        return asociat8partiSociale;
+    }
+
+    public void setAsociat8partiSociale(String asociat8partiSociale) {
+        this.asociat8partiSociale = asociat8partiSociale;
+    }
+
+    public String getAsociat8valoare() {
+        return asociat8valoare;
+    }
+
+    public void setAsociat8valoare(String asociat8valoare) {
+        this.asociat8valoare = asociat8valoare;
+    }
+
+    public String getAsociat8explicatie() {
+        return asociat8explicatie;
+    }
+
+    public void setAsociat8explicatie(String asociat8explicatie) {
+        this.asociat8explicatie = asociat8explicatie;
+    }
+
+    public String getAsociat8moneda() {
+        return asociat8moneda;
+    }
+
+    public void setAsociat8moneda(String asociat8moneda) {
+        this.asociat8moneda = asociat8moneda;
+    }
+
+    public String getExistaAsociat9() {
+        return existaAsociat9;
+    }
+
+    public void setExistaAsociat9(String existaAsociat9) {
+        this.existaAsociat9 = existaAsociat9;
+    }
+
+    public String getAsociat9unitatea() {
+        return asociat9unitatea;
+    }
+
+    public void setAsociat9unitatea(String asociat9unitatea) {
+        this.asociat9unitatea = asociat9unitatea;
+    }
+
+    public String getAsociat9adresa() {
+        return asociat9adresa;
+    }
+
+    public void setAsociat9adresa(String asociat9adresa) {
+        this.asociat9adresa = asociat9adresa;
+    }
+
+    public String getAsociat9rolul() {
+        return asociat9rolul;
+    }
+
+    public void setAsociat9rolul(String asociat9rolul) {
+        this.asociat9rolul = asociat9rolul;
+    }
+
+    public String getAsociat9partiSociale() {
+        return asociat9partiSociale;
+    }
+
+    public void setAsociat9partiSociale(String asociat9partiSociale) {
+        this.asociat9partiSociale = asociat9partiSociale;
+    }
+
+    public String getAsociat9valoare() {
+        return asociat9valoare;
+    }
+
+    public void setAsociat9valoare(String asociat9valoare) {
+        this.asociat9valoare = asociat9valoare;
+    }
+
+    public String getAsociat9explicatie() {
+        return asociat9explicatie;
+    }
+
+    public void setAsociat9explicatie(String asociat9explicatie) {
+        this.asociat9explicatie = asociat9explicatie;
+    }
+
+    public String getAsociat9moneda() {
+        return asociat9moneda;
+    }
+
+    public void setAsociat9moneda(String asociat9moneda) {
+        this.asociat9moneda = asociat9moneda;
+    }
+
+    public String getExistaAsociat10() {
+        return existaAsociat10;
+    }
+
+    public void setExistaAsociat10(String existaAsociat10) {
+        this.existaAsociat10 = existaAsociat10;
+    }
+
+    public String getAsociat10unitatea() {
+        return asociat10unitatea;
+    }
+
+    public void setAsociat10unitatea(String asociat10unitatea) {
+        this.asociat10unitatea = asociat10unitatea;
+    }
+
+    public String getAsociat10adresa() {
+        return asociat10adresa;
+    }
+
+    public void setAsociat10adresa(String asociat10adresa) {
+        this.asociat10adresa = asociat10adresa;
+    }
+
+    public String getAsociat10rolul() {
+        return asociat10rolul;
+    }
+
+    public void setAsociat10rolul(String asociat10rolul) {
+        this.asociat10rolul = asociat10rolul;
+    }
+
+    public String getAsociat10partiSociale() {
+        return asociat10partiSociale;
+    }
+
+    public void setAsociat10partiSociale(String asociat10partiSociale) {
+        this.asociat10partiSociale = asociat10partiSociale;
+    }
+
+    public String getAsociat10valoare() {
+        return asociat10valoare;
+    }
+
+    public void setAsociat10valoare(String asociat10valoare) {
+        this.asociat10valoare = asociat10valoare;
+    }
+
+    public String getAsociat10explicatie() {
+        return asociat10explicatie;
+    }
+
+    public void setAsociat10explicatie(String asociat10explicatie) {
+        this.asociat10explicatie = asociat10explicatie;
+    }
+
+    public String getAsociat10moneda() {
+        return asociat10moneda;
+    }
+
+    public void setAsociat10moneda(String asociat10moneda) {
+        this.asociat10moneda = asociat10moneda;
+    }
+
+    public String getExistaAsociat11() {
+        return existaAsociat11;
+    }
+
+    public void setExistaAsociat11(String existaAsociat11) {
+        this.existaAsociat11 = existaAsociat11;
+    }
+
+    public String getAsociat11unitatea() {
+        return asociat11unitatea;
+    }
+
+    public void setAsociat11unitatea(String asociat11unitatea) {
+        this.asociat11unitatea = asociat11unitatea;
+    }
+
+    public String getAsociat11adresa() {
+        return asociat11adresa;
+    }
+
+    public void setAsociat11adresa(String asociat11adresa) {
+        this.asociat11adresa = asociat11adresa;
+    }
+
+    public String getAsociat11rolul() {
+        return asociat11rolul;
+    }
+
+    public void setAsociat11rolul(String asociat11rolul) {
+        this.asociat11rolul = asociat11rolul;
+    }
+
+    public String getAsociat11partiSociale() {
+        return asociat11partiSociale;
+    }
+
+    public void setAsociat11partiSociale(String asociat11partiSociale) {
+        this.asociat11partiSociale = asociat11partiSociale;
+    }
+
+    public String getAsociat11valoare() {
+        return asociat11valoare;
+    }
+
+    public void setAsociat11valoare(String asociat11valoare) {
+        this.asociat11valoare = asociat11valoare;
+    }
+
+    public String getAsociat11explicatie() {
+        return asociat11explicatie;
+    }
+
+    public void setAsociat11explicatie(String asociat11explicatie) {
+        this.asociat11explicatie = asociat11explicatie;
+    }
+
+    public String getAsociat11moneda() {
+        return asociat11moneda;
+    }
+
+    public void setAsociat11moneda(String asociat11moneda) {
+        this.asociat11moneda = asociat11moneda;
+    }
+
+    public String getExistaAsociat12() {
+        return existaAsociat12;
+    }
+
+    public void setExistaAsociat12(String existaAsociat12) {
+        this.existaAsociat12 = existaAsociat12;
+    }
+
+    public String getAsociat12unitatea() {
+        return asociat12unitatea;
+    }
+
+    public void setAsociat12unitatea(String asociat12unitatea) {
+        this.asociat12unitatea = asociat12unitatea;
+    }
+
+    public String getAsociat12adresa() {
+        return asociat12adresa;
+    }
+
+    public void setAsociat12adresa(String asociat12adresa) {
+        this.asociat12adresa = asociat12adresa;
+    }
+
+    public String getAsociat12rolul() {
+        return asociat12rolul;
+    }
+
+    public void setAsociat12rolul(String asociat12rolul) {
+        this.asociat12rolul = asociat12rolul;
+    }
+
+    public String getAsociat12partiSociale() {
+        return asociat12partiSociale;
+    }
+
+    public void setAsociat12partiSociale(String asociat12partiSociale) {
+        this.asociat12partiSociale = asociat12partiSociale;
+    }
+
+    public String getAsociat12valoare() {
+        return asociat12valoare;
+    }
+
+    public void setAsociat12valoare(String asociat12valoare) {
+        this.asociat12valoare = asociat12valoare;
+    }
+
+    public String getAsociat12explicatie() {
+        return asociat12explicatie;
+    }
+
+    public void setAsociat12explicatie(String asociat12explicatie) {
+        this.asociat12explicatie = asociat12explicatie;
+    }
+
+    public String getAsociat12moneda() {
+        return asociat12moneda;
+    }
+
+    public void setAsociat12moneda(String asociat12moneda) {
+        this.asociat12moneda = asociat12moneda;
+    }
+
+    public String getExistaAsociat13() {
+        return existaAsociat13;
+    }
+
+    public void setExistaAsociat13(String existaAsociat13) {
+        this.existaAsociat13 = existaAsociat13;
+    }
+
+    public String getAsociat13unitatea() {
+        return asociat13unitatea;
+    }
+
+    public void setAsociat13unitatea(String asociat13unitatea) {
+        this.asociat13unitatea = asociat13unitatea;
+    }
+
+    public String getAsociat13adresa() {
+        return asociat13adresa;
+    }
+
+    public void setAsociat13adresa(String asociat13adresa) {
+        this.asociat13adresa = asociat13adresa;
+    }
+
+    public String getAsociat13rolul() {
+        return asociat13rolul;
+    }
+
+    public void setAsociat13rolul(String asociat13rolul) {
+        this.asociat13rolul = asociat13rolul;
+    }
+
+    public String getAsociat13partiSociale() {
+        return asociat13partiSociale;
+    }
+
+    public void setAsociat13partiSociale(String asociat13partiSociale) {
+        this.asociat13partiSociale = asociat13partiSociale;
+    }
+
+    public String getAsociat13valoare() {
+        return asociat13valoare;
+    }
+
+    public void setAsociat13valoare(String asociat13valoare) {
+        this.asociat13valoare = asociat13valoare;
+    }
+
+    public String getAsociat13explicatie() {
+        return asociat13explicatie;
+    }
+
+    public void setAsociat13explicatie(String asociat13explicatie) {
+        this.asociat13explicatie = asociat13explicatie;
+    }
+
+    public String getAsociat13moneda() {
+        return asociat13moneda;
+    }
+
+    public void setAsociat13moneda(String asociat13moneda) {
+        this.asociat13moneda = asociat13moneda;
+    }
+
+    public String getExistaAsociat14() {
+        return existaAsociat14;
+    }
+
+    public void setExistaAsociat14(String existaAsociat14) {
+        this.existaAsociat14 = existaAsociat14;
+    }
+
+    public String getAsociat14unitatea() {
+        return asociat14unitatea;
+    }
+
+    public void setAsociat14unitatea(String asociat14unitatea) {
+        this.asociat14unitatea = asociat14unitatea;
+    }
+
+    public String getAsociat14adresa() {
+        return asociat14adresa;
+    }
+
+    public void setAsociat14adresa(String asociat14adresa) {
+        this.asociat14adresa = asociat14adresa;
+    }
+
+    public String getAsociat14rolul() {
+        return asociat14rolul;
+    }
+
+    public void setAsociat14rolul(String asociat14rolul) {
+        this.asociat14rolul = asociat14rolul;
+    }
+
+    public String getAsociat14partiSociale() {
+        return asociat14partiSociale;
+    }
+
+    public void setAsociat14partiSociale(String asociat14partiSociale) {
+        this.asociat14partiSociale = asociat14partiSociale;
+    }
+
+    public String getAsociat14valoare() {
+        return asociat14valoare;
+    }
+
+    public void setAsociat14valoare(String asociat14valoare) {
+        this.asociat14valoare = asociat14valoare;
+    }
+
+    public String getAsociat14explicatie() {
+        return asociat14explicatie;
+    }
+
+    public void setAsociat14explicatie(String asociat14explicatie) {
+        this.asociat14explicatie = asociat14explicatie;
+    }
+
+    public String getAsociat14moneda() {
+        return asociat14moneda;
+    }
+
+    public void setAsociat14moneda(String asociat14moneda) {
+        this.asociat14moneda = asociat14moneda;
+    }
+
+    public String getExistaAsociat15() {
+        return existaAsociat15;
+    }
+
+    public void setExistaAsociat15(String existaAsociat15) {
+        this.existaAsociat15 = existaAsociat15;
+    }
+
+    public String getAsociat15unitatea() {
+        return asociat15unitatea;
+    }
+
+    public void setAsociat15unitatea(String asociat15unitatea) {
+        this.asociat15unitatea = asociat15unitatea;
+    }
+
+    public String getAsociat15adresa() {
+        return asociat15adresa;
+    }
+
+    public void setAsociat15adresa(String asociat15adresa) {
+        this.asociat15adresa = asociat15adresa;
+    }
+
+    public String getAsociat15rolul() {
+        return asociat15rolul;
+    }
+
+    public void setAsociat15rolul(String asociat15rolul) {
+        this.asociat15rolul = asociat15rolul;
+    }
+
+    public String getAsociat15partiSociale() {
+        return asociat15partiSociale;
+    }
+
+    public void setAsociat15partiSociale(String asociat15partiSociale) {
+        this.asociat15partiSociale = asociat15partiSociale;
+    }
+
+    public String getAsociat15valoare() {
+        return asociat15valoare;
+    }
+
+    public void setAsociat15valoare(String asociat15valoare) {
+        this.asociat15valoare = asociat15valoare;
+    }
+
+    public String getAsociat15explicatie() {
+        return asociat15explicatie;
+    }
+
+    public void setAsociat15explicatie(String asociat15explicatie) {
+        this.asociat15explicatie = asociat15explicatie;
+    }
+
+    public String getAsociat15moneda() {
+        return asociat15moneda;
+    }
+
+    public void setAsociat15moneda(String asociat15moneda) {
+        this.asociat15moneda = asociat15moneda;
     }
 }

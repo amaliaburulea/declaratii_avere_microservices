@@ -657,11 +657,12 @@ public class DemnitarService {
         DeclaratieIntereseAsociatInfo declaratieAsociatInfo = new DeclaratieIntereseAsociatInfo();
         declaratieAsociatInfo.setId(declaratieIntereseAsociatEntity.getId());
         declaratieAsociatInfo.setUnitatea(declaratieIntereseAsociatEntity.getUnitatea());
+        declaratieAsociatInfo.setAdresa(declaratieIntereseAsociatEntity.getAdresa());
         declaratieAsociatInfo.setRolul(declaratieIntereseAsociatEntity.getRolul());
         declaratieAsociatInfo.setPartiSociale(declaratieIntereseAsociatEntity.getPartiSociale());
         declaratieAsociatInfo.setValoare(declaratieIntereseAsociatEntity.getValoarea());
         declaratieAsociatInfo.setMoneda(declaratieIntereseAsociatEntity.getMoneda());
-        declaratieAsociatInfo.setExplicatie(declaratieIntereseAsociatEntity.getExplicatieVenit());
+        declaratieAsociatInfo.setExplicatieVenitAsoc(declaratieIntereseAsociatEntity.getExplicatieVenitAsoc());
 
         return declaratieAsociatInfo;
     }
@@ -1588,8 +1589,8 @@ public class DemnitarService {
 
         Map<Integer, DeclaratieIntereseAsociatEntity> declaratieIntereseAsociatEntityByIdMap = new HashMap<>();
 
-        for (DeclaratieIntereseAsociatEntity declaratieAvereAlteActiveEntity : declaratieIntereseAsociatEntitySet) {
-            declaratieIntereseAsociatEntityByIdMap.put(declaratieAvereAlteActiveEntity.getId(), declaratieAvereAlteActiveEntity);
+        for (DeclaratieIntereseAsociatEntity declaratieIntereseAsociatEntity : declaratieIntereseAsociatEntitySet) {
+            declaratieIntereseAsociatEntityByIdMap.put(declaratieIntereseAsociatEntity.getId(), declaratieIntereseAsociatEntity);
         }
 
 
@@ -1612,9 +1613,9 @@ public class DemnitarService {
                 declaratieIntereseAsociatEntitySet.iterator();
 
         while (declaratieIntereseAsociatEntitySetIterator.hasNext()) {
-            DeclaratieIntereseAsociatEntity declaratieAvereAlteActiveEntity = declaratieIntereseAsociatEntitySetIterator.next();
+            DeclaratieIntereseAsociatEntity declaratieIntereseAsociatEntity = declaratieIntereseAsociatEntitySetIterator.next();
 
-            if (!declaratieIntereseAsociatInfoByIdHashMap.containsKey(declaratieAvereAlteActiveEntity.getId())) {
+            if (!declaratieIntereseAsociatInfoByIdHashMap.containsKey(declaratieIntereseAsociatEntity.getId())) {
                 declaratieIntereseAsociatEntitySetIterator.remove();
             }
         }
@@ -1625,11 +1626,12 @@ public class DemnitarService {
                                                          DeclaratieIntereseAsociatInfo declaratieIntereseAsociatInfo) {
         declaratieIntereseAsociatEntity.setDeclaratieIntereseEntity(declaratieIntereseEntity);
         declaratieIntereseAsociatEntity.setUnitatea(declaratieIntereseAsociatInfo.getUnitatea());
+        declaratieIntereseAsociatEntity.setAdresa(declaratieIntereseAsociatInfo.getAdresa());
         declaratieIntereseAsociatEntity.setRolul(declaratieIntereseAsociatInfo.getRolul());
         declaratieIntereseAsociatEntity.setPartiSociale(declaratieIntereseAsociatInfo.getPartiSociale());
         declaratieIntereseAsociatEntity.setValoarea(declaratieIntereseAsociatInfo.getValoare());
         declaratieIntereseAsociatEntity.setMoneda(declaratieIntereseAsociatInfo.getMoneda());
-        declaratieIntereseAsociatEntity.setExplicatieVenit(declaratieIntereseAsociatInfo.getExplicatie());
+        declaratieIntereseAsociatEntity.setExplicatieVenitAsoc(declaratieIntereseAsociatInfo.getExplicatieVenitAsoc());
     }
     /**
      * Gets a declaratieAvere.
