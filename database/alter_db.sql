@@ -39,6 +39,11 @@ CREATE TABLE IF NOT EXISTS `demnitar` (
   `nume` varchar(100) NOT NULL,
   `prenume` varchar(100) NOT NULL,
   `an_nastere` varchar(100) DEFAULT NULL,
+`institutie_id` int null,
+`institutie2_id`int null,
+`functie_id` int null,
+`functie2_id` int null,
+`grup_politic` varchar(200) NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `demnitar_unique` (`nume`,`prenume`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -48,13 +53,15 @@ CREATE TABLE IF NOT EXISTS `declaratie_avere` (
   `demnitar_id` int(11) NOT NULL,
   `data_declaratiei` date NOT NULL,
   `data_depunerii` date DEFAULT NULL,
-  `functie` varchar(200) NOT NULL,
-  `functie2id` varchar(200) DEFAULT NULL,
-  `institutie` varchar(400) NOT NULL,
-  `institutie2` varchar(400) DEFAULT NULL,
+  `functie_id` varchar(200) NOT NULL,
+  `functie2_id` varchar(200) DEFAULT NULL,
+  `institutie_id` varchar(400) NOT NULL,
+  `institutie2_id` varchar(400) DEFAULT NULL,
   `grup_politic` varchar(200) DEFAULT NULL,
   `link_declaratie` VARCHAR(200) DEFAULT NULL,
   `circumscriptia` varchar(200) DEFAULT NULL,
+	`voluntar_id` int null,
+  `is_done` BIT NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`),
   UNIQUE KEY `declaratieAvere_unique` (`demnitar_id`,`data_declaratiei`),
   CONSTRAINT `declaratieAvere_demnitar_fk` FOREIGN KEY (`demnitar_id`) REFERENCES `demnitar` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
@@ -72,6 +79,9 @@ CREATE TABLE IF NOT EXISTS `declaratie_interese` (
   `grup_politic` varchar(200) DEFAULT NULL,
   `link_declaratie` VARCHAR(200) DEFAULT NULL,
   `circumscriptia` varchar(200) DEFAULT NULL,
+  `voluntar_id` int null,
+  `is_done` BIT NOT NULL DEFAULT 0,
+  
   PRIMARY KEY (`id`),
   UNIQUE KEY `declaratieInterese_unique` (`demnitar_id`,`data_declaratiei`),
   CONSTRAINT `declaratieInterese_demnitar_fk` FOREIGN KEY (`demnitar_id`) REFERENCES `demnitar` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
@@ -81,15 +91,69 @@ CREATE TABLE IF NOT EXISTS `declaratie_interese_asociat_sc` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `declaratie_interese_id` int(11) NOT NULL,
   `unitatea` text NOT NULL,
+  `adresa` text NOT NULL,
   `rolul` varchar(100) DEFAULT NULL,
   `parti_sociale_actiuni` varchar(100) DEFAULT NULL,
   `valoarea` decimal(12,2) DEFAULT NULL,
   `moneda` varchar(100) NOT NULL,
-  `explicatie_venit` varchar(500) DEFAULT NULL,
+  `explicatie_venit` text DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `declaratieIntereseAsociatSc_declaratieInterese_fk_idx` (`declaratie_interese_id`),
   CONSTRAINT `declaratieIntereseAsociatSc_declaratieInterese_fk` FOREIGN KEY (`declaratie_interese_id`) REFERENCES `declaratie_interese` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `declaratie_interese_membru_sc` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `declaratie_interese_id` int(11) NOT NULL,
+  `unitatea` text NOT NULL,
+  `adresa` text NOT NULL,
+  `rolul` varchar(100) DEFAULT NULL,
+  `valoarea` decimal(12,2) DEFAULT NULL,
+  `moneda` varchar(100) NOT NULL,
+  `explicatie_venit` text DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `declaratieIntereseMembruSc_declaratieInterese_fk_idx` (`declaratie_interese_id`),
+  CONSTRAINT `declaratieIntereseMembruSc_declaratieInterese_fk` FOREIGN KEY (`declaratie_interese_id`) REFERENCES `declaratie_interese` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `declaratie_interese_sindicat` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `declaratie_interese_id` int(11) NOT NULL,
+  `nume` text NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `declaratieIntereseSind_declaratieInterese_fk_idx` (`declaratie_interese_id`),
+  CONSTRAINT `declaratieIntereseSind_declaratieInterese_fk` FOREIGN KEY (`declaratie_interese_id`) REFERENCES `declaratie_interese` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `declaratie_interese_partid` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `declaratie_interese_id` int(11) NOT NULL,
+  `nume` varchar(100)NOT NULL,
+  `functia` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `declaratieInteresePartid_declaratieInterese_fk_idx` (`declaratie_interese_id`),
+  CONSTRAINT `declaratieInteresePartid_declaratieInterese_fk` FOREIGN KEY (`declaratie_interese_id`) REFERENCES `declaratie_interese` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `declaratie_interese_contract` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `declaratie_interese_id` int(11) NOT NULL,
+  `titular` varchar(100)DEFAULT NULL,
+  `beneficiar` varchar(250) DEFAULT NULL,
+  `instritutia_contractanta` varchar(250) DEFAULT NULL,
+  `procedura_incredintare` varchar(250) DEFAULT NULL,
+  `tip_contract` varchar(250) DEFAULT NULL,
+  `data` varchar(50) DEFAULT NULL,
+  `durata` varchar(250) DEFAULT NULL,
+  `valoare` decimal(12,2) NOT NULL,
+  `moneda` varchar(45) NOT NULL,
+  `explicatie_contract` varchar(300) NOT NULL,
+  
+  PRIMARY KEY (`id`),
+  KEY `declaratieIntereseContract_declaratieInterese_fk_idx` (`declaratie_interese_id`),
+  CONSTRAINT `declaratieIntereseContract_declaratieInterese_fk` FOREIGN KEY (`declaratie_interese_id`) REFERENCES `declaratie_interese` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 
 
@@ -241,6 +305,20 @@ CREATE TABLE IF NOT EXISTS `declaratie_avere_venit` (
     REFERENCES `declaratie_avere` (`id`)
     ON DELETE CASCADE
     ON UPDATE NO ACTION);
+    
+    CREATE TABLE IF NOT EXISTS `institutie` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nume` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `institutie_unique` (nume)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `functie` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nume` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `functie_unique` (nume)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- permission table
 CREATE TABLE IF NOT EXISTS `permission` (
@@ -362,19 +440,7 @@ call AddColumn('declaratie_avere_bun_imobil', 'explicatie_suprafata', "TEXT NULL
 
 call ChangeColumn('declaratie_avere_venit', 'titular', "TEXT NOT NULL");
 
-CREATE TABLE IF NOT EXISTS `institutie` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nume` varchar(200) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `institutie_unique` (nume)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE IF NOT EXISTS `functie` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nume` varchar(200) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `functie_unique` (nume)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 call AddColumn('declaratie_avere', 'institutie_id', 'int null');
 call AddColumn('declaratie_avere', 'institutie2_id', 'int null');
@@ -416,6 +482,11 @@ call AddColumn('declaratie_avere', 'voluntar_id', "INT NULL");
 call AddForeignKey('fk_declaratie_avere_voluntar', 'declaratie_avere', 'voluntar_id', 'user', 'user_id');
 call CreateIndex('declaratie_avere', 'fk_declaratie_avere_voluntar_idx', 'voluntar_id', 0);
 
+call AddColumn('declaratie_interese', 'voluntar_id', "INT NULL");
+call AddForeignKey('fk_declaratie_interese_voluntar', 'declaratie_interese', 'voluntar_id', 'user', 'user_id');
+call CreateIndex('declaratie_interese', 'fk_declaratie_interese_voluntar_idx', 'voluntar_id', 0);
+
+
 call AddColumn('declaratie_avere', 'is_done', "BIT NOT NULL DEFAULT 0");
 call AddColumn('declaratie_interese', 'is_done', "BIT NOT NULL DEFAULT 0");
 call CreateIndex('declaratie_avere', 'declaratie_avere_data_idx', 'data_declaratiei', 0);
@@ -426,6 +497,12 @@ VALUES ('Find declaratii avere', 'FDEC', 'Find declaratii avere', 0);
 
 INSERT IGNORE INTO permission (permission_name, permission_code, permission_desc, is_deleted)
 VALUES ('Update declaratii avere', 'UDEC', 'Update declaratii avere', 0);
+
+INSERT IGNORE INTO permission (permission_name, permission_code, permission_desc, is_deleted)
+VALUES ('Find declaratii interese', 'FDEC', 'Find declaratii interese', 0);
+
+INSERT IGNORE INTO permission (permission_name, permission_code, permission_desc, is_deleted)
+VALUES ('Update declaratii interese', 'UDEC', 'Update declaratii interese', 0);
 
 
 INSERT IGNORE INTO permission_rest_method

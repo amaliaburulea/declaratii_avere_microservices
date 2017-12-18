@@ -37,6 +37,10 @@ public class DeclaratieIntereseInfo {
     private String voluntarUserName;
 
     private List<DeclaratieIntereseAsociatInfo> declaratieIntereseAsociatInfoList;
+    private List<DeclaratieIntereseMembruInfo> declaratieIntereseMembruInfoList;
+    private List<DeclaratieIntereseSindicatInfo> declaratieIntereseSindicatInfoList;
+    private List<DeclaratieInteresePartidInfo> declaratieInteresePartidInfoList;
+    private List<DeclaratieIntereseContractInfo> declaratieIntereseContractInfoList;
 
 
     public String getDemnitarNume() {
@@ -220,5 +224,35 @@ public class DeclaratieIntereseInfo {
         this.anNastere = anNastere;
     }
 
+    public List<DeclaratieIntereseMembruInfo> getDeclaratieIntereseMembruInfoList() {
+        return declaratieIntereseMembruInfoList;
+    }
 
+    public void setDeclaratieIntereseMembruInfoList(List<DeclaratieIntereseMembruInfo> declaratieIntereseMembruInfoList) {
+        this.declaratieIntereseMembruInfoList = declaratieIntereseMembruInfoList;
+    }
+
+    public List<DeclaratieIntereseSindicatInfo> getDeclaratieIntereseSindicatInfoList() {
+        return declaratieIntereseSindicatInfoList;
+    }
+
+    public void setDeclaratieIntereseSindicatInfoList(List<DeclaratieIntereseSindicatInfo> declaratieIntereseSindicatInfoList) {
+        this.declaratieIntereseSindicatInfoList = declaratieIntereseSindicatInfoList;
+    }
+
+    public List<DeclaratieInteresePartidInfo> getDeclaratieInteresePartidInfoList() {
+        return declaratieInteresePartidInfoList;
+    }
+
+    public void setDeclaratieInteresePartidInfoList(List<DeclaratieInteresePartidInfo> declaratieInteresePartidInfoList) {
+        this.declaratieInteresePartidInfoList = declaratieInteresePartidInfoList;
+    }
+
+    public List<DeclaratieIntereseContractInfo> getDeclaratieIntereseContractInfoList() {
+        return declaratieIntereseContractInfoList;
+    }
+
+    public void setDeclaratieIntereseContractInfoList(List<DeclaratieIntereseContractInfo> declaratieIntereseContractInfoList) {
+        this.declaratieIntereseContractInfoList = declaratieIntereseContractInfoList;
+    }
 }
