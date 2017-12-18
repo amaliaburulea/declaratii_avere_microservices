@@ -1,13 +1,13 @@
 package com.declaratiiavere.demnitarservice.demnitar;
 
 import com.declaratiiavere.common.utils.DateUtilities;
+import com.declaratiiavere.restclient.RestException;
 import com.declaratiiavere.common.utils.ObjectComparator;
 import com.declaratiiavere.common.utils.Utilities;
 import com.declaratiiavere.iam.user.UserIdentity;
 import com.declaratiiavere.iam.user.UserInfo;
 import com.declaratiiavere.jpaframework.OrderByInfo;
 import com.declaratiiavere.jpaframework.OrderType;
-import com.declaratiiavere.restclient.RestException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -505,16 +505,32 @@ public class DemnitarService {
         declaratieIntereseInfo.setIsDone(declaratieIntereseEntity.getIsDone());
 
         if (eagerLoadAllRelations) {
-            List<DeclaratieIntereseAsociatInfo> declaratieIntereseAsociatInfoList = new ArrayList<>();
-
+            List<DeclaratieIntereseAsociatInfo> declaratieIntereseAsocInfoList = new ArrayList<>();
             if (declaratieIntereseEntity.getDeclaratieIntereseAsociatEntitySet() != null) {
                 for (DeclaratieIntereseAsociatEntity declaratieIntereseAsociatEntity : declaratieIntereseEntity.getDeclaratieIntereseAsociatEntitySet()) {
                     DeclaratieIntereseAsociatInfo declaratieInterseAsociatInfo = getDeclaratieAsociatInfo(declaratieIntereseAsociatEntity);
-                    declaratieIntereseAsociatInfoList.add(declaratieInterseAsociatInfo);
+                    declaratieIntereseAsocInfoList.add(declaratieInterseAsociatInfo);
                 }
             }
+            declaratieIntereseInfo.setDeclaratieIntereseAsociatInfoList(declaratieIntereseAsocInfoList);
 
-            declaratieIntereseInfo.setDeclaratieIntereseAsociatInfoList(declaratieIntereseAsociatInfoList);
+            List<DeclaratieIntereseMembruInfo> declaratieIntereseMembruInfoList = new ArrayList<>();
+            if (declaratieIntereseEntity.getDeclaratieIntereseMembruEntitySet() != null) {
+                for (DeclaratieIntereseMembruEntity declaratieIntereseMembruEntity : declaratieIntereseEntity.getDeclaratieIntereseMembruEntitySet()) {
+                    DeclaratieIntereseMembruInfo declaratieInterseMembruInfo = getDeclaratieMembruInfo(declaratieIntereseMembruEntity);
+                    declaratieIntereseMembruInfoList.add(declaratieInterseMembruInfo);
+                }
+            }
+            declaratieIntereseInfo.setDeclaratieIntereseMembruInfoList(declaratieIntereseMembruInfoList);
+
+            List<DeclaratieIntereseSindicatInfo> declaratieIntereseSindicatInfoList = new ArrayList<>();
+            if (declaratieIntereseEntity.getDeclaratieIntereseSindicatEntitySet() != null) {
+                for (DeclaratieIntereseSindicatEntity declaratieIntereseSindicatEntity : declaratieIntereseEntity.getDeclaratieIntereseSindicatEntitySet()) {
+                    DeclaratieIntereseSindicatInfo declaratieInterseSindicatInfo = getDeclaratieSindicatInfo(declaratieIntereseSindicatEntity);
+                    declaratieIntereseSindicatInfoList.add(declaratieInterseSindicatInfo);
+                }
+            }
+            declaratieIntereseInfo.setDeclaratieIntereseSindicatInfoList(declaratieIntereseSindicatInfoList);
         }
 
         return declaratieIntereseInfo;
@@ -665,6 +681,27 @@ public class DemnitarService {
         declaratieAsociatInfo.setExplicatieVenitAsoc(declaratieIntereseAsociatEntity.getExplicatieVenitAsoc());
 
         return declaratieAsociatInfo;
+    }
+
+    private DeclaratieIntereseMembruInfo getDeclaratieMembruInfo(DeclaratieIntereseMembruEntity declaratieIntereseMembruEntity) {
+        DeclaratieIntereseMembruInfo declaratieMembruInfo = new DeclaratieIntereseMembruInfo();
+        declaratieMembruInfo.setId(declaratieIntereseMembruEntity.getId());
+        declaratieMembruInfo.setUnitatea(declaratieIntereseMembruEntity.getUnitatea());
+        declaratieMembruInfo.setAdresa(declaratieIntereseMembruEntity.getAdresa());
+        declaratieMembruInfo.setRolul(declaratieIntereseMembruEntity.getRolul());
+        declaratieMembruInfo.setValoare(declaratieIntereseMembruEntity.getValoarea());
+        declaratieMembruInfo.setMoneda(declaratieIntereseMembruEntity.getMoneda());
+        declaratieMembruInfo.setExplicatieVenitMembru(declaratieIntereseMembruEntity.getExplicatieVenitMembru());
+
+        return declaratieMembruInfo;
+    }
+
+    private DeclaratieIntereseSindicatInfo getDeclaratieSindicatInfo(DeclaratieIntereseSindicatEntity declaratieIntereseSindicatEntity) {
+        DeclaratieIntereseSindicatInfo declaratieSindInfo = new DeclaratieIntereseSindicatInfo();
+        declaratieSindInfo.setId(declaratieIntereseSindicatEntity.getId());
+        declaratieSindInfo.setNume(declaratieIntereseSindicatEntity.getNume());
+
+        return declaratieSindInfo;
     }
 
     /**
@@ -901,7 +938,7 @@ public class DemnitarService {
         return declaratieAvereEntity;
     }
 
-        private DeclaratieIntereseEntity populateDeclaratieIntereseEntity(DeclaratieIntereseInfo declaratieIntereseInfo) {
+    private DeclaratieIntereseEntity populateDeclaratieIntereseEntity(DeclaratieIntereseInfo declaratieIntereseInfo) {
             DeclaratieIntereseEntity DeclaratieIntereseEntity;
             UserInfo loginUserInfo = UserIdentity.getLoginUser();
 
@@ -938,7 +975,14 @@ public class DemnitarService {
 
             populateDeclaratieIntereseAsociatEntitySet(DeclaratieIntereseEntity.getDeclaratieIntereseAsociatEntitySet(),
                     DeclaratieIntereseEntity, declaratieIntereseInfo);
-
+            populateDeclaratieIntereseMembruEntitySet(DeclaratieIntereseEntity.getDeclaratieIntereseMembruEntitySet(),
+                    DeclaratieIntereseEntity, declaratieIntereseInfo);
+            populateDeclaratieIntereseSindicatEntitySet(DeclaratieIntereseEntity.getDeclaratieIntereseSindicatEntitySet(),
+                    DeclaratieIntereseEntity, declaratieIntereseInfo);
+            populateDeclaratieInteresePartidEntitySet(DeclaratieIntereseEntity.getDeclaratieInteresePartidEntitySet(),
+                    DeclaratieIntereseEntity, declaratieIntereseInfo);
+        populateDeclaratieIntereseContractEntitySet(DeclaratieIntereseEntity.getDeclaratieIntereseContractEntitySet(),
+                DeclaratieIntereseEntity, declaratieIntereseInfo);
 
             return DeclaratieIntereseEntity;
         }
@@ -1632,6 +1676,253 @@ public class DemnitarService {
         declaratieIntereseAsociatEntity.setValoarea(declaratieIntereseAsociatInfo.getValoare());
         declaratieIntereseAsociatEntity.setMoneda(declaratieIntereseAsociatInfo.getMoneda());
         declaratieIntereseAsociatEntity.setExplicatieVenitAsoc(declaratieIntereseAsociatInfo.getExplicatieVenitAsoc());
+    }
+
+    private void populateDeclaratieIntereseMembruEntitySet(Set<DeclaratieIntereseMembruEntity> declaratieIntereseMembruEntitySet,
+                                                           DeclaratieIntereseEntity declaratieIntereseEntity,
+                                                           DeclaratieIntereseInfo declaratieIntereseInfo) {
+        if (declaratieIntereseMembruEntitySet == null) {
+            declaratieIntereseMembruEntitySet = new HashSet<>();
+            declaratieIntereseEntity.setDeclaratieIntereseMembruEntitySet(declaratieIntereseMembruEntitySet);
+        }
+
+        // prepare maps that are needed in order to identify what entities news to be added, modified and deleted
+        Map<Integer, DeclaratieIntereseMembruInfo> declaratieIntereseMembruInfoByIdHashMap = new HashMap<>();
+
+        if (declaratieIntereseInfo.getDeclaratieIntereseMembruInfoList() != null) {
+            for (DeclaratieIntereseMembruInfo declaratieIntereseMembruInfo : declaratieIntereseInfo.getDeclaratieIntereseMembruInfoList()) {
+                declaratieIntereseMembruInfoByIdHashMap.put(declaratieIntereseMembruInfo.getId(), declaratieIntereseMembruInfo);
+            }
+        }
+
+        Map<Integer, DeclaratieIntereseMembruEntity> declaratieIntereseMembruEntityByIdMap = new HashMap<>();
+
+        for (DeclaratieIntereseMembruEntity declaratieIntereseMembruEntity : declaratieIntereseMembruEntitySet) {
+            declaratieIntereseMembruEntityByIdMap.put(declaratieIntereseMembruEntity.getId(), declaratieIntereseMembruEntity);
+        }
+
+
+        if (declaratieIntereseInfo.getDeclaratieIntereseMembruInfoList() != null) {
+            for (DeclaratieIntereseMembruInfo declaratieIntereseMembruInfo : declaratieIntereseInfo.getDeclaratieIntereseMembruInfoList()) {
+                DeclaratieIntereseMembruEntity declaratieIntereseMembruEntity = declaratieIntereseMembruEntityByIdMap.get(declaratieIntereseMembruInfo.getId());
+
+                if (declaratieIntereseMembruEntity == null) {
+                    declaratieIntereseMembruEntity = new DeclaratieIntereseMembruEntity();
+                    declaratieIntereseMembruEntitySet.add(declaratieIntereseMembruEntity);
+                }
+
+                populateDeclaratieIntereseMembruEntity(declaratieIntereseMembruEntity, declaratieIntereseEntity,
+                        declaratieIntereseMembruInfo);
+            }
+        }
+
+        // delete the relevant DeclaratieIntereseMembruEntity
+        Iterator<DeclaratieIntereseMembruEntity> declaratieIntereseMembruEntitySetIterator =
+                declaratieIntereseMembruEntitySet.iterator();
+
+        while (declaratieIntereseMembruEntitySetIterator.hasNext()) {
+            DeclaratieIntereseMembruEntity declaratieIntereseMembruEntity = declaratieIntereseMembruEntitySetIterator.next();
+
+            if (!declaratieIntereseMembruInfoByIdHashMap.containsKey(declaratieIntereseMembruEntity.getId())) {
+                declaratieIntereseMembruEntitySetIterator.remove();
+            }
+        }
+    }
+
+    private void populateDeclaratieIntereseMembruEntity(DeclaratieIntereseMembruEntity declaratieIntereseMembruEntity,
+                                                        DeclaratieIntereseEntity declaratieIntereseEntity,
+                                                        DeclaratieIntereseMembruInfo declaratieIntereseMembruInfo) {
+        declaratieIntereseMembruEntity.setDeclaratieIntereseEntity(declaratieIntereseEntity);
+        declaratieIntereseMembruEntity.setUnitatea(declaratieIntereseMembruInfo.getUnitatea());
+        declaratieIntereseMembruEntity.setAdresa(declaratieIntereseMembruInfo.getAdresa());
+        declaratieIntereseMembruEntity.setRolul(declaratieIntereseMembruInfo.getRolul());
+        declaratieIntereseMembruEntity.setValoarea(declaratieIntereseMembruInfo.getValoare());
+        declaratieIntereseMembruEntity.setMoneda(declaratieIntereseMembruInfo.getMoneda());
+        declaratieIntereseMembruEntity.setExplicatieVenitAsoc(declaratieIntereseMembruInfo.getExplicatieVenitMembru());
+    }
+
+    private void populateDeclaratieIntereseSindicatEntity(DeclaratieIntereseSindicatEntity declaratieIntereseSindicatEntity,
+                                                          DeclaratieIntereseEntity declaratieIntereseEntity,
+                                                          DeclaratieIntereseSindicatInfo declaratieIntereseSindicatInfo) {
+        declaratieIntereseSindicatEntity.setDeclaratieIntereseEntity(declaratieIntereseEntity);
+        declaratieIntereseSindicatEntity.setNume(declaratieIntereseSindicatInfo.getNume());
+    }
+
+    private void populateDeclaratieIntereseSindicatEntitySet(Set<DeclaratieIntereseSindicatEntity> declaratieIntereseSindicatEntitySet,
+                                                             DeclaratieIntereseEntity declaratieIntereseEntity,
+                                                             DeclaratieIntereseInfo declaratieIntereseInfo) {
+        if (declaratieIntereseSindicatEntitySet == null) {
+            declaratieIntereseSindicatEntitySet = new HashSet<>();
+            declaratieIntereseEntity.setDeclaratieIntereseSindicatEntitySet(declaratieIntereseSindicatEntitySet);
+        }
+
+        // prepare maps that are needed in order to identify what entities news to be added, modified and deleted
+        Map<Integer, DeclaratieIntereseSindicatInfo> declaratieIntereseSindicatInfoByIdHashMap = new HashMap<>();
+
+        if (declaratieIntereseInfo.getDeclaratieIntereseSindicatInfoList() != null) {
+            for (DeclaratieIntereseSindicatInfo declaratieIntereseSindicatInfo : declaratieIntereseInfo.getDeclaratieIntereseSindicatInfoList()) {
+                declaratieIntereseSindicatInfoByIdHashMap.put(declaratieIntereseSindicatInfo.getId(), declaratieIntereseSindicatInfo);
+            }
+        }
+
+        Map<Integer, DeclaratieIntereseSindicatEntity> declaratieIntereseSindicatEntityByIdMap = new HashMap<>();
+
+        for (DeclaratieIntereseSindicatEntity declaratieIntereseSindicatEntity : declaratieIntereseSindicatEntitySet) {
+            declaratieIntereseSindicatEntityByIdMap.put(declaratieIntereseSindicatEntity.getId(), declaratieIntereseSindicatEntity);
+        }
+
+
+        if (declaratieIntereseInfo.getDeclaratieIntereseSindicatInfoList() != null) {
+            for (DeclaratieIntereseSindicatInfo declaratieIntereseSindicatInfo : declaratieIntereseInfo.getDeclaratieIntereseSindicatInfoList()) {
+                DeclaratieIntereseSindicatEntity declaratieIntereseSindicatEntity = declaratieIntereseSindicatEntityByIdMap.get(declaratieIntereseSindicatInfo.getId());
+
+                if (declaratieIntereseSindicatEntity == null) {
+                    declaratieIntereseSindicatEntity = new DeclaratieIntereseSindicatEntity();
+                    declaratieIntereseSindicatEntitySet.add(declaratieIntereseSindicatEntity);
+                }
+
+                populateDeclaratieIntereseSindicatEntity(declaratieIntereseSindicatEntity, declaratieIntereseEntity,
+                        declaratieIntereseSindicatInfo);
+            }
+        }
+
+        // delete the relevant DeclaratieIntereseSindicatEntity
+        Iterator<DeclaratieIntereseSindicatEntity> declaratieIntereseSindicatEntitySetIterator =
+                declaratieIntereseSindicatEntitySet.iterator();
+
+        while (declaratieIntereseSindicatEntitySetIterator.hasNext()) {
+            DeclaratieIntereseSindicatEntity declaratieIntereseSindicatEntity = declaratieIntereseSindicatEntitySetIterator.next();
+
+            if (!declaratieIntereseSindicatInfoByIdHashMap.containsKey(declaratieIntereseSindicatEntity.getId())) {
+                declaratieIntereseSindicatEntitySetIterator.remove();
+            }
+        }
+    }
+
+    private void populateDeclaratieInteresePartidEntity(DeclaratieInteresePartidEntity declaratieInteresePartidEntity,
+                                                        DeclaratieIntereseEntity declaratieIntereseEntity,
+                                                        DeclaratieInteresePartidInfo declaratieInteresePartidInfo) {
+        declaratieInteresePartidEntity.setDeclaratieIntereseEntity(declaratieIntereseEntity);
+        declaratieInteresePartidEntity.setNume(declaratieInteresePartidInfo.getNume());
+        declaratieInteresePartidEntity.setFunctia(declaratieInteresePartidInfo.getFunctia());
+    }
+
+    private void populateDeclaratieInteresePartidEntitySet(Set<DeclaratieInteresePartidEntity> declaratieInteresePartidEntitySet,
+                                                           DeclaratieIntereseEntity declaratieIntereseEntity,
+                                                           DeclaratieIntereseInfo declaratieIntereseInfo) {
+        if (declaratieInteresePartidEntitySet == null) {
+            declaratieInteresePartidEntitySet = new HashSet<>();
+            declaratieIntereseEntity.setDeclaratieInteresePartidEntitySet(declaratieInteresePartidEntitySet);
+        }
+
+        // prepare maps that are needed in order to identify what entities news to be added, modified and deleted
+        Map<Integer, DeclaratieInteresePartidInfo> declaratieInteresePartidInfoByIdHashMap = new HashMap<>();
+
+        if (declaratieIntereseInfo.getDeclaratieInteresePartidInfoList() != null) {
+            for (DeclaratieInteresePartidInfo declaratieInteresePartidInfo : declaratieIntereseInfo.getDeclaratieInteresePartidInfoList()) {
+                declaratieInteresePartidInfoByIdHashMap.put(declaratieInteresePartidInfo.getId(), declaratieInteresePartidInfo);
+            }
+        }
+
+        Map<Integer, DeclaratieInteresePartidEntity> declaratieInteresePartidEntityByIdMap = new HashMap<>();
+
+        for (DeclaratieInteresePartidEntity declaratieInteresePartidEntity : declaratieInteresePartidEntitySet) {
+            declaratieInteresePartidEntityByIdMap.put(declaratieInteresePartidEntity.getId(), declaratieInteresePartidEntity);
+        }
+
+
+        if (declaratieIntereseInfo.getDeclaratieInteresePartidInfoList() != null) {
+            for (DeclaratieInteresePartidInfo declaratieInteresePartidInfo : declaratieIntereseInfo.getDeclaratieInteresePartidInfoList()) {
+                DeclaratieInteresePartidEntity declaratieInteresePartidEntity = declaratieInteresePartidEntityByIdMap.get(declaratieInteresePartidInfo.getId());
+
+                if (declaratieInteresePartidEntity == null) {
+                    declaratieInteresePartidEntity = new DeclaratieInteresePartidEntity();
+                    declaratieInteresePartidEntitySet.add(declaratieInteresePartidEntity);
+                }
+
+                populateDeclaratieInteresePartidEntity(declaratieInteresePartidEntity, declaratieIntereseEntity,
+                        declaratieInteresePartidInfo);
+            }
+        }
+
+        // delete the relevant DeclaratieInteresePartidEntity
+        Iterator<DeclaratieInteresePartidEntity> declaratieInteresePartidEntitySetIterator =
+                declaratieInteresePartidEntitySet.iterator();
+
+        while (declaratieInteresePartidEntitySetIterator.hasNext()) {
+            DeclaratieInteresePartidEntity declaratieInteresePartidEntity = declaratieInteresePartidEntitySetIterator.next();
+
+            if (!declaratieInteresePartidInfoByIdHashMap.containsKey(declaratieInteresePartidEntity.getId())) {
+                declaratieInteresePartidEntitySetIterator.remove();
+            }
+        }
+    }
+
+    private void populateDeclaratieIntereseContractEntity(DeclaratieIntereseContractEntity declaratieIntereseContractEntity,
+                                                          DeclaratieIntereseEntity declaratieIntereseEntity,
+                                                          DeclaratieIntereseContractInfo declaratieIntereseContractInfo) {
+        declaratieIntereseContractEntity.setDeclaratieIntereseEntity(declaratieIntereseEntity);
+        declaratieIntereseContractEntity.setTitular(declaratieIntereseContractInfo.getTitular());
+        declaratieIntereseContractEntity.setBeneficiar(declaratieIntereseContractInfo.getBeneficiar());
+        declaratieIntereseContractEntity.setInstritutiaContractanta(declaratieIntereseContractInfo.getInstritutiaContractanta());
+        declaratieIntereseContractEntity.setProcedura(declaratieIntereseContractInfo.getProcedura());
+        declaratieIntereseContractEntity.setTipContract(declaratieIntereseContractInfo.getTipContract());
+        declaratieIntereseContractEntity.setData(declaratieIntereseContractInfo.getData());
+        declaratieIntereseContractEntity.setDurata(declaratieIntereseContractInfo.getDurata());
+        declaratieIntereseContractEntity.setValoare(declaratieIntereseContractInfo.getValoare());
+        declaratieIntereseContractEntity.setExplicatieContract(declaratieIntereseContractInfo.getExplicatieContract());
+        declaratieIntereseContractEntity.setMoneda(declaratieIntereseContractInfo.getMoneda());
+    }
+
+    private void populateDeclaratieIntereseContractEntitySet(Set<DeclaratieIntereseContractEntity> declaratieIntereseContractEntitySet,
+                                                             DeclaratieIntereseEntity declaratieIntereseEntity,
+                                                             DeclaratieIntereseInfo declaratieIntereseInfo) {
+        if (declaratieIntereseContractEntitySet == null) {
+            declaratieIntereseContractEntitySet = new HashSet<>();
+            declaratieIntereseEntity.setDeclaratieIntereseContractEntitySet(declaratieIntereseContractEntitySet);
+        }
+
+        // prepare maps that are needed in order to identify what entities news to be added, modified and deleted
+        Map<Integer, DeclaratieIntereseContractInfo> declaratieIntereseContractInfoByIdHashMap = new HashMap<>();
+
+        if (declaratieIntereseInfo.getDeclaratieIntereseContractInfoList() != null) {
+            for (DeclaratieIntereseContractInfo declaratieIntereseContractInfo : declaratieIntereseInfo.getDeclaratieIntereseContractInfoList()) {
+                declaratieIntereseContractInfoByIdHashMap.put(declaratieIntereseContractInfo.getId(), declaratieIntereseContractInfo);
+            }
+        }
+
+        Map<Integer, DeclaratieIntereseContractEntity> declaratieIntereseContractEntityByIdMap = new HashMap<>();
+
+        for (DeclaratieIntereseContractEntity declaratieIntereseContractEntity : declaratieIntereseContractEntitySet) {
+            declaratieIntereseContractEntityByIdMap.put(declaratieIntereseContractEntity.getId(), declaratieIntereseContractEntity);
+        }
+
+
+        if (declaratieIntereseInfo.getDeclaratieIntereseContractInfoList() != null) {
+            for (DeclaratieIntereseContractInfo declaratieIntereseContractInfo : declaratieIntereseInfo.getDeclaratieIntereseContractInfoList()) {
+                DeclaratieIntereseContractEntity declaratieIntereseContractEntity = declaratieIntereseContractEntityByIdMap.get(declaratieIntereseContractInfo.getId());
+
+                if (declaratieIntereseContractEntity == null) {
+                    declaratieIntereseContractEntity = new DeclaratieIntereseContractEntity();
+                    declaratieIntereseContractEntitySet.add(declaratieIntereseContractEntity);
+                }
+
+                populateDeclaratieIntereseContractEntity(declaratieIntereseContractEntity, declaratieIntereseEntity,
+                        declaratieIntereseContractInfo);
+            }
+        }
+
+        // delete the relevant DeclaratieIntereseContractEntity
+        Iterator<DeclaratieIntereseContractEntity> declaratieIntereseContractEntitySetIterator =
+                declaratieIntereseContractEntitySet.iterator();
+
+        while (declaratieIntereseContractEntitySetIterator.hasNext()) {
+            DeclaratieIntereseContractEntity declaratieIntereseContractEntity = declaratieIntereseContractEntitySetIterator.next();
+
+            if (!declaratieIntereseContractInfoByIdHashMap.containsKey(declaratieIntereseContractEntity.getId())) {
+                declaratieIntereseContractEntitySetIterator.remove();
+            }
+        }
     }
     /**
      * Gets a declaratieAvere.

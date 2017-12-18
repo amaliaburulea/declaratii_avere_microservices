@@ -61,6 +61,18 @@ public class DeclaratieIntereseEntity extends EntityBase {
     @OneToMany(mappedBy = "declaratieIntereseEntity", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<DeclaratieIntereseAsociatEntity> declaratieIntereseAsociatEntitySet;
 
+    @OneToMany(mappedBy = "declaratieIntereseEntity", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<DeclaratieIntereseMembruEntity> declaratieIntereseMembruEntitySet;
+
+    @OneToMany(mappedBy = "declaratieIntereseEntity", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<DeclaratieIntereseSindicatEntity> declaratieIntereseSindicatEntitySet;
+
+    @OneToMany(mappedBy = "declaratieIntereseEntity", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<DeclaratieInteresePartidEntity> declaratieInteresePartidEntitySet;
+
+    @OneToMany(mappedBy = "declaratieIntereseEntity", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<DeclaratieIntereseContractEntity> declaratieIntereseContractEntitySet;
+
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "functie", nullable = false, insertable = false, updatable = false)
@@ -230,4 +242,35 @@ public class DeclaratieIntereseEntity extends EntityBase {
         isDone = done;
     }
 
+    public Set<DeclaratieIntereseMembruEntity> getDeclaratieIntereseMembruEntitySet() {
+        return declaratieIntereseMembruEntitySet;
+    }
+
+    public void setDeclaratieIntereseMembruEntitySet(Set<DeclaratieIntereseMembruEntity> declaratieIntereseMembruEntitySet) {
+        this.declaratieIntereseMembruEntitySet = declaratieIntereseMembruEntitySet;
+    }
+
+    public Set<DeclaratieIntereseSindicatEntity> getDeclaratieIntereseSindicatEntitySet() {
+        return declaratieIntereseSindicatEntitySet;
+    }
+
+    public void setDeclaratieIntereseSindicatEntitySet(Set<DeclaratieIntereseSindicatEntity> declaratieIntereseSindicatEntitySet) {
+        this.declaratieIntereseSindicatEntitySet = declaratieIntereseSindicatEntitySet;
+    }
+
+    public Set<DeclaratieInteresePartidEntity> getDeclaratieInteresePartidEntitySet() {
+        return declaratieInteresePartidEntitySet;
+    }
+
+    public void setDeclaratieInteresePartidEntitySet(Set<DeclaratieInteresePartidEntity> declaratieInteresePartidEntitySet) {
+        this.declaratieInteresePartidEntitySet = declaratieInteresePartidEntitySet;
+    }
+
+    public Set<DeclaratieIntereseContractEntity> getDeclaratieIntereseContractEntitySet() {
+        return declaratieIntereseContractEntitySet;
+    }
+
+    public void setDeclaratieIntereseContractEntitySet(Set<DeclaratieIntereseContractEntity> declaratieIntereseContractEntitySet) {
+        this.declaratieIntereseContractEntitySet = declaratieIntereseContractEntitySet;
+    }
 }

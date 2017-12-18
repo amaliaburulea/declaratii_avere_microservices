@@ -1231,6 +1231,270 @@ public class RevenueDeclarationInfo {
     private String asociat15explicatie;
     private String asociat15moneda;
 
+    //declaratie interese membru 1
+    private String existaMembru1;
+    private String membru1unitatea;
+    private String membru1adresa;
+    private String membru1rolul;
+    private String membru1valoare;
+    private String membru1explicatie;
+    private String membru1moneda;
+
+    //declaratie interese membru 2
+    private String existaMembru2;
+    private String membru2unitatea;
+    private String membru2adresa;
+    private String membru2rolul;
+    private String membru2valoare;
+    private String membru2explicatie;
+    private String membru2moneda;
+
+    //declaratie interese membru 3
+    private String existaMembru3;
+    private String membru3unitatea;
+    private String membru3adresa;
+    private String membru3rolul;
+    private String membru3valoare;
+    private String membru3explicatie;
+    private String membru3moneda;
+
+    //declaratie interese membru 4
+    private String existaMembru4;
+    private String membru4unitatea;
+    private String membru4adresa;
+    private String membru4rolul;
+    private String membru4valoare;
+    private String membru4explicatie;
+    private String membru4moneda;
+
+    //declaratie interese membru 5
+    private String existaMembru5;
+    private String membru5unitatea;
+    private String membru5adresa;
+    private String membru5rolul;
+    private String membru5valoare;
+    private String membru5explicatie;
+    private String membru5moneda;
+
+    //declaratie interese membru 6
+    private String existaMembru6;
+    private String membru6unitatea;
+    private String membru6adresa;
+    private String membru6rolul;
+    private String membru6valoare;
+    private String membru6explicatie;
+    private String membru6moneda;
+
+    //declaratie interese sindicat 1
+    private String existaSindicat1;
+    private String sindicat1nume;
+
+    //declaratie interese sindicat 2
+    private String existaSindicat2;
+    private String sindicat2nume;
+
+    //declaratie interese sindicat 3
+    private String existaSindicat3;
+    private String sindicat3nume;
+
+    //declaratie interese sindicat 4
+    private String existaSindicat4;
+    private String sindicat4nume;
+
+    //declaratie interese partid 1
+    private String existaPartid1;
+    private String partid1nume;
+    private String partid1functia;
+
+    //declaratie interese partid 2
+    private String existaPartid2;
+    private String partid2nume;
+    private String partid2functia;
+
+    //declaratie interese partid 3
+    private String existaPartid3;
+    private String partid3nume;
+    private String partid3functia;
+
+    //declaratie interese partid 4
+    private String existaPartid4;
+    private String partid4nume;
+    private String partid4functia;
+
+    //declaratie interese contract 1
+    private String existaContract1;
+    private String contract1titular;
+    private String contract1beneficiar;
+    private String contract1instritutiaContractanta;
+    private String contract1procedura;
+    private String contract1tipContract;
+    private String contract1data;
+    private String contract1durata;
+    private String contract1valoare;
+    private String contract1moneda;
+    private String contract1explicatieContract;
+
+    //declaratie interese contract 2
+    private String existaContract2;
+    private String contract2titular;
+    private String contract2beneficiar;
+    private String contract2instritutiaContractanta;
+    private String contract2procedura;
+    private String contract2tipContract;
+    private String contract2data;
+    private String contract2durata;
+    private String contract2valoare;
+    private String contract2moneda;
+    private String contract2explicatieContract;
+
+    //declaratie interese contract 3
+    private String existaContract3;
+    private String contract3titular;
+    private String contract3beneficiar;
+    private String contract3instritutiaContractanta;
+    private String contract3procedura;
+    private String contract3tipContract;
+    private String contract3data;
+    private String contract3durata;
+    private String contract3valoare;
+    private String contract3moneda;
+    private String contract3explicatieContract;
+
+
+    //declaratie interese contract 4
+    private String existaContract4;
+    private String contract4titular;
+    private String contract4beneficiar;
+    private String contract4instritutiaContractanta;
+    private String contract4procedura;
+    private String contract4tipContract;
+    private String contract4data;
+    private String contract4durata;
+    private String contract4valoare;
+    private String contract4moneda;
+    private String contract4explicatieContract;
+
+    //declaratie interese contract 5
+    private String existaContract5;
+    private String contract5titular;
+    private String contract5beneficiar;
+    private String contract5instritutiaContractanta;
+    private String contract5procedura;
+    private String contract5tipContract;
+    private String contract5data;
+    private String contract5durata;
+    private String contract5valoare;
+    private String contract5moneda;
+    private String contract5explicatieContract;
+
+
+    //declaratie interese contract 6
+    private String existaContract6;
+    private String contract6titular;
+    private String contract6beneficiar;
+    private String contract6instritutiaContractanta;
+    private String contract6procedura;
+    private String contract6tipContract;
+    private String contract6data;
+    private String contract6durata;
+    private String contract6valoare;
+    private String contract6moneda;
+    private String contract6explicatieContract;
+
+    //declaratie interese contract 7
+    private String existaContract7;
+    private String contract7titular;
+    private String contract7beneficiar;
+    private String contract7instritutiaContractanta;
+    private String contract7procedura;
+    private String contract7tipContract;
+    private String contract7data;
+    private String contract7durata;
+    private String contract7valoare;
+    private String contract7moneda;
+    private String contract7explicatieContract;
+
+    //declaratie interese contract 8
+    private String existaContract8;
+    private String contract8titular;
+    private String contract8beneficiar;
+    private String contract8instritutiaContractanta;
+    private String contract8procedura;
+    private String contract8tipContract;
+    private String contract8data;
+    private String contract8durata;
+    private String contract8valoare;
+    private String contract8moneda;
+    private String contract8explicatieContract;
+
+
+    //declaratie interese contract 9
+    private String existaContract9;
+    private String contract9titular;
+    private String contract9beneficiar;
+    private String contract9instritutiaContractanta;
+    private String contract9procedura;
+    private String contract9tipContract;
+    private String contract9data;
+    private String contract9durata;
+    private String contract9valoare;
+    private String contract9moneda;
+    private String contract9explicatieContract;
+
+    //declaratie interese contract 10
+    private String existaContract10;
+    private String contract10titular;
+    private String contract10beneficiar;
+    private String contract10instritutiaContractanta;
+    private String contract10procedura;
+    private String contract10tipContract;
+    private String contract10data;
+    private String contract10durata;
+    private String contract10valoare;
+    private String contract10moneda;
+    private String contract10explicatieContract;
+
+    //declaratie interese contract 11
+    private String existaContract11;
+    private String contract11titular;
+    private String contract11beneficiar;
+    private String contract11instritutiaContractanta;
+    private String contract11procedura;
+    private String contract11tipContract;
+    private String contract11data;
+    private String contract11durata;
+    private String contract11valoare;
+    private String contract11moneda;
+    private String contract11explicatieContract;
+
+    //declaratie interese contract 12
+    private String existaContract12;
+    private String contract12titular;
+    private String contract12beneficiar;
+    private String contract12instritutiaContractanta;
+    private String contract12procedura;
+    private String contract12tipContract;
+    private String contract12data;
+    private String contract12durata;
+    private String contract12valoare;
+    private String contract12moneda;
+    private String contract12explicatieContract;
+
+    //declaratie interese contract 13
+    private String existaContract13;
+    private String contract13titular;
+    private String contract13beneficiar;
+    private String contract13instritutiaContractanta;
+    private String contract13procedura;
+    private String contract13tipContract;
+    private String contract13data;
+    private String contract13durata;
+    private String contract13valoare;
+    private String contract13moneda;
+    private String contract13explicatieContract;
+
+
+
     public String getFirstName() {
         return firstName;
     }
@@ -8885,5 +9149,1645 @@ public class RevenueDeclarationInfo {
 
     public void setAsociat15moneda(String asociat15moneda) {
         this.asociat15moneda = asociat15moneda;
+    }
+
+    public String getExistaMembru1() {
+        return existaMembru1;
+    }
+
+    public void setExistaMembru1(String existaMembru1) {
+        this.existaMembru1 = existaMembru1;
+    }
+
+    public String getMembru1unitatea() {
+        return membru1unitatea;
+    }
+
+    public void setMembru1unitatea(String membru1unitatea) {
+        this.membru1unitatea = membru1unitatea;
+    }
+
+    public String getMembru1adresa() {
+        return membru1adresa;
+    }
+
+    public void setMembru1adresa(String membru1adresa) {
+        this.membru1adresa = membru1adresa;
+    }
+
+    public String getMembru1rolul() {
+        return membru1rolul;
+    }
+
+    public void setMembru1rolul(String membru1rolul) {
+        this.membru1rolul = membru1rolul;
+    }
+
+    public String getMembru1valoare() {
+        return membru1valoare;
+    }
+
+    public void setMembru1valoare(String membru1valoare) {
+        this.membru1valoare = membru1valoare;
+    }
+
+    public String getMembru1explicatie() {
+        return membru1explicatie;
+    }
+
+    public void setMembru1explicatie(String membru1explicatie) {
+        this.membru1explicatie = membru1explicatie;
+    }
+
+    public String getMembru1moneda() {
+        return membru1moneda;
+    }
+
+    public void setMembru1moneda(String membru1moneda) {
+        this.membru1moneda = membru1moneda;
+    }
+
+    public String getExistaMembru2() {
+        return existaMembru2;
+    }
+
+    public void setExistaMembru2(String existaMembru2) {
+        this.existaMembru2 = existaMembru2;
+    }
+
+    public String getMembru2unitatea() {
+        return membru2unitatea;
+    }
+
+    public void setMembru2unitatea(String membru2unitatea) {
+        this.membru2unitatea = membru2unitatea;
+    }
+
+    public String getMembru2adresa() {
+        return membru2adresa;
+    }
+
+    public void setMembru2adresa(String membru2adresa) {
+        this.membru2adresa = membru2adresa;
+    }
+
+    public String getMembru2rolul() {
+        return membru2rolul;
+    }
+
+    public void setMembru2rolul(String membru2rolul) {
+        this.membru2rolul = membru2rolul;
+    }
+
+    public String getMembru2valoare() {
+        return membru2valoare;
+    }
+
+    public void setMembru2valoare(String membru2valoare) {
+        this.membru2valoare = membru2valoare;
+    }
+
+    public String getMembru2explicatie() {
+        return membru2explicatie;
+    }
+
+    public void setMembru2explicatie(String membru2explicatie) {
+        this.membru2explicatie = membru2explicatie;
+    }
+
+    public String getMembru2moneda() {
+        return membru2moneda;
+    }
+
+    public void setMembru2moneda(String membru2moneda) {
+        this.membru2moneda = membru2moneda;
+    }
+
+    public String getExistaMembru3() {
+        return existaMembru3;
+    }
+
+    public void setExistaMembru3(String existaMembru3) {
+        this.existaMembru3 = existaMembru3;
+    }
+
+    public String getMembru3unitatea() {
+        return membru3unitatea;
+    }
+
+    public void setMembru3unitatea(String membru3unitatea) {
+        this.membru3unitatea = membru3unitatea;
+    }
+
+    public String getMembru3adresa() {
+        return membru3adresa;
+    }
+
+    public void setMembru3adresa(String membru3adresa) {
+        this.membru3adresa = membru3adresa;
+    }
+
+    public String getMembru3rolul() {
+        return membru3rolul;
+    }
+
+    public void setMembru3rolul(String membru3rolul) {
+        this.membru3rolul = membru3rolul;
+    }
+
+    public String getMembru3valoare() {
+        return membru3valoare;
+    }
+
+    public void setMembru3valoare(String membru3valoare) {
+        this.membru3valoare = membru3valoare;
+    }
+
+    public String getMembru3explicatie() {
+        return membru3explicatie;
+    }
+
+    public void setMembru3explicatie(String membru3explicatie) {
+        this.membru3explicatie = membru3explicatie;
+    }
+
+    public String getMembru3moneda() {
+        return membru3moneda;
+    }
+
+    public void setMembru3moneda(String membru3moneda) {
+        this.membru3moneda = membru3moneda;
+    }
+
+    public String getExistaMembru4() {
+        return existaMembru4;
+    }
+
+    public void setExistaMembru4(String existaMembru4) {
+        this.existaMembru4 = existaMembru4;
+    }
+
+    public String getMembru4unitatea() {
+        return membru4unitatea;
+    }
+
+    public void setMembru4unitatea(String membru4unitatea) {
+        this.membru4unitatea = membru4unitatea;
+    }
+
+    public String getMembru4adresa() {
+        return membru4adresa;
+    }
+
+    public void setMembru4adresa(String membru4adresa) {
+        this.membru4adresa = membru4adresa;
+    }
+
+    public String getMembru4rolul() {
+        return membru4rolul;
+    }
+
+    public void setMembru4rolul(String membru4rolul) {
+        this.membru4rolul = membru4rolul;
+    }
+
+    public String getMembru4valoare() {
+        return membru4valoare;
+    }
+
+    public void setMembru4valoare(String membru4valoare) {
+        this.membru4valoare = membru4valoare;
+    }
+
+    public String getMembru4explicatie() {
+        return membru4explicatie;
+    }
+
+    public void setMembru4explicatie(String membru4explicatie) {
+        this.membru4explicatie = membru4explicatie;
+    }
+
+    public String getMembru4moneda() {
+        return membru4moneda;
+    }
+
+    public void setMembru4moneda(String membru4moneda) {
+        this.membru4moneda = membru4moneda;
+    }
+
+    public String getExistaMembru5() {
+        return existaMembru5;
+    }
+
+    public void setExistaMembru5(String existaMembru5) {
+        this.existaMembru5 = existaMembru5;
+    }
+
+    public String getMembru5unitatea() {
+        return membru5unitatea;
+    }
+
+    public void setMembru5unitatea(String membru5unitatea) {
+        this.membru5unitatea = membru5unitatea;
+    }
+
+    public String getMembru5adresa() {
+        return membru5adresa;
+    }
+
+    public void setMembru5adresa(String membru5adresa) {
+        this.membru5adresa = membru5adresa;
+    }
+
+    public String getMembru5rolul() {
+        return membru5rolul;
+    }
+
+    public void setMembru5rolul(String membru5rolul) {
+        this.membru5rolul = membru5rolul;
+    }
+
+    public String getMembru5valoare() {
+        return membru5valoare;
+    }
+
+    public void setMembru5valoare(String membru5valoare) {
+        this.membru5valoare = membru5valoare;
+    }
+
+    public String getMembru5explicatie() {
+        return membru5explicatie;
+    }
+
+    public void setMembru5explicatie(String membru5explicatie) {
+        this.membru5explicatie = membru5explicatie;
+    }
+
+    public String getMembru5moneda() {
+        return membru5moneda;
+    }
+
+    public void setMembru5moneda(String membru5moneda) {
+        this.membru5moneda = membru5moneda;
+    }
+
+    public String getExistaMembru6() {
+        return existaMembru6;
+    }
+
+    public void setExistaMembru6(String existaMembru6) {
+        this.existaMembru6 = existaMembru6;
+    }
+
+    public String getMembru6unitatea() {
+        return membru6unitatea;
+    }
+
+    public void setMembru6unitatea(String membru6unitatea) {
+        this.membru6unitatea = membru6unitatea;
+    }
+
+    public String getMembru6adresa() {
+        return membru6adresa;
+    }
+
+    public void setMembru6adresa(String membru6adresa) {
+        this.membru6adresa = membru6adresa;
+    }
+
+    public String getMembru6rolul() {
+        return membru6rolul;
+    }
+
+    public void setMembru6rolul(String membru6rolul) {
+        this.membru6rolul = membru6rolul;
+    }
+
+    public String getMembru6valoare() {
+        return membru6valoare;
+    }
+
+    public void setMembru6valoare(String membru6valoare) {
+        this.membru6valoare = membru6valoare;
+    }
+
+    public String getMembru6explicatie() {
+        return membru6explicatie;
+    }
+
+    public void setMembru6explicatie(String membru6explicatie) {
+        this.membru6explicatie = membru6explicatie;
+    }
+
+    public String getMembru6moneda() {
+        return membru6moneda;
+    }
+
+    public void setMembru6moneda(String membru6moneda) {
+        this.membru6moneda = membru6moneda;
+    }
+
+    public String getExistaSindicat1() {
+        return existaSindicat1;
+    }
+
+    public void setExistaSindicat1(String existaSindicat1) {
+        this.existaSindicat1 = existaSindicat1;
+    }
+
+    public String getSindicat1nume() {
+        return sindicat1nume;
+    }
+
+    public void setSindicat1nume(String sindicat1nume) {
+        this.sindicat1nume = sindicat1nume;
+    }
+
+    public String getExistaSindicat2() {
+        return existaSindicat2;
+    }
+
+    public void setExistaSindicat2(String existaSindicat2) {
+        this.existaSindicat2 = existaSindicat2;
+    }
+
+    public String getSindicat2nume() {
+        return sindicat2nume;
+    }
+
+    public void setSindicat2nume(String sindicat2nume) {
+        this.sindicat2nume = sindicat2nume;
+    }
+
+    public String getExistaSindicat3() {
+        return existaSindicat3;
+    }
+
+    public void setExistaSindicat3(String existaSindicat3) {
+        this.existaSindicat3 = existaSindicat3;
+    }
+
+    public String getSindicat3nume() {
+        return sindicat3nume;
+    }
+
+    public void setSindicat3nume(String sindicat3nume) {
+        this.sindicat3nume = sindicat3nume;
+    }
+
+    public String getExistaSindicat4() {
+        return existaSindicat4;
+    }
+
+    public void setExistaSindicat4(String existaSindicat4) {
+        this.existaSindicat4 = existaSindicat4;
+    }
+
+    public String getSindicat4nume() {
+        return sindicat4nume;
+    }
+
+    public void setSindicat4nume(String sindicat4nume) {
+        this.sindicat4nume = sindicat4nume;
+    }
+
+    public String getExistaPartid1() {
+        return existaPartid1;
+    }
+
+    public void setExistaPartid1(String existaPartid1) {
+        this.existaPartid1 = existaPartid1;
+    }
+
+    public String getPartid1nume() {
+        return partid1nume;
+    }
+
+    public void setPartid1nume(String partid1nume) {
+        this.partid1nume = partid1nume;
+    }
+
+    public String getPartid1functia() {
+        return partid1functia;
+    }
+
+    public void setPartid1functia(String partid1functia) {
+        this.partid1functia = partid1functia;
+    }
+
+    public String getExistaPartid2() {
+        return existaPartid2;
+    }
+
+    public void setExistaPartid2(String existaPartid2) {
+        this.existaPartid2 = existaPartid2;
+    }
+
+    public String getPartid2nume() {
+        return partid2nume;
+    }
+
+    public void setPartid2nume(String partid2nume) {
+        this.partid2nume = partid2nume;
+    }
+
+    public String getPartid2functia() {
+        return partid2functia;
+    }
+
+    public void setPartid2functia(String partid2functia) {
+        this.partid2functia = partid2functia;
+    }
+
+    public String getExistaPartid3() {
+        return existaPartid3;
+    }
+
+    public void setExistaPartid3(String existaPartid3) {
+        this.existaPartid3 = existaPartid3;
+    }
+
+    public String getPartid3nume() {
+        return partid3nume;
+    }
+
+    public void setPartid3nume(String partid3nume) {
+        this.partid3nume = partid3nume;
+    }
+
+    public String getPartid3functia() {
+        return partid3functia;
+    }
+
+    public void setPartid3functia(String partid3functia) {
+        this.partid3functia = partid3functia;
+    }
+
+    public String getExistaPartid4() {
+        return existaPartid4;
+    }
+
+    public void setExistaPartid4(String existaPartid4) {
+        this.existaPartid4 = existaPartid4;
+    }
+
+    public String getPartid4nume() {
+        return partid4nume;
+    }
+
+    public void setPartid4nume(String partid4nume) {
+        this.partid4nume = partid4nume;
+    }
+
+    public String getPartid4functia() {
+        return partid4functia;
+    }
+
+    public void setPartid4functia(String partid4functia) {
+        this.partid4functia = partid4functia;
+    }
+
+    public String getExistaContract1() {
+        return existaContract1;
+    }
+
+    public void setExistaContract1(String existaContract1) {
+        this.existaContract1 = existaContract1;
+    }
+
+    public String getContract1titular() {
+        return contract1titular;
+    }
+
+    public void setContract1titular(String contract1titular) {
+        this.contract1titular = contract1titular;
+    }
+
+    public String getContract1beneficiar() {
+        return contract1beneficiar;
+    }
+
+    public void setContract1beneficiar(String contract1beneficiar) {
+        this.contract1beneficiar = contract1beneficiar;
+    }
+
+    public String getContract1instritutiaContractanta() {
+        return contract1instritutiaContractanta;
+    }
+
+    public void setContract1instritutiaContractanta(String contract1instritutiaContractanta) {
+        this.contract1instritutiaContractanta = contract1instritutiaContractanta;
+    }
+
+    public String getContract1procedura() {
+        return contract1procedura;
+    }
+
+    public void setContract1procedura(String contract1procedura) {
+        this.contract1procedura = contract1procedura;
+    }
+
+    public String getContract1tipContract() {
+        return contract1tipContract;
+    }
+
+    public void setContract1tipContract(String contract1tipContract) {
+        this.contract1tipContract = contract1tipContract;
+    }
+
+    public String getContract1data() {
+        return contract1data;
+    }
+
+    public void setContract1data(String contract1data) {
+        this.contract1data = contract1data;
+    }
+
+    public String getContract1durata() {
+        return contract1durata;
+    }
+
+    public void setContract1durata(String contract1durata) {
+        this.contract1durata = contract1durata;
+    }
+
+    public String getContract1valoare() {
+        return contract1valoare;
+    }
+
+    public void setContract1valoare(String contract1valoare) {
+        this.contract1valoare = contract1valoare;
+    }
+
+    public String getContract1moneda() {
+        return contract1moneda;
+    }
+
+    public void setContract1moneda(String contract1moneda) {
+        this.contract1moneda = contract1moneda;
+    }
+
+    public String getContract1explicatieContract() {
+        return contract1explicatieContract;
+    }
+
+    public void setContract1explicatieContract(String contract1explicatieContract) {
+        this.contract1explicatieContract = contract1explicatieContract;
+    }
+
+    public String getExistaContract2() {
+        return existaContract2;
+    }
+
+    public void setExistaContract2(String existaContract2) {
+        this.existaContract2 = existaContract2;
+    }
+
+    public String getContract2titular() {
+        return contract2titular;
+    }
+
+    public void setContract2titular(String contract2titular) {
+        this.contract2titular = contract2titular;
+    }
+
+    public String getContract2beneficiar() {
+        return contract2beneficiar;
+    }
+
+    public void setContract2beneficiar(String contract2beneficiar) {
+        this.contract2beneficiar = contract2beneficiar;
+    }
+
+    public String getContract2instritutiaContractanta() {
+        return contract2instritutiaContractanta;
+    }
+
+    public void setContract2instritutiaContractanta(String contract2instritutiaContractanta) {
+        this.contract2instritutiaContractanta = contract2instritutiaContractanta;
+    }
+
+    public String getContract2procedura() {
+        return contract2procedura;
+    }
+
+    public void setContract2procedura(String contract2procedura) {
+        this.contract2procedura = contract2procedura;
+    }
+
+    public String getContract2tipContract() {
+        return contract2tipContract;
+    }
+
+    public void setContract2tipContract(String contract2tipContract) {
+        this.contract2tipContract = contract2tipContract;
+    }
+
+    public String getContract2data() {
+        return contract2data;
+    }
+
+    public void setContract2data(String contract2data) {
+        this.contract2data = contract2data;
+    }
+
+    public String getContract2durata() {
+        return contract2durata;
+    }
+
+    public void setContract2durata(String contract2durata) {
+        this.contract2durata = contract2durata;
+    }
+
+    public String getContract2valoare() {
+        return contract2valoare;
+    }
+
+    public void setContract2valoare(String contract2valoare) {
+        this.contract2valoare = contract2valoare;
+    }
+
+    public String getContract2moneda() {
+        return contract2moneda;
+    }
+
+    public void setContract2moneda(String contract2moneda) {
+        this.contract2moneda = contract2moneda;
+    }
+
+    public String getContract2explicatieContract() {
+        return contract2explicatieContract;
+    }
+
+    public void setContract2explicatieContract(String contract2explicatieContract) {
+        this.contract2explicatieContract = contract2explicatieContract;
+    }
+
+    public String getExistaContract3() {
+        return existaContract3;
+    }
+
+    public void setExistaContract3(String existaContract3) {
+        this.existaContract3 = existaContract3;
+    }
+
+    public String getContract3titular() {
+        return contract3titular;
+    }
+
+    public void setContract3titular(String contract3titular) {
+        this.contract3titular = contract3titular;
+    }
+
+    public String getContract3beneficiar() {
+        return contract3beneficiar;
+    }
+
+    public void setContract3beneficiar(String contract3beneficiar) {
+        this.contract3beneficiar = contract3beneficiar;
+    }
+
+    public String getContract3instritutiaContractanta() {
+        return contract3instritutiaContractanta;
+    }
+
+    public void setContract3instritutiaContractanta(String contract3instritutiaContractanta) {
+        this.contract3instritutiaContractanta = contract3instritutiaContractanta;
+    }
+
+    public String getContract3procedura() {
+        return contract3procedura;
+    }
+
+    public void setContract3procedura(String contract3procedura) {
+        this.contract3procedura = contract3procedura;
+    }
+
+    public String getContract3tipContract() {
+        return contract3tipContract;
+    }
+
+    public void setContract3tipContract(String contract3tipContract) {
+        this.contract3tipContract = contract3tipContract;
+    }
+
+    public String getContract3data() {
+        return contract3data;
+    }
+
+    public void setContract3data(String contract3data) {
+        this.contract3data = contract3data;
+    }
+
+    public String getContract3durata() {
+        return contract3durata;
+    }
+
+    public void setContract3durata(String contract3durata) {
+        this.contract3durata = contract3durata;
+    }
+
+    public String getContract3valoare() {
+        return contract3valoare;
+    }
+
+    public void setContract3valoare(String contract3valoare) {
+        this.contract3valoare = contract3valoare;
+    }
+
+    public String getContract3moneda() {
+        return contract3moneda;
+    }
+
+    public void setContract3moneda(String contract3moneda) {
+        this.contract3moneda = contract3moneda;
+    }
+
+    public String getContract3explicatieContract() {
+        return contract3explicatieContract;
+    }
+
+    public void setContract3explicatieContract(String contract3explicatieContract) {
+        this.contract3explicatieContract = contract3explicatieContract;
+    }
+
+    public String getExistaContract4() {
+        return existaContract4;
+    }
+
+    public void setExistaContract4(String existaContract4) {
+        this.existaContract4 = existaContract4;
+    }
+
+    public String getContract4titular() {
+        return contract4titular;
+    }
+
+    public void setContract4titular(String contract4titular) {
+        this.contract4titular = contract4titular;
+    }
+
+    public String getContract4beneficiar() {
+        return contract4beneficiar;
+    }
+
+    public void setContract4beneficiar(String contract4beneficiar) {
+        this.contract4beneficiar = contract4beneficiar;
+    }
+
+    public String getContract4instritutiaContractanta() {
+        return contract4instritutiaContractanta;
+    }
+
+    public void setContract4instritutiaContractanta(String contract4instritutiaContractanta) {
+        this.contract4instritutiaContractanta = contract4instritutiaContractanta;
+    }
+
+    public String getContract4procedura() {
+        return contract4procedura;
+    }
+
+    public void setContract4procedura(String contract4procedura) {
+        this.contract4procedura = contract4procedura;
+    }
+
+    public String getContract4tipContract() {
+        return contract4tipContract;
+    }
+
+    public void setContract4tipContract(String contract4tipContract) {
+        this.contract4tipContract = contract4tipContract;
+    }
+
+    public String getContract4data() {
+        return contract4data;
+    }
+
+    public void setContract4data(String contract4data) {
+        this.contract4data = contract4data;
+    }
+
+    public String getContract4durata() {
+        return contract4durata;
+    }
+
+    public void setContract4durata(String contract4durata) {
+        this.contract4durata = contract4durata;
+    }
+
+    public String getContract4valoare() {
+        return contract4valoare;
+    }
+
+    public void setContract4valoare(String contract4valoare) {
+        this.contract4valoare = contract4valoare;
+    }
+
+    public String getContract4moneda() {
+        return contract4moneda;
+    }
+
+    public void setContract4moneda(String contract4moneda) {
+        this.contract4moneda = contract4moneda;
+    }
+
+    public String getContract4explicatieContract() {
+        return contract4explicatieContract;
+    }
+
+    public void setContract4explicatieContract(String contract4explicatieContract) {
+        this.contract4explicatieContract = contract4explicatieContract;
+    }
+
+    public String getExistaContract5() {
+        return existaContract5;
+    }
+
+    public void setExistaContract5(String existaContract5) {
+        this.existaContract5 = existaContract5;
+    }
+
+    public String getContract5titular() {
+        return contract5titular;
+    }
+
+    public void setContract5titular(String contract5titular) {
+        this.contract5titular = contract5titular;
+    }
+
+    public String getContract5beneficiar() {
+        return contract5beneficiar;
+    }
+
+    public void setContract5beneficiar(String contract5beneficiar) {
+        this.contract5beneficiar = contract5beneficiar;
+    }
+
+    public String getContract5instritutiaContractanta() {
+        return contract5instritutiaContractanta;
+    }
+
+    public void setContract5instritutiaContractanta(String contract5instritutiaContractanta) {
+        this.contract5instritutiaContractanta = contract5instritutiaContractanta;
+    }
+
+    public String getContract5procedura() {
+        return contract5procedura;
+    }
+
+    public void setContract5procedura(String contract5procedura) {
+        this.contract5procedura = contract5procedura;
+    }
+
+    public String getContract5tipContract() {
+        return contract5tipContract;
+    }
+
+    public void setContract5tipContract(String contract5tipContract) {
+        this.contract5tipContract = contract5tipContract;
+    }
+
+    public String getContract5data() {
+        return contract5data;
+    }
+
+    public void setContract5data(String contract5data) {
+        this.contract5data = contract5data;
+    }
+
+    public String getContract5durata() {
+        return contract5durata;
+    }
+
+    public void setContract5durata(String contract5durata) {
+        this.contract5durata = contract5durata;
+    }
+
+    public String getContract5valoare() {
+        return contract5valoare;
+    }
+
+    public void setContract5valoare(String contract5valoare) {
+        this.contract5valoare = contract5valoare;
+    }
+
+    public String getContract5moneda() {
+        return contract5moneda;
+    }
+
+    public void setContract5moneda(String contract5moneda) {
+        this.contract5moneda = contract5moneda;
+    }
+
+    public String getContract5explicatieContract() {
+        return contract5explicatieContract;
+    }
+
+    public void setContract5explicatieContract(String contract5explicatieContract) {
+        this.contract5explicatieContract = contract5explicatieContract;
+    }
+
+    public String getExistaContract6() {
+        return existaContract6;
+    }
+
+    public void setExistaContract6(String existaContract6) {
+        this.existaContract6 = existaContract6;
+    }
+
+    public String getContract6titular() {
+        return contract6titular;
+    }
+
+    public void setContract6titular(String contract6titular) {
+        this.contract6titular = contract6titular;
+    }
+
+    public String getContract6beneficiar() {
+        return contract6beneficiar;
+    }
+
+    public void setContract6beneficiar(String contract6beneficiar) {
+        this.contract6beneficiar = contract6beneficiar;
+    }
+
+    public String getContract6instritutiaContractanta() {
+        return contract6instritutiaContractanta;
+    }
+
+    public void setContract6instritutiaContractanta(String contract6instritutiaContractanta) {
+        this.contract6instritutiaContractanta = contract6instritutiaContractanta;
+    }
+
+    public String getContract6procedura() {
+        return contract6procedura;
+    }
+
+    public void setContract6procedura(String contract6procedura) {
+        this.contract6procedura = contract6procedura;
+    }
+
+    public String getContract6tipContract() {
+        return contract6tipContract;
+    }
+
+    public void setContract6tipContract(String contract6tipContract) {
+        this.contract6tipContract = contract6tipContract;
+    }
+
+    public String getContract6data() {
+        return contract6data;
+    }
+
+    public void setContract6data(String contract6data) {
+        this.contract6data = contract6data;
+    }
+
+    public String getContract6durata() {
+        return contract6durata;
+    }
+
+    public void setContract6durata(String contract6durata) {
+        this.contract6durata = contract6durata;
+    }
+
+    public String getContract6valoare() {
+        return contract6valoare;
+    }
+
+    public void setContract6valoare(String contract6valoare) {
+        this.contract6valoare = contract6valoare;
+    }
+
+    public String getContract6moneda() {
+        return contract6moneda;
+    }
+
+    public void setContract6moneda(String contract6moneda) {
+        this.contract6moneda = contract6moneda;
+    }
+
+    public String getContract6explicatieContract() {
+        return contract6explicatieContract;
+    }
+
+    public void setContract6explicatieContract(String contract6explicatieContract) {
+        this.contract6explicatieContract = contract6explicatieContract;
+    }
+
+    public String getExistaContract7() {
+        return existaContract7;
+    }
+
+    public void setExistaContract7(String existaContract7) {
+        this.existaContract7 = existaContract7;
+    }
+
+    public String getContract7titular() {
+        return contract7titular;
+    }
+
+    public void setContract7titular(String contract7titular) {
+        this.contract7titular = contract7titular;
+    }
+
+    public String getContract7beneficiar() {
+        return contract7beneficiar;
+    }
+
+    public void setContract7beneficiar(String contract7beneficiar) {
+        this.contract7beneficiar = contract7beneficiar;
+    }
+
+    public String getContract7instritutiaContractanta() {
+        return contract7instritutiaContractanta;
+    }
+
+    public void setContract7instritutiaContractanta(String contract7instritutiaContractanta) {
+        this.contract7instritutiaContractanta = contract7instritutiaContractanta;
+    }
+
+    public String getContract7procedura() {
+        return contract7procedura;
+    }
+
+    public void setContract7procedura(String contract7procedura) {
+        this.contract7procedura = contract7procedura;
+    }
+
+    public String getContract7tipContract() {
+        return contract7tipContract;
+    }
+
+    public void setContract7tipContract(String contract7tipContract) {
+        this.contract7tipContract = contract7tipContract;
+    }
+
+    public String getContract7data() {
+        return contract7data;
+    }
+
+    public void setContract7data(String contract7data) {
+        this.contract7data = contract7data;
+    }
+
+    public String getContract7durata() {
+        return contract7durata;
+    }
+
+    public void setContract7durata(String contract7durata) {
+        this.contract7durata = contract7durata;
+    }
+
+    public String getContract7valoare() {
+        return contract7valoare;
+    }
+
+    public void setContract7valoare(String contract7valoare) {
+        this.contract7valoare = contract7valoare;
+    }
+
+    public String getContract7moneda() {
+        return contract7moneda;
+    }
+
+    public void setContract7moneda(String contract7moneda) {
+        this.contract7moneda = contract7moneda;
+    }
+
+    public String getContract7explicatieContract() {
+        return contract7explicatieContract;
+    }
+
+    public void setContract7explicatieContract(String contract7explicatieContract) {
+        this.contract7explicatieContract = contract7explicatieContract;
+    }
+
+    public String getExistaContract8() {
+        return existaContract8;
+    }
+
+    public void setExistaContract8(String existaContract8) {
+        this.existaContract8 = existaContract8;
+    }
+
+    public String getContract8titular() {
+        return contract8titular;
+    }
+
+    public void setContract8titular(String contract8titular) {
+        this.contract8titular = contract8titular;
+    }
+
+    public String getContract8beneficiar() {
+        return contract8beneficiar;
+    }
+
+    public void setContract8beneficiar(String contract8beneficiar) {
+        this.contract8beneficiar = contract8beneficiar;
+    }
+
+    public String getContract8instritutiaContractanta() {
+        return contract8instritutiaContractanta;
+    }
+
+    public void setContract8instritutiaContractanta(String contract8instritutiaContractanta) {
+        this.contract8instritutiaContractanta = contract8instritutiaContractanta;
+    }
+
+    public String getContract8procedura() {
+        return contract8procedura;
+    }
+
+    public void setContract8procedura(String contract8procedura) {
+        this.contract8procedura = contract8procedura;
+    }
+
+    public String getContract8tipContract() {
+        return contract8tipContract;
+    }
+
+    public void setContract8tipContract(String contract8tipContract) {
+        this.contract8tipContract = contract8tipContract;
+    }
+
+    public String getContract8data() {
+        return contract8data;
+    }
+
+    public void setContract8data(String contract8data) {
+        this.contract8data = contract8data;
+    }
+
+    public String getContract8durata() {
+        return contract8durata;
+    }
+
+    public void setContract8durata(String contract8durata) {
+        this.contract8durata = contract8durata;
+    }
+
+    public String getContract8valoare() {
+        return contract8valoare;
+    }
+
+    public void setContract8valoare(String contract8valoare) {
+        this.contract8valoare = contract8valoare;
+    }
+
+    public String getContract8moneda() {
+        return contract8moneda;
+    }
+
+    public void setContract8moneda(String contract8moneda) {
+        this.contract8moneda = contract8moneda;
+    }
+
+    public String getContract8explicatieContract() {
+        return contract8explicatieContract;
+    }
+
+    public void setContract8explicatieContract(String contract8explicatieContract) {
+        this.contract8explicatieContract = contract8explicatieContract;
+    }
+
+    public String getExistaContract9() {
+        return existaContract9;
+    }
+
+    public void setExistaContract9(String existaContract9) {
+        this.existaContract9 = existaContract9;
+    }
+
+    public String getContract9titular() {
+        return contract9titular;
+    }
+
+    public void setContract9titular(String contract9titular) {
+        this.contract9titular = contract9titular;
+    }
+
+    public String getContract9beneficiar() {
+        return contract9beneficiar;
+    }
+
+    public void setContract9beneficiar(String contract9beneficiar) {
+        this.contract9beneficiar = contract9beneficiar;
+    }
+
+    public String getContract9instritutiaContractanta() {
+        return contract9instritutiaContractanta;
+    }
+
+    public void setContract9instritutiaContractanta(String contract9instritutiaContractanta) {
+        this.contract9instritutiaContractanta = contract9instritutiaContractanta;
+    }
+
+    public String getContract9procedura() {
+        return contract9procedura;
+    }
+
+    public void setContract9procedura(String contract9procedura) {
+        this.contract9procedura = contract9procedura;
+    }
+
+    public String getContract9tipContract() {
+        return contract9tipContract;
+    }
+
+    public void setContract9tipContract(String contract9tipContract) {
+        this.contract9tipContract = contract9tipContract;
+    }
+
+    public String getContract9data() {
+        return contract9data;
+    }
+
+    public void setContract9data(String contract9data) {
+        this.contract9data = contract9data;
+    }
+
+    public String getContract9durata() {
+        return contract9durata;
+    }
+
+    public void setContract9durata(String contract9durata) {
+        this.contract9durata = contract9durata;
+    }
+
+    public String getContract9valoare() {
+        return contract9valoare;
+    }
+
+    public void setContract9valoare(String contract9valoare) {
+        this.contract9valoare = contract9valoare;
+    }
+
+    public String getContract9moneda() {
+        return contract9moneda;
+    }
+
+    public void setContract9moneda(String contract9moneda) {
+        this.contract9moneda = contract9moneda;
+    }
+
+    public String getContract9explicatieContract() {
+        return contract9explicatieContract;
+    }
+
+    public void setContract9explicatieContract(String contract9explicatieContract) {
+        this.contract9explicatieContract = contract9explicatieContract;
+    }
+
+    public String getExistaContract10() {
+        return existaContract10;
+    }
+
+    public void setExistaContract10(String existaContract10) {
+        this.existaContract10 = existaContract10;
+    }
+
+    public String getContract10titular() {
+        return contract10titular;
+    }
+
+    public void setContract10titular(String contract10titular) {
+        this.contract10titular = contract10titular;
+    }
+
+    public String getContract10beneficiar() {
+        return contract10beneficiar;
+    }
+
+    public void setContract10beneficiar(String contract10beneficiar) {
+        this.contract10beneficiar = contract10beneficiar;
+    }
+
+    public String getContract10instritutiaContractanta() {
+        return contract10instritutiaContractanta;
+    }
+
+    public void setContract10instritutiaContractanta(String contract10instritutiaContractanta) {
+        this.contract10instritutiaContractanta = contract10instritutiaContractanta;
+    }
+
+    public String getContract10procedura() {
+        return contract10procedura;
+    }
+
+    public void setContract10procedura(String contract10procedura) {
+        this.contract10procedura = contract10procedura;
+    }
+
+    public String getContract10tipContract() {
+        return contract10tipContract;
+    }
+
+    public void setContract10tipContract(String contract10tipContract) {
+        this.contract10tipContract = contract10tipContract;
+    }
+
+    public String getContract10data() {
+        return contract10data;
+    }
+
+    public void setContract10data(String contract10data) {
+        this.contract10data = contract10data;
+    }
+
+    public String getContract10durata() {
+        return contract10durata;
+    }
+
+    public void setContract10durata(String contract10durata) {
+        this.contract10durata = contract10durata;
+    }
+
+    public String getContract10valoare() {
+        return contract10valoare;
+    }
+
+    public void setContract10valoare(String contract10valoare) {
+        this.contract10valoare = contract10valoare;
+    }
+
+    public String getContract10moneda() {
+        return contract10moneda;
+    }
+
+    public void setContract10moneda(String contract10moneda) {
+        this.contract10moneda = contract10moneda;
+    }
+
+    public String getContract10explicatieContract() {
+        return contract10explicatieContract;
+    }
+
+    public void setContract10explicatieContract(String contract10explicatieContract) {
+        this.contract10explicatieContract = contract10explicatieContract;
+    }
+
+    public String getExistaContract11() {
+        return existaContract11;
+    }
+
+    public void setExistaContract11(String existaContract11) {
+        this.existaContract11 = existaContract11;
+    }
+
+    public String getContract11titular() {
+        return contract11titular;
+    }
+
+    public void setContract11titular(String contract11titular) {
+        this.contract11titular = contract11titular;
+    }
+
+    public String getContract11beneficiar() {
+        return contract11beneficiar;
+    }
+
+    public void setContract11beneficiar(String contract11beneficiar) {
+        this.contract11beneficiar = contract11beneficiar;
+    }
+
+    public String getContract11instritutiaContractanta() {
+        return contract11instritutiaContractanta;
+    }
+
+    public void setContract11instritutiaContractanta(String contract11instritutiaContractanta) {
+        this.contract11instritutiaContractanta = contract11instritutiaContractanta;
+    }
+
+    public String getContract11procedura() {
+        return contract11procedura;
+    }
+
+    public void setContract11procedura(String contract11procedura) {
+        this.contract11procedura = contract11procedura;
+    }
+
+    public String getContract11tipContract() {
+        return contract11tipContract;
+    }
+
+    public void setContract11tipContract(String contract11tipContract) {
+        this.contract11tipContract = contract11tipContract;
+    }
+
+    public String getContract11data() {
+        return contract11data;
+    }
+
+    public void setContract11data(String contract11data) {
+        this.contract11data = contract11data;
+    }
+
+    public String getContract11durata() {
+        return contract11durata;
+    }
+
+    public void setContract11durata(String contract11durata) {
+        this.contract11durata = contract11durata;
+    }
+
+    public String getContract11valoare() {
+        return contract11valoare;
+    }
+
+    public void setContract11valoare(String contract11valoare) {
+        this.contract11valoare = contract11valoare;
+    }
+
+    public String getContract11moneda() {
+        return contract11moneda;
+    }
+
+    public void setContract11moneda(String contract11moneda) {
+        this.contract11moneda = contract11moneda;
+    }
+
+    public String getContract11explicatieContract() {
+        return contract11explicatieContract;
+    }
+
+    public void setContract11explicatieContract(String contract11explicatieContract) {
+        this.contract11explicatieContract = contract11explicatieContract;
+    }
+
+    public String getExistaContract12() {
+        return existaContract12;
+    }
+
+    public void setExistaContract12(String existaContract12) {
+        this.existaContract12 = existaContract12;
+    }
+
+    public String getContract12titular() {
+        return contract12titular;
+    }
+
+    public void setContract12titular(String contract12titular) {
+        this.contract12titular = contract12titular;
+    }
+
+    public String getContract12beneficiar() {
+        return contract12beneficiar;
+    }
+
+    public void setContract12beneficiar(String contract12beneficiar) {
+        this.contract12beneficiar = contract12beneficiar;
+    }
+
+    public String getContract12instritutiaContractanta() {
+        return contract12instritutiaContractanta;
+    }
+
+    public void setContract12instritutiaContractanta(String contract12instritutiaContractanta) {
+        this.contract12instritutiaContractanta = contract12instritutiaContractanta;
+    }
+
+    public String getContract12procedura() {
+        return contract12procedura;
+    }
+
+    public void setContract12procedura(String contract12procedura) {
+        this.contract12procedura = contract12procedura;
+    }
+
+    public String getContract12tipContract() {
+        return contract12tipContract;
+    }
+
+    public void setContract12tipContract(String contract12tipContract) {
+        this.contract12tipContract = contract12tipContract;
+    }
+
+    public String getContract12data() {
+        return contract12data;
+    }
+
+    public void setContract12data(String contract12data) {
+        this.contract12data = contract12data;
+    }
+
+    public String getContract12durata() {
+        return contract12durata;
+    }
+
+    public void setContract12durata(String contract12durata) {
+        this.contract12durata = contract12durata;
+    }
+
+    public String getContract12valoare() {
+        return contract12valoare;
+    }
+
+    public void setContract12valoare(String contract12valoare) {
+        this.contract12valoare = contract12valoare;
+    }
+
+    public String getContract12moneda() {
+        return contract12moneda;
+    }
+
+    public void setContract12moneda(String contract12moneda) {
+        this.contract12moneda = contract12moneda;
+    }
+
+    public String getContract12explicatieContract() {
+        return contract12explicatieContract;
+    }
+
+    public void setContract12explicatieContract(String contract12explicatieContract) {
+        this.contract12explicatieContract = contract12explicatieContract;
+    }
+
+    public String getExistaContract13() {
+        return existaContract13;
+    }
+
+    public void setExistaContract13(String existaContract13) {
+        this.existaContract13 = existaContract13;
+    }
+
+    public String getContract13titular() {
+        return contract13titular;
+    }
+
+    public void setContract13titular(String contract13titular) {
+        this.contract13titular = contract13titular;
+    }
+
+    public String getContract13beneficiar() {
+        return contract13beneficiar;
+    }
+
+    public void setContract13beneficiar(String contract13beneficiar) {
+        this.contract13beneficiar = contract13beneficiar;
+    }
+
+    public String getContract13instritutiaContractanta() {
+        return contract13instritutiaContractanta;
+    }
+
+    public void setContract13instritutiaContractanta(String contract13instritutiaContractanta) {
+        this.contract13instritutiaContractanta = contract13instritutiaContractanta;
+    }
+
+    public String getContract13procedura() {
+        return contract13procedura;
+    }
+
+    public void setContract13procedura(String contract13procedura) {
+        this.contract13procedura = contract13procedura;
+    }
+
+    public String getContract13tipContract() {
+        return contract13tipContract;
+    }
+
+    public void setContract13tipContract(String contract13tipContract) {
+        this.contract13tipContract = contract13tipContract;
+    }
+
+    public String getContract13data() {
+        return contract13data;
+    }
+
+    public void setContract13data(String contract13data) {
+        this.contract13data = contract13data;
+    }
+
+    public String getContract13durata() {
+        return contract13durata;
+    }
+
+    public void setContract13durata(String contract13durata) {
+        this.contract13durata = contract13durata;
+    }
+
+    public String getContract13valoare() {
+        return contract13valoare;
+    }
+
+    public void setContract13valoare(String contract13valoare) {
+        this.contract13valoare = contract13valoare;
+    }
+
+    public String getContract13moneda() {
+        return contract13moneda;
+    }
+
+    public void setContract13moneda(String contract13moneda) {
+        this.contract13moneda = contract13moneda;
+    }
+
+    public String getContract13explicatieContract() {
+        return contract13explicatieContract;
+    }
+
+    public void setContract13explicatieContract(String contract13explicatieContract) {
+        this.contract13explicatieContract = contract13explicatieContract;
     }
 }
