@@ -3,4 +3,6 @@ target/
 .project
 .classpath
 .idea
+.DS_Store
+/ui/idea
 /ui/node_modules
