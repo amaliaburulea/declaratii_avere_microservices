@@ -1,8 +1,13 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-import { routerMiddleware } from 'react-router-redux'
+import { routerMiddleware } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
 import { rootReducer } from './reducers';
 
+import createSagaMiddleware from 'redux-saga';
+import { authentificationSaga } from 'containers';
+
+/*ToDo This could co in a new file*/
+const sagaMiddleware = createSagaMiddleware();
 /* eslint-disable no-underscore-dangle */
 /**
  * Enable redux devtools
@@ -17,6 +22,7 @@ export const history = createHistory();
 
 const middlewares = [
   routerMiddleware(history),
+  sagaMiddleware,
 ];
 
 const enhancers = [
@@ -27,3 +33,5 @@ export const store = createStore(
   rootReducer,
   composeEnhancers(...enhancers)
 );
+
+sagaMiddleware.run(authentificationSaga);

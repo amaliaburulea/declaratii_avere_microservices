@@ -10,7 +10,7 @@ import registerServiceWorker from './registerServiceWorker';
 import { store, history } from './store';
 import './styles/global.css';
 
-import App from './containers/app/App';
+import { App } from 'containers';
 
 
 injectTapEventPlugin(); // Needed for material-ui onTouchTap http://stackoverflow.com/a/34015469/988941
