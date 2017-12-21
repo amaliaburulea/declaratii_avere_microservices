@@ -17,6 +17,8 @@ class LoginComponent extends Component {
   };
 
   render() {
+    console.log(this.props);
+
     return (
       <Grid fluid>
         <Row around={'xs'}>

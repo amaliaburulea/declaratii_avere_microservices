@@ -14,9 +14,17 @@ const Logged = (props) => (
 export const Toolbar = (props) => {
   const toolbarRightItem = props.isLoggedIn ?
     <Logged/> :
-    <NavLink exact to="/login">
-      Login
-    </NavLink>;
+    (
+      <div>
+        <NavLink exact to="/login">
+          Login
+        </NavLink>
+
+        <NavLink exact to="/home">
+          Home
+        </NavLink>
+      </div>
+    );
 
   return (
     <AppBar

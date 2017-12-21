@@ -8,6 +8,7 @@ const initialState = {
 export const authReducer = (state = initialState, action) => {
   switch (action.type) {
     case actions.ON_LOGIN_SUCCESS:
+      debugger;
       return { ...state, username: action.payload.username, password: action.payload.password };
     default:
       return state;
